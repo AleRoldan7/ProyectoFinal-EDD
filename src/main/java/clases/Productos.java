@@ -31,6 +31,19 @@ public class Productos implements Comparable<Productos> {
         this.branchId = branchId;
     }
 
+
+    public Productos(int branchId, String name, String barCode, String category, String expiryDate, String brand,
+                     Double price, int stock) {
+        this.branchId = branchId;
+        this.name = name;
+        this.barCode = barCode;
+        this.category = category;
+        this.expiryDate = expiryDate;
+        this.brand = brand;
+        this.price = price;
+        this.stock = stock;
+    }
+
     @Override
     public int compareTo(Productos productos) {
         return this.name.compareToIgnoreCase(productos.name);

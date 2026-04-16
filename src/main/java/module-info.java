@@ -1,10 +1,12 @@
-module cunoc.tutoria.ipc1.proyectofinaledd {
+module cunoc.proyectofinaledd {
     requires javafx.controls;
     requires javafx.fxml;
 
     requires org.controlsfx.controls;
     requires org.kordamp.bootstrapfx.core;
+    requires com.opencsv;
 
-    opens cunoc.tutoria.ipc1.proyectofinaledd to javafx.fxml;
-    exports cunoc.tutoria.ipc1.proyectofinaledd;
+    opens cunoc.proyectofinaledd to javafx.fxml;
+    exports cunoc.proyectofinaledd;
+    exports ui;
 }
