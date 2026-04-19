@@ -8,5 +8,6 @@ module cunoc.proyectofinaledd {
 
     opens cunoc.proyectofinaledd to javafx.fxml;
     exports cunoc.proyectofinaledd;
-    exports ui;
+    exports ui.estructuras_view;
+    exports ui.view;
 }

@@ -160,7 +160,6 @@ public class ArbolAVL<T extends Comparable<T>> {
     }
 
 
-    // InOrder → retorna elementos ordenados alfabéticamente
     public List<T> inOrder() {
         List<T> result = new ArrayList<>();
         inOrder(raiz, result);
