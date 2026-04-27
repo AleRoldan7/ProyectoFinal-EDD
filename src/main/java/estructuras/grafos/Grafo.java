@@ -59,7 +59,6 @@ public class Grafo {
         int[] anterior = new int[NODOS_MAX];
         boolean[] visitado = new boolean[NODOS_MAX];
 
-        // Inicializar todo en infinito
         for (int i = 0; i < NODOS_MAX; i++) {
             distancia[i] = Double.MAX_VALUE;
             anterior[i] = -1;
@@ -71,21 +70,18 @@ public class Grafo {
 
         distancia[idxOrigen] = 0;
 
-        // Cola de prioridad desde cero
-        ColaPrioridad cp = new ColaPrioridad(NODOS_MAX * NODOS_MAX);
-        cp.insertar(idxOrigen, 0);
+        ColaPrioridad colaPrioridad = new ColaPrioridad(NODOS_MAX * NODOS_MAX);
+        colaPrioridad.insertar(idxOrigen, 0);
 
-        while (!cp.isEmpty()) {
-            ColaPrioridad.Entrada actual = cp.extraerMinimo();
+        while (!colaPrioridad.isEmpty()) {
+            ColaPrioridad.Entrada actual = colaPrioridad.extraerMinimo();
             int idxActual = actual.nodo;
 
             if (visitado[idxActual]) continue;
             visitado[idxActual] = true;
 
-            // Si llegamos al destino, parar
             if (nodoGrafos[idxActual].getIdSucursal() == destino) break;
 
-            // Recorrer las aristas del nodo actual
             NodoArista arista = nodoGrafos[idxActual].getListaArista();
             while (arista != null) {
                 int idxVecino = buscarIndice(arista.getDestino());
@@ -100,21 +96,19 @@ public class Grafo {
                 if (nuevaDist < distancia[idxVecino]) {
                     distancia[idxVecino] = nuevaDist;
                     anterior[idxVecino] = idxActual;
-                    cp.insertar(idxVecino, nuevaDist);
+                    colaPrioridad.insertar(idxVecino, nuevaDist);
                 }
 
                 arista = arista.getSiguiente();
             }
         }
 
-        // Reconstruir ruta
         int idxDestino = buscarIndice(destino);
         if (idxDestino == -1 ||
                 distancia[idxDestino] == Double.MAX_VALUE) {
-            return new ResultadoRuta(null, -1); // sin ruta
+            return new ResultadoRuta(null, -1);
         }
 
-        // Reconstruir el camino de IDs de sucursales
         int[] caminoIdx = new int[NODOS_MAX];
         int largoCamino = 0;
         int paso = idxDestino;
@@ -125,7 +119,6 @@ public class Grafo {
             paso = anterior[paso];
         }
 
-        // Invertir (está de destino a origen)
         int[] ruta = new int[largoCamino];
         for (int i = 0; i < largoCamino; i++) {
             ruta[i] = caminoIdx[largoCamino - 1 - i];
@@ -157,12 +150,10 @@ public class Grafo {
                             origen, destino, tiempo, costo
                     );
                 } catch (Exception e) {
-                    System.err.println("Conexión inválida línea "
-                            + numLinea);
+                    System.err.println("Conexión inválida línea " + numLinea);
                 }
             }
-            System.out.println("Grafo cargado: "
-                    + totalNodos + " sucursales");
+            System.out.println("Grafo cargado: " + totalNodos + " sucursales");
 
         } catch (java.io.IOException e) {
             System.err.println("Error: " + e.getMessage());

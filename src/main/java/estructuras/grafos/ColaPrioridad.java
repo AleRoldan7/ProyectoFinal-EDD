@@ -1,8 +1,6 @@
 package estructuras.grafos;
 
 public class ColaPrioridad {
-
-    // Entrada de la cola: nodo + su distancia acumulada
     public static class Entrada {
         public int nodo;
         public double distancia;
@@ -13,7 +11,7 @@ public class ColaPrioridad {
         }
     }
 
-    private Entrada[] heap; // arreglo que representa el heap
+    private Entrada[] heap;
     private int size;
     private int capacidad;
 
@@ -22,14 +20,6 @@ public class ColaPrioridad {
         this.heap = new Entrada[capacidad];
         this.size = 0;
     }
-
-    // ─────────────────────────────────────────
-    // POSICIONES EN EL HEAP
-    // Para un nodo en índice i:
-    //   padre     → (i-1) / 2
-    //   hijo izq  → 2*i + 1
-    //   hijo der  → 2*i + 2
-    // ─────────────────────────────────────────
 
     private int padre(int i) {
         return (i - 1) / 2;
@@ -49,10 +39,6 @@ public class ColaPrioridad {
         heap[j] = temp;
     }
 
-    // ─────────────────────────────────────────
-    // INSERTAR — O(log n)
-    // ─────────────────────────────────────────
-
     public void insertar(int nodo, double distancia) {
         if (size >= capacidad)
             throw new RuntimeException("Cola de prioridad llena");
@@ -60,8 +46,6 @@ public class ColaPrioridad {
         heap[size] = new Entrada(nodo, distancia);
         int i = size;
         size++;
-
-        // Subir hasta que el padre sea menor (heapify up)
         while (i > 0 &&
                 heap[i].distancia < heap[padre(i)].distancia) {
             intercambiar(i, padre(i));
@@ -69,21 +53,14 @@ public class ColaPrioridad {
         }
     }
 
-    // ─────────────────────────────────────────
-    // EXTRAER MÍNIMO — O(log n)
-    // ─────────────────────────────────────────
-
     public Entrada extraerMinimo() {
         if (isEmpty())
             throw new RuntimeException("Cola vacía");
 
         Entrada minimo = heap[0];
 
-        // Mover el último elemento a la raíz
         heap[0] = heap[size - 1];
         size--;
-
-        // Bajar hasta que los hijos sean mayores (heapify down)
         heapifyDown(0);
 
         return minimo;

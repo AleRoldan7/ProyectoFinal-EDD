@@ -18,6 +18,10 @@ public class Productos implements Comparable<Productos> {
     public Productos() {
     }
 
+    public Productos(String name) {
+        this.name = name;
+    }
+
     public Productos(String name, String barCode, String category, String expiryDate, String brand, Double price,
                      int stock, Estado status, int branchId) {
         this.name = name;

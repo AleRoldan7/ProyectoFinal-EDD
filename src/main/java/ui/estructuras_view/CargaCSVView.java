@@ -55,7 +55,7 @@ public class CargaCSVView extends VBox {
 
         btn.setOnAction(e -> {
             accion.run();
-            estado.setText("✅ Cargado");
+            estado.setText("Cargado");
             estado.setStyle("-fx-text-fill: #27ae60;");
         });
 
@@ -83,11 +83,10 @@ public class CargaCSVView extends VBox {
         String ruta = elegirArchivo("Seleccionar sucursales.csv");
         if (ruta == null) return;
         state.getCargaCSV().cargarSucursales(ruta);
-        // Registrar sucursales en el grafo
         for (Sucursal s : state.getCargaCSV().getListaSucursales()) {
             state.getGrafo().agregarSucursal(s.getIdSucursal());
         }
-        log.appendText("✅ Sucursales: "
+        log.appendText(" Sucursales: "
                 + state.getCargaCSV().getTotalSucursales()
                 + " cargadas\n");
     }
@@ -96,14 +95,13 @@ public class CargaCSVView extends VBox {
         String ruta = elegirArchivo("Seleccionar productos.csv");
         if (ruta == null) return;
         state.getCargaCSV().cargarProductos(ruta);
-        // Insertar en AVL global
         for (Sucursal s : state.getCargaCSV().getListaSucursales()) {
             for (Object obj : s.getLista().toList()) {
                 clases.Productos p = (clases.Productos) obj;
                 state.getAvlGlobal().insert(p);
             }
         }
-        log.appendText("✅ Productos cargados\n");
+        log.appendText("Productos cargados\n");
         log.appendText("   (ver errors.log para detalles)\n");
     }
 
@@ -111,7 +109,7 @@ public class CargaCSVView extends VBox {
         String ruta = elegirArchivo("Seleccionar conexiones.csv");
         if (ruta == null) return;
         state.getGrafo().cargarConexionesCSV(ruta);
-        log.appendText("✅ Conexiones cargadas: "
+        log.appendText("Conexiones cargadas: "
                 + state.getGrafo().getTotalNodos()
                 + " nodos en el grafo\n");
     }

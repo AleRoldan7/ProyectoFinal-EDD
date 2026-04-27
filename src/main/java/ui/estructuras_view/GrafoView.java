@@ -18,9 +18,7 @@ public class GrafoView extends VBox {
     private AppState state;
     private Canvas   canvas;
     private TextArea salida;
-    private int[]    rutaActual; // para resaltar en el canvas
-
-    // Posiciones fijas de los nodos en el canvas
+    private int[]    rutaActual;
     private double[] posX;
     private double[] posY;
 
@@ -32,7 +30,6 @@ public class GrafoView extends VBox {
         Label titulo = new Label("Red de Sucursales y Rutas");
         titulo.setStyle("-fx-font-size: 18px; -fx-font-weight: bold;");
 
-        // Controles de transferencia
         TextField txtOrigen  = new TextField();
         TextField txtDestino = new TextField();
         txtOrigen.setPromptText("ID sucursal origen");
@@ -60,7 +57,6 @@ public class GrafoView extends VBox {
         );
         controles.setPadding(new Insets(5));
 
-        // Canvas para dibujar el grafo
         canvas = new Canvas(700, 400);
         canvas.setStyle("-fx-border-color: #bdc3c7; -fx-border-width: 1;");
 
@@ -85,20 +81,19 @@ public class GrafoView extends VBox {
                         .determinaDijkstra(origen, destino, usarTiempo);
 
                 if (!resultado.tieneRuta()) {
-                    salida.appendText("❌ No existe ruta entre "
+                    salida.appendText("No existe ruta entre "
                             + origen + " y " + destino + "\n");
                     return;
                 }
 
                 rutaActual = resultado.getRuta();
-                dibujarGrafo(); // redibujar con la ruta resaltada
+                dibujarGrafo();
 
                 String criterio = usarTiempo ? "tiempo" : "costo";
-                salida.appendText("✅ Ruta óptima por " + criterio
-                        + ":\n   " + resultado + "\n");
+                salida.appendText("Ruta óptima por " + criterio + ":\n   " + resultado + "\n");
 
             } catch (NumberFormatException ex) {
-                salida.appendText("❌ Los IDs deben ser números\n");
+                salida.appendText("Los IDs deben ser números\n");
             }
         });
 
@@ -111,14 +106,9 @@ public class GrafoView extends VBox {
                 botones,
                 salida
         );
-
-        // Dibujar al abrir la vista
         dibujarGrafo();
     }
 
-    // ─────────────────────────────────────────
-    // DIBUJAR GRAFO EN CANVAS
-    // ─────────────────────────────────────────
 
     private void dibujarGrafo() {
         GraphicsContext gc = canvas.getGraphicsContext2D();
@@ -132,17 +122,15 @@ public class GrafoView extends VBox {
             return;
         }
 
-        // Calcular posiciones en círculo
         calcularPosiciones(total);
 
-        // Dibujar aristas
         for (int i = 0; i < total; i++) {
             int idOrigen = grafo.getIdSucursal(i);
             NodoArista arista = grafo.getAristas(i);
 
             while (arista != null) {
                 int j = buscarIndicePorId(grafo, arista.getDestino());
-                if (j != -1 && j > i) { // evitar duplicar
+                if (j != -1 && j > i) {
                     boolean enRuta = estaEnRuta(idOrigen, arista.getDestino());
 
                     gc.setStroke(enRuta ? Color.web("#e74c3c")
@@ -150,7 +138,6 @@ public class GrafoView extends VBox {
                     gc.setLineWidth(enRuta ? 3 : 1.5);
                     gc.strokeLine(posX[i], posY[i], posX[j], posY[j]);
 
-                    // Etiqueta de peso en el centro de la arista
                     double mx = (posX[i] + posX[j]) / 2;
                     double my = (posY[i] + posY[j]) / 2;
                     gc.setFill(Color.web("#2c3e50"));
@@ -162,12 +149,10 @@ public class GrafoView extends VBox {
             }
         }
 
-        // Dibujar nodos
         for (int i = 0; i < total; i++) {
             int idSuc = grafo.getIdSucursal(i);
             boolean enRuta = estaEnRutaNodo(idSuc);
 
-            // Círculo del nodo
             gc.setFill(enRuta ? Color.web("#e74c3c")
                     : Color.web("#2980b9"));
             gc.fillOval(posX[i] - 22, posY[i] - 22, 44, 44);
@@ -176,13 +161,11 @@ public class GrafoView extends VBox {
             gc.setLineWidth(2);
             gc.strokeOval(posX[i] - 22, posY[i] - 22, 44, 44);
 
-            // ID del nodo
             gc.setFill(Color.WHITE);
             gc.setFont(javafx.scene.text.Font.font(13));
             gc.fillText(String.valueOf(idSuc),
                     posX[i] - 6, posY[i] + 5);
 
-            // Nombre de la sucursal debajo
             Sucursal s = state.getCargaCSV().buscarSucursal(idSuc);
             if (s != null) {
                 gc.setFill(Color.web("#2c3e50"));

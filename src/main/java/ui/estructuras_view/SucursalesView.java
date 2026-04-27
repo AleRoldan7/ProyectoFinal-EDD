@@ -19,7 +19,6 @@ public class SucursalesView extends VBox {
         Label titulo = new Label("Gestión de Sucursales");
         titulo.setStyle("-fx-font-size: 18px; -fx-font-weight: bold;");
 
-        // Formulario
         GridPane form = new GridPane();
         form.setHgap(10);
         form.setVgap(8);
@@ -68,10 +67,9 @@ public class SucursalesView extends VBox {
                 int tDes = Integer.parseInt(txtDespacho.getText().trim());
 
                 Sucursal s = new Sucursal(id, nom, ubi, tIng, tTra, tDes);
-                //state.getCargaCSV().agregarSucursal(s);
                 state.getGrafo().agregarSucursal(id);
 
-                salida.appendText("✅ Sucursal agregada: "
+                salida.appendText("Sucursal agregada: "
                         + nom + " (ID=" + id + ")\n");
 
                 txtId.clear();
@@ -82,7 +80,7 @@ public class SucursalesView extends VBox {
                 txtDespacho.clear();
 
             } catch (NumberFormatException ex) {
-                salida.appendText("❌ ID y tiempos deben ser números\n");
+                salida.appendText("ID y tiempos deben ser números\n");
             }
         });
 
@@ -91,15 +89,16 @@ public class SucursalesView extends VBox {
             salida.appendText("📋 Sucursales registradas:\n\n");
             for (Sucursal s : state.getCargaCSV().getListaSucursales()) {
                 salida.appendText(String.format(
-                        "ID: %-4d | %-20s | %-15s | " +
-                                "Productos: %d | Colas: I=%d T=%d S=%d\n",
+                        "ID: %-4d | %-20s | %-18s\n" +
+                                "         T.Ingreso: %ds | T.Traspaso: %ds | T.Despacho: %ds\n" +
+                                "         Productos: %d\n\n",
                         s.getIdSucursal(),
                         s.getNameSucursal(),
                         s.getLocation(),
-                        s.getLista().size(),
-                        s.getColaIngreso().size(),
-                        s.getColaTraspaso().size(),
-                        s.getColaSalida().size()
+                        s.getEntryTime(),
+                        s.getTransferTime(),
+                        s.getDispatchInterval(),
+                        s.getLista().size()
                 ));
             }
         });
@@ -107,14 +106,14 @@ public class SucursalesView extends VBox {
         btnDetalle.setOnAction(e -> {
             String idStr = txtId.getText().trim();
             if (idStr.isEmpty()) {
-                salida.appendText("❌ Escribe un ID para ver detalle\n");
+                salida.appendText("Escribe un ID para ver detalle\n");
                 return;
             }
             try {
                 int id = Integer.parseInt(idStr);
                 Sucursal s = state.getCargaCSV().buscarSucursal(id);
                 if (s == null) {
-                    salida.appendText("❌ Sucursal no encontrada\n");
+                    salida.appendText("Sucursal no encontrada\n");
                     return;
                 }
                 salida.clear();
@@ -129,7 +128,7 @@ public class SucursalesView extends VBox {
                 salida.appendText("Cola ingreso:" + s.getColaIngreso().size() + "\n");
                 salida.appendText("Cola salida: " + s.getColaSalida().size() + "\n");
             } catch (NumberFormatException ex) {
-                salida.appendText("❌ ID debe ser número\n");
+                salida.appendText("ID debe ser número\n");
             }
         });
 

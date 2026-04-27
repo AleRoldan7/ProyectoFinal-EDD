@@ -11,7 +11,7 @@ public class AppState {
 
     private CargaCSV cargaCSV;
     private Grafo grafo;
-    private ArbolAVL<Productos> avlGlobal; // AVL global para comparar búsquedas
+    private ArbolAVL<Productos> avlGlobal;
 
     private AppState() {
         cargaCSV = new CargaCSV();
@@ -19,7 +19,6 @@ public class AppState {
         avlGlobal = new ArbolAVL<>();
     }
 
-    // Singleton — una sola instancia para toda la app
     public static AppState getInstance() {
         if (instancia == null)
             instancia = new AppState();

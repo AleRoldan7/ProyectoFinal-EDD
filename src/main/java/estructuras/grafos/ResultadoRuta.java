@@ -1,8 +1,8 @@
 package estructuras.grafos;
 
 public class ResultadoRuta {
-    private int[]  ruta;       // IDs de sucursales en orden
-    private double pesoTotal;  // tiempo o costo total
+    private int[]  ruta;
+    private double pesoTotal;
 
     public ResultadoRuta(int[] ruta, double pesoTotal) {
         this.ruta      = ruta;

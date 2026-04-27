@@ -1,162 +1,144 @@
 package estructuras.avl;
 
-import estructuras.nodo.Nodo;
-
 import java.util.ArrayList;
 import java.util.List;
 
 public class ArbolAVL<T extends Comparable<T>> {
 
-    private NodoAVL raiz;
+    private NodoAVL<T> raiz;
 
     public ArbolAVL() {
         raiz = null;
     }
 
-    private int altura(NodoAVL nodoAVL) {
-        return (nodoAVL == null) ? 0 : nodoAVL.altura;
+    private int altura(NodoAVL<T> nodo) {
+        return (nodo == null) ? 0 : nodo.altura;
     }
 
-    private int factorBalanceo(NodoAVL nodoAVL) {
-        return (nodoAVL == null) ? 0 : altura(nodoAVL.left) - altura(nodoAVL.right);
+    private int factorBalanceo(NodoAVL<T> nodo) {
+        return (nodo == null) ? 0
+                : altura(nodo.left) - altura(nodo.right);
     }
 
-    private void updateAltura(NodoAVL nodoAVL) {
-        nodoAVL.altura = 1 + Math.max(altura(nodoAVL.left), altura(nodoAVL.right));
+    private void updateAltura(NodoAVL<T> nodo) {
+        nodo.altura = 1 + Math.max(
+                altura(nodo.left),
+                altura(nodo.right)
+        );
     }
 
-    private NodoAVL rotacionDerecha(NodoAVL y) {
 
-        NodoAVL x = y.left;
-        NodoAVL nodo = x.right;
+    private NodoAVL<T> rotacionDerecha(NodoAVL<T> y) {
+        NodoAVL<T> x = y.left;
+        NodoAVL<T> temp = x.right;
 
         x.right = y;
-        y.left = nodo;
+        y.left = temp;
 
         updateAltura(y);
         updateAltura(x);
         return x;
     }
 
-    private NodoAVL rotacionIzquierda(NodoAVL x) {
-
-        NodoAVL y = x.right;
-        NodoAVL nodo = y.left;
+    private NodoAVL<T> rotacionIzquierda(NodoAVL<T> x) {
+        NodoAVL<T> y = x.right;
+        NodoAVL<T> temp = y.left;
 
         y.left = x;
-        x.right = nodo;
+        x.right = temp;
 
         updateAltura(x);
         updateAltura(y);
         return y;
     }
 
-    private NodoAVL balanceo(NodoAVL nodo) {
+    private NodoAVL<T> balanceo(NodoAVL<T> nodo) {
         updateAltura(nodo);
-        int bf = factorBalanceo(nodo);
+        int fb = factorBalanceo(nodo);
 
-        // Caso Izquierda-Izquierda
-        if (bf > 1 && factorBalanceo(nodo.left) >= 0)
+        if (fb > 1 && factorBalanceo(nodo.left) >= 0)
             return rotacionDerecha(nodo);
 
-        // Caso Izquierda-Derecha
-        if (bf > 1 && factorBalanceo(nodo.left) < 0) {
-            nodo.left = rotacionIzquierda(nodo.left); // primero rota el hijo
-            return rotacionDerecha(nodo);       // luego rota la raíz
+        if (fb > 1 && factorBalanceo(nodo.left) < 0) {
+            nodo.left = rotacionIzquierda(nodo.left);
+            return rotacionDerecha(nodo);
         }
 
-        // Caso Derecha-Derecha
-        if (bf < -1 && factorBalanceo(nodo.right) <= 0)
+        if (fb < -1 && factorBalanceo(nodo.right) <= 0)
             return rotacionIzquierda(nodo);
 
-        // Caso Derecha-Izquierda
-        if (bf < -1 && factorBalanceo(nodo.right) > 0) {
-            nodo.right = rotacionDerecha(nodo.right); // primero rota el hijo
-            return rotacionIzquierda(nodo);           // luego rota la raíz
+        if (fb < -1 && factorBalanceo(nodo.right) > 0) {
+            nodo.right = rotacionDerecha(nodo.right);
+            return rotacionIzquierda(nodo);
         }
 
         return nodo;
     }
 
 
-    public void insert(T producto) {
-        raiz = insert(raiz, producto);
+    public void insert(T dato) {
+        raiz = insert(raiz, dato);
     }
 
-    private NodoAVL insert(NodoAVL node, T producto) {
-        if (node == null) return new NodoAVL(producto);
+    private NodoAVL<T> insert(NodoAVL<T> nodo, T dato) {
+        if (nodo == null) return new NodoAVL<>(dato);
+        int cmp = dato.compareTo(nodo.producto);
 
-        int cmp = producto.compareTo(producto);
+        if (cmp < 0) nodo.left = insert(nodo.left, dato);
+        else if (cmp > 0) nodo.right = insert(nodo.right, dato);
+        else return nodo;
+
+        return balanceo(nodo);
+    }
+
+
+    public T search(T dato) {
+        NodoAVL<T> resultado = search(raiz, dato);
+        return (resultado != null) ? resultado.producto : null;
+    }
+
+    private NodoAVL<T> search(NodoAVL<T> nodo, T dato) {
+        if (nodo == null) return null;
+
+        int cmp = dato.compareTo(nodo.producto);
+
+        if (cmp == 0) return nodo;
+        if (cmp < 0) return search(nodo.left, dato);
+        return search(nodo.right, dato);
+    }
+
+
+    public void delete(T dato) {
+        raiz = delete(raiz, dato);
+    }
+
+    private NodoAVL<T> minNodo(NodoAVL<T> nodo) {
+        while (nodo.left != null)
+            nodo = nodo.left;
+        return nodo;
+    }
+
+    private NodoAVL<T> delete(NodoAVL<T> nodo, T dato) {
+        if (nodo == null) return null;
+
+        int cmp = dato.compareTo(nodo.producto);
 
         if (cmp < 0) {
-            node.left = insert(node.left, producto);
+            nodo.left = delete(nodo.left, dato);
         } else if (cmp > 0) {
-            node.right = insert(node.right, producto);
+            nodo.right = delete(nodo.right, dato);
         } else {
-            return node;
+            if (nodo.left == null) return nodo.right;
+
+            if (nodo.right == null) return nodo.left;
+
+            NodoAVL<T> sucesor = minNodo(nodo.right);
+            nodo.producto = sucesor.producto;
+
+            nodo.right = delete(nodo.right, sucesor.producto);
         }
 
-        return balanceo(node);
-    }
-
-
-    public T search(T producto) {
-        NodoAVL result = search(raiz, producto);
-        return (result != null) ? producto : null;
-    }
-
-    private NodoAVL search(NodoAVL node, T producto) {
-        // No encontrado
-        if (node == null) return null;
-
-        int cmp = producto.compareTo(producto);
-
-        if (cmp == 0) return node;        // encontrado
-        if (cmp < 0) return search(node.left, producto);  // buscar izquierda
-        return search(node.right, producto);               // buscar derecha
-    }
-
-
-    public void delete(T producto) {
-        raiz = delete(raiz, producto);
-    }
-
-    // Encuentra el nodo con el valor mínimo de un subárbol
-    // (se usa para reemplazar el nodo eliminado)
-    private NodoAVL minNode(NodoAVL node) {
-        while (node.left != null)
-            node = node.left;
-        return node;
-    }
-
-    private NodoAVL delete(NodoAVL node, T producto) {
-        if (node == null) return null;
-
-        int cmp = producto.compareTo(producto);
-
-        if (cmp < 0) {
-            node.left = delete(node.left, producto);
-        } else if (cmp > 0) {
-            node.right = delete(node.right, producto);
-        } else {
-            // Encontramos el nodo a eliminar — 3 casos:
-
-            // Caso 1: no tiene hijo izquierdo
-            if (node.left == null) return node.right;
-
-            // Caso 2: no tiene hijo derecho
-            if (node.right == null) return node.left;
-
-            // Caso 3: tiene dos hijos
-            // Reemplazamos con el sucesor inOrder
-            // (el menor del subárbol derecho)
-            NodoAVL successor = minNode(node.right);
-            node.producto = successor.producto;
-            node.right = delete(node.right, producto);
-        }
-
-        // Balancear al regresar
-        return balanceo(node);
+        return balanceo(nodo);
     }
 
 
@@ -166,25 +148,22 @@ public class ArbolAVL<T extends Comparable<T>> {
         return result;
     }
 
-    private void inOrder(NodoAVL node, List<T> result) {
-        if (node == null) return;
-        inOrder(node.left, result);   // primero izquierda
-        result.add((T) node.producto);        // luego este nodo
-        inOrder(node.right, result);  // luego derecha
+    private void inOrder(NodoAVL<T> nodo, List<T> result) {
+        if (nodo == null) return;
+        inOrder(nodo.left, result);
+        result.add(nodo.producto);
+        inOrder(nodo.right, result);
     }
 
-
-    public boolean isEmpty() {
-        return raiz == null;
-    }
-
-    public NodoAVL getRoot() {
+    public NodoAVL<T> getRoot() {
         return raiz;
     }
 
-    // Altura total del árbol (para mostrar en UI)
     public int getHeight() {
         return altura(raiz);
     }
 
+    public boolean isEmpty() {
+        return raiz == null;
+    }
 }

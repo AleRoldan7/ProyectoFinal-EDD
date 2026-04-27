@@ -7,6 +7,7 @@ import javafx.scene.control.Separator;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
+import ui.estructuras_view.AvlView;
 import ui.estructuras_view.*;
 
 public class ViewMain extends BorderPane {
@@ -59,7 +60,7 @@ public class ViewMain extends BorderPane {
                 mostrarVista(new SucursalesView(state))
         );
         btnGrafo.setOnAction(e ->
-                mostrarVista(new GrafoView(state))
+                mostrarVista(new GrafoAnimadoView(state))
         );
 
         btnAVL.setOnAction(e ->
