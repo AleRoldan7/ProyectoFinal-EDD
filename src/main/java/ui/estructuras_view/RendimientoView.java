@@ -127,21 +127,17 @@ public class RendimientoView extends VBox {
 
         for (Sucursal s : sucursales) {
 
-            // 1) Lista enlazada — O(n): recorre nodo a nodo
             long t1 = System.nanoTime();
             Productos r1 = s.getLista().buscar(
                     p -> p.getName().equalsIgnoreCase(termino)
             );
             long ns1 = System.nanoTime() - t1;
 
-            // 2) AVL — O(log n): recorre el árbol en inOrder y busca por nombre.
-            //    Usa el método buscarPorNombre del ArbolAVL si existe,
-            //    o cae al inOrder+stream como fallback seguro.
+
             long t2 = System.nanoTime();
             Productos r2 = buscarEnAvl(s, termino);
             long ns2 = System.nanoTime() - t2;
 
-            // 3) Hash — O(1) promedio: acceso directo por hash del nombre
             long t3 = System.nanoTime();
             Productos r3 = s.getTablaHash().buscar(termino);
             long ns3 = System.nanoTime() - t3;
@@ -161,7 +157,6 @@ public class RendimientoView extends VBox {
 
         tabla.setItems(filas);
 
-        // Resumen global
         int n = sucursales.size();
         lblResumen.setText(String.format(
                 "Promedio sobre %d sucursal(es) —  Lista: %,d ns  |  AVL: %,d ns  |  Hash: %,d ns" +
@@ -173,7 +168,6 @@ public class RendimientoView extends VBox {
                 encontradosLista, encontradosAvl, encontradosHash
         ));
 
-        // Gráfico
         dibujarBarras(
                 n > 0 ? totalLista / n : 0,
                 n > 0 ? totalAvl   / n : 0,
@@ -181,9 +175,6 @@ public class RendimientoView extends VBox {
         );
     }
 
-    // ══════════════════════════════════════════════
-    //  CONSTRUIR TABLA JavaFX
-    // ══════════════════════════════════════════════
 
     private TableView<FilaRendimiento> construirTabla() {
         TableView<FilaRendimiento> tv = new TableView<>();
@@ -194,20 +185,16 @@ public class RendimientoView extends VBox {
         colSuc.setCellValueFactory(d -> d.getValue().sucursalProp());
         colSuc.setPrefWidth(160);
 
-        // Lista
         TableColumn<FilaRendimiento, String> colListaNs  = colNum("Lista (ns)",  "listaNs");
         TableColumn<FilaRendimiento, String> colListaRes = colRes("Lista res.",   "listaRes");
         colListaNs.setStyle("-fx-background-color: #eaf4fb;");
 
-        // AVL
         TableColumn<FilaRendimiento, String> colAvlNs  = colNum("AVL (ns)",  "avlNs");
         TableColumn<FilaRendimiento, String> colAvlRes = colRes("AVL res.",   "avlRes");
 
-        // Hash
         TableColumn<FilaRendimiento, String> colHashNs  = colNum("Hash (ns)",  "hashNs");
         TableColumn<FilaRendimiento, String> colHashRes = colRes("Hash res.",   "hashRes");
 
-        // Ganador
         TableColumn<FilaRendimiento, String> colGanador = new TableColumn<>("Más rápida");
         colGanador.setCellValueFactory(d -> d.getValue().ganadorProp());
         colGanador.setCellFactory(tc -> new TableCell<>() {
@@ -230,7 +217,6 @@ public class RendimientoView extends VBox {
                 colGanador
         );
 
-        // Colorear filas alternadas
         tv.setRowFactory(r -> new TableRow<>() {
             @Override protected void updateItem(FilaRendimiento item, boolean empty) {
                 super.updateItem(item, empty);
@@ -242,7 +228,6 @@ public class RendimientoView extends VBox {
         return tv;
     }
 
-    // Columna de tiempo en ns formateado
     @SuppressWarnings("unchecked")
     private TableColumn<FilaRendimiento, String> colNum(String titulo, String prop) {
         TableColumn<FilaRendimiento, String> col = new TableColumn<>(titulo);
@@ -266,7 +251,6 @@ public class RendimientoView extends VBox {
         return col;
     }
 
-    // Columna de resultado (encontrado / no encontrado)
     @SuppressWarnings("unchecked")
     private TableColumn<FilaRendimiento, String> colRes(String titulo, String prop) {
         TableColumn<FilaRendimiento, String> col = new TableColumn<>(titulo);
@@ -293,9 +277,7 @@ public class RendimientoView extends VBox {
         return col;
     }
 
-    // ══════════════════════════════════════════════
-    //  GRÁFICO DE BARRAS (log scale)
-    // ══════════════════════════════════════════════
+
 
     private void dibujarBarras(long nsLista, long nsAvl, long nsHash) {
         GraphicsContext gc = canvasBarras.getGraphicsContext2D();
@@ -315,7 +297,6 @@ public class RendimientoView extends VBox {
 
         long   maxNs  = Math.max(1, Math.max(nsLista, Math.max(nsAvl, nsHash)));
 
-        // Log scale: convertir a log para comparación visual más clara
         double logMax = Math.log10(Math.max(maxNs, 1)) + 1;
 
         String[]   labels  = {"Lista O(n)", "AVL O(log n)", "Hash O(1)"};
@@ -325,7 +306,6 @@ public class RendimientoView extends VBox {
         double barW  = areaW / (labels.length * 2.0);
         double gapX  = barW;
 
-        // Eje Y
         gc.setStroke(Color.web("#bdc3c7"));
         gc.setLineWidth(1);
         gc.strokeLine(padL, padTop, padL, padTop + areaH);
@@ -338,36 +318,27 @@ public class RendimientoView extends VBox {
             double x      = padL + gapX / 2 + i * (barW + gapX);
             double y      = padTop + areaH - h;
 
-            // Sombra
             gc.setFill(Color.web("#00000018"));
             gc.fillRoundRect(x + 2, y + 2, barW, h, 5, 5);
 
-            // Barra
             gc.setFill(Color.web(colores[i]));
             gc.fillRoundRect(x, y, barW, h, 5, 5);
 
-            // Valor encima
             gc.setFill(Color.web("#2c3e50"));
             gc.setFont(Font.font(11));
             String val = ns > 0 ? String.format("%,d ns", ns) : "—";
             double tw  = val.length() * 5.5;
             gc.fillText(val, x + barW / 2 - tw / 2, Math.max(y - 4, padTop + 10));
 
-            // Etiqueta debajo
             gc.setFont(Font.font(11));
             double lw = labels[i].length() * 5.5;
             gc.fillText(labels[i], x + barW / 2 - lw / 2, padTop + areaH + 18);
         }
 
-        // Nota escala log
         gc.setFill(Color.web("#95a5a6"));
         gc.setFont(Font.font(10));
         gc.fillText("* barras en escala log₁₀ para mejor visualización", padL + 2, cH - 4);
     }
-
-    // ══════════════════════════════════════════════
-    //  LEYENDA DE COMPLEJIDADES
-    // ══════════════════════════════════════════════
 
     private VBox crearLeyenda() {
         VBox box = new VBox(4);
@@ -398,10 +369,6 @@ public class RendimientoView extends VBox {
         a.setHeaderText(null);
         a.showAndWait();
     }
-
-    // ══════════════════════════════════════════════
-    //  MODELO DE FILA PARA LA TABLA
-    // ══════════════════════════════════════════════
 
     public static class FilaRendimiento {
         private final SimpleStringProperty sucursal;

@@ -40,15 +40,16 @@ public class ViewMain extends BorderPane {
         Separator sep = new Separator();
         sep.setStyle("-fx-background-color: #7f8c8d;");
 
-        Button btnCarga = crearBoton("📂 Cargar CSV");
-        Button btnProductos = crearBoton("📦 Productos");
-        Button btnSucursales = crearBoton("🏪 Sucursales");
-        Button btnGrafo = crearBoton("🗺 Grafo / Rutas");
-        Button btnAVL = crearBoton("🌳 Árbol AVL");
-        Button btnB = crearBoton("🌲 Árbol B");
-        Button btnBPlus = crearBoton("🌴 Árbol B+");
-        Button btnHash = crearBoton("# Tabla Hash");
-        Button btnRendimiento = crearBoton("📊 Rendimiento");
+        Button btnCarga = crearBoton("Cargar CSV");
+        Button btnProductos = crearBoton("Productos");
+        Button btnSucursales = crearBoton("Sucursales");
+        Button btnGrafo = crearBoton("Grafo / Rutas");
+        Button btnAVL = crearBoton("Árbol AVL");
+        Button btnB = crearBoton("Árbol B");
+        Button btnBPlus = crearBoton("Árbol B+");
+        Button btnHash = crearBoton("Tabla Hash");
+        Button btnTransferencia = crearBoton("Transferencia");
+        Button btnRendimiento = crearBoton("Rendimiento");
 
         btnCarga.setOnAction(e ->
                 mostrarVista(new CargaCSVView(state))
@@ -76,6 +77,9 @@ public class ViewMain extends BorderPane {
                 mostrarVista(new HashView(state))
         );
 
+        btnTransferencia.setOnAction(e ->
+            mostrarVista(new TransferenciaView(state))
+        );
 
         btnRendimiento.setOnAction(e ->
                 mostrarVista(new RendimientoView(state))
@@ -89,7 +93,9 @@ public class ViewMain extends BorderPane {
                 new Separator(),
                 btnAVL, btnB, btnBPlus, btnHash,
                 new Separator(),
+                btnTransferencia,
                 btnRendimiento
+
         );
     }
 

@@ -149,4 +149,31 @@ public class ListaEnlazada<T> {
         }
         return sb.toString();
     }
+
+    public void agregarTodos(ListaEnlazada<T> otra) {
+        Nodo<T> actual = otra.getHead();
+        while (actual != null) {
+            agregar(actual.producto);
+            actual = actual.next;
+        }
+    }
+
+    public boolean contiene(java.util.function.Predicate<T> condicion) {
+        Nodo<T> actual = head;
+        while (actual != null) {
+            if (condicion.test(actual.producto)) return true;
+            actual = actual.next;
+        }
+        return false;
+    }
+
+    public T buscarPrimero(java.util.function.Predicate<T> condicion) {
+        Nodo<T> actual = head;
+        while (actual != null) {
+            if (condicion.test(actual.producto))
+                return actual.producto;
+            actual = actual.next;
+        }
+        return null;
+    }
 }
