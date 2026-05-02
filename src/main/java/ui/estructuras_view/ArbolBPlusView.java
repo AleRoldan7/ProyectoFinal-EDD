@@ -3,6 +3,7 @@ package ui.estructuras_view;
 import clases.Sucursal;
 import estructuras.arbolBPlus.ArbolBPlus;
 import estructuras.arbolBPlus.NodoBPlus;
+import estructuras.lista.ListaEnlazada;
 import javafx.geometry.Insets;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
@@ -11,6 +12,8 @@ import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import ui.view.AppState;
+import ui.view.PanelExportacion;
+import utils.ExportarEstructuras;
 
 import java.util.List;
 
@@ -23,7 +26,7 @@ public class ArbolBPlusView extends VBox {
 
     private static final int NODO_H_BASE = 34;
     private static final int NODO_W_BASE = 110;
-    private static final int SEP_V_BASE  = 85;
+    private static final int SEP_V_BASE = 85;
 
     public ArbolBPlusView(AppState state) {
         this.state = state;
@@ -45,9 +48,7 @@ public class ArbolBPlusView extends VBox {
         lblInfo = new Label("Árbol B+ indexado por categoría  |  Las hojas están enlazadas →");
         lblInfo.setStyle("-fx-text-fill: #7f8c8d;");
 
-        HBox controles = new HBox(10,
-                new Label("Sucursal:"), cmbSucursal, btnDibujar, lblInfo
-        );
+        HBox controles = new HBox(10, new Label("Sucursal:"), cmbSucursal, btnDibujar, lblInfo);
 
         canvas = new Canvas(3000, 700);
         ScrollPane scroll = new ScrollPane(canvas);
@@ -58,10 +59,7 @@ public class ArbolBPlusView extends VBox {
 
         btnDibujar.setOnAction(e -> dibujar());
 
-        this.getChildren().addAll(
-                titulo, new Separator(),
-                controles, leyenda, scroll
-        );
+        this.getChildren().addAll(titulo, new Separator(), controles, leyenda, scroll, panelExport);
     }
 
     @SuppressWarnings("unchecked")
@@ -76,8 +74,7 @@ public class ArbolBPlusView extends VBox {
             if (s != null) arbol = s.getArbolBPlusCategoria();
         }
 
-        if (arbol == null || arbol.getRaiz() == null ||
-                arbol.getRaiz().getClaves().isEmpty()) {
+        if (arbol == null || arbol.getRaiz() == null || arbol.getRaiz().getNumClaves() == 0) {
             gc.clearRect(0, 0, canvas.getWidth(), canvas.getHeight());
             gc.setFill(Color.GRAY);
             gc.setFont(Font.font(14));
@@ -85,22 +82,21 @@ public class ArbolBPlusView extends VBox {
             return;
         }
 
-        // Calcular métricas del árbol para escalar
-        int[] conteo   = {0, 0}; // [0]=nodos totales, [1]=hojas
-        int   alt      = calcularInfo(arbol.getRaiz(), conteo);
-        int   totalNod = conteo[0];
-        int   hojas    = conteo[1];
+        int[] conteo = {0, 0};
+        int alt = calcularInfo(arbol.getRaiz(), conteo);
+        int totalNod = conteo[0];
+        int hojas = conteo[1];
 
         double escala = Math.max(0.3, Math.min(1.0, 60.0 / Math.max(totalNod, 1)));
-        int nodoW = (int)(NODO_W_BASE * escala);
-        int nodoH = (int)(NODO_H_BASE * escala);
-        int sepV  = (int)(SEP_V_BASE  * Math.max(0.55, escala));
+        int nodoW = (int) (NODO_W_BASE * escala);
+        int nodoH = (int) (NODO_H_BASE * escala);
+        int sepV = (int) (SEP_V_BASE * Math.max(0.55, escala));
 
-        double anchoNec = Math.pow(2, alt) * (nodoW * 3 + 10);
-        double altoNec  = (alt + 1) * (sepV + nodoH) + 100;
+        double anchoNec = calcularAnchoSubarbol(arbol.getRaiz(), nodoW) + 200;
+        double altoNec = (alt + 1) * (sepV + nodoH) + 100;
 
         double cW = Math.max(3000, anchoNec);
-        double cH = Math.max(650,  altoNec);
+        double cH = Math.max(650, altoNec);
         canvas.setWidth(cW);
         canvas.setHeight(cH);
 
@@ -108,115 +104,123 @@ public class ArbolBPlusView extends VBox {
         gc.setFill(Color.web("#fafafa"));
         gc.fillRect(0, 0, cW, cH);
 
-        lblInfo.setText(String.format(
-                "B+  |  Nodos: %d  |  Hojas enlazadas: %d  |  Altura: %d",
-                totalNod, hojas, alt
-        ));
+        lblInfo.setText(String.format("B+  |  Nodos: %d  |  Hojas enlazadas: %d  |  Altura: %d", totalNod, hojas, alt));
 
-        // Arrays para guardar posición de hojas (para dibujar enlaces)
-        // Usamos listas dinámicas en lugar de arrays fijos de [100]
-        java.util.ArrayList<Double> posHojasX = new java.util.ArrayList<>();
-        java.util.ArrayList<Double> posHojasY = new java.util.ArrayList<>();
 
-        dibujarNodoBPlus(gc, arbol.getRaiz(),
-                cW / 2.0, 40, cW / 4.0,
-                posHojasX, posHojasY,
-                nodoW, nodoH, sepV);
+        ListaEnlazada<Double> posHojasX = new ListaEnlazada<>();
+        ListaEnlazada<Double> posHojasY = new ListaEnlazada<>();
+
+        double ancho = calcularAnchoSubarbol(arbol.getRaiz(), nodoW);
+
+        dibujarNodoBPlus(gc, arbol.getRaiz(), cW / 2.0, 40, ancho / 2, posHojasX, posHojasY, nodoW, nodoH, sepV);
 
         dibujarEnlacesHojas(gc, posHojasX, posHojasY, nodoW);
     }
 
     @SuppressWarnings("unchecked")
-    private void dibujarNodoBPlus(GraphicsContext gc, NodoBPlus nodo,
-                                  double cx, double cy, double offset,
-                                  java.util.ArrayList<Double> posX,
-                                  java.util.ArrayList<Double> posY,
-                                  int nodoW, int nodoH, int sepV) {
+    private void dibujarNodoBPlus(GraphicsContext gc, NodoBPlus nodo, double cx, double cy, double offset, ListaEnlazada<Double> posX, ListaEnlazada<Double> posY, int nodoW, int nodoH, int sepV) {
+
         if (nodo == null) return;
 
-        List   claves    = nodo.getClaves();
-        int    numCl     = claves.size();
-        double nodoAncho = numCl * nodoW;
-        double nodoX     = cx - nodoAncho / 2.0;
+        int numCl = nodo.getNumClaves();
+        Object[] claves = nodo.getClaves();
 
-        Color colorFondo = nodo.isEsHoja()
-                ? Color.web("#d35400")
-                : Color.web("#2c3e50");
+        double nodoAncho = Math.max(nodoW, numCl * nodoW);
+        double nodoX = cx - nodoAncho / 2.0;
 
-        // Sombra
-        gc.setFill(Color.web("#00000015"));
-        gc.fillRoundRect(nodoX + 2, cy + 2, nodoAncho, nodoH, 6, 6);
+        boolean esRaiz = (nodo == state.getCargaCSV().buscarSucursal(Integer.parseInt(cmbSucursal.getValue().split(" - ")[0])).getArbolBPlusCategoria().getRaiz());
+
+        Color colorFondo = nodo.isEsHoja() ? Color.web("#e67e22") : Color.web("#2c3e50");
+
+        gc.setFill(Color.web("#00000018"));
+        gc.fillRoundRect(nodoX + 3, cy + 3, nodoAncho, nodoH, 8, 8);
 
         gc.setFill(colorFondo);
-        gc.fillRoundRect(nodoX, cy, nodoAncho, nodoH, 6, 6);
-        gc.setStroke(nodo.isEsHoja() ? Color.web("#e67e22") : Color.web("#7f8c8d"));
-        gc.setLineWidth(1.5);
-        gc.strokeRoundRect(nodoX, cy, nodoAncho, nodoH, 6, 6);
+        gc.fillRoundRect(nodoX, cy, nodoAncho, nodoH, 8, 8);
 
-        double fontSize = Math.max(7, nodoH * 0.32);
+        gc.setStroke(esRaiz ? Color.GOLD : Color.web("#7f8c8d"));
+        gc.setLineWidth(esRaiz ? 2.5 : 1.2);
+        gc.strokeRoundRect(nodoX, cy, nodoAncho, nodoH, 8, 8);
+
+        double fontSize = Math.max(8, nodoH * 0.35);
         gc.setFont(Font.font(fontSize));
 
         for (int i = 0; i < numCl; i++) {
+
             if (i > 0) {
-                gc.setStroke(Color.web("#95a5a6"));
-                gc.setLineWidth(0.6);
-                gc.strokeLine(nodoX + i * nodoW, cy,
-                        nodoX + i * nodoW, cy + nodoH);
+                gc.setStroke(Color.web("#bdc3c7"));
+                gc.setLineWidth(0.7);
+                gc.strokeLine(nodoX + i * nodoW, cy, nodoX + i * nodoW, cy + nodoH);
+
             }
-            String clave  = claves.get(i).toString();
-            int    maxLen = Math.max(3, nodoW / 8);
-            if (clave.length() > maxLen) clave = clave.substring(0, maxLen - 1) + ".";
+
+            String clave = claves[i].toString();
+            int maxLen = Math.max(4, nodoW / 7);
+
+            if (clave.length() > maxLen) {
+                clave = clave.substring(0, maxLen - 1) + ".";
+            }
 
             gc.setFill(Color.WHITE);
-            gc.fillText(clave, nodoX + i * nodoW + 4, cy + nodoH / 2.0 + fontSize * 0.35);
+            gc.fillText(clave, nodoX + i * nodoW + 6, cy + nodoH / 2.0 + fontSize * 0.35);
         }
 
-        if (nodo.isEsHoja()) {
-            // Guardar posición del lado derecho para el enlace
-            posX.add(nodoX + nodoAncho);
-            posY.add(cy + nodoH / 2.0);
+        String info = "k:" + numCl + " | h:" + (nodo.isEsHoja() ? 0 : numCl + 1);
+
+        gc.setFill(Color.web("#ecf0f1"));
+        gc.setFont(Font.font(9));
+        gc.fillText(info, nodoX + 4, cy - 5);
+
+        if (nodo.isEsHoja() && numCl > 0) {
+            String rango = claves[0] + " → " + claves[numCl - 1];
+
+            gc.setFill(Color.web("#f1c40f"));
+            gc.setFont(Font.font(9));
+            gc.fillText(rango, nodoX + 4, cy + nodoH + 12);
+
+            posX.agregar(nodoX + nodoAncho);
+            posY.agregar(cy + nodoH / 2.0);
         }
 
         if (!nodo.isEsHoja()) {
-            List   hijos    = nodo.getHijos();
-            int    numHijos = hijos.size();
-            if (numHijos == 0) return;
 
-            double paso    = (offset * 2) / Math.max(numHijos - 1, 1);
-            double inicioX = cx - offset;
+            NodoBPlus[] hijos = nodo.getHijos();
+            int numHijos = numCl + 1;
+
+
+            double inicio = cx - offset;
 
             for (int i = 0; i < numHijos; i++) {
-                double hijoX = numHijos == 1 ? cx : inicioX + i * paso;
-                double hijoY = cy + sepV + nodoH;
+
+                double anchoHijo = calcularAnchoSubarbol(hijos[i], nodoW);
+
+                double hx = inicio + anchoHijo / 2;
+                double hy = cy + nodoH + sepV;
 
                 gc.setStroke(Color.web("#bdc3c7"));
-                gc.setLineWidth(1.0);
-                gc.strokeLine(cx, cy + nodoH, hijoX, hijoY);
+                gc.setLineWidth(1.2);
+                gc.strokeLine(cx, cy + nodoH, hx, hy);
 
-                dibujarNodoBPlus(gc, (NodoBPlus) hijos.get(i),
-                        hijoX, hijoY, offset / 2,
-                        posX, posY, nodoW, nodoH, sepV);
+                dibujarNodoBPlus(gc, hijos[i], hx, hy, anchoHijo / 2, posX, posY, nodoW, nodoH, sepV);
+
+                inicio += anchoHijo;
             }
         }
     }
 
-    private void dibujarEnlacesHojas(GraphicsContext gc,
-                                     java.util.ArrayList<Double> posX,
-                                     java.util.ArrayList<Double> posY,
-                                     int nodoW) {
+    private void dibujarEnlacesHojas(GraphicsContext gc, ListaEnlazada<Double> posX, ListaEnlazada<Double> posY, int nodoW) {
         int total = posX.size();
         gc.setStroke(Color.web("#f39c12"));
         gc.setLineWidth(2);
 
         for (int i = 0; i < total - 1; i++) {
-            double x1 = posX.get(i);
-            double y1 = posY.get(i);
-            double x2 = posX.get(i + 1) - nodoW * 0.5;
-            double y2 = posY.get(i + 1);
+            double x1 = posX.getIndice(i);
+            double y1 = posY.getIndice(i);
+            double x2 = posX.getIndice(i + 1) - nodoW * 0.5;
+            double y2 = posY.getIndice(i + 1);
 
             gc.strokeLine(x1, y1, x2, y2);
 
-            // Flecha
             gc.setFill(Color.web("#f39c12"));
             double[] fx = {x2, x2 - 7, x2 - 7};
             double[] fy = {y2, y2 - 4, y2 + 4};
@@ -228,7 +232,10 @@ public class ArbolBPlusView extends VBox {
     private int calcularInfo(NodoBPlus nodo, int[] conteo) {
         if (nodo == null) return 0;
         conteo[0]++;
-        if (nodo.isEsHoja()) { conteo[1]++; return 1; }
+        if (nodo.isEsHoja()) {
+            conteo[1]++;
+            return 1;
+        }
         int maxH = 0;
         for (Object h : nodo.getHijos()) {
             maxH = Math.max(maxH, calcularInfo((NodoBPlus) h, conteo));
@@ -236,14 +243,27 @@ public class ArbolBPlusView extends VBox {
         return maxH + 1;
     }
 
+    private double calcularAnchoSubarbol(NodoBPlus nodo, int nodoW) {
+        if (nodo == null) return nodoW;
+
+        if (nodo.isEsHoja()) {
+            return Math.max(nodoW, nodo.getNumClaves() * nodoW);
+        }
+
+        double ancho = 0;
+        NodoBPlus[] hijos = nodo.getHijos();
+
+        for (int i = 0; i <= nodo.getNumClaves(); i++) {
+            ancho += calcularAnchoSubarbol(hijos[i], nodoW);
+        }
+
+        return Math.max(ancho, nodo.getNumClaves() * nodoW);
+    }
+
     private HBox crearLeyenda() {
         HBox hbox = new HBox(15);
         hbox.setPadding(new Insets(5));
-        String[][] items = {
-                {"Nodo interno", "#2c3e50"},
-                {"Nodo hoja",    "#d35400"},
-                {"Enlace hojas", "#f39c12"}
-        };
+        String[][] items = {{"Nodo interno", "#2c3e50"}, {"Nodo hoja", "#d35400"}, {"Enlace hojas", "#f39c12"}};
         for (String[] item : items) {
             Canvas c = new Canvas(14, 14);
             GraphicsContext gc = c.getGraphicsContext2D();
@@ -255,4 +275,24 @@ public class ArbolBPlusView extends VBox {
         }
         return hbox;
     }
+
+    PanelExportacion panelExport = new PanelExportacion("Árbol B+", () -> {
+        String sel = cmbSucursal.getValue();
+        if (sel == null) return "";
+        int id = Integer.parseInt(sel.split(" - ")[0]);
+        Sucursal s = state.getCargaCSV().buscarSucursal(id);
+        if (s == null) return "";
+        return ExportarEstructuras.arbolBPlusToDot(s.getArbolBPlusCategoria(), "ArbolBPlus_S" + id);
+    }, (ruta, fmt) -> {
+        String sel = cmbSucursal.getValue();
+        if (sel == null) return false;
+
+        int id = Integer.parseInt(sel.split(" - ")[0]);
+        Sucursal s = state.getCargaCSV().buscarSucursal(id);
+        if (s == null) return false;
+
+        String dot = ExportarEstructuras.arbolBPlusToDot(s.getArbolBPlusCategoria(), "ArbolBPlus_S" + id);
+
+        return ExportarEstructuras.exportarDotAImagen(dot, ruta, fmt);
+    });
 }

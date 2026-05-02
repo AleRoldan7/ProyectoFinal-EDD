@@ -3,33 +3,35 @@ package estructuras.arbolBPlus;
 import java.util.ArrayList;
 import java.util.List;
 
-public class NodoBPlus <T extends Comparable<T>> {
+public class NodoBPlus<T extends Comparable<T>> {
 
-    private List<T> claves;
-    private List<NodoBPlus<T>> hijos;
-    NodoBPlus<T> siguiente;
+    private T[] claves;
+    private NodoBPlus<T>[] hijos;
+    private NodoBPlus<T> siguiente;
     private boolean esHoja;
+    private int numClaves;
 
-    public NodoBPlus(boolean esHoja) {
-        this.claves = new ArrayList<>();
-        this.hijos = new ArrayList<>();
-        this.siguiente = null;
+    public NodoBPlus(boolean esHoja, int orden) {
         this.esHoja = esHoja;
+        this.claves = (T[]) new Comparable[orden];
+        this.hijos = new NodoBPlus[orden + 1];
+        this.siguiente = null;
+        this.numClaves = 0;
     }
 
-    public List<T> getClaves() {
+    public T[] getClaves() {
         return claves;
     }
 
-    public void setClaves(List<T> claves) {
+    public void setClaves(T[] claves) {
         this.claves = claves;
     }
 
-    public List<NodoBPlus<T>> getHijos() {
+    public NodoBPlus<T>[] getHijos() {
         return hijos;
     }
 
-    public void setHijos(List<NodoBPlus<T>> hijos) {
+    public void setHijos(NodoBPlus<T>[] hijos) {
         this.hijos = hijos;
     }
 
@@ -47,5 +49,13 @@ public class NodoBPlus <T extends Comparable<T>> {
 
     public void setEsHoja(boolean esHoja) {
         this.esHoja = esHoja;
+    }
+
+    public int getNumClaves() {
+        return numClaves;
+    }
+
+    public void setNumClaves(int numClaves) {
+        this.numClaves = numClaves;
     }
 }

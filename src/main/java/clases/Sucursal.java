@@ -83,7 +83,7 @@ public class Sucursal {
         if (p == null) return false;
 
         lista.remove(p);
-        avlNombre.delete(p);                   // ← eliminar del AVL
+        avlNombre.delete(p);                   
         tablaHash.eliminar(codigoBarras);
         arbolBFechas.eliminar(p.getExpiryDate());
         arbolBPlusCategoria.eliminar(p.getCategory());
@@ -106,17 +106,17 @@ public class Sucursal {
         return tablaHash.buscar(codigo);
     }
 
-    public java.util.List<String> buscarPorRangoFecha(
+    public ListaEnlazada<String> buscarPorRangoFecha(
             String desde, String hasta) {
         return arbolBFechas.buscarRango(desde, hasta);
     }
 
-    public java.util.List<String> buscarPorCategoria(String categoria) {
+    public ListaEnlazada<String> buscarPorCategoria(String categoria) {
         return arbolBPlusCategoria.buscarPorCategoria(categoria);
     }
 
-    public java.util.List<Productos> listarOrdenados() {
-        return avlNombre.inOrder();
+    public ListaEnlazada<Productos> listarOrdenados() {
+        return avlNombre.inOrden();
     }
 
     public OperacionProducto deshacerUltimaOperacion() {

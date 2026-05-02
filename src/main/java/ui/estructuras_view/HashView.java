@@ -10,13 +10,15 @@ import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import ui.view.AppState;
+import ui.view.PanelExportacion;
+import utils.ExportarEstructuras;
 
 public class HashView extends VBox {
 
     private AppState state;
-    private Canvas   canvas;
+    private Canvas canvas;
     private ComboBox<String> cmbSucursal;
-    private Label    lblFactor;
+    private Label lblFactor;
 
     // Dimensiones base; se ajustan para acomodar todos los buckets
     private static final int BUCKET_H_BASE = 28;
@@ -70,7 +72,7 @@ public class HashView extends VBox {
 
         this.getChildren().addAll(
                 titulo, new Separator(),
-                controles, lblInfo, leyenda, scroll
+                controles, lblInfo, leyenda, scroll, panelExport
         );
     }
 
@@ -93,8 +95,8 @@ public class HashView extends VBox {
             return;
         }
 
-        int    capacidad   = tabla.getCapacidad();
-        int    elementos   = tabla.size();
+        int capacidad = tabla.getCapacidad();
+        int elementos = tabla.size();
         double factorCarga = tabla.factorCarga();
 
         lblFactor.setText(String.format(
@@ -105,36 +107,36 @@ public class HashView extends VBox {
         // ── Calcular layout dinámico ──
         // Elegir cuántas columnas según la capacidad
         int maxCols;
-        if      (capacidad <= 20)  maxCols = 2;
-        else if (capacidad <= 50)  maxCols = 3;
+        if (capacidad <= 20) maxCols = 2;
+        else if (capacidad <= 50) maxCols = 3;
         else if (capacidad <= 100) maxCols = 4;
         else if (capacidad <= 200) maxCols = 5;
-        else                       maxCols = 6;
+        else maxCols = 6;
 
         // Escalar tamaño de bucket para que quepan bien
-        double escala  = Math.max(0.45, Math.min(1.0, 500.0 / capacidad));
-        int    bH      = (int)(BUCKET_H_BASE * escala);
-        int    bW      = (int)(BUCKET_W_BASE * escala);
-        int    padX    = 15;
-        int    padY    = 15;
-        int    gapX    = 8;
-        int    gapY    = 5;
+        double escala = Math.max(0.45, Math.min(1.0, 500.0 / capacidad));
+        int bH = (int) (BUCKET_H_BASE * escala);
+        int bW = (int) (BUCKET_W_BASE * escala);
+        int padX = 15;
+        int padY = 15;
+        int gapX = 8;
+        int gapY = 5;
 
         // Filas necesarias (sólo buckets no-vacíos, o todos si toggle)
         int bucketsMostrados = mostrarVacios ? capacidad : (capacidad - contarVacios(tabla, capacidad));
         int filas = (int) Math.ceil((double) bucketsMostrados / maxCols);
 
         double canvasW = maxCols * (bW + gapX) + padX * 2 + 200; // +200 para cadenas de colisión
-        double canvasH = filas  * (bH + gapY) + padY * 2 + 80;
+        double canvasH = filas * (bH + gapY) + padY * 2 + 80;
 
         canvas.setWidth(Math.max(1400, canvasW));
-        canvas.setHeight(Math.max(600,  canvasH));
+        canvas.setHeight(Math.max(600, canvasH));
 
         gc.clearRect(0, 0, canvas.getWidth(), canvas.getHeight());
         gc.setFill(Color.web("#fafafa"));
         gc.fillRect(0, 0, canvas.getWidth(), canvas.getHeight());
 
-        int col  = 0;
+        int col = 0;
         int fila = 0;
         int vacios = 0;
         int colisiones = 0;
@@ -156,9 +158,9 @@ public class HashView extends VBox {
 
             // Color del bucket
             Color color;
-            if      (tam == 0) color = Color.web("#ecf0f1");   // vacío — gris claro
+            if (tam == 0) color = Color.web("#ecf0f1");   // vacío — gris claro
             else if (tam == 1) color = Color.web("#27ae60");   // sin colisión — verde
-            else               color = Color.web("#e74c3c");   // colisión — rojo
+            else color = Color.web("#e74c3c");   // colisión — rojo
 
             // Bucket principal
             gc.setFill(color);
@@ -185,7 +187,7 @@ public class HashView extends VBox {
             // Cadena de colisión (cuadraditos a la derecha)
             if (tam > 1) {
                 for (int k = 1; k < Math.min(tam, 6); k++) {
-                    double cx2 = x + bW + 3 + (k - 1) * (int)(bH * 1.1);
+                    double cx2 = x + bW + 3 + (k - 1) * (int) (bH * 1.1);
                     gc.setFill(Color.web("#c0392b"));
                     gc.fillRoundRect(cx2, y, bH, bH, 4, 4);
                     gc.setFill(Color.WHITE);
@@ -193,7 +195,7 @@ public class HashView extends VBox {
                     gc.fillText(String.valueOf(k), cx2 + bH * 0.3, y + bH / 2.0 + fontSize * 0.3);
                 }
                 if (tam > 6) {
-                    double cx2 = x + bW + 3 + 5 * (int)(bH * 1.1);
+                    double cx2 = x + bW + 3 + 5 * (int) (bH * 1.1);
                     gc.setFill(Color.web("#7f8c8d"));
                     gc.setFont(Font.font(Math.max(7, fontSize - 1)));
                     gc.fillText("+" + (tam - 6), cx2, y + bH / 2.0 + fontSize * 0.3);
@@ -228,9 +230,9 @@ public class HashView extends VBox {
         HBox hbox = new HBox(15);
         hbox.setPadding(new Insets(5));
         String[][] items = {
-                {"Sin colisión",   "#27ae60"},
+                {"Sin colisión", "#27ae60"},
                 {"Con colisión ⚠", "#e74c3c"},
-                {"Vacío",          "#ecf0f1"}
+                {"Vacío", "#ecf0f1"}
         };
         for (String[] item : items) {
             Canvas c = new Canvas(14, 14);
@@ -243,4 +245,28 @@ public class HashView extends VBox {
         }
         return hbox;
     }
+
+    PanelExportacion panelExport = new PanelExportacion(
+            "Tabla Hash",
+            () -> {
+                String sel = cmbSucursal.getValue();
+                if (sel == null) return "";
+                int id = Integer.parseInt(sel.split(" - ")[0]);
+                Sucursal s = state.getCargaCSV().buscarSucursal(id);
+                if (s == null) return "";
+                return ExportarEstructuras.hashToDot(
+                        s.getTablaHash(), "Hash_S" + id
+                );
+            },
+            (ruta, fmt) -> {
+                String sel = cmbSucursal.getValue();
+                if (sel == null) return false;
+                int id = Integer.parseInt(sel.split(" - ")[0]);
+                Sucursal s = state.getCargaCSV().buscarSucursal(id);
+                if (s == null) return false;
+                return ExportarEstructuras.exportarHashImagen(
+                        s.getTablaHash(), ruta, fmt
+                );
+            }
+    );
 }

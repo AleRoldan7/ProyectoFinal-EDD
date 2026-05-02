@@ -1,5 +1,7 @@
 package estructuras.avl;
 
+import estructuras.lista.ListaEnlazada;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -142,17 +144,17 @@ public class ArbolAVL<T extends Comparable<T>> {
     }
 
 
-    public List<T> inOrder() {
-        List<T> result = new ArrayList<>();
-        inOrder(raiz, result);
-        return result;
+    public ListaEnlazada<T> inOrden() {
+        ListaEnlazada<T> lista = new ListaEnlazada<>();
+        inOrder(raiz,lista);
+        return lista;
     }
 
-    private void inOrder(NodoAVL<T> nodo, List<T> result) {
+    private void inOrder(NodoAVL<T> nodo, ListaEnlazada<T> lista) {
         if (nodo == null) return;
-        inOrder(nodo.left, result);
-        result.add(nodo.producto);
-        inOrder(nodo.right, result);
+        inOrder(nodo.left, lista);
+        lista.agregar(nodo.producto);
+        inOrder(nodo.right, lista);
     }
 
     public NodoAVL<T> getRoot() {

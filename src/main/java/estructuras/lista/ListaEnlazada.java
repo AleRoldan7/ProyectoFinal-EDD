@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Predicate;
 
-public class ListaEnlazada<T> {
+public class ListaEnlazada<T> implements Iterable<T> {
 
     private Nodo<T> head;
     private int size;
@@ -175,5 +175,25 @@ public class ListaEnlazada<T> {
             actual = actual.next;
         }
         return null;
+    }
+
+    @Override
+    public java.util.Iterator<T> iterator() {
+        return new java.util.Iterator<T>() {
+
+            private Nodo<T> actual = head;
+
+            @Override
+            public boolean hasNext() {
+                return actual != null;
+            }
+
+            @Override
+            public T next() {
+                T dato = actual.producto;
+                actual = actual.next;
+                return dato;
+            }
+        };
     }
 }

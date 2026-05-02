@@ -2,6 +2,7 @@ package ui.view;
 
 import clases.Productos;
 import clases.Sucursal;
+import estructuras.lista.ListaEnlazada;
 import javafx.geometry.Insets;
 import javafx.scene.control.*;
 import javafx.scene.layout.*;
@@ -199,7 +200,7 @@ public class ProductosView extends VBox {
             String txt = busNombre.getText().trim();
             if (txt.isEmpty()) return;
             long t0 = System.nanoTime();
-            List<Productos> res = buscarPorNombreAVL(
+            ListaEnlazada<Productos> res = buscarPorNombreAVL(
                     txt, getSucursalSeleccionada(cmbSucBuscar)
             );
             long t  = System.nanoTime() - t0;
@@ -213,7 +214,7 @@ public class ProductosView extends VBox {
             String txt = busCodigo.getText().trim();
             if (txt.isEmpty()) return;
             long t0 = System.nanoTime();
-            List<Productos> res = buscarPorCodigoHash(
+            ListaEnlazada<Productos> res = buscarPorCodigoHash(
                     txt, getSucursalSeleccionada(cmbSucBuscar)
             );
             long t  = System.nanoTime() - t0;
@@ -227,7 +228,7 @@ public class ProductosView extends VBox {
             String txt = busCategoria.getText().trim();
             if (txt.isEmpty()) return;
             long t0 = System.nanoTime();
-            List<Productos> res = buscarPorCategoriaBPlus(
+            ListaEnlazada<Productos> res = buscarPorCategoriaBPlus(
                     txt, getSucursalSeleccionada(cmbSucBuscar)
             );
             long t  = System.nanoTime() - t0;
@@ -242,7 +243,7 @@ public class ProductosView extends VBox {
             String hasta = busFechaH.getText().trim();
             if (desde.isEmpty() || hasta.isEmpty()) return;
             long t0 = System.nanoTime();
-            List<Productos> res = buscarPorRangoFechaB(
+            ListaEnlazada<Productos> res = buscarPorRangoFechaB(
                     desde, hasta, getSucursalSeleccionada(cmbSucBuscar)
             );
             long t  = System.nanoTime() - t0;
@@ -256,7 +257,7 @@ public class ProductosView extends VBox {
             String txt = busNombre.getText().trim();
             if (txt.isEmpty()) return;
             long t0 = System.nanoTime();
-            List<Productos> res = buscarSecuencial(
+            ListaEnlazada<Productos> res = buscarSecuencial(
                     txt, getSucursalSeleccionada(cmbSucBuscar)
             );
             long t  = System.nanoTime() - t0;
@@ -337,20 +338,22 @@ public class ProductosView extends VBox {
         });
 
         btnInOrder.setOnAction(e -> {
-            List<Productos> todos;
+            ListaEnlazada<Productos> todos;
             String sel = cmbSucLista.getValue();
 
             if (sel == null || sel.startsWith("--")) {
                 // AVL global — todos los productos
-                todos = state.getAvlGlobal().inOrder();
+                todos = state.getAvlGlobal().inOrden();
             } else {
                 int id = Integer.parseInt(
                         sel.split(" - ")[0].trim()
                 );
                 Sucursal s = state.getCargaCSV().buscarSucursal(id);
-                todos = (s != null)
-                        ? s.getAvlNombre().inOrder()
-                        : List.of();
+                if (s != null) {
+                    todos = s.getAvlNombre().inOrden();
+                } else {
+                    todos = new ListaEnlazada<>();
+                }
             }
 
             mostrarEnTabla(todos, tablaInOrder);
@@ -364,11 +367,11 @@ public class ProductosView extends VBox {
             String sel = cmbSucLista.getValue();
             if (sel == null || sel.startsWith("--")) {
                 // Mostrar todos agrupados
-                List<Productos> todos =
-                        new java.util.ArrayList<>();
+                ListaEnlazada<Productos> todos =
+                        new ListaEnlazada<>();
                 for (Sucursal s :
                         state.getCargaCSV().getListaSucursales()) {
-                    todos.addAll(s.getLista().toList());
+                    todos.agregarTodos(s.getLista());
                 }
                 mostrarEnTabla(todos, tablaInOrder);
                 lblConteo.setText(
@@ -380,7 +383,7 @@ public class ProductosView extends VBox {
                 );
                 Sucursal s = state.getCargaCSV().buscarSucursal(id);
                 if (s != null) {
-                    List<Productos> lista = s.getLista().toList();
+                    ListaEnlazada<Productos> lista = s.getLista();
                     mostrarEnTabla(lista, tablaInOrder);
                     lblConteo.setText(
                             s.getNameSucursal() + ": " +
@@ -466,13 +469,18 @@ public class ProductosView extends VBox {
             if (s == null) return;
 
             Productos p = s.buscarPorCodigo(cod);
+
             if (p != null) {
-                mostrarEnTabla(List.of(p), tablaPrevia);
-                logEl.appendText("✅ Producto encontrado: "
+                ListaEnlazada<Productos> temp = new ListaEnlazada<>();
+                temp.agregar(p);
+
+                mostrarEnTabla(temp, tablaPrevia);
+
+                logEl.appendText("Producto encontrado: "
                         + p.getName() + "\n");
             } else {
                 tablaPrevia.getItems().clear();
-                logEl.appendText("❌ Código no encontrado: "
+                logEl.appendText("Código no encontrado: "
                         + cod + "\n");
             }
         });
@@ -637,87 +645,112 @@ public class ProductosView extends VBox {
     // BÚSQUEDAS
     // ─────────────────────────────────────────
 
-    private List<Productos> buscarPorNombreAVL(
+    private ListaEnlazada<Productos> buscarPorNombreAVL(
             String nombre, Sucursal filtro) {
-        List<Productos> res = new java.util.ArrayList<>();
-        List<Sucursal> lista = filtro != null
-                ? List.of(filtro)
-                : state.getCargaCSV().getListaSucursales();
+        ListaEnlazada<Productos> res = new ListaEnlazada<>();
+        ListaEnlazada<Sucursal> lista;
+
+        if (filtro != null) {
+            lista = new ListaEnlazada<>();
+            lista.agregar(filtro);
+        } else {
+            lista = state.getCargaCSV().getListaSucursales();
+        }
 
         for (Sucursal s : lista) {
             Productos p = s.buscarPorNombre(nombre);
-            if (p != null) res.add(p);
+            if (p != null) res.agregar(p);
         }
         return res;
     }
 
-    private List<Productos> buscarPorCodigoHash(
+    private ListaEnlazada<Productos> buscarPorCodigoHash(
             String codigo, Sucursal filtro) {
-        List<Productos> res = new java.util.ArrayList<>();
-        List<Sucursal> lista = filtro != null
-                ? List.of(filtro)
-                : state.getCargaCSV().getListaSucursales();
+        ListaEnlazada<Productos> res = new ListaEnlazada<>();
+        ListaEnlazada<Sucursal> lista;
+
+        if (filtro != null) {
+            lista = new ListaEnlazada<>();
+            lista.agregar(filtro);
+        } else {
+            lista = state.getCargaCSV().getListaSucursales();
+        }
 
         for (Sucursal s : lista) {
             Productos p = s.buscarPorCodigo(codigo);
-            if (p != null) res.add(p);
+            if (p != null) res.agregar(p);
         }
         return res;
     }
 
-    private List<Productos> buscarPorCategoriaBPlus(
+    private ListaEnlazada<Productos> buscarPorCategoriaBPlus(
             String cat, Sucursal filtro) {
-        List<Productos> res = new java.util.ArrayList<>();
-        List<Sucursal> lista = filtro != null
-                ? List.of(filtro)
-                : state.getCargaCSV().getListaSucursales();
+        ListaEnlazada<Productos> res = new ListaEnlazada<>();
+        ListaEnlazada<Sucursal> lista;
+
+        if (filtro != null) {
+            lista = new ListaEnlazada<>();
+            lista.agregar(filtro);
+        } else {
+            lista = state.getCargaCSV().getListaSucursales();
+        }
 
         for (Sucursal s : lista) {
             // B+ retorna claves (categorías), buscamos los productos
-            List<String> claves = s.buscarPorCategoria(cat);
+            ListaEnlazada<String> claves = s.buscarPorCategoria(cat);
             if (!claves.isEmpty()) {
                 // Buscar todos los productos de esa categoría en la lista
                 for (Productos p : s.getLista().toList()) {
                     if (p.getCategory().equalsIgnoreCase(cat))
-                        res.add(p);
+                        res.agregar(p);
                 }
             }
         }
         return res;
     }
 
-    private List<Productos> buscarPorRangoFechaB(
+    private ListaEnlazada<Productos> buscarPorRangoFechaB(
             String desde, String hasta, Sucursal filtro) {
-        List<Productos> res = new java.util.ArrayList<>();
-        List<Sucursal> lista = filtro != null
-                ? List.of(filtro)
-                : state.getCargaCSV().getListaSucursales();
+        ListaEnlazada<Productos> res = new ListaEnlazada<>();
+        ListaEnlazada<Sucursal> lista;
+
+        if (filtro != null) {
+            lista = new ListaEnlazada<>();
+            lista.agregar(filtro);
+        } else {
+            lista = state.getCargaCSV().getListaSucursales();
+        }
 
         for (Sucursal s : lista) {
-            List<String> fechas = s.buscarPorRangoFecha(desde, hasta);
+            ListaEnlazada<String> fechas = s.buscarPorRangoFecha(desde, hasta);
             for (String fecha : fechas) {
                 for (Productos p : s.getLista().toList()) {
                     if (p.getExpiryDate().equals(fecha))
-                        res.add(p);
+                        res.agregar(p);
                 }
             }
         }
         return res;
     }
 
-    private List<Productos> buscarSecuencial(
+    private ListaEnlazada<Productos> buscarSecuencial(
             String nombre, Sucursal filtro) {
-        List<Productos> res = new java.util.ArrayList<>();
-        List<Sucursal> lista = filtro != null
-                ? List.of(filtro)
-                : state.getCargaCSV().getListaSucursales();
+        ListaEnlazada<Productos> res = new ListaEnlazada<>();
+        ListaEnlazada<Sucursal> lista;
+
+        if (filtro != null) {
+            lista = new ListaEnlazada<>();
+            lista.agregar(filtro);
+        } else {
+            lista = state.getCargaCSV().getListaSucursales();
+        }
 
         for (Sucursal s : lista) {
             Productos p = s.getLista().buscar(
                     prod -> prod.getName()
                             .equalsIgnoreCase(nombre)
             );
-            if (p != null) res.add(p);
+            if (p != null) res.agregar(p);
         }
         return res;
     }
@@ -776,10 +809,10 @@ public class ProductosView extends VBox {
     // UTILIDADES
     // ─────────────────────────────────────────
 
-    private void mostrarEnTabla(List<Productos> lista,
+    private void mostrarEnTabla(ListaEnlazada<Productos> lista,
                                 TableView<Productos> tabla) {
         tabla.getItems().clear();
-        tabla.getItems().addAll(lista);
+        tabla.getItems().addAll(lista.toList());
     }
 
     private Sucursal getSucursalSeleccionada(

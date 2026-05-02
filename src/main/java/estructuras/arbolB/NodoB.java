@@ -1,34 +1,47 @@
 package estructuras.arbolB;
 
+import estructuras.nodo.Nodo;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class NodoB <T extends Comparable<T>> {
 
-    private List<T> claves;
-    private List<NodoB<T>> hijos;
+
+    private T[] claves;
+    private NodoB<T>[] hijos;
+    private int numClaves;
     private boolean esHoja;
 
-    public NodoB(boolean esHoja) {
+    public NodoB(boolean esHoja, int orden) {
         this.esHoja = esHoja;
-        this.claves = new ArrayList<>();
-        this.hijos = new ArrayList<>();
+        this.claves = (T[]) new Comparable[2 * orden - 1];
+        this.hijos = new NodoB[2 * orden];
+        this.numClaves = 0;
     }
 
-    public List<T> getClaves() {
+    public T[] getClaves() {
         return claves;
     }
 
-    public void setClaves(List<T> claves) {
+    public void setClaves(T[] claves) {
         this.claves = claves;
     }
 
-    public List<NodoB<T>> getHijos() {
+    public NodoB<T>[] getHijos() {
         return hijos;
     }
 
-    public void setHijos(List<NodoB<T>> hijos) {
+    public void setHijos(NodoB<T>[] hijos) {
         this.hijos = hijos;
+    }
+
+    public int getNumClaves() {
+        return numClaves;
+    }
+
+    public void setNumClaves(int numClaves) {
+        this.numClaves = numClaves;
     }
 
     public boolean isEsHoja() {
@@ -38,4 +51,5 @@ public class NodoB <T extends Comparable<T>> {
     public void setEsHoja(boolean esHoja) {
         this.esHoja = esHoja;
     }
+
 }

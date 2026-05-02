@@ -48,8 +48,10 @@ public class ViewMain extends BorderPane {
         Button btnB = crearBoton("Árbol B");
         Button btnBPlus = crearBoton("Árbol B+");
         Button btnHash = crearBoton("Tabla Hash");
+        Button btnEnlazada = crearBoton("Lista Enlazada");
         Button btnTransferencia = crearBoton("Transferencia");
         Button btnRendimiento = crearBoton("Rendimiento");
+        Button btnEliminar = crearBoton("Eliminar");
 
         btnCarga.setOnAction(e ->
                 mostrarVista(new CargaCSVView(state))
@@ -77,12 +79,19 @@ public class ViewMain extends BorderPane {
                 mostrarVista(new HashView(state))
         );
 
+        btnEnlazada.setOnAction(e ->
+                mostrarVista(new ListaEnlazadaView(state))
+        );
         btnTransferencia.setOnAction(e ->
-            mostrarVista(new TransferenciaView(state))
+                mostrarVista(new TransferenciaView(state))
         );
 
         btnRendimiento.setOnAction(e ->
                 mostrarVista(new RendimientoView(state))
+        );
+
+        btnEliminar.setOnAction(e ->
+            mostrarVista(new EliminacionView(state))
         );
 
         menu.getChildren().addAll(
@@ -91,10 +100,11 @@ public class ViewMain extends BorderPane {
                 new Separator(),
                 btnGrafo,
                 new Separator(),
-                btnAVL, btnB, btnBPlus, btnHash,
+                btnAVL, btnB, btnBPlus, btnHash, btnEnlazada,
                 new Separator(),
                 btnTransferencia,
-                btnRendimiento
+                btnRendimiento,
+                btnEliminar
 
         );
     }

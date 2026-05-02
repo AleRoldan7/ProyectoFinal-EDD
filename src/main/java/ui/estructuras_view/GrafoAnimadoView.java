@@ -22,8 +22,6 @@ public class GrafoAnimadoView extends VBox {
     private Canvas    canvas;
     private TextArea  salida;
     private Timeline  animacion;
-
-    // Estado de la animación
     private int[]     rutaFinal;
     private int       pasoActual;
     private boolean[] visitado;
@@ -38,7 +36,7 @@ public class GrafoAnimadoView extends VBox {
         this.setSpacing(10);
         this.setPadding(new Insets(15));
 
-        Label titulo = new Label("Grafo de Sucursales — Animación Dijkstra");
+        Label titulo = new Label("Grafo de Sucursales Animación Dijkstra");
         titulo.setStyle("-fx-font-size: 18px; -fx-font-weight: bold;");
 
         TextField txtOrigen  = new TextField();
@@ -301,7 +299,6 @@ public class GrafoAnimadoView extends VBox {
                             posX[i], posY[i], posX[j], posY[j]
                     );
 
-                    // Peso en el centro
                     double mx = (posX[i] + posX[j]) / 2;
                     double my = (posY[i] + posY[j]) / 2;
                     gc.setFill(enRuta

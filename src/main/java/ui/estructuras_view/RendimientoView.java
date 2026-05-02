@@ -2,6 +2,7 @@ package ui.estructuras_view;
 
 import clases.Productos;
 import clases.Sucursal;
+import estructuras.lista.ListaEnlazada;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -113,13 +114,13 @@ public class RendimientoView extends VBox {
     private void compararBusquedas(String termino, String selSucursal) {
         ObservableList<FilaRendimiento> filas = FXCollections.observableArrayList();
 
-        List<Sucursal> sucursales = new ArrayList<>();
+        ListaEnlazada<Sucursal> sucursales = new ListaEnlazada<>();
         if (selSucursal == null) {
-            sucursales.addAll(state.getCargaCSV().getListaSucursales());
+            sucursales.agregarTodos(state.getCargaCSV().getListaSucursales());
         } else {
             int id = Integer.parseInt(selSucursal.split(" - ")[0].trim());
             Sucursal s = state.getCargaCSV().buscarSucursal(id);
-            if (s != null) sucursales.add(s);
+            if (s != null) sucursales.agregar(s);
         }
 
         long totalLista = 0, totalAvl = 0, totalHash = 0;

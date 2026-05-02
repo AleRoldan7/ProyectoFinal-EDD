@@ -1,5 +1,7 @@
 package transferencia;
 
+import estructuras.lista.ListaEnlazada;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -7,13 +9,13 @@ public class ResultadoTransferencia {
 
     private boolean exito;
     private String mensaje;
-    private List<PasoTransferencia> pasos;
+    private ListaEnlazada<PasoTransferencia> pasos;
     private double totalSegundos;
     public int[] ruta;
 
 
     public ResultadoTransferencia() {
-        this.pasos = new ArrayList<>();
+        this.pasos = new ListaEnlazada<>();
     }
 
     public boolean isExito() {
@@ -32,11 +34,11 @@ public class ResultadoTransferencia {
         this.mensaje = mensaje;
     }
 
-    public List<PasoTransferencia> getPasos() {
+    public ListaEnlazada<PasoTransferencia> getPasos() {
         return pasos;
     }
 
-    public void setPasos(List<PasoTransferencia> pasos) {
+    public void setPasos(ListaEnlazada<PasoTransferencia> pasos) {
         this.pasos = pasos;
     }
 

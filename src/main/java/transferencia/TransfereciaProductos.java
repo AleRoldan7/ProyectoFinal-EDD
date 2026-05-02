@@ -18,219 +18,157 @@ public class TransfereciaProductos {
         this.state = state;
     }
 
-    public ResultadoTransferencia transferencia(String codigoProducto, int idOrigen, int idDestino, boolean usarTiempo) {
+    public ResultadoTransferencia transferencia(String codigoProducto, int cantidad, int idOrigen, int idDestino, boolean usarTiempo) {
+
+        resultadoTransferencia = new ResultadoTransferencia();
 
         Sucursal origen = state.getCargaCSV().buscarSucursal(idOrigen);
-
         if (origen == null) {
-            boolean exito = false;
-            resultadoTransferencia.setExito(exito);
-            resultadoTransferencia.isExito();
-
-            String mensaje = "La Sucursal no existe: " + idOrigen;
-            resultadoTransferencia.setMensaje(mensaje);
-            resultadoTransferencia.getMensaje();
-
+            resultadoTransferencia.setExito(false);
+            resultadoTransferencia.setMensaje("Sucursal origen no existe");
             return resultadoTransferencia;
         }
 
-        Productos productos = origen.buscarPorCodigo(codigoProducto);
-
-        if (productos == null) {
-
-            boolean exito = false;
-            resultadoTransferencia.setExito(exito);
-            resultadoTransferencia.isExito();
-
-            String mensaje = "Producto no encontrado en: " + origen.getNameSucursal() + ": " + codigoProducto;
-            resultadoTransferencia.setMensaje(mensaje);
-            resultadoTransferencia.getMensaje();
-
+        Productos productoBase = origen.buscarPorCodigo(codigoProducto);
+        if (productoBase == null) {
+            resultadoTransferencia.setExito(false);
+            resultadoTransferencia.setMensaje("Producto no existe en origen");
             return resultadoTransferencia;
         }
 
-        Sucursal destino = state.getCargaCSV().buscarSucursal(idDestino);
-
-        if (destino == null) {
-            boolean exito = false;
-            resultadoTransferencia.setExito(exito);
-            resultadoTransferencia.isExito();
-
-            String mensaje = "La Sucursal destino no existe: " + idDestino;
-            resultadoTransferencia.setMensaje(mensaje);
-            resultadoTransferencia.getMensaje();
-
+        if (productoBase.getStock() < cantidad) {
+            resultadoTransferencia.setExito(false);
+            resultadoTransferencia.setMensaje("Stock insuficiente");
             return resultadoTransferencia;
         }
 
         if (idOrigen == idDestino) {
-            boolean exito = false;
-            resultadoTransferencia.setExito(exito);
-            resultadoTransferencia.isExito();
+            resultadoTransferencia.setExito(false);
+            resultadoTransferencia.setMensaje("Origen y destino son iguales");
+            return resultadoTransferencia;
+        }
 
-            String mensaje = "El origen y el destino de sucursal son lo mismo: ";
-            resultadoTransferencia.setMensaje(mensaje);
-            resultadoTransferencia.getMensaje();
-
+        Sucursal destino = state.getCargaCSV().buscarSucursal(idDestino);
+        if (destino == null) {
+            resultadoTransferencia.setExito(false);
+            resultadoTransferencia.setMensaje("Sucursal destino no existe");
             return resultadoTransferencia;
         }
 
         ResultadoRuta ruta = state.getGrafo().determinaDijkstra(idOrigen, idDestino, usarTiempo);
 
         if (!ruta.tieneRuta()) {
-            boolean exito = false;
-            resultadoTransferencia.setExito(exito);
-            resultadoTransferencia.isExito();
-
-            String mensaje = "No existe ruta entre " + origen.getNameSucursal() + " y " + destino.getNameSucursal();
-            resultadoTransferencia.setMensaje(mensaje);
-            resultadoTransferencia.getMensaje();
-
+            resultadoTransferencia.setExito(false);
+            resultadoTransferencia.setMensaje("No hay ruta disponible");
             return resultadoTransferencia;
         }
 
-        resultadoTransferencia.setRuta(ruta.getRuta());
-        origen.eliminarProducto(codigoProducto);
-        productos.setStatus(Estado.TRANSITO);
-
-        double etaAcumulado = 0;
         int[] rutaIds = ruta.getRuta();
+        resultadoTransferencia.setRuta(rutaIds);
 
-        for (int i = 0; i < rutaIds.length; i++) {
-            Sucursal sucursalActual = state.getCargaCSV().buscarSucursal(rutaIds[i]);
+        for (int i = 0; i < cantidad; i++) {
 
-            if (sucursalActual == null) continue;
+            Productos unidad = new Productos(
+                    productoBase.getBranchId(),
+                    productoBase.getName(),
+                    productoBase.getBarCode(),
+                    productoBase.getCategory(),
+                    productoBase.getExpiryDate(),
+                    productoBase.getBrand(),
+                    productoBase.getPrice(),
+                    1
+            );
 
-            boolean esOrigen = (i == 0);
-            boolean esDestino = (i == rutaIds.length - 1);
-            boolean esInter = (!esOrigen && !esDestino);
+            unidad.setStatus(Estado.TRANSITO);
 
-            sucursalActual.recibirProducto(productos);
-            etaAcumulado += sucursalActual.getEntryTime();
-
-            resultadoTransferencia.getPasos().add(new PasoTransferencia(rutaIds[i], sucursalActual.getNameSucursal(),
-                    "INGRESO",
-                    (long) (sucursalActual.getEntryTime() * 1000),
-                    String.format("[%s] Ingreso procesado (+%ds) → %.0fs total", sucursalActual.getNameSucursal(),
-                            sucursalActual.getEntryTime(),
-                            etaAcumulado
-                    )
-            ));
-
-            sucursalActual.getColaIngreso().dequeue();
-
-            if (esDestino) {
-                productos.setStatus(Estado.DISPONIBLE);
-
-
-                productos.setBranchId(rutaIds[i]);
-
-                boolean ok = sucursalActual.agregarProducto(productos);
-
-                resultadoTransferencia.getPasos().add(new PasoTransferencia(
-                        rutaIds[i],
-                        sucursalActual.getNameSucursal(),
-                        "DESTINO",
-                        0,
-                        String.format(
-                                "🏁 [%s] Producto REGISTRADO en destino%s",
-                                sucursalActual.getNameSucursal(),
-                                ok ? " ✅" : " ⚠ (ya existía)"
-                        )
-                ));
-
-            } else {
-
-                sucursalActual.prepararTraspaso(productos);
-                etaAcumulado += sucursalActual.getTransferTime();
-
-                resultadoTransferencia.getPasos().add(new PasoTransferencia(
-                        rutaIds[i],
-                        sucursalActual.getNameSucursal(),
-                        "TRASPASO",
-                        (long) (sucursalActual.getTransferTime() * 1000),
-                        String.format(
-                                "[%s] Preparando traspaso (+%ds) → %.0fs",
-                                sucursalActual.getNameSucursal(),
-                                sucursalActual.getTransferTime(),
-                                etaAcumulado
-                        )
-                ));
-
-                sucursalActual.getColaTraspaso().dequeue();
-
-                sucursalActual.alistarSalida(productos);
-                etaAcumulado += sucursalActual.getDispatchInterval();
-
-                resultadoTransferencia.getPasos().add(new PasoTransferencia(
-                        rutaIds[i],
-                        sucursalActual.getNameSucursal(),
-                        "SALIDA",
-                        (long) (sucursalActual.getDispatchInterval() * 1000),
-                        String.format(
-                                "[%s] Despachando (+%ds) → %.0fs",
-                                sucursalActual.getNameSucursal(),
-                                sucursalActual.getDispatchInterval(),
-                                etaAcumulado
-                        )
-                ));
-
-                sucursalActual.despachar();
-
-                if (i + 1 < rutaIds.length) {
-                    double pesoConexion = obtenerPeso(
-                            rutaIds[i], rutaIds[i + 1], usarTiempo
-                    );
-                    etaAcumulado += pesoConexion;
-
-                    resultadoTransferencia.getPasos().add(new PasoTransferencia(
-                            rutaIds[i],
-                            sucursalActual.getNameSucursal(),
-                            "TRANSITO",
-                            (long) (pesoConexion * 1000),
-                            String.format(
-                                    "🛣  En tránsito S%d → S%d (+%.0f%s) → %.0fs",
-                                    rutaIds[i], rutaIds[i + 1],
-                                    pesoConexion,
-                                    usarTiempo ? "s" : "Q",
-                                    etaAcumulado
-                            )
-                    ));
-                }
-            }
+            procesarUnidad(unidad, rutaIds, usarTiempo);
         }
 
-        boolean exito = true;
-        resultadoTransferencia.setExito(exito);
-        resultadoTransferencia.isExito();
+        productoBase.setStock(productoBase.getStock() - cantidad);
 
-        resultadoTransferencia.setTotalSegundos(etaAcumulado);
-        resultadoTransferencia.setMensaje(String.format(
-                "✅ '%s' transferido de %s → %s en %.0f segundos (%.1f min)",
-                productos.getName(),
-                origen.getNameSucursal(),
-                destino.getNameSucursal(),
-                etaAcumulado,
-                etaAcumulado / 60.0
-        ));
+        if (productoBase.getStock() == 0) {
+            origen.eliminarProducto(codigoProducto);
+        }
+
+        resultadoTransferencia.setExito(true);
+        resultadoTransferencia.setMensaje(
+                cantidad + " unidades transferidas correctamente"
+        );
 
         return resultadoTransferencia;
     }
 
+    private void procesarUnidad(Productos p, int[] rutaIds, boolean usarTiempo) {
 
+        double eta = 0;
 
-    private double obtenerPeso(int origen, int destino,
-                               boolean usarTiempo) {
+        for (int i = 0; i < rutaIds.length; i++) {
+
+            Sucursal suc = state.getCargaCSV().buscarSucursal(rutaIds[i]);
+            if (suc == null) continue;
+
+            boolean esDestino = (i == rutaIds.length - 1);
+            boolean esIntermedia = (i > 0 && i < rutaIds.length - 1);
+
+            suc.recibirProducto(p);
+            eta += suc.getEntryTime();
+
+            resultadoTransferencia.getPasos().agregar(new PasoTransferencia(suc.getIdSucursal(), suc.getNameSucursal(), "INGRESO", suc.getEntryTime() * 1000, "Producto recibido"));
+
+            suc.getColaIngreso().dequeue();
+
+            if (esIntermedia) {
+
+                suc.prepararTraspaso(p);
+                eta += suc.getTransferTime();
+
+                resultadoTransferencia.getPasos().agregar(new PasoTransferencia(suc.getIdSucursal(), suc.getNameSucursal(), "TRASPASO", suc.getTransferTime() * 1000, "Preparando envío"));
+
+                suc.getColaTraspaso().dequeue();
+            }
+
+            if (!esDestino) {
+
+                suc.alistarSalida(p);
+                eta += suc.getDispatchInterval();
+
+                resultadoTransferencia.getPasos().agregar(new PasoTransferencia(suc.getIdSucursal(), suc.getNameSucursal(), "SALIDA", suc.getDispatchInterval() * 1000, "Producto enviado"));
+
+                suc.despachar();
+
+                double peso = obtenerPeso(rutaIds[i], rutaIds[i + 1], usarTiempo);
+
+                eta += peso;
+            }
+
+            if (esDestino) {
+
+                p.setStatus(Estado.DISPONIBLE);
+                p.setBranchId(suc.getIdSucursal());
+
+                Productos existente = suc.buscarPorCodigo(p.getBarCode());
+
+                if (existente != null) {
+                    existente.setStock(existente.getStock() + 1);
+                } else {
+                    suc.agregarProducto(p);
+                }
+
+                resultadoTransferencia.getPasos().agregar(new PasoTransferencia(suc.getIdSucursal(), suc.getNameSucursal(), "DESTINO", 0, "Producto recibido en destino"));
+            }
+        }
+
+        resultadoTransferencia.setTotalSegundos(resultadoTransferencia.getTotalSegundos() + eta);
+    }
+
+    private double obtenerPeso(int origen, int destino, boolean usarTiempo) {
         Grafo grafo = state.getGrafo();
         for (int i = 0; i < grafo.getTotalNodos(); i++) {
             if (grafo.getIdSucursal(i) == origen) {
-                estructuras.grafos.NodoArista a =
-                        grafo.getAristas(i);
+                estructuras.grafos.NodoArista a = grafo.getAristas(i);
                 while (a != null) {
                     if (a.getDestino() == destino) {
-                        return usarTiempo
-                                ? a.getTiempo()
-                                : a.getCosto();
+                        return usarTiempo ? a.getTiempo() : a.getCosto();
                     }
                     a = a.getSiguiente();
                 }

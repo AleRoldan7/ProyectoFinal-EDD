@@ -18,13 +18,12 @@ public class CargaCSV {
 
     private static final String ERROR_LOG = "errors.log";
 
-    private Sucursal[] sucursales = new Sucursal[200];
+    private Sucursal[] sucursales = new Sucursal[1000];
     private int totalSucursal = 0;
 
     public Sucursal buscarSucursal(int id) {
         for (int i = 0; i < totalSucursal; i++) {
-            if (sucursales[i].getIdSucursal() == id)
-                return sucursales[i];
+            if (sucursales[i].getIdSucursal() == id) return sucursales[i];
         }
         return null;
     }
@@ -45,8 +44,7 @@ public class CargaCSV {
                 String[] p = linea.split(",");
                 try {
                     if (p.length < 6) {
-                        logError("Sucursales línea " + numLinea
-                                + ": campos insuficientes");
+                        logError("Sucursales línea " + numLinea + ": campos insuficientes");
                         continue;
                     }
                     int id = Integer.parseInt(p[0].trim());
@@ -56,22 +54,13 @@ public class CargaCSV {
                     int tTra = Integer.parseInt(p[4].trim());
                     int tDes = Integer.parseInt(p[5].trim());
 
-                    System.out.println("Sucursal cargada: ID=" + id
-                            + " nom=" + nom
-                            + " tIng=" + tIng
-                            + " tTra=" + tTra
-                            + " tDes=" + tDes);
+                    System.out.println("Sucursal cargada: ID=" + id + " nom=" + nom + " tIng=" + tIng + " tTra=" + tTra + " tDes=" + tDes);
 
-                    sucursales[totalSucursal] =
-                            new Sucursal(id, nom, loc, tIng, tTra, tDes);
+                    sucursales[totalSucursal] = new Sucursal(id, nom, loc, tIng, tTra, tDes);
                     totalSucursal++;
 
                 } catch (NumberFormatException e) {
-                    logError("Sucursales línea " + numLinea
-                            + ": error numérico → [" + linea + "]"
-                            + " campo[3]=" + (p.length > 3 ? p[3] : "falta")
-                            + " campo[4]=" + (p.length > 4 ? p[4] : "falta")
-                            + " campo[5]=" + (p.length > 5 ? p[5] : "falta"));
+                    logError("Sucursales línea " + numLinea + ": error numérico → [" + linea + "]" + " campo[3]=" + (p.length > 3 ? p[3] : "falta") + " campo[4]=" + (p.length > 4 ? p[4] : "falta") + " campo[5]=" + (p.length > 5 ? p[5] : "falta"));
                 }
             }
             System.out.println("Sucursales: " + totalSucursal);
@@ -87,8 +76,7 @@ public class CargaCSV {
         int cargados = 0;
         int errores = 0;
 
-        try (BufferedReader br =
-                     new BufferedReader(new FileReader(archivo))) {
+        try (BufferedReader br = new BufferedReader(new FileReader(archivo))) {
 
             String linea;
             br.readLine();
@@ -102,8 +90,7 @@ public class CargaCSV {
                 String[] p = linea.split(",");
                 try {
                     if (p.length < 8) {
-                        logError("Productos línea " + numLinea
-                                + ": campos insuficientes");
+                        logError("Productos línea " + numLinea + ": campos insuficientes");
                         errores++;
                         continue;
                     }
@@ -111,6 +98,12 @@ public class CargaCSV {
                     int idSuc = Integer.parseInt(p[0].trim());
                     String nombre = p[1].trim();
                     String codigo = p[2].trim();
+
+                    if (codigo.length() != 10) {
+                        logError("Productos línea " + numLinea + ": código de barras inválido solo necesita 10 caracteres: " + codigo);
+                        errores++;
+                        continue;
+                    }
                     String categoria = p[3].trim();
                     String fecha = p[4].trim();
                     String marca = p[5].trim();
@@ -125,8 +118,7 @@ public class CargaCSV {
                         }
                     }
                     if (duplicado) {
-                        logError("Productos línea " + numLinea
-                                + ": código duplicado → " + codigo);
+                        logError("Productos línea " + numLinea + ": código duplicado → " + codigo);
                         errores++;
                         continue;
                     }
@@ -135,33 +127,26 @@ public class CargaCSV {
 
                     Sucursal suc = buscarSucursal(idSuc);
                     if (suc == null) {
-                        logError("Productos línea " + numLinea
-                                + ": sucursal inexistente ID=" + idSuc);
+                        logError("Productos línea " + numLinea + ": sucursal inexistente ID=" + idSuc);
                         errores++;
                         continue;
                     }
 
-                    Productos prod = new Productos(
-                            idSuc, nombre, codigo,
-                            categoria, fecha, marca, precio, stock
-                    );
+                    Productos prod = new Productos(idSuc, nombre, codigo, categoria, fecha, marca, precio, stock);
 
                     boolean ok = suc.agregarProducto(prod);
                     if (ok) cargados++;
                     else {
-                        logError("Productos línea " + numLinea
-                                + ": fallo inserción → " + nombre);
+                        logError("Productos línea " + numLinea + ": fallo inserción → " + nombre);
                         errores++;
                     }
 
                 } catch (NumberFormatException e) {
-                    logError("Productos línea " + numLinea
-                            + ": número inválido → " + linea);
+                    logError("Productos línea " + numLinea + ": número inválido → " + linea);
                     errores++;
                 }
             }
-            System.out.println("Cargados: " + cargados
-                    + " | Errores: " + errores);
+            System.out.println("Cargados: " + cargados + " | Errores: " + errores);
 
         } catch (IOException e) {
             System.err.println("Error: " + e.getMessage());
@@ -171,8 +156,7 @@ public class CargaCSV {
 
     private void logError(String mensaje) {
         try (FileWriter fw = new FileWriter(ERROR_LOG, true)) {
-            fw.write("[" + new java.util.Date() + "] "
-                    + mensaje + "\n");
+            fw.write("[" + new java.util.Date() + "] " + mensaje + "\n");
         } catch (IOException e) {
             System.err.println("No se pudo escribir errors.log");
         }
@@ -187,12 +171,27 @@ public class CargaCSV {
         return totalSucursal;
     }
 
-    public List<Sucursal> getListaSucursales() {
-        List<Sucursal> lista = new ArrayList<>();
+    public ListaEnlazada<Sucursal> getListaSucursales() {
+        ListaEnlazada<Sucursal> lista = new ListaEnlazada<>();
+
         for (int i = 0; i < totalSucursal; i++) {
-            lista.add(sucursales[i]);
+            lista.agregar(sucursales[i]);
         }
+
         return lista;
+    }
+
+    public boolean eliminarSucursal(int id) {
+        for (int i = 0; i < totalSucursal; i++) {
+            if (sucursales[i].getIdSucursal() == id) {
+                for (int j = i; j < totalSucursal - 1; j++)
+                    sucursales[j] = sucursales[j + 1];
+                sucursales[totalSucursal - 1] = null;
+                totalSucursal--;
+                return true;
+            }
+        }
+        return false;
     }
 }
 
