@@ -241,5 +241,5 @@ Desde las demás vistas de estructuras (AVL, Hash, Lista) también se puede expo
 
 ## Créditos
 
-Proyecto desarrollado para el curso de **Estructuras de Datos** — Universidad. 
+Proyecto desarrollado para el curso de **Estructuras de Datos** — Universidad San Carlos De Guatemala Centro Universitario De Occidente. 
 Todas las estructuras de datos son implementaciones propias sin librerías externas de colecciones.
