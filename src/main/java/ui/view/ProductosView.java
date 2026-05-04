@@ -29,7 +29,7 @@ public class ProductosView extends VBox {
         TabPane tabs = new TabPane();
         tabs.setTabClosingPolicy(TabPane.TabClosingPolicy.UNAVAILABLE);
 
-        tabs.getTabs().addAll(crearTabAgregar(), crearTabListar());
+        tabs.getTabs().addAll(crearTabAgregar(), crearTabListar(), crearTabBuscar());
 
         this.getChildren().add(tabs);
         VBox.setVgrow(tabs, Priority.ALWAYS);
