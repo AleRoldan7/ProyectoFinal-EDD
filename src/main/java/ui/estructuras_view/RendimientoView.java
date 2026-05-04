@@ -307,7 +307,6 @@ public class RendimientoView extends VBox {
 
         gc.setFill(Color.web("#95a5a6"));
         gc.setFont(Font.font(10));
-        gc.fillText("* barras en escala log₁₀ para mejor visualización", padL + 2, cH - 4);
     }
 
     private VBox crearLeyenda() {
@@ -347,13 +346,12 @@ public class RendimientoView extends VBox {
         public FilaRendimiento(String sucursal, long nsLista, boolean resLista, long nsAvl, boolean resAvl, long nsHash, boolean resHash) {
             this.sucursal = new SimpleStringProperty(sucursal);
             this.listaNs = new SimpleStringProperty(String.format("%,d", nsLista));
-            this.listaRes = new SimpleStringProperty(resLista ? "✔" : "✘");
+            this.listaRes = new SimpleStringProperty(resLista ? "Encontrado" : "No encontrado");
             this.avlNs = new SimpleStringProperty(String.format("%,d", nsAvl));
-            this.avlRes = new SimpleStringProperty(resAvl ? "✔" : "✘");
+            this.avlRes = new SimpleStringProperty(resAvl ? "Encontrado" : "No encontrado");
             this.hashNs = new SimpleStringProperty(String.format("%,d", nsHash));
-            this.hashRes = new SimpleStringProperty(resHash ? "✔" : "✘");
+            this.hashRes = new SimpleStringProperty(resHash ? "Encontrado" : "No encontrado");
 
-            // Determinar ganadora
             long min = Math.min(nsLista, Math.min(nsAvl, nsHash));
             String g;
             if (min == nsHash) g = "Hash";

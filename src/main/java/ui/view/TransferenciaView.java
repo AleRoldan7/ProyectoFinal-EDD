@@ -121,7 +121,6 @@ public class TransferenciaView extends VBox {
         btnPausar.setStyle("-fx-background-color: #e67e22; -fx-text-fill: white;" + "-fx-padding: 8 14;");
         btnReset.setStyle("-fx-background-color: #7f8c8d; -fx-text-fill: white;" + "-fx-padding: 8 14;");
 
-        // ── Botones de exportación ───────────────────────────────────────────
         Button btnExportDot = new Button("Exportar .dot");
         Button btnExportPng = new Button("Exportar PNG");
         Button btnExportJpg = new Button("Exportar JPG");

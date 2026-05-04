@@ -3,13 +3,15 @@ package ui.estructuras_view;
 import clases.Sucursal;
 import estructuras.hash.NodoTabla;
 import estructuras.hash.TablaHash;
+import estructuras.lista.ListaEnlazada;
 import javafx.geometry.Insets;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.*;
 import javafx.scene.layout.*;
-import javafx.scene.paint.Color;
+import javafx.scene.paint.*;
 import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
 import ui.view.AppState;
 import ui.view.PanelExportacion;
 import utils.ExportarEstructuras;
@@ -20,15 +22,40 @@ public class HashView extends VBox {
     private Canvas canvas;
     private ComboBox<String> cmbSucursal;
     private Label lblFactor;
-    private static final int BUCKET_H_BASE = 28;
-    private static final int BUCKET_W_BASE = 160;
+    private Tooltip tooltip;
+
+    // ── Dimensiones base ──────────────────────────────────────────────────────
+    private static final int BUCKET_H = 42;   // altura del bloque-bucket
+    private static final int BUCKET_W = 180;  // ancho del bloque-bucket
+    private static final int NODE_H = 34;   // altura de cada nodo encadenado
+    private static final int NODE_W = 176;  // ancho de cada nodo (código completo)
+    private static final int ARROW_W = 24;   // ancho de la flecha entre nodos
+    private static final int NULL_W = 32;   // ancho del bloque "null"
+    private static final int PAD_X = 18;
+    private static final int PAD_Y = 18;
+    private static final int GAP_Y = 8;    // espacio vertical entre buckets
+    private static final int NODE_GAP = 4;    // espacio horizontal entre nodos
+
+    // ── Colores ───────────────────────────────────────────────────────────────
+    private static final Color C_EMPTY_FILL = Color.web("#f1f5f9");
+    private static final Color C_EMPTY_TEXT = Color.web("#94a3b8");
+    private static final Color C_SINGLE = Color.web("#22c55e");
+    private static final Color C_WARN = Color.web("#f59e0b");
+    private static final Color C_DANGER = Color.web("#ef4444");
+    private static final Color C_NODE_EXTRA = Color.web("#f97316"); // nodos 2,3,4…
+    private static final Color C_ARROW = Color.web("#94a3b8");
+    private static final Color C_NULL_FILL = Color.web("#e2e8f0");
+    private static final Color C_NULL_TEXT = Color.web("#64748b");
+    private static final Color C_BG = Color.web("#f8fafc");
+    private static final Color C_FOOTER_TEXT = Color.web("#64748b");
+    private static final Color C_BADGE_WARN = Color.web("#b45309");
 
     public HashView(AppState state) {
         this.state = state;
         this.setSpacing(10);
         this.setPadding(new Insets(15));
 
-        Label titulo = new Label("Visualización — Tabla Hash");
+        Label titulo = new Label("Visualización Tabla Hash ");
         titulo.setStyle("-fx-font-size: 18px; -fx-font-weight: bold;");
 
         cmbSucursal = new ComboBox<>();
@@ -37,37 +64,48 @@ public class HashView extends VBox {
             cmbSucursal.getItems().add(s.getIdSucursal() + " - " + s.getNameSucursal());
         }
 
-        Button btnDibujar = new Button("Dibujar Hash");
-        btnDibujar.setStyle("-fx-background-color: #c0392b; -fx-text-fill: white; -fx-padding: 6 14;");
+        Button btnDibujar = new Button("Dibujar tabla");
+        btnDibujar.setStyle("-fx-background-color: #2563eb; -fx-text-fill: white; -fx-padding: 6 16; -fx-background-radius: 6;");
 
-        CheckBox chkMostrarVacios = new CheckBox("Mostrar buckets vacíos");
-        chkMostrarVacios.setSelected(false);
+        CheckBox chkVacios = new CheckBox("Mostrar buckets vacíos");
 
         lblFactor = new Label("Factor de carga: —");
-        lblFactor.setStyle("-fx-font-weight: bold;");
+        lblFactor.setStyle("-fx-font-weight: bold; -fx-font-size: 12px;");
 
-        Label lblInfo = new Label("Colisiones resueltas por chaining  |  Búsqueda O(1) promedio");
-        lblInfo.setStyle("-fx-text-fill: #7f8c8d;");
-
-        HBox controles = new HBox(10, new Label("Sucursal:"), cmbSucursal, btnDibujar, chkMostrarVacios, lblFactor);
+        HBox controles = new HBox(10, new Label("Sucursal:"), cmbSucursal, btnDibujar, chkVacios, lblFactor);
         controles.setStyle("-fx-alignment: center-left;");
-
-        canvas = new Canvas(1400, 800);
-        ScrollPane scroll = new ScrollPane(canvas);
-        scroll.setPrefHeight(680);
-        scroll.setFitToWidth(false);
 
         HBox leyenda = crearLeyenda();
 
-        btnDibujar.setOnAction(e -> dibujar(chkMostrarVacios.isSelected()));
-        chkMostrarVacios.setOnAction(e -> dibujar(chkMostrarVacios.isSelected()));
+        Label lblInfo = new Label("Resolución de colisiones por encadenamiento colocarse sobre un nodo para ver detalles");
+        lblInfo.setStyle("-fx-text-fill: #64748b; -fx-font-size: 12px;");
+
+        canvas = new Canvas(1200, 600);
+        ScrollPane scroll = new ScrollPane(canvas);
+        scroll.setPrefHeight(660);
+        scroll.setFitToWidth(false);
+        scroll.setStyle("-fx-background: #f8fafc; -fx-background-color: #f8fafc;");
+
+        tooltip = new Tooltip();
+        tooltip.setStyle("-fx-font-size: 12px; -fx-background-radius: 6; -fx-padding: 8 12;");
+        canvas.setOnMouseMoved(e -> mostrarTooltip(e.getX(), e.getY(), e.getScreenX(), e.getScreenY()));
+        canvas.setOnMouseExited(e -> tooltip.hide());
+
+        btnDibujar.setOnAction(e -> dibujar(chkVacios.isSelected()));
+        chkVacios.setOnAction(e -> dibujar(chkVacios.isSelected()));
 
         this.getChildren().addAll(titulo, new Separator(), controles, lblInfo, leyenda, scroll, panelExport);
     }
 
+    private record HitArea(double x, double y, double w, double h, int bucket, int nodoIdx, String clave, int totalEnBucket) {
+    }
+
+    private final ListaEnlazada<HitArea> hitAreas = new ListaEnlazada<>();
+
     private void dibujar(boolean mostrarVacios) {
-        String sel = cmbSucursal.getValue();
+        hitAreas.clear();
         GraphicsContext gc = canvas.getGraphicsContext2D();
+        String sel = cmbSucursal.getValue();
 
         TablaHash tabla = null;
         if (sel != null) {
@@ -78,153 +116,187 @@ public class HashView extends VBox {
 
         if (tabla == null || tabla.isEmpty()) {
             gc.clearRect(0, 0, canvas.getWidth(), canvas.getHeight());
-            gc.setFill(Color.GRAY);
-            gc.setFont(Font.font(14));
-            gc.fillText("Tabla Hash vacía carga productos primero", 300, 200);
+            gc.setFill(Color.web("#64748b"));
+            gc.setFont(Font.font("System", 14));
+            gc.fillText("Tabla Hash vacía — carga productos primero.", 40, 80);
             return;
         }
 
         int capacidad = tabla.getCapacidad();
         int elementos = tabla.size();
         double factorCarga = tabla.factorCarga();
+        lblFactor.setText(String.format("Factor de carga: %.3f  (%d elem. / %d buckets)", factorCarga, elementos, capacidad));
 
-        lblFactor.setText(String.format("Factor de carga: %.3f  (%d elementos / %d buckets)", factorCarga, elementos, capacidad));
+        int filasMostradas = 0;
+        int maxCadena = 0;
+        for (int i = 0; i < capacidad; i++) {
+            int tam = tabla.tamanioBucket(i);
+            if (tam > 0 || mostrarVacios) filasMostradas++;
+            if (tam > maxCadena) maxCadena = tam;
+        }
 
-        int maxCols;
-        if (capacidad <= 20) maxCols = 2;
-        else if (capacidad <= 50) maxCols = 3;
-        else if (capacidad <= 100) maxCols = 4;
-        else if (capacidad <= 200) maxCols = 5;
-        else maxCols = 6;
+        double canvasW = PAD_X * 2 + BUCKET_W + ARROW_W + (long) maxCadena * (NODE_W + NODE_GAP + ARROW_W) + NULL_W + 20;
+        double canvasH = PAD_Y + (long) filasMostradas * (BUCKET_H + GAP_Y) + PAD_Y + 24;
 
-        double escala = Math.max(0.45, Math.min(1.0, 500.0 / capacidad));
-        int bH = (int) (BUCKET_H_BASE * escala);
-        int bW = (int) (BUCKET_W_BASE * escala);
-        int padX = 15;
-        int padY = 15;
-        int gapX = 8;
-        int gapY = 5;
+        canvas.setWidth(Math.max(1200, canvasW));
+        canvas.setHeight(Math.max(500, canvasH));
 
-        int bucketsMostrados = mostrarVacios ? capacidad : (capacidad - contarVacios(tabla, capacidad));
-        int filas = (int) Math.ceil((double) bucketsMostrados / maxCols);
-
-        double canvasW = maxCols * (bW + gapX) + padX * 2 + 200;
-        double canvasH = filas * (bH + gapY) + padY * 2 + 80;
-
-        canvas.setWidth(Math.max(1400, canvasW));
-        canvas.setHeight(Math.max(600, canvasH));
-
-        gc.clearRect(0, 0, canvas.getWidth(), canvas.getHeight());
-        gc.setFill(Color.web("#fafafa"));
+        gc.setFill(C_BG);
         gc.fillRect(0, 0, canvas.getWidth(), canvas.getHeight());
 
-        int col = 0;
         int fila = 0;
         int vacios = 0;
         int colisiones = 0;
 
-        double fontSize = Math.max(8, bH * 0.36);
-
         for (int i = 0; i < capacidad; i++) {
             int tam = tabla.tamanioBucket(i);
-
             if (tam == 0) {
                 vacios++;
                 if (!mostrarVacios) continue;
             }
-
             if (tam > 1) colisiones++;
 
-            double x = padX + col * (bW + gapX);
-            double y = padY + fila * (bH + gapY);
+            double y = PAD_Y + (long) fila * (BUCKET_H + GAP_Y);
+            double x = PAD_X;
 
-            // Color del bucket
-            Color color;
-            if (tam == 0) color = Color.web("#ecf0f1");
-            else if (tam == 1) color = Color.web("#27ae60"); /* Sin colisiones */
-            else if (tam <= 3) color = Color.web("#f39c12"); /* Con 3 colisiones o menos*/
-            else color = Color.web("#c0392b"); /* Mas de 4 colisones */
+            dibujarBucket(gc, x, y, i, tam);
 
-            // Bucket principal
-            gc.setFill(color);
-            gc.fillRoundRect(x, y, bW, bH, 5, 5);
-            gc.setStroke(tam == 0 ? Color.web("#bdc3c7") : Color.WHITE);
-            gc.setLineWidth(0.8);
-            gc.strokeRoundRect(x, y, bW, bH, 5, 5);
+            if (tam > 0) {
+                NodoTabla nodo = tabla.getBuckets()[i];
+                int k = 0;
+                double nodeX = x + BUCKET_W + ARROW_W;
 
-            // Texto
-            gc.setFill(tam == 0 ? Color.web("#95a5a6") : Color.WHITE);
-            gc.setFont(Font.font(fontSize));
-            String txt;
-            if (tam == 0) {
-                txt = String.format("[%d] vacío", i);
-            } else {
-                txt = String.format("[%d] %d elem%s", i, tam, tam > 1 ?  " ": "");
+                while (nodo != null) {
+                    double fromX = (k == 0) ? x + BUCKET_W : nodeX - ARROW_W;
+                    double arrowY = y + BUCKET_H / 2.0;
+                    dibujarFlecha(gc, fromX, arrowY, nodeX, arrowY);
+
+                    Color colorNodo = (k == 0 && tam == 1) ? C_SINGLE : (k == 0) ? C_WARN : C_NODE_EXTRA;
+                    double nodeY = y + (BUCKET_H - NODE_H) / 2.0;
+                    dibujarNodo(gc, nodeX, nodeY, NODE_W, NODE_H, colorNodo, k, nodo.getClave());
+
+                    hitAreas.agregar(new HitArea(nodeX, nodeY, NODE_W, NODE_H, i, k, nodo.getClave(), tam));
+
+                    if (nodo.getSiguiente() == null) {
+                        double nullFromX = nodeX + NODE_W;
+                        dibujarFlecha(gc, nullFromX, arrowY, nullFromX + ARROW_W, arrowY);
+                        dibujarNull(gc, nullFromX + ARROW_W, nodeY);
+                    }
+
+                    nodo = nodo.getSiguiente();
+                    nodeX += NODE_W + NODE_GAP + ARROW_W;
+                    k++;
+                }
             }
-            // Truncar si no cabe
-            while (txt.length() * fontSize * 0.58 > bW - 6 && txt.length() > 5)
-                txt = txt.substring(0, txt.length() - 1);
-            gc.fillText(txt, x + 4, y + bH / 2.0 + fontSize * 0.35);
-
-            NodoTabla nodActual = tabla.getBuckets()[i];
-            int k = 0;
-
-            while (nodActual != null) {
-
-                double cx2 = x + bW + 5 + k * (bW * 0.75);
-
-                gc.setFill(Color.web("#e67e22")); // naranja para elementos
-                gc.fillRoundRect(cx2, y, bW * 0.7, bH, 5, 5);
-
-                gc.setStroke(Color.WHITE);
-                gc.strokeRoundRect(cx2, y, bW * 0.7, bH, 5, 5);
-
-                gc.setFill(Color.WHITE);
-                gc.setFont(Font.font(Math.max(8, fontSize)));
-
-                String clave = nodActual.getClave();
-
-                // recortar texto si es largo
-                if (clave.length() > 8) clave = clave.substring(0, 7) + "...";
-
-                gc.fillText(clave, cx2 + 5, y + bH / 2.0 + fontSize * 0.3);
-
-                nodActual = nodActual.getSiguiente();
-                k++;
-            }
-
-            col++;
-            if (col >= maxCols) {
-                col = 0;
-                fila++;
-            }
+            fila++;
         }
 
-        double resY = padY + (fila + 1) * (bH + gapY) + 20;
-        gc.setFill(Color.web("#2c3e50"));
-        gc.setFont(Font.font(12));
-        gc.fillText(String.format("Total: %d buckets  |  Ocupados: %d  |  Vacíos: %d  |  Buckets con colisión: %d", capacidad, capacidad - vacios, vacios, colisiones), padX, resY);
+        gc.setFill(C_FOOTER_TEXT);
+        gc.setFont(Font.font("System", 11));
+        double footY = PAD_Y + (long) fila * (BUCKET_H + GAP_Y) + 16;
+        gc.fillText(String.format("Total: %d buckets  ·  Ocupados: %d  ·  Vacíos: %d  ·  Buckets con colisión: %d", capacidad, capacidad - vacios, vacios, colisiones), PAD_X, footY);
     }
 
-    private int contarVacios(TablaHash tabla, int capacidad) {
-        int v = 0;
-        for (int i = 0; i < capacidad; i++)
-            if (tabla.tamanioBucket(i) == 0) v++;
-        return v;
+    private void dibujarBucket(GraphicsContext gc, double x, double y, int idx, int tam) {
+        Color fill = tam == 0 ? C_EMPTY_FILL : tam == 1 ? C_SINGLE : tam <= 3 ? C_WARN : C_DANGER;
+
+        gc.setFill(fill);
+        gc.fillRoundRect(x, y, BUCKET_W, BUCKET_H, 8, 8);
+        gc.setStroke(tam == 0 ? Color.web("#cbd5e1") : fill.darker());
+        gc.setLineWidth(0.8);
+        gc.strokeRoundRect(x, y, BUCKET_W, BUCKET_H, 8, 8);
+
+        gc.setFill(Color.color(0, 0, 0, 0.18));
+        gc.fillRoundRect(x + 5, y + 7, 30, BUCKET_H - 14, 5, 5);
+        gc.setFill(tam == 0 ? C_EMPTY_TEXT : Color.WHITE);
+        gc.setFont(Font.font("System", FontWeight.BOLD, 12));
+        gc.setTextBaseline(javafx.geometry.VPos.CENTER);
+        gc.fillText(String.valueOf(idx), x + 20, y + BUCKET_H / 2.0);
+
+        if (tam == 0) {
+            gc.setFill(C_EMPTY_TEXT);
+            gc.setFont(Font.font("System", 12));
+            gc.fillText("vacío", x + 44, y + BUCKET_H / 2.0);
+        } else {
+            gc.setFill(Color.WHITE);
+            gc.setFont(Font.font("System", FontWeight.BOLD, 12));
+            String label = tam == 1 ? "1 elemento" : tam + " elementos";
+            gc.fillText(label, x + 44, y + BUCKET_H / 2.0);
+
+            if (tam > 1) {
+                double bx = x + BUCKET_W - 80;
+                gc.setFill(Color.color(0, 0, 0, 0.18));
+                gc.fillRoundRect(bx, y + 8, 74, BUCKET_H - 16, 5, 5);
+                gc.setFill(Color.WHITE);
+                gc.setFont(Font.font("System", FontWeight.BOLD, 10));
+                gc.fillText("colisión", bx + 8, y + BUCKET_H / 2.0);
+            }
+        }
     }
+
+    private void dibujarNodo(GraphicsContext gc, double x, double y, double w, double h, Color color, int idx, String clave) {
+        gc.setFill(color);
+        gc.fillRoundRect(x, y, w, h, 5, 5);
+        gc.setStroke(color.brighter());
+        gc.setLineWidth(0.8);
+        gc.strokeRoundRect(x, y, w, h, 5, 5);
+
+        gc.setFill(Color.color(0, 0, 0, 0.2));
+        gc.fillRoundRect(x + 3, y + 4, 17, h - 8, 3, 3);
+        gc.setFill(Color.WHITE);
+        gc.setFont(Font.font("System", FontWeight.BOLD, 9));
+        gc.fillText(String.valueOf(idx), x + 7, y + h / 2.0);
+
+        gc.setFill(Color.WHITE);
+        gc.setFont(Font.font("Monospaced", 11));
+        gc.fillText(clave, x + 24, y + h / 2.0);
+    }
+
+
+    private void dibujarNull(GraphicsContext gc, double x, double y) {
+        gc.setFill(C_NULL_FILL);
+        gc.fillRoundRect(x, y + (BUCKET_H - NODE_H) / 2.0 + 4, NULL_W, NODE_H - 8, 4, 4);
+        gc.setFill(C_NULL_TEXT);
+        gc.setFont(Font.font("System", FontWeight.BOLD, 9));
+        gc.fillText("null", x + 4, y + (BUCKET_H - NODE_H) / 2.0 + NODE_H / 2.0);
+    }
+
+    private void dibujarFlecha(GraphicsContext gc, double x1, double y, double x2, double yEnd) {
+        gc.setStroke(C_ARROW);
+        gc.setLineWidth(1.5);
+        gc.strokeLine(x1, y, x2 - 7, y);
+        // Punta de flecha
+        gc.setFill(C_ARROW);
+        gc.fillPolygon(new double[]{x2, x2 - 8, x2 - 8}, new double[]{y, y - 4, y + 4}, 3);
+    }
+
+    private void mostrarTooltip(double mx, double my, double screenX, double screenY) {
+        for (HitArea h : hitAreas) {
+            if (mx >= h.x() && mx <= h.x() + h.w() && my >= h.y() && my <= h.y() + h.h()) {
+                String warn = h.totalEnBucket() > 1 ? "Colisión — " + h.totalEnBucket() + " elementos en bucket " + h.bucket() : "Sin colisión";
+                tooltip.setText("Bucket: " + h.bucket() + "\n" + "Nodo:   #" + h.nodoIdx() + (h.nodoIdx() == 0 && h.totalEnBucket() > 1 ? " (primero en cadena)" : "") + "\n" + "Código: " + h.clave() + "\n" + warn);
+                tooltip.show(canvas, screenX + 14, screenY - 10);
+                return;
+            }
+        }
+        tooltip.hide();
+    }
+
 
     private HBox crearLeyenda() {
-        HBox hbox = new HBox(15);
-        hbox.setPadding(new Insets(5));
-        String[][] items = {{"Sin colisión", "#27ae60"}, {"Con colisión ⚠", "#e74c3c"}, {"Vacío", "#ecf0f1"}};
+        HBox hbox = new HBox(16);
+        hbox.setPadding(new Insets(6, 0, 6, 0));
+        hbox.setStyle("-fx-alignment: center-left;");
+
+        String[][] items = {{"Sin colisión (1 elem)", "#22c55e"}, {"Colisión leve (2–3 elem)", "#f59e0b"}, {"Colisión grave (4+ elem)", "#ef4444"}, {"Nodo encadenado extra", "#f97316"}, {"Vacío", "#e2e8f0"},};
         for (String[] item : items) {
-            Canvas c = new Canvas(14, 14);
-            GraphicsContext gc = c.getGraphicsContext2D();
-            gc.setFill(Color.web(item[1]));
-            gc.fillRoundRect(0, 0, 14, 14, 4, 4);
+            Canvas dot = new Canvas(13, 13);
+            GraphicsContext g = dot.getGraphicsContext2D();
+            g.setFill(Color.web(item[1]));
+            g.fillRoundRect(0, 0, 13, 13, 4, 4);
             Label l = new Label(item[0]);
-            l.setStyle("-fx-font-size: 12px;");
-            hbox.getChildren().addAll(c, l);
+            l.setStyle("-fx-font-size: 12px; -fx-text-fill: #475569;");
+            hbox.getChildren().addAll(dot, l);
         }
         return hbox;
     }

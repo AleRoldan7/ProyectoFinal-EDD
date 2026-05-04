@@ -51,7 +51,7 @@ public class AvlView extends VBox {
         Button btnDibujar = new Button("Dibujar AVL");
         btnDibujar.setStyle("-fx-background-color: #27ae60;" + "-fx-text-fill: white; -fx-padding: 6 14;");
 
-        Button btnInOrder = new Button("📋 Ver inOrder");
+        Button btnInOrder = new Button("Ver inOrder");
         btnInOrder.setStyle("-fx-background-color: #8e44ad;" + "-fx-text-fill: white; -fx-padding: 6 14;");
 
         Button btnSubir = new Button("Subir niveles");

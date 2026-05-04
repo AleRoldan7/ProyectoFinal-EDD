@@ -32,7 +32,7 @@ public class EliminacionView extends VBox {
         TabPane tabPane = new TabPane();
         tabPane.setTabClosingPolicy(TabPane.TabClosingPolicy.UNAVAILABLE);
 
-        tabPane.getTabs().addAll(tabEliminarProductoSucursal(), tabEliminarProductoGlobal(), tabEliminarSucursal(), tabRebalanceo());
+        tabPane.getTabs().addAll(tabEliminarProductoSucursal(), tabEliminarProductoGlobal(), tabEliminarSucursal());
 
         this.getChildren().add(tabPane);
         VBox.setVgrow(tabPane, javafx.scene.layout.Priority.ALWAYS);
@@ -79,16 +79,6 @@ public class EliminacionView extends VBox {
         btnEliminar.setText("Eliminar");
         btnDeshacer.setText("Deshacer");
 
-        TextArea txtPrevia = new TextArea();
-        txtPrevia.setEditable(false);
-        txtPrevia.setPrefHeight(80);
-        txtPrevia.setStyle("-fx-font-family: monospace; -fx-font-size: 11px;");
-
-        Label lblAVL = new Label("AVL de la sucursal (antes y después):");
-        Canvas canvasAntes = new Canvas(450, 260);
-        Canvas canvasDespues = new Canvas(450, 260);
-        HBox canvases = new HBox(10, new VBox(5, new Label("Antes:"), canvasAntes), new VBox(5, new Label("Después:"), canvasDespues));
-
         TextArea log = new TextArea();
         log.setEditable(false);
         log.setPrefHeight(130);
@@ -107,11 +97,9 @@ public class EliminacionView extends VBox {
 
             Productos p = s.buscarPorCodigo(cod);
             if (p != null) {
-                txtPrevia.setText(formatearProducto(p));
                 log.appendText("Encontrado: " + p.getName() + "\n");
-                dibujarAVL(canvasAntes, s.getAvlNombre(), null, "Estado actual");
+
             } else {
-                txtPrevia.setText("Producto no encontrado: " + cod);
                 log.appendText("No encontrado: " + cod + "\n");
             }
         });
@@ -127,7 +115,7 @@ public class EliminacionView extends VBox {
             Sucursal s = appState.getCargaCSV().buscarSucursal(id);
             if (s == null) return;
 
-            dibujarAVL(canvasAntes, s.getAvlNombre(), null, "Antes");
+
 
             Productos p = s.buscarPorCodigo(cod);
             if (p == null) {
@@ -139,9 +127,7 @@ public class EliminacionView extends VBox {
             boolean ok = s.eliminarProducto(cod);
 
             if (ok) {
-                dibujarAVL(canvasDespues, s.getAvlNombre(), null, "Después (rebalanceado)");
                 log.appendText(String.format("'%s' eliminado de %s\n" + "   AVL rebalanceado | Hash actualizado\n" + "   Árbol B y B+ actualizados\n", nombre, s.getNameSucursal()));
-                txtPrevia.clear();
                 cargarProductos(cmbSuc, cmbProd);
             } else {
                 log.appendText("Error al eliminar: " + cod + "\n");
@@ -160,7 +146,7 @@ public class EliminacionView extends VBox {
 
             clases.OperacionProducto op = s.deshacerUltimaOperacion();
             if (op != null) {
-                dibujarAVL(canvasDespues, s.getAvlNombre(), null, "Después del rollback");
+
                 log.appendText("Deshecho: " + op + "\n");
                 cargarProductos(cmbSuc, cmbProd);
             } else {
@@ -177,7 +163,7 @@ public class EliminacionView extends VBox {
 
         HBox botones = new HBox(10, btnEliminar, btnDeshacer);
 
-        root.getChildren().addAll(titulo, desc, new Separator(), form, botones, new Label("Vista previa:"), txtPrevia, lblAVL, canvases, new Label("Log:"), log);
+        root.getChildren().addAll(titulo, desc, new Separator(), form, botones,  new Label("Log:"), log);
 
         ScrollPane scroll = new ScrollPane(root);
         scroll.setFitToWidth(true);
