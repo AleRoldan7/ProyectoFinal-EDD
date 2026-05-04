@@ -1,0 +1,13 @@
+ID,Nombre,Ubicacion,t_ingreso,t_traspaso,t_despacho
+1,Central Guatemala,Ciudad de Guatemala,5,3,10
+2,Sucursal Xela,Quetzaltenango,8,4,12
+3,Sucursal Antigua,Antigua Guatemala,6,3,8
+4,Sucursal Coban,Alta Verapaz,7,4,11
+5,Sucursal Peten,Flores Peten,10,5,15
+6,Sucursal Escuintla,Escuintla,6,3,9
+7,Sucursal Huehue,Huehuetenango,9,5,13
+8,Sucursal Jutiapa,Jutiapa,7,4,11
+9,Sucursal Jalapa,Jalapa,6,3,10
+10,Sucursal Izabal,Puerto Barrios,8,4,12
+11,Sucursal Retalhuleu,Retalhuleu,7,3,10
+12,Sucursal Chiquimula,Chiquimula,6,4,11

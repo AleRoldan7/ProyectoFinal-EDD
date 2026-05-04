@@ -10,8 +10,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
+
 
 public class CargaCSV {
 
@@ -60,7 +59,7 @@ public class CargaCSV {
                     totalSucursal++;
 
                 } catch (NumberFormatException e) {
-                    logError("Sucursales línea " + numLinea + ": error numérico → [" + linea + "]" + " campo[3]=" + (p.length > 3 ? p[3] : "falta") + " campo[4]=" + (p.length > 4 ? p[4] : "falta") + " campo[5]=" + (p.length > 5 ? p[5] : "falta"));
+                    logError("Sucursales línea " + numLinea + ": error numérico: [" + linea + "]" + " campo[3]=" + (p.length > 3 ? p[3] : "falta") + " campo[4]=" + (p.length > 4 ? p[4] : "falta") + " campo[5]=" + (p.length > 5 ? p[5] : "falta"));
                 }
             }
             System.out.println("Sucursales: " + totalSucursal);
@@ -118,7 +117,7 @@ public class CargaCSV {
                         }
                     }
                     if (duplicado) {
-                        logError("Productos línea " + numLinea + ": código duplicado → " + codigo);
+                        logError("Productos línea " + numLinea + ": código duplicado: " + codigo);
                         errores++;
                         continue;
                     }
@@ -137,12 +136,12 @@ public class CargaCSV {
                     boolean ok = suc.agregarProducto(prod);
                     if (ok) cargados++;
                     else {
-                        logError("Productos línea " + numLinea + ": fallo inserción → " + nombre);
+                        logError("Productos línea " + numLinea + ": fallo inserción: " + nombre);
                         errores++;
                     }
 
                 } catch (NumberFormatException e) {
-                    logError("Productos línea " + numLinea + ": número inválido → " + linea);
+                    logError("Productos línea " + numLinea + ": número inválido: " + linea);
                     errores++;
                 }
             }
@@ -181,6 +180,16 @@ public class CargaCSV {
         return lista;
     }
 
+    public boolean agregarSucursal(Sucursal s) {
+        if (totalSucursal >= sucursales.length) return false;
+
+        if (buscarSucursal(s.getIdSucursal()) != null) return false;
+
+        sucursales[totalSucursal] = s;
+        totalSucursal++;
+        return true;
+    }
+
     public boolean eliminarSucursal(int id) {
         for (int i = 0; i < totalSucursal; i++) {
             if (sucursales[i].getIdSucursal() == id) {
@@ -193,5 +202,7 @@ public class CargaCSV {
         }
         return false;
     }
+
+
 }
 

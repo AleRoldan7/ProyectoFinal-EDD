@@ -2,9 +2,6 @@ package estructuras.avl;
 
 import estructuras.lista.ListaEnlazada;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class ArbolAVL<T extends Comparable<T>> {
 
     private NodoAVL<T> raiz;

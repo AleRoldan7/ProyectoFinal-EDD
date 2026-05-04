@@ -54,7 +54,7 @@ public class TransferenciaView extends VBox {
     private int[] rutaAnimacion;
 
     private double[] posX, posY;
-    private static final int RADIO    = 28;
+    private static final int RADIO = 28;
     private static final int CANVAS_W = 1500;
     private static final int CANVAS_H = 1000;
 
@@ -71,9 +71,6 @@ public class TransferenciaView extends VBox {
         VBox.setVgrow(tabs, Priority.ALWAYS);
     }
 
-    // ─────────────────────────────────────────────────────────────────────────
-    // TAB: Transferir
-    // ─────────────────────────────────────────────────────────────────────────
     private Tab crearTabTransferir() {
         Tab tab = new Tab("Transferir Producto");
         VBox root = new VBox(12);
@@ -105,7 +102,7 @@ public class TransferenciaView extends VBox {
 
         ToggleGroup grupo = new ToggleGroup();
         rbTiempo = new RadioButton("Mínimo tiempo");
-        rbCosto  = new RadioButton("Menor costo");
+        rbCosto = new RadioButton("Menor costo");
         rbTiempo.setToggleGroup(grupo);
         rbCosto.setToggleGroup(grupo);
         rbTiempo.setSelected(true);
@@ -117,34 +114,27 @@ public class TransferenciaView extends VBox {
         sldVel.setMajorTickUnit(1000);
 
         Button btnTransferir = new Button("Transferir");
-        Button btnPausar     = new Button("Pausar");
-        Button btnReset      = new Button("Reset");
+        Button btnPausar = new Button("Pausar");
+        Button btnReset = new Button("Reset");
 
-        btnTransferir.setStyle("-fx-background-color: #27ae60; -fx-text-fill: white;" +
-                "-fx-font-size: 13px; -fx-padding: 8 20;");
-        btnPausar.setStyle("-fx-background-color: #e67e22; -fx-text-fill: white;" +
-                "-fx-padding: 8 14;");
-        btnReset.setStyle("-fx-background-color: #7f8c8d; -fx-text-fill: white;" +
-                "-fx-padding: 8 14;");
+        btnTransferir.setStyle("-fx-background-color: #27ae60; -fx-text-fill: white;" + "-fx-font-size: 13px; -fx-padding: 8 20;");
+        btnPausar.setStyle("-fx-background-color: #e67e22; -fx-text-fill: white;" + "-fx-padding: 8 14;");
+        btnReset.setStyle("-fx-background-color: #7f8c8d; -fx-text-fill: white;" + "-fx-padding: 8 14;");
 
         // ── Botones de exportación ───────────────────────────────────────────
         Button btnExportDot = new Button("Exportar .dot");
         Button btnExportPng = new Button("Exportar PNG");
         Button btnExportJpg = new Button("Exportar JPG");
 
-        btnExportDot.setStyle("-fx-background-color: #8e44ad; -fx-text-fill: white;" +
-                "-fx-padding: 8 14;");
-        btnExportPng.setStyle("-fx-background-color: #2980b9; -fx-text-fill: white;" +
-                "-fx-padding: 8 14;");
-        btnExportJpg.setStyle("-fx-background-color: #16a085; -fx-text-fill: white;" +
-                "-fx-padding: 8 14;");
+        btnExportDot.setStyle("-fx-background-color: #8e44ad; -fx-text-fill: white;" + "-fx-padding: 8 14;");
+        btnExportPng.setStyle("-fx-background-color: #2980b9; -fx-text-fill: white;" + "-fx-padding: 8 14;");
+        btnExportJpg.setStyle("-fx-background-color: #16a085; -fx-text-fill: white;" + "-fx-padding: 8 14;");
 
         btnExportDot.setOnAction(e -> exportarDot());
         btnExportPng.setOnAction(e -> exportarImagen("png"));
         btnExportJpg.setOnAction(e -> exportarImagen("jpg"));
 
         HBox botonesExport = new HBox(10, btnExportDot, btnExportPng, btnExportJpg);
-        // ────────────────────────────────────────────────────────────────────
 
         canvasEstado = new Canvas(CANVAS_W, CANVAS_H);
         canvasEstado.setStyle("-fx-border-color: #bdc3c7; -fx-border-width: 1;");
@@ -166,12 +156,7 @@ public class TransferenciaView extends VBox {
         tabla = crearTablaLog();
         tabla.setPrefHeight(180);
 
-        HBox leyenda = new HBox(15,
-                itemLeyenda("#2980b9", "Sin visitar"),
-                itemLeyenda("#f39c12", "Procesando"),
-                itemLeyenda("#e74c3c", "Ya procesado"),
-                itemLeyenda("#27ae60", "Destino OK")
-        );
+        HBox leyenda = new HBox(15, itemLeyenda("#2980b9", "Sin visitar"), itemLeyenda("#f39c12", "Procesando"), itemLeyenda("#e74c3c", "Ya procesado"), itemLeyenda("#27ae60", "Destino OK"));
 
         btnTransferir.setOnAction(e -> iniciarTransferencia(sldVel.getValue()));
 
@@ -189,8 +174,8 @@ public class TransferenciaView extends VBox {
 
         btnReset.setOnAction(e -> {
             if (animacion != null) animacion.stop();
-            pasoActual    = 0;
-            pasos         = null;
+            pasoActual = 0;
+            pasos = null;
             rutaAnimacion = null;
             tabla.getItems().clear();
             btnPausar.setText("Pausar");
@@ -204,8 +189,8 @@ public class TransferenciaView extends VBox {
         form.setHgap(15);
         form.setVgap(10);
 
-        form.addRow(0, etiqueta("Origen:"),   cmbOrigen,  etiqueta("Producto:"), cmbProducto);
-        form.addRow(1, etiqueta("Destino:"),  cmbDestino, new HBox(15, rbTiempo, rbCosto));
+        form.addRow(0, etiqueta("Origen:"), cmbOrigen, etiqueta("Producto:"), cmbProducto);
+        form.addRow(1, etiqueta("Destino:"), cmbDestino, new HBox(15, rbTiempo, rbCosto));
         form.addRow(2, lblVel, sldVel);
         form.addRow(3, etiqueta("Cantidad:"), txtCantidad, chkTodo);
 
@@ -214,15 +199,7 @@ public class TransferenciaView extends VBox {
         Label lblExport = new Label("Exportar grafo:");
         lblExport.setStyle("-fx-font-weight: bold;");
 
-        root.getChildren().addAll(
-                titulo, new Separator(),
-                form, botones,
-                new Separator(),
-                lblExport, botonesExport,
-                new Separator(),
-                leyenda, canvasEstado,
-                new Label("Log de transferencia:"), tabla
-        );
+        root.getChildren().addAll(titulo, new Separator(), form, botones, new Separator(), lblExport, botonesExport, new Separator(), leyenda, canvasEstado, new Label("Log de transferencia:"), tabla);
 
         ScrollPane scroll = new ScrollPane(root);
         scroll.setFitToWidth(true);
@@ -235,16 +212,14 @@ public class TransferenciaView extends VBox {
     private void exportarDot() {
         int total = state.getGrafo().getTotalNodos();
         if (total == 0) {
-            mostrarAlerta(Alert.AlertType.WARNING,
-                    "Grafo vacío", "No hay sucursales cargadas para exportar.");
+            mostrarAlerta(Alert.AlertType.WARNING, "Grafo vacío", "No hay sucursales cargadas para exportar.");
             return;
         }
 
         FileChooser fc = new FileChooser();
         fc.setTitle("Guardar archivo .dot");
         fc.setInitialFileName("grafo_sucursales.dot");
-        fc.getExtensionFilters().add(
-                new FileChooser.ExtensionFilter("Graphviz DOT", "*.dot"));
+        fc.getExtensionFilters().add(new FileChooser.ExtensionFilter("Graphviz DOT", "*.dot"));
         File archivo = fc.showSaveDialog(new Stage());
         if (archivo == null) return;
 
@@ -260,16 +235,14 @@ public class TransferenciaView extends VBox {
             for (int i = 0; i < total; i++) {
                 int id = state.getGrafo().getIdSucursal(i);
                 Sucursal s = state.getCargaCSV().buscarSucursal(id);
-                String nombre  = (s != null) ? s.getNameSucursal() : "Suc " + id;
-                int    numProd = (s != null) ? s.getLista().size() : 0;
+                String nombre = (s != null) ? s.getNameSucursal() : "Suc " + id;
+                int numProd = (s != null) ? s.getLista().size() : 0;
 
-                boolean enRuta  = enRutaNodo(id, rutaAnimacion);
-                String  color   = enRuta ? "#e74c3c" : "#2980b9";
-                String  borde   = enRuta ? "#c0392b" : "#1a5276";
+                boolean enRuta = enRutaNodo(id, rutaAnimacion);
+                String color = enRuta ? "#e74c3c" : "#2980b9";
+                String borde = enRuta ? "#c0392b" : "#1a5276";
 
-                pw.printf("    %d [label=\"%d\\n%s\\n(%d prods)\","
-                                + " fillcolor=\"%s\", color=\"%s\"];%n",
-                        id, id, escaparDot(nombre), numProd, color, borde);
+                pw.printf("    %d [label=\"%d\\n%s\\n(%d prods)\"," + " fillcolor=\"%s\", color=\"%s\"];%n", id, id, escaparDot(nombre), numProd, color, borde);
             }
 
             pw.println();
@@ -284,15 +257,10 @@ public class TransferenciaView extends VBox {
                     if (j != -1 && !vistos[i][j] && !vistos[j][i]) {
                         vistos[i][j] = true;
                         boolean enRuta = enRuta(idO, a.getDestino(), rutaAnimacion);
-                        String  estilo = enRuta ? "bold"   : "solid";
-                        String  color  = enRuta ? "#e74c3c" : "#95a5a6";
+                        String estilo = enRuta ? "bold" : "solid";
+                        String color = enRuta ? "#e74c3c" : "#95a5a6";
 
-                        pw.printf("    %d -- %d [label=\"T:%.0f C:%.0f\","
-                                        + " style=%s, color=\"%s\", penwidth=%.1f];%n",
-                                idO, a.getDestino(),
-                                a.getTiempo(), a.getCosto(),
-                                estilo, color,
-                                enRuta ? 2.5 : 1.0);
+                        pw.printf("    %d -- %d [label=\"T:%.0f C:%.0f\"," + " style=%s, color=\"%s\", penwidth=%.1f];%n", idO, a.getDestino(), a.getTiempo(), a.getCosto(), estilo, color, enRuta ? 2.5 : 1.0);
                     }
                     a = a.getSiguiente();
                 }
@@ -301,21 +269,17 @@ public class TransferenciaView extends VBox {
             pw.println("}");
 
             log("Exportado: " + archivo.getAbsolutePath());
-            mostrarAlerta(Alert.AlertType.INFORMATION, "Exportación exitosa",
-                    "Archivo .dot guardado en:\n" + archivo.getAbsolutePath()
-                            + "\n\nPuedes visualizarlo con Graphviz (dot -Tpng archivo.dot -o grafo.png).");
+            mostrarAlerta(Alert.AlertType.INFORMATION, "Exportación exitosa", "Archivo .dot guardado en:\n" + archivo.getAbsolutePath() + "\n\nPuedes visualizarlo con Graphviz (dot -Tpng archivo.dot -o grafo.png).");
 
         } catch (IOException ex) {
             log("Error al exportar .dot: " + ex.getMessage());
-            mostrarAlerta(Alert.AlertType.ERROR, "Error al exportar",
-                    "No se pudo guardar el archivo:\n" + ex.getMessage());
+            mostrarAlerta(Alert.AlertType.ERROR, "Error al exportar", "No se pudo guardar el archivo:\n" + ex.getMessage());
         }
     }
 
     private void exportarImagen(String formato) {
         if (state.getGrafo().getTotalNodos() == 0) {
-            mostrarAlerta(Alert.AlertType.WARNING,
-                    "Grafo vacío", "No hay sucursales cargadas para exportar.");
+            mostrarAlerta(Alert.AlertType.WARNING, "Grafo vacío", "No hay sucursales cargadas para exportar.");
             return;
         }
 
@@ -324,11 +288,9 @@ public class TransferenciaView extends VBox {
         fc.setInitialFileName("grafo_sucursales." + formato);
 
         if ("png".equalsIgnoreCase(formato)) {
-            fc.getExtensionFilters().add(
-                    new FileChooser.ExtensionFilter("PNG Image", "*.png"));
+            fc.getExtensionFilters().add(new FileChooser.ExtensionFilter("PNG Image", "*.png"));
         } else {
-            fc.getExtensionFilters().add(
-                    new FileChooser.ExtensionFilter("JPEG Image", "*.jpg", "*.jpeg"));
+            fc.getExtensionFilters().add(new FileChooser.ExtensionFilter("JPEG Image", "*.jpg", "*.jpeg"));
         }
 
         File archivo = fc.showSaveDialog(new Stage());
@@ -339,9 +301,7 @@ public class TransferenciaView extends VBox {
             BufferedImage buffered = SwingFXUtils.fromFXImage(snapshot, null);
 
             if ("jpg".equalsIgnoreCase(formato)) {
-                BufferedImage rgb = new BufferedImage(
-                        buffered.getWidth(), buffered.getHeight(),
-                        BufferedImage.TYPE_INT_RGB);
+                BufferedImage rgb = new BufferedImage(buffered.getWidth(), buffered.getHeight(), BufferedImage.TYPE_INT_RGB);
                 java.awt.Graphics2D g2d = rgb.createGraphics();
                 g2d.drawImage(buffered, 0, 0, java.awt.Color.WHITE, null);
                 g2d.dispose();
@@ -354,13 +314,11 @@ public class TransferenciaView extends VBox {
             }
 
             log("Imagen exportada: " + archivo.getAbsolutePath());
-            mostrarAlerta(Alert.AlertType.INFORMATION, "Exportación exitosa",
-                    "Imagen guardada en:\n" + archivo.getAbsolutePath());
+            mostrarAlerta(Alert.AlertType.INFORMATION, "Exportación exitosa", "Imagen guardada en:\n" + archivo.getAbsolutePath());
 
         } catch (IOException ex) {
             log("Error al exportar imagen: " + ex.getMessage());
-            mostrarAlerta(Alert.AlertType.ERROR, "Error al exportar",
-                    "No se pudo guardar la imagen:\n" + ex.getMessage());
+            mostrarAlerta(Alert.AlertType.ERROR, "Error al exportar", "No se pudo guardar la imagen:\n" + ex.getMessage());
         }
     }
 
@@ -373,20 +331,16 @@ public class TransferenciaView extends VBox {
         titulo.setStyle("-fx-font-size: 16px; -fx-font-weight: bold;");
 
         Button btnRefrescar = new Button("Refrescar");
-        btnRefrescar.setStyle("-fx-background-color: #2980b9; -fx-text-fill: white;" +
-                "-fx-padding: 6 14;");
+        btnRefrescar.setStyle("-fx-background-color: #2980b9; -fx-text-fill: white;" + "-fx-padding: 6 14;");
 
         TableView<Sucursal> tablaSucursal = crearTablaSucursales();
         btnRefrescar.setOnAction(e -> {
-            tablaSucursal.setStyle(
-                    "-fx-background-color: #ffffff;" +
-                            "-fx-border-color: #dcdde1;" +
-                            "-fx-border-radius: 6;"
-            );
+            tablaSucursal.setStyle("-fx-background-color: #ffffff;" + "-fx-border-color: #dcdde1;" + "-fx-border-radius: 6;");
             tablaSucursal.getItems().clear();
-            tablaSucursal.getItems().addAll(
-                    state.getCargaCSV().getListaSucursales().toList()
-            );
+
+            for (Sucursal sucursal : state.getCargaCSV().getListaSucursales()) {
+                tablaSucursal.getItems().add(sucursal);
+            }
         });
 
         root.getChildren().addAll(titulo, new Separator(), btnRefrescar, tablaSucursal);
@@ -401,14 +355,14 @@ public class TransferenciaView extends VBox {
         if (!chkTodo.isSelected()) return;
 
         String selOrigen = cmbOrigen.getValue();
-        String selProd   = cmbProducto.getValue();
+        String selProd = cmbProducto.getValue();
         if (selOrigen == null || selProd == null) return;
 
         int idOrigen = Integer.parseInt(selOrigen.split(" - ")[0].trim());
-        Sucursal s   = state.getCargaCSV().buscarSucursal(idOrigen);
+        Sucursal s = state.getCargaCSV().buscarSucursal(idOrigen);
         if (s == null) return;
 
-        String codigo  = selProd.split("\\|")[0].trim();
+        String codigo = selProd.split("\\|")[0].trim();
         Productos prod = s.buscarPorCodigo(codigo);
         if (prod != null) {
             txtCantidad.setText(String.valueOf(prod.getStock()));
@@ -418,16 +372,16 @@ public class TransferenciaView extends VBox {
     private void iniciarTransferencia(double velocidadMs) {
         if (animacion != null) animacion.stop();
 
-        String selOrigen  = cmbOrigen.getValue();
+        String selOrigen = cmbOrigen.getValue();
         String selDestino = cmbDestino.getValue();
-        String selProd    = cmbProducto.getValue();
+        String selProd = cmbProducto.getValue();
 
         if (selOrigen == null || selDestino == null || selProd == null) {
             log("Selecciona origen, destino y producto");
             return;
         }
 
-        int idOrigen  = Integer.parseInt(selOrigen.split(" - ")[0].trim());
+        int idOrigen = Integer.parseInt(selOrigen.split(" - ")[0].trim());
         int idDestino = Integer.parseInt(selDestino.split(" - ")[0].trim());
         String codigo = selProd.split("\\|")[0].trim();
 
@@ -466,18 +420,13 @@ public class TransferenciaView extends VBox {
             return;
         }
         if (cantidad > producto.getStock()) {
-            log(String.format(
-                    "Cantidad inválida. Stock disponible: %d — Solicitado: %d",
-                    producto.getStock(), cantidad
-            ));
+            log(String.format("Cantidad inválida. Stock disponible: %d — Solicitado: %d", producto.getStock(), cantidad));
             return;
         }
 
         boolean usarTiempo = rbTiempo.isSelected();
 
-        ResultadoTransferencia res = transfereciaProductos.transferencia(
-                codigo, cantidad, idOrigen, idDestino, usarTiempo
-        );
+        ResultadoTransferencia res = transfereciaProductos.transferencia(codigo, cantidad, idOrigen, idDestino, usarTiempo);
 
         tabla.getItems().clear();
 
@@ -486,23 +435,15 @@ public class TransferenciaView extends VBox {
             return;
         }
 
-        pasos         = res.getPasos();
+        pasos = res.getPasos();
         rutaAnimacion = res.getRuta();
-        pasoActual    = 0;
+        pasoActual = 0;
 
         dibujarGrafoBase(rutaAnimacion, -1);
 
-        log(String.format(
-                "Transferencia: %d unidades | Ruta: %d sucursales | ETA: %.0fs (%.1f min)",
-                cantidad,
-                rutaAnimacion.length,
-                res.getTotalSegundos(),
-                res.getTotalSegundos() / 60.0
-        ));
+        log(String.format("Transferencia: %d unidades | Ruta: %d sucursales | ETA: %.0fs (%.1f min)", cantidad, rutaAnimacion.length, res.getTotalSegundos(), res.getTotalSegundos() / 60.0));
 
-        animacion = new Timeline(
-                new KeyFrame(Duration.millis(velocidadMs), e -> animarPaso())
-        );
+        animacion = new Timeline(new KeyFrame(Duration.millis(velocidadMs), e -> animarPaso()));
 
         animacion.setCycleCount(pasos.size());
 
@@ -559,8 +500,7 @@ public class TransferenciaView extends VBox {
                     gc.fillRoundRect(mx - 18, my - 9, 60, 13, 3, 3);
                     gc.setFill(enRuta ? Color.web("#c0392b") : Color.web("#7f8c8d"));
                     gc.setFont(Font.font(8));
-                    gc.fillText(String.format("T:%.0f C:%.0f",
-                            a.getTiempo(), a.getCosto()), mx - 16, my);
+                    gc.fillText(String.format("T:%.0f C:%.0f", a.getTiempo(), a.getCosto()), mx - 16, my);
                 }
                 a = a.getSiguiente();
             }
@@ -572,8 +512,7 @@ public class TransferenciaView extends VBox {
         }
     }
 
-    private void dibujarNodo(GraphicsContext gc, int idx, int idSuc,
-                             int[] ruta, int sucursalActiva) {
+    private void dibujarNodo(GraphicsContext gc, int idx, int idSuc, int[] ruta, int sucursalActiva) {
         double x = posX[idx];
         double y = posY[idx];
 
@@ -628,15 +567,12 @@ public class TransferenciaView extends VBox {
         String sel = cmbOrigen.getValue();
         if (sel == null) return;
 
-        int id     = Integer.parseInt(sel.split(" - ")[0].trim());
+        int id = Integer.parseInt(sel.split(" - ")[0].trim());
         Sucursal s = state.getCargaCSV().buscarSucursal(id);
         if (s == null) return;
 
         for (Productos p : s.getLista().toList()) {
-            cmbProducto.getItems().add(
-                    p.getBarCode() + " | " + p.getName()
-                            + " (stock: " + p.getStock() + ")"
-            );
+            cmbProducto.getItems().add(p.getBarCode() + " | " + p.getName() + " (stock: " + p.getStock() + ")");
         }
 
         if (cmbProducto.getItems().isEmpty()) {
@@ -651,7 +587,7 @@ public class TransferenciaView extends VBox {
         posY = new double[total];
         double cx = CANVAS_W / 2.0;
         double cy = CANVAS_H / 2.0;
-        double r  = Math.min(cx, cy) - 40;
+        double r = Math.min(cx, cy) - 40;
 
         for (int i = 0; i < total; i++) {
             double ang = 2 * Math.PI * i / total - Math.PI / 2;
@@ -670,8 +606,7 @@ public class TransferenciaView extends VBox {
     private boolean enRuta(int a, int b, int[] ruta) {
         if (ruta == null) return false;
         for (int i = 0; i < ruta.length - 1; i++) {
-            if ((ruta[i] == a && ruta[i + 1] == b)
-                    || (ruta[i] == b && ruta[i + 1] == a)) return true;
+            if ((ruta[i] == a && ruta[i + 1] == b) || (ruta[i] == b && ruta[i + 1] == a)) return true;
         }
         return false;
     }
@@ -696,9 +631,7 @@ public class TransferenciaView extends VBox {
 
     private String escaparDot(String texto) {
         if (texto == null) return "";
-        return texto.replace("\\", "\\\\")
-                .replace("\"", "\\\"")
-                .replace("\n", "\\n");
+        return texto.replace("\\", "\\\\").replace("\"", "\\\"").replace("\n", "\\n");
     }
 
     private void mostrarAlerta(Alert.AlertType tipo, String titulo, String mensaje) {
@@ -710,9 +643,7 @@ public class TransferenciaView extends VBox {
     }
 
     private void log(String msg) {
-        tabla.getItems().add(
-                new PasoTransferencia(0, "Sistema", "Informacion", 0, msg)
-        );
+        tabla.getItems().add(new PasoTransferencia(0, "Sistema", "Informacion", 0, msg));
     }
 
     private HBox itemLeyenda(String hex, String texto) {
@@ -734,32 +665,19 @@ public class TransferenciaView extends VBox {
     private TableView<PasoTransferencia> crearTablaLog() {
         TableView<PasoTransferencia> tabla = new TableView<>();
 
-        tabla.setStyle(
-                "-fx-background-color: white;" +
-                        "-fx-border-color: #dcdde1;" +
-                        "-fx-border-radius: 8;" +
-                        "-fx-font-size: 11px;"
-        );
+        tabla.setStyle("-fx-background-color: white;" + "-fx-border-color: #dcdde1;" + "-fx-border-radius: 8;" + "-fx-font-size: 11px;");
 
         TableColumn<PasoTransferencia, String> colSucursal = new TableColumn<>("Sucursal");
-        colSucursal.setCellValueFactory(d ->
-                new javafx.beans.property.SimpleStringProperty(
-                        d.getValue().getNombreSucursal()));
+        colSucursal.setCellValueFactory(d -> new javafx.beans.property.SimpleStringProperty(d.getValue().getNombreSucursal()));
 
         TableColumn<PasoTransferencia, String> colEtapa = new TableColumn<>("Etapa");
-        colEtapa.setCellValueFactory(d ->
-                new javafx.beans.property.SimpleStringProperty(
-                        d.getValue().getEtapa()));
+        colEtapa.setCellValueFactory(d -> new javafx.beans.property.SimpleStringProperty(d.getValue().getEtapa()));
 
         TableColumn<PasoTransferencia, String> colTiempo = new TableColumn<>("Tiempo");
-        colTiempo.setCellValueFactory(d ->
-                new javafx.beans.property.SimpleStringProperty(
-                        d.getValue().getTiempo() + " ms"));
+        colTiempo.setCellValueFactory(d -> new javafx.beans.property.SimpleStringProperty(d.getValue().getTiempo() + " ms"));
 
         TableColumn<PasoTransferencia, String> colMensaje = new TableColumn<>("Detalle");
-        colMensaje.setCellValueFactory(d ->
-                new javafx.beans.property.SimpleStringProperty(
-                        d.getValue().getMensaje()));
+        colMensaje.setCellValueFactory(d -> new javafx.beans.property.SimpleStringProperty(d.getValue().getMensaje()));
 
         tabla.getColumns().addAll(colSucursal, colEtapa, colTiempo, colMensaje);
         tabla.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
@@ -770,35 +688,24 @@ public class TransferenciaView extends VBox {
         TableView<Sucursal> tabla = new TableView<>();
 
         TableColumn<Sucursal, String> colNombre = new TableColumn<>("Sucursal");
-        colNombre.setCellValueFactory(d ->
-                new javafx.beans.property.SimpleStringProperty(
-                        d.getValue().getNameSucursal()));
+        colNombre.setCellValueFactory(d -> new javafx.beans.property.SimpleStringProperty(d.getValue().getNameSucursal()));
 
         TableColumn<Sucursal, String> colInventario = new TableColumn<>("Inventario");
-        colInventario.setCellValueFactory(d ->
-                new javafx.beans.property.SimpleStringProperty(
-                        String.valueOf(d.getValue().getLista().size())));
+        colInventario.setCellValueFactory(d -> new javafx.beans.property.SimpleStringProperty(String.valueOf(d.getValue().getLista().size())));
 
         TableColumn<Sucursal, String> colIngreso = new TableColumn<>("Cola Ingreso");
-        colIngreso.setCellValueFactory(d ->
-                new javafx.beans.property.SimpleStringProperty(
-                        String.valueOf(d.getValue().getColaIngreso().size())));
+        colIngreso.setCellValueFactory(d -> new javafx.beans.property.SimpleStringProperty(String.valueOf(d.getValue().getColaIngreso().size())));
 
         TableColumn<Sucursal, String> colTraspaso = new TableColumn<>("Cola Traspaso");
-        colTraspaso.setCellValueFactory(d ->
-                new javafx.beans.property.SimpleStringProperty(
-                        String.valueOf(d.getValue().getColaTraspaso().size())));
+        colTraspaso.setCellValueFactory(d -> new javafx.beans.property.SimpleStringProperty(String.valueOf(d.getValue().getColaTraspaso().size())));
 
         TableColumn<Sucursal, String> colSalida = new TableColumn<>("Cola Salida");
-        colSalida.setCellValueFactory(d ->
-                new javafx.beans.property.SimpleStringProperty(
-                        String.valueOf(d.getValue().getColaSalida().size())));
+        colSalida.setCellValueFactory(d -> new javafx.beans.property.SimpleStringProperty(String.valueOf(d.getValue().getColaSalida().size())));
 
-        tabla.getColumns().addAll(
-                colNombre, colInventario,
-                colIngreso, colTraspaso, colSalida
-        );
+        tabla.getColumns().addAll(colNombre, colInventario, colIngreso, colTraspaso, colSalida);
         tabla.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
         return tabla;
     }
+
+
 }

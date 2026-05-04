@@ -43,6 +43,7 @@ public class ViewMain extends BorderPane {
         Button btnCarga = crearBoton("Cargar CSV");
         Button btnProductos = crearBoton("Productos");
         Button btnSucursales = crearBoton("Sucursales");
+        Button btnConexiones = crearBoton("Conexiones");
         Button btnGrafo = crearBoton("Grafo / Rutas");
         Button btnAVL = crearBoton("Árbol AVL");
         Button btnB = crearBoton("Árbol B");
@@ -61,6 +62,9 @@ public class ViewMain extends BorderPane {
         );
         btnSucursales.setOnAction(e ->
                 mostrarVista(new SucursalesView(state))
+        );
+        btnConexiones.setOnAction(e ->
+                mostrarVista(new ConexionView(state))
         );
         btnGrafo.setOnAction(e ->
                 mostrarVista(new GrafoAnimadoView(state))
@@ -96,7 +100,7 @@ public class ViewMain extends BorderPane {
 
         menu.getChildren().addAll(
                 titulo, sep,
-                btnCarga, btnProductos, btnSucursales,
+                btnCarga, btnProductos, btnSucursales, btnConexiones,
                 new Separator(),
                 btnGrafo,
                 new Separator(),

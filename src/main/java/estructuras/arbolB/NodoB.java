@@ -1,10 +1,5 @@
 package estructuras.arbolB;
 
-import estructuras.nodo.Nodo;
-
-import java.util.ArrayList;
-import java.util.List;
-
 public class NodoB <T extends Comparable<T>> {
 
 
@@ -12,6 +7,12 @@ public class NodoB <T extends Comparable<T>> {
     private NodoB<T>[] hijos;
     private int numClaves;
     private boolean esHoja;
+
+    public double anchoSubarbol = 0;
+
+    public double posX = 0;
+
+    public double posY = 0;
 
     public NodoB(boolean esHoja, int orden) {
         this.esHoja = esHoja;
@@ -52,4 +53,27 @@ public class NodoB <T extends Comparable<T>> {
         this.esHoja = esHoja;
     }
 
+    public double getAnchoSubarbol() {
+        return anchoSubarbol;
+    }
+
+    public void setAnchoSubarbol(double anchoSubarbol) {
+        this.anchoSubarbol = anchoSubarbol;
+    }
+
+    public double getPosX() {
+        return posX;
+    }
+
+    public void setPosX(double posX) {
+        this.posX = posX;
+    }
+
+    public double getPosY() {
+        return posY;
+    }
+
+    public void setPosY(double posY) {
+        this.posY = posY;
+    }
 }

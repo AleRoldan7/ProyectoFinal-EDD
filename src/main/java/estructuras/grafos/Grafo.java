@@ -6,7 +6,7 @@ import java.io.FileReader;
 
 public class Grafo {
 
-    private static final int NODOS_MAX = 100;
+    private static final int NODOS_MAX = 1000;
     private NodoGrafo[] nodoGrafos;
     private int totalNodos;
 
@@ -33,7 +33,23 @@ public class Grafo {
         }
     }
 
+    private boolean existeConexion(int origen, int destino) {
+        int idx = buscarIndice(origen);
+        if (idx == -1) return false;
+
+        NodoArista aux = nodoGrafos[idx].getListaArista();
+
+        while (aux != null) {
+            if (aux.getDestino() == destino) return true;
+            aux = aux.getSiguiente();
+        }
+        return false;
+    }
+
     public void agregarConexion(int origen, int destino, double tiempo, double costo) {
+
+        if (existeConexion(origen, destino)) return;
+        if (origen == destino) return;
 
         agregarSucursal(origen);
         agregarSucursal(destino);
@@ -104,8 +120,7 @@ public class Grafo {
         }
 
         int idxDestino = buscarIndice(destino);
-        if (idxDestino == -1 ||
-                distancia[idxDestino] == Double.MAX_VALUE) {
+        if (idxDestino == -1 || distancia[idxDestino] == Double.MAX_VALUE) {
             return new ResultadoRuta(null, -1);
         }
 
@@ -146,9 +161,7 @@ public class Grafo {
                     double tiempo = Double.parseDouble(partes[2].trim());
                     double costo = Double.parseDouble(partes[3].trim());
 
-                    agregarConexionBiDireccional(
-                            origen, destino, tiempo, costo
-                    );
+                    agregarConexionBiDireccional(origen, destino, tiempo, costo);
                 } catch (Exception e) {
                     System.err.println("Conexión inválida línea " + numLinea);
                 }
@@ -175,5 +188,37 @@ public class Grafo {
     public NodoArista getAristas(int idx) {
         return nodoGrafos[idx].getListaArista();
 
+    }
+
+    public NodoArista getAdyacentesPorId(int idSucursal) {
+        int idx = buscarIndice(idSucursal);
+        if (idx == -1) return null;
+        return nodoGrafos[idx].getListaArista();
+    }
+
+    public String obtenerConexionesComoTexto() {
+
+        StringBuilder sb = new StringBuilder();
+
+        for (int i = 0; i < totalNodos; i++) {
+
+            int origen = nodoGrafos[i].getIdSucursal();
+            sb.append("Sucursal ").append(origen).append(" → ");
+
+            NodoArista aux = nodoGrafos[i].getListaArista();
+
+            if (aux == null) {
+                sb.append("sin conexiones\n");
+            } else {
+                while (aux != null) {
+                    sb.append(aux.getDestino()).append("(T:").append(aux.getTiempo()).append(", C:").append(aux.getCosto()).append(")  ");
+
+                    aux = aux.getSiguiente();
+                }
+                sb.append("\n");
+            }
+        }
+
+        return sb.toString();
     }
 }

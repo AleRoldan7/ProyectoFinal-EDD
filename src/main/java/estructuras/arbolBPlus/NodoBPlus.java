@@ -1,7 +1,5 @@
 package estructuras.arbolBPlus;
 
-import java.util.ArrayList;
-import java.util.List;
 
 public class NodoBPlus<T extends Comparable<T>> {
 

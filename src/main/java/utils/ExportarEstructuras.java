@@ -521,7 +521,6 @@ public class ExportarEstructuras {
             fw.write(dot);
             fw.close();
 
-            // Ejecutar Graphviz
             ProcessBuilder pb = new ProcessBuilder(
                     "dot", "-T" + formato,
                     tempDot.getAbsolutePath(),

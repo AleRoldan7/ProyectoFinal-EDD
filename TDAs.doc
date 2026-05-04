@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>TDAs del proyecto - ProyectoFinalEDD</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.4; }
+        h1 { color: #2c3e50; }
+        h2 { color: #34495e; }
+        pre { background: #f4f4f4; padding: 8px; border-radius: 4px; }
+        .ruta { font-size: 0.95em; color: #555; }
+        table { border-collapse: collapse; width: 100%; }
+        th, td { border: 1px solid #ddd; padding: 8px; }
+        th { background: #f2f2f2; text-align: left; }
+    </style>
+</head>
+<body>
+<h1>TDAs del proyecto - ProyectoFinalEDD</h1>
+<p>Generado: 4 de mayo de 2026</p>
+
+<h2>Resumen</h2>
+<p>Este documento lista los Tipos Abstractos de Datos (TDA) implementados en el proyecto, una breve descripción de cada uno, las operaciones principales y la ubicación de los archivos fuente.</p>
+
+<h2>Listado de TDAs</h2>
+
+<h3>1. Lista enlazada (ListaEnlazada&lt;T&gt;)</h3>
+<p class="ruta">Archivo: src/main/java/estructuras/lista/ListaEnlazada.java</p>
+<p>Descripción: Lista enlazada simple con métodos para agregar al final, eliminar por valor, búsqueda por predicado y conversión a otra lista. Implementa Iterable.</p>
+<p>Operaciones principales: agregar, mostrar, remove, buscar(Predicate), existe, getIndice, size, isEmpty, agregarTodos, toList, iterator.</p>
+
+<h3>2. Nodo genérico (Nodo&lt;T&gt;)</h3>
+<p class="ruta">Archivo: src/main/java/estructuras/nodo/Nodo.java</p>
+<p>Descripción: Nodo simple con campo producto y referencia next, usado por lista, cola y pila.</p>
+
+<h3>3. Pila (Pila&lt;T&gt;)</h3>
+<p class="ruta">Archivo: src/main/java/estructuras/nodo/Pila.java</p>
+<p>Descripción: Implementación LIFO usando nodos enlazados.</p>
+<p>Operaciones principales: push, pop, peek, isEmpty, size.</p>
+
+<h3>4. Cola (Cola&lt;T&gt;)</h3>
+<p class="ruta">Archivo: src/main/java/estructuras/nodo/Cola.java</p>
+<p>Descripción: Implementación FIFO usando nodos enlazados con punteros a frente y fin.</p>
+<p>Operaciones principales: enqueue, dequeue, peek, isEmpty, size.</p>
+
+<h3>5. Árbol AVL (ArbolAVL&lt;T&gt;)</h3>
+<p class="ruta">Archivos: src/main/java/estructuras/avl/ArbolAVL.java, src/main/java/estructuras/avl/NodoAVL.java</p>
+<p>Descripción: Árbol binario de búsqueda auto-balanceado (AVL). Soporta rotaciones y mantiene alturas para balanceo.</p>
+<p>Operaciones principales: insert, search, delete, inOrden, getHeight, isEmpty.</p>
+
+<h3>6. Árbol B (ArbolB&lt;T&gt;)</h3>
+<p class="ruta">Archivos: src/main/java/estructuras/arbolB/ArbolB.java, src/main/java/estructuras/arbolB/NodoB.java</p>
+<p>Descripción: Implementación de árbol B parametrizado por orden. Incluye insertar, buscar, buscarRango y eliminación con fusión/préstamo.</p>
+
+<h3>7. Árbol B+ (ArbolBPlus&lt;T&gt;)</h3>
+<p class="ruta">Archivos: src/main/java/estructuras/arbolBPlus/ArbolBPlus.java, src/main/java/estructuras/arbolBPlus/NodoBPlus.java</p>
+<p>Descripción: B+ con hojas enlazadas; soporta inserción, búsqueda, búsqueda por categoría, búsqueda por rango y eliminación, además de recorrer hojas.</p>
+
+<h3>8. Tabla Hash (TablaHash)</h3>
+<p class="ruta">Archivos: src/main/java/estructuras/hash/TablaHash.java, src/main/java/estructuras/hash/NodoTabla.java</p>
+<p>Descripción: Tabla hash con encadenamiento (listas en buckets), redimensionamiento (doble capacidad) y operaciones CRUD básicas sobre claves de tipo String mapeadas a Productos.</p>
+
+<h3>9. Grafo (Grafo)</h3>
+<p class="ruta">Archivos: src/main/java/estructuras/grafos/Grafo.java, src/main/java/estructuras/grafos/NodoGrafo.java, src/main/java/estructuras/grafos/NodoArista.java</p>
+<p>Descripción: Grafo con lista de adyacencia (implementada por listas de NodoArista). Incluye carga desde CSV y algoritmo de Dijkstra (usa ColaPrioridad) para rutas mínimas por tiempo o costo.</p>
+
+<h3>10. Cola de prioridad (ColaPrioridad)</h3>
+<p class="ruta">Archivo: src/main/java/estructuras/grafos/ColaPrioridad.java</p>
+<p>Descripción: Heap mínimo implementado en arreglo con Entradas (nodo, distancia). Usado en Dijkstra.</p>
+
+<h3>11. Transferencia de productos</h3>
+<p class="ruta">Archivos: src/main/java/transferencia/TransfereciaProductos.java, src/main/java/transferencia/PasoTransferencia.java, src/main/java/transferencia/ResultadoTransferencia.java</p>
+<p>Descripción: Modelos y lógica para realizar transferencias de productos entre sucursales, representando pasos y resultados de la operación.</p>
+
+<h3>12. Clases de dominio</h3>
+<p class="ruta">Archivos: src/main/java/clases/Productos.java, src/main/java/clases/Sucursal.java, src/main/java/clases/OperacionProducto.java</p>
+<p>Descripción: Entidades que representan productos, sucursales y operaciones sobre productos; ampliamente usadas por las estructuras y la UI.</p>
+
+<h3>13. Utilidades</h3>
+<p class="ruta">Archivos: src/main/java/utils/CargaCSV.java, src/main/java/utils/ExportarEstructuras.java</p>
+<p>Descripción: Utilidades para cargar datos desde CSV y exportar estructuras a archivos u otros formatos.</p>
+
+<hr>
+<p>Fin del documento. Si quieres, puedo:</p>
+<ul>
+    <li>Convertir este archivo a formato .docx (requiere librería externa o conversión en tu máquina).</li>
+    <li>Incluir firmas públicas (metódicas) detalladas para cada TDA dentro del documento.</li>
+    <li>Generar un diagrama mermaid/PNG que muestre relaciones entre TDA y agregarlo al documento.</li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>TDAs - Métodos</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    h1 { color: #2c3e50; }
+    h2 { color: #34495e; margin-top: 28px; }
+    table { width: 100%; border-collapse: collapse; margin-top: 8px; }
+    th, td { border: 1px solid #ccc; padding: 8px; vertical-align: top; }
+    th { background: #f4f4f4; text-align: left; }
+    .ruta { font-size: 0.95em; color: #666; }
+    .nota { font-size: 0.95em; color: #333; }
+  </style>
+</head>
+<body>
+  <h1>Métodos de los TDAs del proyecto</h1>
+  <p>Generado: 4 de mayo de 2026</p>
+  <p>Este documento contiene tablas por cada TDA con sus métodos, firma, descripción breve y notas. Puedes editar el archivo en Word para modificar cualquier texto.</p>
+
+  <h2>Lista enlazada - ListaEnlazada&lt;T&gt;</h2>
+  <p class="ruta">Archivo: src/main/java/estructuras/lista/ListaEnlazada.java</p>
+  <table>
+    <tr><th>Método (firma)</th><th>Descripción</th><th>Notas / Uso</th></tr>
+    <tr><td>public ListaEnlazada()</td><td>Constructor. Inicializa lista vacía.</td><td>-</td></tr>
+    <tr><td>public void agregar(T producto)</td><td>Agrega <code>producto</code> al final de la lista.</td><td>Incrementa <code>size</code>. No permite índice; O(n) para agregar al final debido a recorrido.</td></tr>
+    <tr><td>public void mostrar()</td><td>Imprime por consola los elementos de la lista, enumerados.</td><td>Utilidad para depuración.</td></tr>
+    <tr><td>public boolean remove(T producto)</td><td>Elimina la primera ocurrencia de <code>producto</code> y devuelve true si se eliminó.</td><td>Compara con <code>equals</code>. O(n).</td></tr>
+    <tr><td>public T buscar(Predicate&lt;T&gt; condicion)</td><td>Retorna el primer elemento que cumple la condición, o null si no hay ninguno.</td><td>Útil para búsquedas personalizadas (ej. por código). </td></tr>
+    <tr><td>public boolean existe(T producto)</td><td>Verifica si existe el producto (usa equals).</td><td>O(n).</td></tr>
+    <tr><td>public T getIndice(int indice)</td><td>Devuelve el elemento en la posición <code>indice</code>. Lanza IndexOutOfBounds si fuera de rango.</td><td>Índice 0-based. O(n).</td></tr>
+    <tr><td>public ListaEnlazada&lt;T&gt; toList()</td><td>Devuelve una nueva ListaEnlazada con los mismos elementos (copia superficial).</td><td>Útil para retornar colecciones independientes.</td></tr>
+    <tr><td>public void clear()</td><td>Vacía la lista (head=null, size=0).</td><td>Rápido; libera referencias para GC.</td></tr>
+    <tr><td>public boolean isEmpty()</td><td>Indica si la lista está vacía.</td><td>Retorna size==0.</td></tr>
+    <tr><td>public int size()</td><td>Devuelve el número de elementos.</td><td>-</td></tr>
+    <tr><td>public Nodo&lt;T&gt; getHead()</td><td>Retorna la referencia al primer nodo (head).</td><td>Expone la estructura interna; usar con cuidado.</td></tr>
+    <tr><td>public String toString()</td><td>Representación en texto de la lista (separada por flechas).</td><td>Útil para logs.</td></tr>
+    <tr><td>public void agregarTodos(ListaEnlazada&lt;T&gt; otra)</td><td>Agrega todos los elementos de <code>otra</code> al final de esta lista.</td><td>Itera sobre la otra lista; O(m+n).</td></tr>
+    <tr><td>public boolean contiene(Predicate&lt;T&gt; condicion)</td><td>Indica si existe un elemento que cumpla la condición.</td><td>Similar a buscar pero devuelve booleano.</td></tr>
+    <tr><td>public T buscarPrimero(Predicate&lt;T&gt; condicion)</td><td>Devuelve el primer elemento que cumple la condición.</td><td>Alias funcional de <code>buscar</code> (con un nombre distinto).</td></tr>
+    <tr><td>public Iterator&lt;T&gt; iterator()</td><td>Permite iterar la lista con for-each.</td><td>Implementa un iterador sencillo que recorre desde head.</td></tr>
+  </table>
+
+  <h2>Nodo genérico - Nodo&lt;T&gt;</h2>
+  <p class="ruta">Archivo: src/main/java/estructuras/nodo/Nodo.java</p>
+  <table>
+    <tr><th>Método / Campo</th><th>Descripción</th><th>Notas</th></tr>
+    <tr><td>public Nodo(T producto)</td><td>Constructor: inicializa el nodo con producto y next=null.</td><td>-</td></tr>
+    <tr><td>public T getProducto()</td><td>Getter del producto.</td><td>-</td></tr>
+    <tr><td>public void setProducto(T producto)</td><td>Setter del producto.</td><td>-</td></tr>
+    <tr><td>public Nodo&lt;T&gt; getNext()</td><td>Getter del siguiente nodo.</td><td>-</td></tr>
+    <tr><td>public void setNext(Nodo&lt;T&gt; next)</td><td>Setter del siguiente nodo.</td><td>-</td></tr>
+    <tr><td>public T producto (campo)</td><td>Dato almacenado (acceso package/public en código actual).</td><td>Campo público; considera encapsular si quieres privacidad.</td></tr>
+    <tr><td>public Nodo&lt;T&gt; next (campo)</td><td>Referencia al siguiente nodo.</td><td>Campo público; igual consideración de encapsulación.</td></tr>
+  </table>
+
+  <h2>Pila - Pila&lt;T&gt;</h2>
+  <p class="ruta">Archivo: src/main/java/estructuras/nodo/Pila.java</p>
+  <table>
+    <tr><th>Método (firma)</th><th>Descripción</th><th>Notas</th></tr>
+    <tr><td>public Pila()</td><td>Constructor: inicializa tope=null, size=0.</td><td>-</td></tr>
+    <tr><td>public void push(T dato)</td><td>Inserta dato en el tope (O(1)).</td><td>Actualiza size.</td></tr>
+    <tr><td>public T pop()</td><td>Remueve y retorna el tope; lanza RuntimeException si está vacía.</td><td>Manejar excepciones or verificar isEmpty()</td></tr>
+    <tr><td>public T peek()</td><td>Retorna el tope sin eliminar; lanza si vacía.</td><td>-</td></tr>
+    <tr><td>public boolean isEmpty()</td><td>Indica si la pila está vacía.</td><td>-</td></tr>
+    <tr><td>public int size()</td><td>Numero de elementos en la pila.</td><td>-</td></tr>
+    <tr><td>public String toString()</td><td>Representación de la pila (tope -> fondo).</td><td>-</td></tr>
+  </table>
+
+  <h2>Cola - Cola&lt;T&gt;</h2>
+  <p class="ruta">Archivo: src/main/java/estructuras/nodo/Cola.java</p>
+  <table>
+    <tr><th>Método (firma)</th><th>Descripción</th><th>Notas</th></tr>
+    <tr><td>public Cola()</td><td>Constructor: frente=null, fin=null, size=0.</td><td>-</td></tr>
+    <tr><td>public void enqueue(T dato)</td><td>Añade dato al final (O(1)).</td><td>Actualiza fin y size.</td></tr>
+    <tr><td>public T dequeue()</td><td>Remueve y retorna el frente; lanza si vacía.</td><td>Actualiza frente y fin si queda vacía.</td></tr>
+    <tr><td>public T peek()</td><td>Retorna el frente sin eliminar; lanza si vacía.</td><td>-</td></tr>
+    <tr><td>public boolean isEmpty()</td><td>Indica si está vacía.</td><td>-</td></tr>
+    <tr><td>public int size()</td><td>Retorna tamaño.</td><td>-</td></tr>
+    <tr><td>public String toString()</td><td>Representación textual de la cola.</td><td>-</td></tr>
+  </table>
+
+  <h2>Árbol AVL - ArbolAVL&lt;T&gt;</h2>
+  <p class="ruta">Archivo: src/main/java/estructuras/avl/ArbolAVL.java</p>
+  <table>
+    <tr><th>Método (firma)</th><th>Descripción</th><th>Notas / Complejidad</th></tr>
+    <tr><td>public ArbolAVL()</td><td>Constructor: raiz=null.</td><td>-</td></tr>
+    <tr><td>private int altura(NodoAVL&lt;T&gt; nodo)</td><td>Devuelve la altura del nodo (0 si null).</td><td>Helper para balanceo.</td></tr>
+    <tr><td>private int factorBalanceo(NodoAVL&lt;T&gt; nodo)</td><td>Calcula el factor de balanceo (altura(left)-altura(right)).</td><td>Helper.</td></tr>
+    <tr><td>private void updateAltura(NodoAVL&lt;T&gt; nodo)</td><td>Actualiza el campo altura del nodo basado en hijos.</td><td>Helper.</td></tr>
+    <tr><td>private NodoAVL&lt;T&gt; rotacionDerecha(NodoAVL&lt;T&gt; y)</td><td>Realiza rotación derecha y devuelve nueva raíz local.</td><td>Operación O(1).</td></tr>
+    <tr><td>private NodoAVL&lt;T&gt; rotacionIzquierda(NodoAVL&lt;T&gt; x)</td><td>Rotación izquierda.</td><td>O(1).</td></tr>
+    <tr><td>private NodoAVL&lt;T&gt; balanceo(NodoAVL&lt;T&gt; nodo)</td><td>Rebalancea nodo aplicando las rotaciones necesarias.</td><td>Usado tras inserción/borrado.</td></tr>
+    <tr><td>public void insert(T dato)</td><td>Inserta dato en el árbol (O(log n) amortizado por balanceo).</td><td>Invoca método privado recursivo <code>insert(NodoAVL, T)</code>.</td></tr>
+    <tr><td>private NodoAVL&lt;T&gt; insert(NodoAVL&lt;T&gt; nodo, T dato)</td><td>Inserción recursiva con balanceo al retornar.</td><td>Devuelve la nueva subraíz.</td></tr>
+    <tr><td>public T search(T dato)</td><td>Busca y devuelve el dato si existe (o null).</td><td>Usa método privado recursivo.</td></tr>
+    <tr><td>private NodoAVL&lt;T&gt; search(NodoAVL&lt;T&gt; nodo, T dato)</td><td>Búsqueda recursiva por comparación.</td><td>O(log n) si balanceado.</td></tr>
+    <tr><td>public void delete(T dato)</td><td>Elimina el dato del árbol (usa método privado recursivo).</td><td>Realiza reestructuración y balanceo.</td></tr>
+    <tr><td>private NodoAVL&lt;T&gt; delete(NodoAVL&lt;T&gt; nodo, T dato)</td><td>Implementa casos de borrado (0,1,2 hijos) y balanceo.</td><td>O(log n).</td></tr>
+    <tr><td>private NodoAVL&lt;T&gt; minNodo(NodoAVL&lt;T&gt; nodo)</td><td>Devuelve el nodo con el mínimo valor en subárbol (izquierda más profunda).</td><td>Helper para delete.</td></tr>
+    <tr><td>public ListaEnlazada&lt;T&gt; inOrden()</td><td>Devuelve una lista con recorrido in-order.</td><td>O(n).</td></tr>
+    <tr><td>private void inOrder(NodoAVL&lt;T&gt; nodo, ListaEnlazada&lt;T&gt; lista)</td><td>Recorrido recursivo.</td><td>Helper.</td></tr>
+    <tr><td>public NodoAVL&lt;T&gt; getRoot()</td><td>Devuelve la raíz del árbol.</td><td>Exposición de la estructura interna.</td></tr>
+    <tr><td>public int getHeight()</td><td>Altura del árbol (altura de la raíz).</td><td>-</td></tr>
+    <tr><td>public boolean isEmpty()</td><td>Indica si el árbol está vacío.</td><td>-</td></tr>
+  </table>
+
+  <h2>Árbol B - ArbolB&lt;T&gt;</h2>
+  <p class="ruta">Archivo: src/main/java/estructuras/arbolB/ArbolB.java</p>
+  <table>
+    <tr><th>Método (firma)</th><th>Descripción</th><th>Notas</th></tr>
+    <tr><td>public ArbolB(int orden)</td><td>Constructor: inicializa con orden y crea raíz vacía.</td><td>Orden determina máxima/minima claves por nodo.</td></tr>
+    <tr><td>public void insertar(T clave)</td><td>Inserta clave en el árbol B, manejando división si la raíz está llena.</td><td>Algoritmo estándar de B-Tree insert.</td></tr>
+    <tr><td>private void insertarNoLleno(NodoB nodo, T clave)</td><td>Inserción en nodo no lleno (recursiva).</td><td>Helper.</td></tr>
+    <tr><td>private void dividirHijo(NodoB&lt;T&gt; padre, int i)</td><td>Divide el hijo lleno en dos y ajusta claves/hijos del padre.</td><td>Helper para insertar.</td></tr>
+    <tr><td>public boolean buscar(T clave)</td><td>Busca la clave en el árbol y retorna true si existe.</td><td>Usa método privado recursivo.</td></tr>
+    <tr><td>private boolean buscar(NodoB&lt;T&gt; nodo, T clave)</td><td>Búsqueda recursiva.</td><td>-</td></tr>
+    <tr><td>public ListaEnlazada&lt;T&gt; buscarRango(T desde, T hasta)</td><td>Retorna lista con claves en rango [desde, hasta].</td><td>Usa recorrido recursivo.</td></tr>
+    <tr><td>public void eliminar(T clave)</td><td>Elimina clave del árbol y ajusta la estructura (préstamo/fusión).</td><td>Implementación completa con varios helpers privados.</td></tr>
+    <tr><td>private void eliminar(NodoB nodo, T clave)</td><td>Recursivo para eliminar en nodo (manejando casos).</td><td>-</td></tr>
+    <tr><td>private int encontrarIndice(NodoB nodo, T clave)</td><td>Obtiene índice donde debería estar la clave.</td><td>Helper.</td></tr>
+    <tr><td>private void eliminarDeInterno(NodoB nodo, int idx)</td><td>Elimina desde un nodo interno (usa predecesor/sucesor o fusiona).</td><td>-</td></tr>
+    <tr><td>private T obtenerPredecesor(NodoB nodo, int idx)</td><td>Devuelve predecesor para reemplazo en eliminación.</td><td>-</td></tr>
+    <tr><td>private T obtenerSucesor(NodoB nodo, int idx)</td><td>Devuelve sucesor para reemplazo en eliminación.</td><td>-</td></tr>
+    <tr><td>private void fusionar(NodoB nodo, int idx)</td><td>Fusiona hijo y su hermano, ajustando claves del padre.</td><td>-</td></tr>
+    <tr><td>private void rellenar(NodoB nodo, int idx)</td><td>Garantiza que un hijo tenga suficientes claves antes de recursar.</td><td>Usa tomarDelAnterior / tomarDelSiguiente.</td></tr>
+    <tr><td>private void tomarDelAnterior(NodoB nodo, int idx)</td><td>Toma una clave del hermano izquierdo (préstamo).</td><td>-</td></tr>
+    <tr><td>private void tomarDelSiguiente(NodoB nodo, int idx)</td><td>Toma una clave del hermano derecho (préstamo).</td><td>-</td></tr>
+    <tr><td>public boolean isEmpty()</td><td>Indica si el árbol está vacío.</td><td>-</td></tr>
+    <tr><td>public NodoB getRaiz()</td><td>Retorna la raíz.</td><td>Permite inspección externa (UI/visualización).</td></tr>
+  </table>
+
+  <h2>Árbol B+ - ArbolBPlus&lt;T&gt;</h2>
+  <p class="ruta">Archivo: src/main/java/estructuras/arbolBPlus/ArbolBPlus.java</p>
+  <table>
+    <tr><th>Método (firma)</th><th>Descripción</th><th>Notas</th></tr>
+    <tr><td>public ArbolBPlus(int orden)</td><td>Constructor: inicializa orden y raíz hoja.</td><td>-</td></tr>
+    <tr><td>public void insertar(T clave)</td><td>Inserta clave, dividiendo nodos cuando es necesario.</td><td>Implementación B+ con claves en hojas enlazadas.</td></tr>
+    <tr><td>private void insertarNoLleno(NodoBPlus&lt;T&gt; nodo, T clave)</td><td>Inserción en nodo no lleno (recursiva).</td><td>-</td></tr>
+    <tr><td>private void dividir(NodoBPlus&lt;T&gt; padre, int idx)</td><td>Divide un hijo y mueve claves/hijos al padre; en hojas enlaza siguiente.</td><td>En hojas, la clave media se conserva en hojas (comportamiento B+).</td></tr>
+    <tr><td>private void insertarEnPadre(NodoBPlus padre, int idx, T clave, NodoBPlus nuevo)</td><td>Inserta referencia y clave en el padre tras división.</td><td>Helper.</td></tr>
+    <tr><td>public boolean buscar(T clave)</td><td>Busca clave en hojas; devuelve true si existe.</td><td>Usa encontrarHoja.</td></tr>
+    <tr><td>private NodoBPlus encontrarHoja(T clave)</td><td>Recorre árbol hasta la hoja correspondiente.</td><td>-</td></tr>
+    <tr><td>public ListaEnlazada&lt;T&gt; buscarPorCategoria(T categoria)</td><td>Recorre hojas desde la hoja inicial recolectando claves que igualen la categoría.</td><td>Útil cuando las claves representan categorías.</td></tr>
+    <tr><td>public ListaEnlazada&lt;T&gt; buscarRango(T desde, T hasta)</td><td>Retorna claves dentro del rango usando el enlace de hojas.</td><td>Eficiente para rangos (característica B+).</td></tr>
+    <tr><td>public void eliminar(T clave)</td><td>Elimina clave y rebalancea si es necesario (merge/borrow).</td><td>Implementación con helpers; mantiene enlaces de hojas.</td></tr>
+    <tr><td>private void eliminarRec(NodoBPlus&lt;T&gt; nodo, T clave)</td><td>Recursivo para eliminación y rebalanceo.</td><td>-</td></tr>
+    <tr><td>private void eliminarEnHoja(NodoBPlus&lt;T&gt; nodo, T clave)</td><td>Elimina clave en la hoja si existe.</td><td>-</td></tr>
+    <tr><td>private void rebalancear(NodoBPlus&lt;T&gt; padre, int idx)</td><td>Intenta tomar de hermanos o hacer merge si hijo queda con pocas claves.</td><td>-</td></tr>
+    <tr><td>private void prestarDeIzquierda(...)</td><td>Préstamo desde hermano izquierdo.</td><td>-</td></tr>
+    <tr><td>private void prestarDeDerecha(...)</td><td>Préstamo desde hermano derecho.</td><td>-</td></tr>
+    <tr><td>private void merge(NodoBPlus&lt;T&gt; padre, int idx)</td><td>Fusiona hijo con su hermano derecho y actualiza padre.</td><td>-</td></tr>
+    <tr><td>public ListaEnlazada&lt;T&gt; recorrerHojas()</td><td>Devuelve una lista con todas las claves recorriendo las hojas enlazadas.</td><td>O(n) en número de claves.</td></tr>
+    <tr><td>public boolean isEmpty()</td><td>Indica si el árbol está vacío.</td><td>-</td></tr>
+    <tr><td>public NodoBPlus&lt;T&gt; getRaiz()</td><td>Retorna la raíz.</td><td>-</td></tr>
+  </table>
+
+  <h2>Tabla Hash - TablaHash</h2>
+  <p class="ruta">Archivo: src/main/java/estructuras/hash/TablaHash.java</p>
+  <table>
+    <tr><th>Método (firma)</th><th>Descripción</th><th>Notas</th></tr>
+    <tr><td>public TablaHash()</td><td>Constructor: inicializa capacidad por defecto (64) y buckets.</td><td>-</td></tr>
+    <tr><td>private int caluclarHash(String clave)</td><td>Calcula índice de bucket (hash % capacidad).</td><td>Usa abs de hashCode.</td></tr>
+    <tr><td>public boolean insertar(String clave, Productos valor)</td><td>Inserta (clave, valor) si no existe; redimensiona si factor de carga excede 0.75.</td><td>Usa encadenamiento; devuelve false si clave duplicada.</td></tr>
+    <tr><td>private void redimensionarTabla()</td><td>Duplica la capacidad y re-inserta elementos en nueva tabla.</td><td>O(n) durante redimensión.</td></tr>
+    <tr><td>public Productos buscar(String clave)</td><td>Retorna el valor asociado o null.</td><td>Recorrido del bucket (lista enlazada).</td></tr>
+    <tr><td>public boolean eliminar(String clave)</td><td>Elimina la pareja clave-valor si existe y retorna true.</td><td>Ajusta size.</td></tr>
+    <tr><td>public boolean contiene(String clave)</td><td>Indica si la clave existe (usa buscar).</td><td>-</td></tr>
+    <tr><td>public int size()</td><td>Numero de elementos.</td><td>-</td></tr>
+    <tr><td>public boolean isEmpty()</td><td>True si size==0.</td><td>-</td></tr>
+    <tr><td>public int getCapacidad()</td><td>Capacidad actual de la tabla (número de buckets).</td><td>-</td></tr>
+    <tr><td>public double factorCarga()</td><td>Ratio size/capacidad.</td><td>-</td></tr>
+    <tr><td>public int tamanioBucket(int idx)</td><td>Cuenta elementos en el bucket idx.</td><td>Útil para análisis de colisiones.</td></tr>
+    <tr><td>public void imprimirTabla()</td><td>Imprime contenido de la tabla por buckets (consola).</td><td>Útil para depurar.</td></tr>
+    <tr><td>public NodoTabla[] getBuckets()</td><td>Devuelve arreglo interno de buckets.</td><td>Exposición de estructura interna.</td></tr>
+  </table>
+
+  <h2>Nodo de Tabla Hash - NodoTabla</h2>
+  <p class="ruta">Archivo: src/main/java/estructuras/hash/NodoTabla.java</p>
+  <table>
+    <tr><th>Método / Campo</th><th>Descripción</th><th>Notas</th></tr>
+    <tr><td>public NodoTabla(String clave, Productos productos)</td><td>Constructor con clave y objeto Productos.</td><td>-</td></tr>
+    <tr><td>getClave / setClave</td><td>Getter/Setter para clave.</td><td>-</td></tr>
+    <tr><td>getProductos / setProductos</td><td>Getter/Setter para Productos.</td><td>-</td></tr>
+    <tr><td>NodoTabla siguiente (campo)</td><td>Referencia al siguiente nodo en bucket (encadenamiento).</td><td>Campo package-accessible en implementación actual.</td></tr>
+  </table>
+
+  <h2>Grafo - Grafo</h2>
+  <p class="ruta">Archivo: src/main/java/estructuras/grafos/Grafo.java</p>
+  <table>
+    <tr><th>Método (firma)</th><th>Descripción</th><th>Notas</th></tr>
+    <tr><td>public Grafo()</td><td>Constructor: inicializa arreglo de nodos y totalNodos=0.</td><td>-</td></tr>
+    <tr><td>private int buscarIndice(int idSucursal)</td><td>Busca el índice interno del nodo con idSucursal.</td><td>O(n) lineal en totalNodos.</td></tr>
+    <tr><td>public void agregarSucursal(int idSucursal)</td><td>Agrega un nuevo NodoGrafo si no existe ya.</td><td>Aumenta totalNodos.</td></tr>
+    <tr><td>private boolean existeConexion(int origen, int destino)</td><td>Verifica si ya existe arista origen->destino.</td><td>Helper usado antes de insertar.</td></tr>
+    <tr><td>public void agregarConexion(int origen, int destino, double tiempo, double costo)</td><td>Agrega arista dirigida con tiempo y costo.</td><td>Inserta al inicio de la lista de aristas del nodo origen.</td></tr>
+    <tr><td>public void agregarConexionBiDireccional(int origen, int destino, double tiempo, double costo)</td><td>Agrega aristas en ambas direcciones.</td><td>-</td></tr>
+    <tr><td>public ResultadoRuta determinaDijkstra(int origen, int destino, boolean usarTiempo)</td><td>Calcula ruta mínima usando Dijkstra; retorna ruta y costo/tiempo.</td><td>Usa ColaPrioridad; complejidad depende de estructura (aquí heap simple). Retorna ResultadoRuta con ruta o -1 si no hay ruta.</td></tr>
+    <tr><td>public void cargarConexionesCSV(String archivo)</td><td>Lee CSV (formato origen,destino,tiempo,costo) y agrega conexiones.</td><td>Ignora líneas inválidas; imprime totalNodos al finalizar.</td></tr>
+    <tr><td>public int getTotalNodos()</td><td>Devuelve número de nodos cargados.</td><td>-</td></tr>
+    <tr><td>public NodoGrafo[] getNodos()</td><td>Devuelve arreglo interno de nodos.</td><td>Exposición interna.</td></tr>
+    <tr><td>public int getIdSucursal(int idx)</td><td>Devuelve idSucursal del nodo en índice idx.</td><td>-</td></tr>
+    <tr><td>public NodoArista getAristas(int idx)</td><td>Retorna la lista de aristas del nodo en índice idx.</td><td>-</td></tr>
+    <tr><td>public NodoArista getAdyacentesPorId(int idSucursal)</td><td>Retorna listado de aristas para la sucursal dada (busca por id).</td><td>-</td></tr>
+    <tr><td>public String obtenerConexionesComoTexto()</td><td>Devuelve un String con todas las conexiones (para mostrar).</td><td>Útil para UI/depuración.</td></tr>
+  </table>
+
+  <h2>NodoGrafo</h2>
+  <p class="ruta">Archivo: src/main/java/estructuras/grafos/NodoGrafo.java</p>
+  <table>
+    <tr><th>Método / Campo</th><th>Descripción</th><th>Notas</th></tr>
+    <tr><td>public NodoGrafo(int idSucursal)</td><td>Constructor que inicializa idSucursal y listaArista=null.</td><td>-</td></tr>
+    <tr><td>getIdSucursal / setIdSucursal</td><td>Getter/Setter idSucursal.</td><td>-</td></tr>
+    <tr><td>getListaArista / setListaArista</td><td>Getter/Setter de la lista de aristas (NodoArista).</td><td>-</td></tr>
+  </table>
+
+  <h2>NodoArista</h2>
+  <p class="ruta">Archivo: src/main/java/estructuras/grafos/NodoArista.java</p>
+  <table>
+    <tr><th>Método / Campo</th><th>Descripción</th><th>Notas</th></tr>
+    <tr><td>public NodoArista(int destino, double tiempo, double costo)</td><td>Constructor para crear una arista con datos.</td><td>-</td></tr>
+    <tr><td>getDestino / setDestino</td><td>Getter/Setter destino (idSucursal destino).</td><td>-</td></tr>
+    <tr><td>getTiempo / setTiempo</td><td>Getter/Setter tiempo.</td><td>-</td></tr>
+    <tr><td>getCosto / setCosto</td><td>Getter/Setter costo.</td><td>-</td></tr>
+    <tr><td>getSiguiente / setSiguiente</td><td>Getter/Setter para la siguiente arista en la lista.</td><td>-</td></tr>
+  </table>
+
+  <h2>Cola de prioridad - ColaPrioridad</h2>
+  <p class="ruta">Archivo: src/main/java/estructuras/grafos/ColaPrioridad.java</p>
+  <table>
+    <tr><th>Método (firma)</th><th>Descripción</th><th>Notas</th></tr>
+    <tr><td>public ColaPrioridad(int capacidad)</td><td>Constructor que inicializa heap con capacidad dada.</td><td>-</td></tr>
+    <tr><td>private int padre(int i), hijoIzq(int i), hijoDer(int i)</td><td>Índices auxiliares para heap.</td><td>Helpers privados.</td></tr>
+    <tr><td>private void intercambiar(int i, int j)</td><td>Intercambia entradas en el heap.</td><td>Helper.</td></tr>
+    <tr><td>public void insertar(int nodo, double distancia)</td><td>Inserta una entrada (nodo, distancia) y mantiene heap mínimo.</td><td>Lanza RuntimeException si heap lleno.</td></tr>
+    <tr><td>public Entrada extraerMinimo()</td><td>Extrae y retorna la entrada con menor distancia (min-heap).</td><td>Rearma heap con heapifyDown.</td></tr>
+    <tr><td>private void heapifyDown(int i)</td><td>Desciende elemento para mantener heap mínimo.</td><td>Helper.</td></tr>
+    <tr><td>public boolean isEmpty()</td><td>Indica si el heap está vacío.</td><td>-</td></tr>
+    <tr><td>public int size()</td><td>Numero de entradas en el heap.</td><td>-</td></tr>
+  </table>
+
+  <hr>
+  <p class="nota">Notas finales: Si deseas que incluya ejemplos de uso (pequeños fragmentos de código) para cada TDA, o que haga el documento en formato .docx, lo puedo añadir. También puedo exportar estas tablas a un archivo Markdown o CSV si lo prefieres.</p>
+</body>
+</html>

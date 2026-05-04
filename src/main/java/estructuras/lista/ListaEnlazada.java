@@ -2,8 +2,7 @@ package estructuras.lista;
 
 import estructuras.nodo.Nodo;
 
-import java.util.ArrayList;
-import java.util.List;
+
 import java.util.function.Predicate;
 
 public class ListaEnlazada<T> implements Iterable<T> {
@@ -109,13 +108,13 @@ public class ListaEnlazada<T> implements Iterable<T> {
     }
 
 
-    public List<T> toList() {
-        List<T> result = new ArrayList<>();
+    public ListaEnlazada<T> toList() {
+        ListaEnlazada<T> result = new ListaEnlazada<>();
         Nodo<T> current = head;
 
         while (current != null) {
 
-            result.add(current.producto);
+            result.agregar(current.producto);
             current = current.next;
         }
         return result;

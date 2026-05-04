@@ -1,0 +1,1000 @@
+[Mon May 04 00:43:42 CST 2026] Sucursales línea 2: error numérico: [1,Leche Entera,7000000001,Lacteos,2026-06-15,Dos Pinos,12.50,100] campo[3]=Lacteos campo[4]=2026-06-15 campo[5]=Dos Pinos
+[Mon May 04 00:43:42 CST 2026] Sucursales línea 3: error numérico: [1,Pan Blanco,7000000002,Panaderia,2026-04-25,Bimbo,8.75,50] campo[3]=Panaderia campo[4]=2026-04-25 campo[5]=Bimbo
+[Mon May 04 00:43:42 CST 2026] Sucursales línea 4: error numérico: [1,Arroz Largo,7000000003,Granos,2027-01-01,Tio Pelon,18.00,200] campo[3]=Granos campo[4]=2027-01-01 campo[5]=Tio Pelon
+[Mon May 04 00:43:42 CST 2026] Sucursales línea 5: error numérico: [2,Frijol Negro,7000000004,Granos,2027-03-10,La Preferida,15.50,150] campo[3]=Granos campo[4]=2027-03-10 campo[5]=La Preferida
+[Mon May 04 00:43:42 CST 2026] Sucursales línea 6: error numérico: [2,Aceite Vegetal,7000000005,Aceites,2026-12-31,Ideal,32.00,80] campo[3]=Aceites campo[4]=2026-12-31 campo[5]=Ideal
+[Mon May 04 00:43:42 CST 2026] Sucursales línea 7: error numérico: [3,Yogur Natural,7000000006,Lacteos,2026-05-10,Yoplait,14.00,60] campo[3]=Lacteos campo[4]=2026-05-10 campo[5]=Yoplait
+[Mon May 04 00:43:42 CST 2026] Sucursales línea 8: error numérico: [3,Cereal Maiz,7000000007,Cereales,2026-11-20,Kelloggs,28.50,45] campo[3]=Cereales campo[4]=2026-11-20 campo[5]=Kelloggs
+[Mon May 04 00:43:42 CST 2026] Sucursales línea 9: error numérico: [11,Jugo Naranja 026,7000000008,Congelados,2027-12-18,Nestle,192.45,378] campo[3]=Congelados campo[4]=2027-12-18 campo[5]=Nestle
+[Mon May 04 00:43:42 CST 2026] Sucursales línea 10: error numérico: [2,Papa Blanca 759,7000000009,Snacks,2026-11-28,Pringles,30.40,48] campo[3]=Snacks campo[4]=2026-11-28 campo[5]=Pringles
+[Mon May 04 00:43:42 CST 2026] Sucursales línea 11: error numérico: [4,Tortillas Maiz 518,7000000010,Limpieza,2026-07-27,Familia,171.82,333] campo[3]=Limpieza campo[4]=2026-07-27 campo[5]=Familia
+[Mon May 04 00:43:42 CST 2026] Sucursales línea 12: error numérico: [12,Papel Higienico 430,7000000011,Aceites,2028-12-08,Unilever,688.68,4] campo[3]=Aceites campo[4]=2028-12-08 campo[5]=Unilever
+[Mon May 04 00:43:42 CST 2026] Sucursales línea 13: error numérico: [3,Zanahoria 433,7000000012,Bebidas,2027-12-24,Ideal,185.76,391] campo[3]=Bebidas campo[4]=2027-12-24 campo[5]=Ideal
+[Mon May 04 00:43:42 CST 2026] Sucursales línea 14: error numérico: [6,Cereal Maiz 095,7000000013,Carnes,2026-12-18,Heinz,720.90,310] campo[3]=Carnes campo[4]=2026-12-18 campo[5]=Heinz
+[Mon May 04 00:43:42 CST 2026] Sucursales línea 15: error numérico: [5,Carne Molida 045,7000000014,Congelados,2028-12-29,Familia,109.17,473] campo[3]=Congelados campo[4]=2028-12-29 campo[5]=Familia
+[Mon May 04 00:43:42 CST 2026] Sucursales línea 16: error numérico: [7,Yogur Natural 566,7000000015,Cereales,2028-06-12,Kelloggs,599.92,24] campo[3]=Cereales campo[4]=2028-06-12 campo[5]=Kelloggs
+[Mon May 04 00:43:42 CST 2026] Sucursales línea 17: error numérico: [11,Tortillas Maiz 792,7000000016,Cereales,2026-11-13,Nestle,736.98,195] campo[3]=Cereales campo[4]=2026-11-13 campo[5]=Nestle
+[Mon May 04 00:43:42 CST 2026] Sucursales línea 18: error numérico: [5,Agua Pura 651,7000000017,Dulces,2028-06-19,Yoplait,316.86,108] campo[3]=Dulces campo[4]=2028-06-19 campo[5]=Yoplait
+[Mon May 04 00:43:42 CST 2026] Sucursales línea 19: error numérico: [11,Ketchup 719,7000000018,Snacks,2026-10-27,Yoplait,455.65,126] campo[3]=Snacks campo[4]=2026-10-27 campo[5]=Yoplait
+[Mon May 04 00:43:42 CST 2026] Sucursales línea 20: error numérico: [3,Agua Pura 389,7000000019,Cereales,2027-08-26,Del Monte,716.97,398] campo[3]=Cereales campo[4]=2027-08-26 campo[5]=Del Monte
+[Mon May 04 00:43:42 CST 2026] Sucursales línea 21: error numérico: [1,Tortillas Maiz 842,7000000020,Lacteos,2028-03-10,Kraft,230.14,109] campo[3]=Lacteos campo[4]=2028-03-10 campo[5]=Kraft
+[Mon May 04 00:43:42 CST 2026] Sucursales línea 22: error numérico: [10,Margarina 736,7000000021,Bebidas,2027-08-12,Dove,338.40,469] campo[3]=Bebidas campo[4]=2027-08-12 campo[5]=Dove
+[Mon May 04 00:43:42 CST 2026] Sucursales línea 23: error numérico: [11,Agua Pura 147,7000000022,Cereales,2027-03-15,Nestle,634.13,276] campo[3]=Cereales campo[4]=2027-03-15 campo[5]=Nestle
+[Mon May 04 00:43:42 CST 2026] Sucursales línea 24: error numérico: [5,Ajo Entero 599,7000000023,Carnes,2028-08-28,Heinz,189.16,71] campo[3]=Carnes campo[4]=2028-08-28 campo[5]=Heinz
+[Mon May 04 00:43:42 CST 2026] Sucursales línea 25: error numérico: [9,Jabon Barra 094,7000000024,Enlatados,2026-09-07,La Preferida,132.88,82] campo[3]=Enlatados campo[4]=2026-09-07 campo[5]=La Preferida
+[Mon May 04 00:43:42 CST 2026] Sucursales línea 26: error numérico: [11,Papas Fritas 611,7000000025,Panaderia,2028-07-30,Kraft,507.92,240] campo[3]=Panaderia campo[4]=2028-07-30 campo[5]=Kraft
+[Mon May 04 00:43:42 CST 2026] Sucursales línea 27: error numérico: [9,Spaghetti 995,7000000026,Verduras,2026-06-26,La Preferida,580.57,275] campo[3]=Verduras campo[4]=2026-06-26 campo[5]=La Preferida
+[Mon May 04 00:43:42 CST 2026] Sucursales línea 28: error numérico: [5,Limon Persa 657,7000000027,Bebidas,2027-01-17,Maggi,371.53,233] campo[3]=Bebidas campo[4]=2027-01-17 campo[5]=Maggi
+[Mon May 04 00:43:42 CST 2026] Sucursales línea 29: error numérico: [1,Canela Molida 740,7000000028,Snacks,2027-11-24,Lux,648.50,260] campo[3]=Snacks campo[4]=2027-11-24 campo[5]=Lux
+[Mon May 04 00:43:42 CST 2026] Sucursales línea 30: error numérico: [2,Huevos Blancos 641,7000000029,Cereales,2029-04-07,Kelloggs,132.88,391] campo[3]=Cereales campo[4]=2029-04-07 campo[5]=Kelloggs
+[Mon May 04 00:43:42 CST 2026] Sucursales línea 31: error numérico: [3,Papel Higienico 977,7000000030,Enlatados,2026-06-04,Del Monte,417.10,58] campo[3]=Enlatados campo[4]=2026-06-04 campo[5]=Del Monte
+[Mon May 04 00:43:42 CST 2026] Sucursales línea 32: error numérico: [6,Margarina 852,7000000031,Enlatados,2028-02-22,Nestle,52.53,450] campo[3]=Enlatados campo[4]=2028-02-22 campo[5]=Nestle
+[Mon May 04 00:43:42 CST 2026] Sucursales línea 33: error numérico: [10,Levadura Seca 081,7000000032,Panaderia,2029-02-22,Tio Pelon,831.36,273] campo[3]=Panaderia campo[4]=2029-02-22 campo[5]=Tio Pelon
+[Mon May 04 00:43:42 CST 2026] Sucursales línea 34: error numérico: [3,Atun en Agua 676,7000000033,Frutas,2027-05-07,Unilever,450.18,311] campo[3]=Frutas campo[4]=2027-05-07 campo[5]=Unilever
+[Mon May 04 00:43:42 CST 2026] Sucursales línea 35: error numérico: [7,Canela Molida 217,7000000034,Snacks,2027-07-19,Maggi,341.25,344] campo[3]=Snacks campo[4]=2027-07-19 campo[5]=Maggi
+[Mon May 04 00:43:42 CST 2026] Sucursales línea 36: error numérico: [11,Cafe Molido 449,7000000035,Snacks,2029-04-27,Colgate,105.93,116] campo[3]=Snacks campo[4]=2029-04-27 campo[5]=Colgate
+[Mon May 04 00:43:42 CST 2026] Sucursales línea 37: error numérico: [2,Sal de Mesa 022,7000000036,Limpieza,2027-09-17,Nestle,9.59,363] campo[3]=Limpieza campo[4]=2027-09-17 campo[5]=Nestle
+[Mon May 04 00:43:42 CST 2026] Sucursales línea 38: error numérico: [11,Frijol Negro 235,7000000037,Panaderia,2026-08-06,Del Monte,63.48,122] campo[3]=Panaderia campo[4]=2026-08-06 campo[5]=Del Monte
+[Mon May 04 00:43:42 CST 2026] Sucursales línea 39: error numérico: [5,Tomate Rojo 498,7000000038,Aceites,2027-02-28,Dove,209.20,243] campo[3]=Aceites campo[4]=2027-02-28 campo[5]=Dove
+[Mon May 04 00:43:42 CST 2026] Sucursales línea 40: error numérico: [7,Mantequilla 097,7000000039,Panaderia,2028-11-01,Heinz,362.06,240] campo[3]=Panaderia campo[4]=2028-11-01 campo[5]=Heinz
+[Mon May 04 00:43:42 CST 2026] Sucursales línea 41: error numérico: [12,Frijol Negro 690,7000000040,Higiene,2026-12-21,Bimbo,344.32,174] campo[3]=Higiene campo[4]=2026-12-21 campo[5]=Bimbo
+[Mon May 04 00:43:42 CST 2026] Sucursales línea 42: error numérico: [2,Frijoles Negros 197,7000000041,Aceites,2028-12-07,Ideal,360.62,143] campo[3]=Aceites campo[4]=2028-12-07 campo[5]=Ideal
+[Mon May 04 00:43:42 CST 2026] Sucursales línea 43: error numérico: [8,Frijoles Negros 896,7000000042,Snacks,2026-11-04,Colgate,687.49,439] campo[3]=Snacks campo[4]=2026-11-04 campo[5]=Colgate
+[Mon May 04 00:43:42 CST 2026] Sucursales línea 44: error numérico: [9,Cereal Maiz 052,7000000043,Higiene,2026-07-03,Tio Pelon,787.67,435] campo[3]=Higiene campo[4]=2026-07-03 campo[5]=Tio Pelon
+[Mon May 04 00:43:42 CST 2026] Sucursales línea 45: error numérico: [4,Jamon Cocido 417,7000000044,Frutas,2029-02-12,Kelloggs,735.43,463] campo[3]=Frutas campo[4]=2029-02-12 campo[5]=Kelloggs
+[Mon May 04 00:43:42 CST 2026] Sucursales línea 46: error numérico: [1,Jamon Cocido 389,7000000045,Lacteos,2028-08-10,Unilever,787.80,402] campo[3]=Lacteos campo[4]=2028-08-10 campo[5]=Unilever
+[Mon May 04 00:43:42 CST 2026] Sucursales línea 47: error numérico: [8,Mayonesa 434,7000000046,Congelados,2029-02-23,Ideal,164.25,112] campo[3]=Congelados campo[4]=2029-02-23 campo[5]=Ideal
+[Mon May 04 00:43:42 CST 2026] Sucursales línea 48: error numérico: [1,Desodorante Roll 754,7000000047,Verduras,2026-10-05,Del Monte,51.89,300] campo[3]=Verduras campo[4]=2026-10-05 campo[5]=Del Monte
+[Mon May 04 00:43:42 CST 2026] Sucursales línea 49: error numérico: [8,Detergente Polvo 942,7000000048,Dulces,2027-04-21,Bimbo,816.80,42] campo[3]=Dulces campo[4]=2027-04-21 campo[5]=Bimbo
+[Mon May 04 00:43:42 CST 2026] Sucursales línea 50: error numérico: [3,Aceite Vegetal 610,7000000049,Panaderia,2027-09-27,Kraft,104.98,456] campo[3]=Panaderia campo[4]=2027-09-27 campo[5]=Kraft
+[Mon May 04 00:43:42 CST 2026] Sucursales línea 51: error numérico: [10,Frijoles Negros 593,7000000050,Limpieza,2026-08-23,Tio Pelon,358.37,299] campo[3]=Limpieza campo[4]=2026-08-23 campo[5]=Tio Pelon
+[Mon May 04 00:43:42 CST 2026] Sucursales línea 52: error numérico: [10,Suavizante Ropa 324,7000000051,Snacks,2027-11-19,Kelloggs,570.42,161] campo[3]=Snacks campo[4]=2027-11-19 campo[5]=Kelloggs
+[Mon May 04 00:43:42 CST 2026] Sucursales línea 53: error numérico: [4,Spaghetti 406,7000000052,Granos,2028-02-07,Colgate,271.14,385] campo[3]=Granos campo[4]=2028-02-07 campo[5]=Colgate
+[Mon May 04 00:43:42 CST 2026] Sucursales línea 54: error numérico: [2,Leche Entera 470,7000000053,Limpieza,2026-12-24,Tio Pelon,458.61,260] campo[3]=Limpieza campo[4]=2026-12-24 campo[5]=Tio Pelon
+[Mon May 04 00:43:42 CST 2026] Sucursales línea 55: error numérico: [5,Atun en Agua 956,7000000054,Bebidas,2026-10-21,Nestle,316.30,81] campo[3]=Bebidas campo[4]=2026-10-21 campo[5]=Nestle
+[Mon May 04 00:43:42 CST 2026] Sucursales línea 56: error numérico: [8,Mortadela 557,7000000055,Congelados,2028-02-12,Lux,10.12,419] campo[3]=Congelados campo[4]=2028-02-12 campo[5]=Lux
+[Mon May 04 00:43:42 CST 2026] Sucursales línea 57: error numérico: [9,Mostaza 955,7000000056,Higiene,2027-01-01,Ideal,227.37,456] campo[3]=Higiene campo[4]=2027-01-01 campo[5]=Ideal
+[Mon May 04 00:43:42 CST 2026] Sucursales línea 58: error numérico: [2,Ajo Entero 567,7000000057,Granos,2027-12-12,Maggi,515.49,368] campo[3]=Granos campo[4]=2027-12-12 campo[5]=Maggi
+[Mon May 04 00:43:42 CST 2026] Sucursales línea 59: error numérico: [6,Crema Agria 704,7000000058,Higiene,2027-11-25,Lux,417.04,464] campo[3]=Higiene campo[4]=2027-11-25 campo[5]=Lux
+[Mon May 04 00:43:42 CST 2026] Sucursales línea 60: error numérico: [1,Yogur Natural 650,7000000059,Carnes,2027-12-21,Bimbo,6.50,395] campo[3]=Carnes campo[4]=2027-12-21 campo[5]=Bimbo
+[Mon May 04 00:43:42 CST 2026] Sucursales línea 61: error numérico: [3,Manzana Roja 269,7000000060,Granos,2028-11-23,Familia,600.85,288] campo[3]=Granos campo[4]=2028-11-23 campo[5]=Familia
+[Mon May 04 00:43:42 CST 2026] Sucursales línea 62: error numérico: [1,Jugo Naranja 078,7000000061,Snacks,2027-04-04,Familia,34.00,190] campo[3]=Snacks campo[4]=2027-04-04 campo[5]=Familia
+[Mon May 04 00:43:42 CST 2026] Sucursales línea 63: error numérico: [10,Servilletas 152,7000000062,Carnes,2027-02-19,Bimbo,264.44,461] campo[3]=Carnes campo[4]=2027-02-19 campo[5]=Bimbo
+[Mon May 04 00:43:42 CST 2026] Sucursales línea 64: error numérico: [1,Leche Condensada 367,7000000063,Aceites,2027-10-27,La Preferida,302.89,287] campo[3]=Aceites campo[4]=2027-10-27 campo[5]=La Preferida
+[Mon May 04 00:43:42 CST 2026] Sucursales línea 65: error numérico: [7,Pimienta Negra 636,7000000064,Congelados,2027-04-15,Nestle,735.39,500] campo[3]=Congelados campo[4]=2027-04-15 campo[5]=Nestle
+[Mon May 04 00:43:42 CST 2026] Sucursales línea 66: error numérico: [3,Margarina 423,7000000065,Lacteos,2027-06-05,Del Monte,665.79,211] campo[3]=Lacteos campo[4]=2027-06-05 campo[5]=Del Monte
+[Mon May 04 00:43:42 CST 2026] Sucursales línea 67: error numérico: [11,Huevos Blancos 753,7000000066,Enlatados,2027-10-24,Unilever,138.26,360] campo[3]=Enlatados campo[4]=2027-10-24 campo[5]=Unilever
+[Mon May 04 00:43:42 CST 2026] Sucursales línea 68: error numérico: [2,Te Verde 894,7000000067,Lacteos,2029-01-21,Nestle,172.44,471] campo[3]=Lacteos campo[4]=2029-01-21 campo[5]=Nestle
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 69: error numérico: [8,Azucar Blanca 313,7000000068,Dulces,2027-09-12,Nestle,23.53,99] campo[3]=Dulces campo[4]=2027-09-12 campo[5]=Nestle
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 70: error numérico: [7,Sal de Mesa 286,7000000069,Dulces,2026-10-23,Unilever,300.75,261] campo[3]=Dulces campo[4]=2026-10-23 campo[5]=Unilever
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 71: error numérico: [7,Papa Blanca 864,7000000070,Verduras,2028-04-11,Dos Pinos,101.14,497] campo[3]=Verduras campo[4]=2028-04-11 campo[5]=Dos Pinos
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 72: error numérico: [5,Queso Fresco 595,7000000071,Cereales,2026-08-20,La Preferida,508.50,177] campo[3]=Cereales campo[4]=2026-08-20 campo[5]=La Preferida
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 73: error numérico: [12,Pollo Entero 322,7000000072,Carnes,2029-04-15,La Preferida,329.57,296] campo[3]=Carnes campo[4]=2029-04-15 campo[5]=La Preferida
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 74: error numérico: [4,Spaghetti 046,7000000073,Congelados,2028-11-12,Dos Pinos,443.61,413] campo[3]=Congelados campo[4]=2028-11-12 campo[5]=Dos Pinos
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 75: error numérico: [9,Papa Blanca 737,7000000074,Congelados,2027-07-11,Heinz,368.59,486] campo[3]=Congelados campo[4]=2027-07-11 campo[5]=Heinz
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 76: error numérico: [11,Harina Trigo 339,7000000075,Limpieza,2028-03-06,La Preferida,612.77,154] campo[3]=Limpieza campo[4]=2028-03-06 campo[5]=La Preferida
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 77: error numérico: [9,Mostaza 683,7000000076,Carnes,2028-04-01,Kraft,593.69,284] campo[3]=Carnes campo[4]=2028-04-01 campo[5]=Kraft
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 78: error numérico: [3,Mantequilla 431,7000000077,Higiene,2028-07-18,Yoplait,524.53,155] campo[3]=Higiene campo[4]=2028-07-18 campo[5]=Yoplait
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 79: error numérico: [7,Servilletas 854,7000000078,Lacteos,2028-02-15,Maggi,181.42,403] campo[3]=Lacteos campo[4]=2028-02-15 campo[5]=Maggi
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 80: error numérico: [10,Pasta Dental 671,7000000079,Bebidas,2029-01-10,Colgate,377.79,110] campo[3]=Bebidas campo[4]=2029-01-10 campo[5]=Colgate
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 81: error numérico: [9,Shampoo Clasico 813,7000000080,Snacks,2027-05-16,Tio Pelon,243.73,340] campo[3]=Snacks campo[4]=2027-05-16 campo[5]=Tio Pelon
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 82: error numérico: [11,Cepillo Dientes 344,7000000081,Panaderia,2027-09-27,Maggi,193.66,102] campo[3]=Panaderia campo[4]=2027-09-27 campo[5]=Maggi
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 83: error numérico: [3,Pan Blanco 048,7000000082,Aceites,2029-01-31,Tio Pelon,389.01,454] campo[3]=Aceites campo[4]=2029-01-31 campo[5]=Tio Pelon
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 84: error numérico: [11,Toallas Cocina 200,7000000083,Congelados,2028-07-28,Dove,341.81,76] campo[3]=Congelados campo[4]=2028-07-28 campo[5]=Dove
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 85: error numérico: [11,Zanahoria 006,7000000084,Snacks,2027-01-07,Pringles,188.75,412] campo[3]=Snacks campo[4]=2027-01-07 campo[5]=Pringles
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 86: error numérico: [12,Suavizante Ropa 476,7000000085,Lacteos,2027-10-26,La Preferida,389.89,411] campo[3]=Lacteos campo[4]=2027-10-26 campo[5]=La Preferida
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 87: error numérico: [8,Tomate Rojo 544,7000000086,Verduras,2028-03-13,Colgate,522.11,369] campo[3]=Verduras campo[4]=2028-03-13 campo[5]=Colgate
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 88: error numérico: [9,Papas Fritas 851,7000000087,Snacks,2028-12-02,Yoplait,633.00,244] campo[3]=Snacks campo[4]=2028-12-02 campo[5]=Yoplait
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 89: error numérico: [8,Spaghetti 770,7000000088,Aceites,2027-12-22,Lux,413.71,123] campo[3]=Aceites campo[4]=2027-12-22 campo[5]=Lux
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 90: error numérico: [5,Gaseosa Cola 080,7000000089,Congelados,2028-01-09,Nestle,233.51,164] campo[3]=Congelados campo[4]=2028-01-09 campo[5]=Nestle
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 91: error numérico: [9,Yogur Natural 142,7000000090,Granos,2027-09-19,Kraft,590.93,362] campo[3]=Granos campo[4]=2027-09-19 campo[5]=Kraft
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 92: error numérico: [4,Aceite Vegetal 425,7000000091,Carnes,2028-04-10,Familia,397.90,32] campo[3]=Carnes campo[4]=2028-04-10 campo[5]=Familia
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 93: error numérico: [4,Mortadela 431,7000000092,Carnes,2026-07-13,Kraft,407.26,483] campo[3]=Carnes campo[4]=2026-07-13 campo[5]=Kraft
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 94: error numérico: [6,Mostaza 772,7000000093,Carnes,2028-10-08,Familia,636.27,280] campo[3]=Carnes campo[4]=2028-10-08 campo[5]=Familia
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 95: error numérico: [10,Leche Condensada 226,7000000094,Frutas,2027-08-26,Unilever,372.44,15] campo[3]=Frutas campo[4]=2027-08-26 campo[5]=Unilever
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 96: error numérico: [7,Sal de Mesa 685,7000000095,Higiene,2028-09-08,Yoplait,714.99,471] campo[3]=Higiene campo[4]=2028-09-08 campo[5]=Yoplait
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 97: error numérico: [3,Pimienta Negra 638,7000000096,Verduras,2026-07-28,Kraft,504.54,340] campo[3]=Verduras campo[4]=2026-07-28 campo[5]=Kraft
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 98: error numérico: [1,Yogur Natural 659,7000000097,Carnes,2027-03-07,Colgate,157.33,134] campo[3]=Carnes campo[4]=2027-03-07 campo[5]=Colgate
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 99: error numérico: [7,Vinagre Blanco 217,7000000098,Frutas,2028-04-02,Del Monte,647.88,195] campo[3]=Frutas campo[4]=2028-04-02 campo[5]=Del Monte
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 100: error numérico: [5,Chile Pimiento 975,7000000099,Dulces,2028-10-13,Unilever,710.25,241] campo[3]=Dulces campo[4]=2028-10-13 campo[5]=Unilever
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 101: error numérico: [1,Ajo Entero 553,7000000100,Lacteos,2028-05-19,Nestle,553.85,400] campo[3]=Lacteos campo[4]=2028-05-19 campo[5]=Nestle
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 102: error numérico: [11,Arroz Largo 773,7000000101,Lacteos,2027-10-22,Kelloggs,713.91,319] campo[3]=Lacteos campo[4]=2027-10-22 campo[5]=Kelloggs
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 103: error numérico: [3,Frijoles Negros 130,7000000102,Frutas,2027-01-23,Kelloggs,397.15,132] campo[3]=Frutas campo[4]=2027-01-23 campo[5]=Kelloggs
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 104: error numérico: [6,Jamon Cocido 621,7000000103,Limpieza,2027-01-23,Yoplait,820.14,56] campo[3]=Limpieza campo[4]=2027-01-23 campo[5]=Yoplait
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 105: error numérico: [10,Pan Blanco 952,7000000104,Cereales,2028-07-10,Kraft,800.45,102] campo[3]=Cereales campo[4]=2028-07-10 campo[5]=Kraft
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 106: error numérico: [2,Desodorante Roll 708,7000000105,Dulces,2027-10-13,La Preferida,593.67,155] campo[3]=Dulces campo[4]=2027-10-13 campo[5]=La Preferida
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 107: error numérico: [11,Pasta Dental 825,7000000106,Panaderia,2026-08-26,Heinz,454.47,339] campo[3]=Panaderia campo[4]=2026-08-26 campo[5]=Heinz
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 108: error numérico: [6,Aceite Vegetal 519,7000000107,Higiene,2028-05-01,Dos Pinos,722.67,422] campo[3]=Higiene campo[4]=2028-05-01 campo[5]=Dos Pinos
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 109: error numérico: [8,Cereal Maiz 444,7000000108,Bebidas,2028-12-30,Ideal,372.14,376] campo[3]=Bebidas campo[4]=2028-12-30 campo[5]=Ideal
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 110: error numérico: [9,Canela Molida 667,7000000109,Cereales,2029-02-17,Colgate,372.21,375] campo[3]=Cereales campo[4]=2029-02-17 campo[5]=Colgate
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 111: error numérico: [10,Ketchup 331,7000000110,Dulces,2027-10-18,Tio Pelon,239.61,231] campo[3]=Dulces campo[4]=2027-10-18 campo[5]=Tio Pelon
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 112: error numérico: [4,Chile Pimiento 476,7000000111,Limpieza,2028-07-18,Del Monte,27.79,436] campo[3]=Limpieza campo[4]=2028-07-18 campo[5]=Del Monte
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 113: error numérico: [6,Queso Fresco 500,7000000112,Aceites,2028-05-29,Unilever,291.60,451] campo[3]=Aceites campo[4]=2028-05-29 campo[5]=Unilever
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 114: error numérico: [10,Zanahoria 902,7000000113,Cereales,2026-06-23,Lux,806.03,44] campo[3]=Cereales campo[4]=2026-06-23 campo[5]=Lux
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 115: error numérico: [4,Cebolla Blanca 417,7000000114,Frutas,2027-10-08,Dove,550.26,252] campo[3]=Frutas campo[4]=2027-10-08 campo[5]=Dove
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 116: error numérico: [8,Pollo Entero 018,7000000115,Panaderia,2028-01-26,Nestle,345.83,125] campo[3]=Panaderia campo[4]=2028-01-26 campo[5]=Nestle
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 117: error numérico: [5,Tomate Rojo 596,7000000116,Bebidas,2029-01-27,Familia,452.93,218] campo[3]=Bebidas campo[4]=2029-01-27 campo[5]=Familia
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 118: error numérico: [12,Servilletas 339,7000000117,Bebidas,2028-12-18,Unilever,263.06,119] campo[3]=Bebidas campo[4]=2028-12-18 campo[5]=Unilever
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 119: error numérico: [2,Cebolla Blanca 198,7000000118,Bebidas,2027-02-02,Familia,808.42,354] campo[3]=Bebidas campo[4]=2027-02-02 campo[5]=Familia
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 120: error numérico: [3,Mantequilla 222,7000000119,Congelados,2029-02-18,Unilever,616.86,390] campo[3]=Congelados campo[4]=2029-02-18 campo[5]=Unilever
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 121: error numérico: [9,Pasta Dental 290,7000000120,Panaderia,2027-07-05,Maggi,196.06,92] campo[3]=Panaderia campo[4]=2027-07-05 campo[5]=Maggi
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 122: error numérico: [5,Leche Entera 726,7000000121,Verduras,2027-02-17,Unilever,42.03,28] campo[3]=Verduras campo[4]=2027-02-17 campo[5]=Unilever
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 123: error numérico: [9,Mayonesa 715,7000000122,Granos,2029-03-04,La Preferida,742.26,294] campo[3]=Granos campo[4]=2029-03-04 campo[5]=La Preferida
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 124: error numérico: [5,Shampoo Clasico 491,7000000123,Frutas,2028-04-30,Yoplait,820.79,130] campo[3]=Frutas campo[4]=2028-04-30 campo[5]=Yoplait
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 125: error numérico: [8,Jugo Naranja 842,7000000124,Panaderia,2028-08-31,Dove,66.21,323] campo[3]=Panaderia campo[4]=2028-08-31 campo[5]=Dove
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 126: error numérico: [11,Frijol Negro 156,7000000125,Granos,2028-02-15,Tio Pelon,844.85,61] campo[3]=Granos campo[4]=2028-02-15 campo[5]=Tio Pelon
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 127: error numérico: [9,Chile Pimiento 427,7000000126,Limpieza,2027-09-08,Lux,325.49,466] campo[3]=Limpieza campo[4]=2027-09-08 campo[5]=Lux
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 128: error numérico: [8,Mostaza 881,7000000127,Limpieza,2028-10-28,Maggi,484.84,31] campo[3]=Limpieza campo[4]=2028-10-28 campo[5]=Maggi
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 129: error numérico: [10,Canela Molida 758,7000000128,Panaderia,2027-08-02,Kelloggs,227.52,42] campo[3]=Panaderia campo[4]=2027-08-02 campo[5]=Kelloggs
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 130: error numérico: [3,Frijoles Negros 178,7000000129,Verduras,2026-11-03,Yoplait,5.76,231] campo[3]=Verduras campo[4]=2026-11-03 campo[5]=Yoplait
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 131: error numérico: [12,Pasta Dental 482,7000000130,Cereales,2026-08-08,Nestle,247.38,145] campo[3]=Cereales campo[4]=2026-08-08 campo[5]=Nestle
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 132: error numérico: [12,Huevos Blancos 465,7000000131,Panaderia,2027-09-24,Unilever,670.40,321] campo[3]=Panaderia campo[4]=2027-09-24 campo[5]=Unilever
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 133: error numérico: [10,Tomate Rojo 824,7000000132,Snacks,2027-07-13,Pringles,100.66,116] campo[3]=Snacks campo[4]=2027-07-13 campo[5]=Pringles
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 134: error numérico: [11,Sopa Pollo 931,7000000133,Cereales,2027-03-21,Tio Pelon,53.98,406] campo[3]=Cereales campo[4]=2027-03-21 campo[5]=Tio Pelon
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 135: error numérico: [5,Pasta Dental 767,7000000134,Dulces,2028-01-15,Colgate,108.77,353] campo[3]=Dulces campo[4]=2028-01-15 campo[5]=Colgate
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 136: error numérico: [5,Zanahoria 413,7000000135,Cereales,2029-03-23,Familia,421.50,42] campo[3]=Cereales campo[4]=2029-03-23 campo[5]=Familia
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 137: error numérico: [10,Arroz Largo 911,7000000136,Carnes,2028-03-24,Unilever,25.39,118] campo[3]=Carnes campo[4]=2028-03-24 campo[5]=Unilever
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 138: error numérico: [11,Mortadela 882,7000000137,Limpieza,2026-07-15,Unilever,491.29,391] campo[3]=Limpieza campo[4]=2026-07-15 campo[5]=Unilever
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 139: error numérico: [3,Shampoo Clasico 532,7000000138,Higiene,2028-11-24,Unilever,157.13,300] campo[3]=Higiene campo[4]=2028-11-24 campo[5]=Unilever
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 140: error numérico: [7,Manzana Roja 834,7000000139,Frutas,2026-12-06,Dove,298.05,171] campo[3]=Frutas campo[4]=2026-12-06 campo[5]=Dove
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 141: error numérico: [6,Tomate Rojo 108,7000000140,Dulces,2027-04-28,Del Monte,351.96,254] campo[3]=Dulces campo[4]=2027-04-28 campo[5]=Del Monte
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 142: error numérico: [5,Tomate Rojo 968,7000000141,Carnes,2026-08-17,Colgate,78.04,130] campo[3]=Carnes campo[4]=2026-08-17 campo[5]=Colgate
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 143: error numérico: [6,Jugo Naranja 994,7000000142,Enlatados,2028-09-07,Lux,701.80,1] campo[3]=Enlatados campo[4]=2028-09-07 campo[5]=Lux
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 144: error numérico: [11,Huevos Blancos 556,7000000143,Frutas,2028-09-26,Bimbo,162.29,186] campo[3]=Frutas campo[4]=2028-09-26 campo[5]=Bimbo
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 145: error numérico: [10,Chile Pimiento 511,7000000144,Higiene,2028-11-24,Bimbo,175.81,282] campo[3]=Higiene campo[4]=2028-11-24 campo[5]=Bimbo
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 146: error numérico: [3,Bicarbonato 295,7000000145,Frutas,2029-02-19,La Preferida,27.94,323] campo[3]=Frutas campo[4]=2029-02-19 campo[5]=La Preferida
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 147: error numérico: [10,Carne Molida 246,7000000146,Congelados,2027-04-23,Maggi,469.79,283] campo[3]=Congelados campo[4]=2027-04-23 campo[5]=Maggi
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 148: error numérico: [7,Yogur Natural 231,7000000147,Dulces,2027-01-21,Colgate,805.19,332] campo[3]=Dulces campo[4]=2027-01-21 campo[5]=Colgate
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 149: error numérico: [3,Jabon Barra 956,7000000148,Congelados,2028-01-21,Lux,600.63,213] campo[3]=Congelados campo[4]=2028-01-21 campo[5]=Lux
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 150: error numérico: [8,Pimienta Negra 484,7000000149,Aceites,2028-12-24,Familia,125.94,98] campo[3]=Aceites campo[4]=2028-12-24 campo[5]=Familia
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 151: error numérico: [10,Detergente Polvo 765,7000000150,Snacks,2027-03-09,Tio Pelon,237.34,405] campo[3]=Snacks campo[4]=2027-03-09 campo[5]=Tio Pelon
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 152: error numérico: [7,Sal de Mesa 957,7000000151,Enlatados,2029-04-07,Unilever,698.10,145] campo[3]=Enlatados campo[4]=2029-04-07 campo[5]=Unilever
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 153: error numérico: [12,Mostaza 858,7000000152,Limpieza,2029-03-01,Ideal,381.50,248] campo[3]=Limpieza campo[4]=2029-03-01 campo[5]=Ideal
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 154: error numérico: [6,Sal de Mesa 566,7000000153,Enlatados,2028-07-14,Colgate,793.16,446] campo[3]=Enlatados campo[4]=2028-07-14 campo[5]=Colgate
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 155: error numérico: [4,Pimienta Negra 715,7000000154,Aceites,2028-07-26,Nestle,728.11,211] campo[3]=Aceites campo[4]=2028-07-26 campo[5]=Nestle
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 156: error numérico: [1,Vinagre Blanco 763,7000000155,Frutas,2028-07-22,Kraft,840.19,406] campo[3]=Frutas campo[4]=2028-07-22 campo[5]=Kraft
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 157: error numérico: [11,Pimienta Negra 156,7000000156,Frutas,2026-08-17,Ideal,428.69,303] campo[3]=Frutas campo[4]=2026-08-17 campo[5]=Ideal
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 158: error numérico: [6,Huevos Blancos 103,7000000157,Dulces,2028-11-20,La Preferida,448.72,234] campo[3]=Dulces campo[4]=2028-11-20 campo[5]=La Preferida
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 159: error numérico: [1,Cebolla Blanca 148,7000000158,Carnes,2027-04-15,Tio Pelon,400.92,497] campo[3]=Carnes campo[4]=2027-04-15 campo[5]=Tio Pelon
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 160: error numérico: [5,Sal de Mesa 639,7000000159,Congelados,2028-08-25,Tio Pelon,724.52,437] campo[3]=Congelados campo[4]=2028-08-25 campo[5]=Tio Pelon
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 161: error numérico: [11,Chorizo 547,7000000160,Carnes,2028-03-12,Dove,741.97,19] campo[3]=Carnes campo[4]=2028-03-12 campo[5]=Dove
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 162: error numérico: [10,Aceite Vegetal 241,7000000161,Higiene,2028-01-12,Nestle,635.64,223] campo[3]=Higiene campo[4]=2028-01-12 campo[5]=Nestle
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 163: error numérico: [2,Chile Pimiento 649,7000000162,Congelados,2026-12-25,Colgate,144.33,154] campo[3]=Congelados campo[4]=2026-12-25 campo[5]=Colgate
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 164: error numérico: [1,Arroz Largo 333,7000000163,Enlatados,2026-09-25,Maggi,306.94,221] campo[3]=Enlatados campo[4]=2026-09-25 campo[5]=Maggi
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 165: error numérico: [3,Frijoles Negros 544,7000000164,Carnes,2027-06-06,Yoplait,151.70,313] campo[3]=Carnes campo[4]=2027-06-06 campo[5]=Yoplait
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 166: error numérico: [7,Cepillo Dientes 700,7000000165,Aceites,2029-03-18,Ideal,200.05,327] campo[3]=Aceites campo[4]=2029-03-18 campo[5]=Ideal
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 167: error numérico: [5,Agua Pura 262,7000000166,Higiene,2026-06-22,Colgate,766.37,347] campo[3]=Higiene campo[4]=2026-06-22 campo[5]=Colgate
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 168: error numérico: [9,Jamon Cocido 076,7000000167,Frutas,2028-05-10,Maggi,544.36,218] campo[3]=Frutas campo[4]=2028-05-10 campo[5]=Maggi
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 169: error numérico: [12,Spaghetti 468,7000000168,Dulces,2028-02-11,Kelloggs,849.47,437] campo[3]=Dulces campo[4]=2028-02-11 campo[5]=Kelloggs
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 170: error numérico: [8,Cereal Maiz 243,7000000169,Carnes,2028-06-07,Maggi,843.81,152] campo[3]=Carnes campo[4]=2028-06-07 campo[5]=Maggi
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 171: error numérico: [1,Pimienta Negra 850,7000000170,Higiene,2028-08-21,Unilever,10.35,443] campo[3]=Higiene campo[4]=2028-08-21 campo[5]=Unilever
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 172: error numérico: [11,Limon Persa 763,7000000171,Lacteos,2029-03-16,Maggi,660.16,118] campo[3]=Lacteos campo[4]=2029-03-16 campo[5]=Maggi
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 173: error numérico: [10,Carne Molida 361,7000000172,Aceites,2027-06-27,Unilever,577.23,370] campo[3]=Aceites campo[4]=2027-06-27 campo[5]=Unilever
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 174: error numérico: [11,Papa Blanca 859,7000000173,Granos,2026-12-18,Bimbo,265.01,226] campo[3]=Granos campo[4]=2026-12-18 campo[5]=Bimbo
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 175: error numérico: [1,Desodorante Roll 374,7000000174,Congelados,2027-02-27,Tio Pelon,773.50,168] campo[3]=Congelados campo[4]=2027-02-27 campo[5]=Tio Pelon
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 176: error numérico: [12,Galletas Soda 180,7000000175,Aceites,2027-02-28,Familia,745.42,188] campo[3]=Aceites campo[4]=2027-02-28 campo[5]=Familia
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 177: error numérico: [9,Detergente Polvo 936,7000000176,Cereales,2027-05-05,Unilever,777.24,484] campo[3]=Cereales campo[4]=2027-05-05 campo[5]=Unilever
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 178: error numérico: [8,Canela Molida 826,7000000177,Cereales,2028-04-26,La Preferida,399.94,39] campo[3]=Cereales campo[4]=2028-04-26 campo[5]=La Preferida
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 179: error numérico: [3,Chile Pimiento 990,7000000178,Aceites,2028-08-24,Familia,313.13,405] campo[3]=Aceites campo[4]=2028-08-24 campo[5]=Familia
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 180: error numérico: [7,Leche Entera 271,7000000179,Verduras,2027-02-11,Colgate,315.51,384] campo[3]=Verduras campo[4]=2027-02-11 campo[5]=Colgate
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 181: error numérico: [11,Spaghetti 599,7000000180,Carnes,2028-07-02,La Preferida,574.75,242] campo[3]=Carnes campo[4]=2028-07-02 campo[5]=La Preferida
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 182: error numérico: [1,Cepillo Dientes 906,7000000181,Verduras,2028-04-04,Nestle,551.74,326] campo[3]=Verduras campo[4]=2028-04-04 campo[5]=Nestle
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 183: error numérico: [8,Harina Trigo 718,7000000182,Cereales,2028-09-16,La Preferida,121.82,485] campo[3]=Cereales campo[4]=2028-09-16 campo[5]=La Preferida
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 184: error numérico: [1,Mostaza 505,7000000183,Panaderia,2026-12-19,Nestle,754.57,70] campo[3]=Panaderia campo[4]=2026-12-19 campo[5]=Nestle
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 185: error numérico: [7,Agua Pura 380,7000000184,Higiene,2028-10-08,Ideal,753.00,336] campo[3]=Higiene campo[4]=2028-10-08 campo[5]=Ideal
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 186: error numérico: [2,Mortadela 502,7000000185,Limpieza,2028-09-15,Unilever,31.19,190] campo[3]=Limpieza campo[4]=2028-09-15 campo[5]=Unilever
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 187: error numérico: [4,Gaseosa Cola 456,7000000186,Aceites,2028-06-14,La Preferida,833.86,189] campo[3]=Aceites campo[4]=2028-06-14 campo[5]=La Preferida
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 188: error numérico: [9,Leche Condensada 661,7000000187,Bebidas,2026-10-05,Kraft,237.03,496] campo[3]=Bebidas campo[4]=2026-10-05 campo[5]=Kraft
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 189: error numérico: [2,Levadura Seca 869,7000000188,Dulces,2028-12-20,Tio Pelon,564.53,329] campo[3]=Dulces campo[4]=2028-12-20 campo[5]=Tio Pelon
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 190: error numérico: [11,Pasta Dental 995,7000000189,Lacteos,2026-09-14,Del Monte,209.68,65] campo[3]=Lacteos campo[4]=2026-09-14 campo[5]=Del Monte
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 191: error numérico: [10,Crema Agria 071,7000000190,Dulces,2027-08-01,Kelloggs,691.75,120] campo[3]=Dulces campo[4]=2027-08-01 campo[5]=Kelloggs
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 192: error numérico: [6,Limon Persa 152,7000000191,Enlatados,2026-06-08,Unilever,730.14,75] campo[3]=Enlatados campo[4]=2026-06-08 campo[5]=Unilever
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 193: error numérico: [3,Papel Higienico 257,7000000192,Enlatados,2027-05-26,La Preferida,563.09,14] campo[3]=Enlatados campo[4]=2027-05-26 campo[5]=La Preferida
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 194: error numérico: [3,Leche Entera 367,7000000193,Enlatados,2027-10-03,Del Monte,16.86,136] campo[3]=Enlatados campo[4]=2027-10-03 campo[5]=Del Monte
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 195: error numérico: [1,Atun en Agua 760,7000000194,Carnes,2027-01-21,Tio Pelon,406.64,399] campo[3]=Carnes campo[4]=2027-01-21 campo[5]=Tio Pelon
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 196: error numérico: [6,Detergente Polvo 608,7000000195,Panaderia,2028-12-14,Lux,191.04,315] campo[3]=Panaderia campo[4]=2028-12-14 campo[5]=Lux
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 197: error numérico: [1,Cebolla Blanca 803,7000000196,Snacks,2028-02-10,Colgate,548.09,16] campo[3]=Snacks campo[4]=2028-02-10 campo[5]=Colgate
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 198: error numérico: [1,Shampoo Clasico 868,7000000197,Carnes,2028-10-23,La Preferida,418.51,466] campo[3]=Carnes campo[4]=2028-10-23 campo[5]=La Preferida
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 199: error numérico: [8,Aceite Vegetal 921,7000000198,Panaderia,2028-03-23,Ideal,59.10,141] campo[3]=Panaderia campo[4]=2028-03-23 campo[5]=Ideal
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 200: error numérico: [10,Manzana Roja 600,7000000199,Verduras,2028-03-29,Kraft,845.45,272] campo[3]=Verduras campo[4]=2028-03-29 campo[5]=Kraft
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 201: error numérico: [5,Agua Pura 518,7000000200,Limpieza,2028-10-31,La Preferida,674.86,59] campo[3]=Limpieza campo[4]=2028-10-31 campo[5]=La Preferida
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 202: error numérico: [11,Platano Maduro 899,7000000201,Enlatados,2027-08-17,Pringles,385.74,117] campo[3]=Enlatados campo[4]=2027-08-17 campo[5]=Pringles
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 203: error numérico: [7,Sal de Mesa 848,7000000202,Frutas,2028-08-27,Pringles,621.12,161] campo[3]=Frutas campo[4]=2028-08-27 campo[5]=Pringles
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 204: error numérico: [7,Vinagre Blanco 682,7000000203,Cereales,2028-07-08,Ideal,584.89,243] campo[3]=Cereales campo[4]=2028-07-08 campo[5]=Ideal
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 205: error numérico: [2,Yogur Natural 852,7000000204,Panaderia,2026-12-10,Pringles,85.24,379] campo[3]=Panaderia campo[4]=2026-12-10 campo[5]=Pringles
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 206: error numérico: [6,Carne Molida 134,7000000205,Verduras,2026-10-03,Familia,478.96,344] campo[3]=Verduras campo[4]=2026-10-03 campo[5]=Familia
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 207: error numérico: [2,Galletas Soda 363,7000000206,Dulces,2028-10-16,Bimbo,823.25,308] campo[3]=Dulces campo[4]=2028-10-16 campo[5]=Bimbo
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 208: error numérico: [5,Azucar Blanca 107,7000000207,Limpieza,2029-04-07,Kelloggs,134.48,247] campo[3]=Limpieza campo[4]=2029-04-07 campo[5]=Kelloggs
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 209: error numérico: [4,Chorizo 111,7000000208,Bebidas,2028-06-24,La Preferida,649.05,294] campo[3]=Bebidas campo[4]=2028-06-24 campo[5]=La Preferida
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 210: error numérico: [4,Carne Molida 440,7000000209,Dulces,2026-07-26,Unilever,28.01,140] campo[3]=Dulces campo[4]=2026-07-26 campo[5]=Unilever
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 211: error numérico: [12,Chile Pimiento 317,7000000210,Snacks,2028-04-28,Heinz,8.67,446] campo[3]=Snacks campo[4]=2028-04-28 campo[5]=Heinz
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 212: error numérico: [3,Toallas Cocina 674,7000000211,Carnes,2026-10-23,Ideal,630.73,498] campo[3]=Carnes campo[4]=2026-10-23 campo[5]=Ideal
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 213: error numérico: [1,Yogur Natural 765,7000000212,Verduras,2027-08-17,Kraft,358.89,175] campo[3]=Verduras campo[4]=2027-08-17 campo[5]=Kraft
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 214: error numérico: [3,Cafe Molido 320,7000000213,Congelados,2028-03-28,Tio Pelon,751.25,80] campo[3]=Congelados campo[4]=2028-03-28 campo[5]=Tio Pelon
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 215: error numérico: [3,Chile Pimiento 633,7000000214,Lacteos,2026-11-17,Unilever,378.60,218] campo[3]=Lacteos campo[4]=2026-11-17 campo[5]=Unilever
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 216: error numérico: [8,Pasta Dental 453,7000000215,Carnes,2027-12-14,Kelloggs,642.56,59] campo[3]=Carnes campo[4]=2027-12-14 campo[5]=Kelloggs
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 217: error numérico: [6,Papas Fritas 114,7000000216,Cereales,2029-02-23,Lux,568.23,24] campo[3]=Cereales campo[4]=2029-02-23 campo[5]=Lux
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 218: error numérico: [4,Chocolate Negro 614,7000000217,Lacteos,2026-06-18,Kelloggs,258.65,109] campo[3]=Lacteos campo[4]=2026-06-18 campo[5]=Kelloggs
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 219: error numérico: [3,Chile Pimiento 262,7000000218,Cereales,2028-04-04,La Preferida,10.04,383] campo[3]=Cereales campo[4]=2028-04-04 campo[5]=La Preferida
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 220: error numérico: [7,Queso Fresco 133,7000000219,Carnes,2027-09-17,Lux,476.46,343] campo[3]=Carnes campo[4]=2027-09-17 campo[5]=Lux
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 221: error numérico: [6,Aceite Vegetal 407,7000000220,Dulces,2026-08-28,Pringles,19.36,472] campo[3]=Dulces campo[4]=2026-08-28 campo[5]=Pringles
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 222: error numérico: [2,Huevos Blancos 321,7000000221,Limpieza,2028-10-29,Kraft,604.09,214] campo[3]=Limpieza campo[4]=2028-10-29 campo[5]=Kraft
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 223: error numérico: [5,Jugo Naranja 415,7000000222,Lacteos,2028-03-29,Yoplait,681.82,317] campo[3]=Lacteos campo[4]=2028-03-29 campo[5]=Yoplait
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 224: error numérico: [8,Mortadela 707,7000000223,Snacks,2028-06-13,Tio Pelon,373.18,55] campo[3]=Snacks campo[4]=2028-06-13 campo[5]=Tio Pelon
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 225: error numérico: [4,Papas Fritas 604,7000000224,Carnes,2026-11-11,Kraft,740.40,382] campo[3]=Carnes campo[4]=2026-11-11 campo[5]=Kraft
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 226: error numérico: [6,Tortillas Maiz 342,7000000225,Enlatados,2027-05-13,Tio Pelon,435.62,59] campo[3]=Enlatados campo[4]=2027-05-13 campo[5]=Tio Pelon
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 227: error numérico: [9,Detergente Polvo 199,7000000226,Snacks,2028-05-18,Heinz,619.23,420] campo[3]=Snacks campo[4]=2028-05-18 campo[5]=Heinz
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 228: error numérico: [11,Salchicha 152,7000000227,Aceites,2026-12-30,Ideal,220.18,89] campo[3]=Aceites campo[4]=2026-12-30 campo[5]=Ideal
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 229: error numérico: [10,Sopa Pollo 779,7000000228,Enlatados,2026-11-04,Yoplait,808.77,322] campo[3]=Enlatados campo[4]=2026-11-04 campo[5]=Yoplait
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 230: error numérico: [8,Agua Pura 773,7000000229,Limpieza,2028-12-08,Del Monte,735.08,322] campo[3]=Limpieza campo[4]=2028-12-08 campo[5]=Del Monte
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 231: error numérico: [6,Sopa Pollo 451,7000000230,Panaderia,2029-01-18,Colgate,537.97,408] campo[3]=Panaderia campo[4]=2029-01-18 campo[5]=Colgate
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 232: error numérico: [5,Desodorante Roll 058,7000000231,Bebidas,2029-04-07,Tio Pelon,266.26,232] campo[3]=Bebidas campo[4]=2029-04-07 campo[5]=Tio Pelon
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 233: error numérico: [1,Frijol Negro 378,7000000232,Dulces,2028-01-11,Tio Pelon,549.21,438] campo[3]=Dulces campo[4]=2028-01-11 campo[5]=Tio Pelon
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 234: error numérico: [2,Cepillo Dientes 609,7000000233,Verduras,2028-07-29,Colgate,494.75,489] campo[3]=Verduras campo[4]=2028-07-29 campo[5]=Colgate
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 235: error numérico: [12,Leche Condensada 043,7000000234,Frutas,2027-06-23,Del Monte,515.64,257] campo[3]=Frutas campo[4]=2027-06-23 campo[5]=Del Monte
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 236: error numérico: [3,Canela Molida 064,7000000235,Frutas,2026-12-31,Del Monte,835.09,44] campo[3]=Frutas campo[4]=2026-12-31 campo[5]=Del Monte
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 237: error numérico: [9,Platano Maduro 177,7000000236,Lacteos,2027-10-23,Colgate,842.37,269] campo[3]=Lacteos campo[4]=2027-10-23 campo[5]=Colgate
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 238: error numérico: [9,Cepillo Dientes 163,7000000237,Bebidas,2028-07-05,Maggi,331.45,397] campo[3]=Bebidas campo[4]=2028-07-05 campo[5]=Maggi
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 239: error numérico: [6,Papa Blanca 613,7000000238,Lacteos,2028-04-18,Tio Pelon,282.58,286] campo[3]=Lacteos campo[4]=2028-04-18 campo[5]=Tio Pelon
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 240: error numérico: [11,Te Verde 291,7000000239,Cereales,2027-04-06,Del Monte,72.49,340] campo[3]=Cereales campo[4]=2027-04-06 campo[5]=Del Monte
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 241: error numérico: [3,Harina Trigo 359,7000000240,Cereales,2028-08-13,Ideal,507.20,481] campo[3]=Cereales campo[4]=2028-08-13 campo[5]=Ideal
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 242: error numérico: [2,Mostaza 573,7000000241,Carnes,2028-04-05,Ideal,570.75,425] campo[3]=Carnes campo[4]=2028-04-05 campo[5]=Ideal
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 243: error numérico: [12,Papa Blanca 935,7000000242,Verduras,2026-12-11,Pringles,433.94,10] campo[3]=Verduras campo[4]=2026-12-11 campo[5]=Pringles
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 244: error numérico: [6,Mostaza 185,7000000243,Aceites,2028-05-02,Dove,166.03,71] campo[3]=Aceites campo[4]=2028-05-02 campo[5]=Dove
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 245: error numérico: [3,Aceite Vegetal 303,7000000244,Dulces,2026-12-27,Lux,656.05,428] campo[3]=Dulces campo[4]=2026-12-27 campo[5]=Lux
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 246: error numérico: [12,Margarina 540,7000000245,Lacteos,2028-04-22,Ideal,509.07,79] campo[3]=Lacteos campo[4]=2028-04-22 campo[5]=Ideal
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 247: error numérico: [3,Queso Fresco 852,7000000246,Congelados,2027-05-08,Colgate,40.49,187] campo[3]=Congelados campo[4]=2027-05-08 campo[5]=Colgate
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 248: error numérico: [11,Cebolla Blanca 244,7000000247,Frutas,2028-01-07,Colgate,201.58,123] campo[3]=Frutas campo[4]=2028-01-07 campo[5]=Colgate
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 249: error numérico: [5,Canela Molida 829,7000000248,Enlatados,2029-01-18,Kelloggs,314.88,485] campo[3]=Enlatados campo[4]=2029-01-18 campo[5]=Kelloggs
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 250: error numérico: [10,Gaseosa Cola 473,7000000249,Enlatados,2028-01-01,Kraft,429.21,215] campo[3]=Enlatados campo[4]=2028-01-01 campo[5]=Kraft
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 251: error numérico: [3,Salchicha 205,7000000250,Enlatados,2027-03-13,Unilever,47.67,247] campo[3]=Enlatados campo[4]=2027-03-13 campo[5]=Unilever
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 252: error numérico: [6,Servilletas 957,7000000251,Panaderia,2029-04-24,La Preferida,244.81,391] campo[3]=Panaderia campo[4]=2029-04-24 campo[5]=La Preferida
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 253: error numérico: [3,Ketchup 461,7000000252,Snacks,2029-04-19,Ideal,706.98,47] campo[3]=Snacks campo[4]=2029-04-19 campo[5]=Ideal
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 254: error numérico: [4,Salchicha 462,7000000253,Snacks,2028-05-18,Dos Pinos,354.71,203] campo[3]=Snacks campo[4]=2028-05-18 campo[5]=Dos Pinos
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 255: error numérico: [9,Cafe Molido 242,7000000254,Carnes,2026-11-17,Heinz,193.57,164] campo[3]=Carnes campo[4]=2026-11-17 campo[5]=Heinz
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 256: error numérico: [2,Mortadela 732,7000000255,Higiene,2028-04-19,Ideal,119.98,147] campo[3]=Higiene campo[4]=2028-04-19 campo[5]=Ideal
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 257: error numérico: [8,Zanahoria 852,7000000256,Granos,2029-01-18,Colgate,524.39,464] campo[3]=Granos campo[4]=2029-01-18 campo[5]=Colgate
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 258: error numérico: [2,Pan Blanco 263,7000000257,Aceites,2027-04-05,Familia,799.40,312] campo[3]=Aceites campo[4]=2027-04-05 campo[5]=Familia
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 259: error numérico: [9,Papas Fritas 114,7000000258,Enlatados,2028-01-14,Nestle,258.42,25] campo[3]=Enlatados campo[4]=2028-01-14 campo[5]=Nestle
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 260: error numérico: [4,Galletas Soda 655,7000000259,Enlatados,2028-12-25,Tio Pelon,97.34,464] campo[3]=Enlatados campo[4]=2028-12-25 campo[5]=Tio Pelon
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 261: error numérico: [8,Pasta Dental 549,7000000260,Lacteos,2029-04-23,Nestle,611.75,150] campo[3]=Lacteos campo[4]=2029-04-23 campo[5]=Nestle
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 262: error numérico: [7,Leche Entera 630,7000000261,Bebidas,2027-10-08,Pringles,162.06,343] campo[3]=Bebidas campo[4]=2027-10-08 campo[5]=Pringles
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 263: error numérico: [2,Suavizante Ropa 999,7000000262,Bebidas,2026-10-19,Lux,464.07,403] campo[3]=Bebidas campo[4]=2026-10-19 campo[5]=Lux
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 264: error numérico: [9,Servilletas 021,7000000263,Carnes,2029-01-20,Bimbo,541.60,192] campo[3]=Carnes campo[4]=2029-01-20 campo[5]=Bimbo
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 265: error numérico: [5,Ajo Entero 017,7000000264,Bebidas,2026-10-19,Heinz,207.61,337] campo[3]=Bebidas campo[4]=2026-10-19 campo[5]=Heinz
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 266: error numérico: [11,Cereal Maiz 791,7000000265,Limpieza,2028-04-13,Ideal,41.03,280] campo[3]=Limpieza campo[4]=2028-04-13 campo[5]=Ideal
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 267: error numérico: [6,Salchicha 659,7000000266,Granos,2029-01-09,Dove,538.26,416] campo[3]=Granos campo[4]=2029-01-09 campo[5]=Dove
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 268: error numérico: [3,Aceite Vegetal 734,7000000267,Enlatados,2028-12-26,Bimbo,251.90,23] campo[3]=Enlatados campo[4]=2028-12-26 campo[5]=Bimbo
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 269: error numérico: [4,Margarina 043,7000000268,Bebidas,2028-02-28,Lux,340.60,418] campo[3]=Bebidas campo[4]=2028-02-28 campo[5]=Lux
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 270: error numérico: [9,Shampoo Clasico 260,7000000269,Lacteos,2027-06-29,Maggi,305.68,400] campo[3]=Lacteos campo[4]=2027-06-29 campo[5]=Maggi
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 271: error numérico: [1,Huevos Blancos 672,7000000270,Bebidas,2027-12-14,La Preferida,680.14,224] campo[3]=Bebidas campo[4]=2027-12-14 campo[5]=La Preferida
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 272: error numérico: [7,Ajo Entero 451,7000000271,Snacks,2028-08-02,Del Monte,827.76,255] campo[3]=Snacks campo[4]=2028-08-02 campo[5]=Del Monte
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 273: error numérico: [12,Jabon Barra 377,7000000272,Snacks,2029-05-01,Unilever,681.67,373] campo[3]=Snacks campo[4]=2029-05-01 campo[5]=Unilever
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 274: error numérico: [7,Yogur Natural 441,7000000273,Limpieza,2027-06-07,Familia,252.17,53] campo[3]=Limpieza campo[4]=2027-06-07 campo[5]=Familia
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 275: error numérico: [2,Vinagre Blanco 677,7000000274,Cereales,2028-02-20,Colgate,513.62,219] campo[3]=Cereales campo[4]=2028-02-20 campo[5]=Colgate
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 276: error numérico: [3,Zanahoria 455,7000000275,Bebidas,2028-12-04,Bimbo,618.75,467] campo[3]=Bebidas campo[4]=2028-12-04 campo[5]=Bimbo
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 277: error numérico: [6,Cepillo Dientes 446,7000000276,Cereales,2026-09-28,Tio Pelon,571.66,208] campo[3]=Cereales campo[4]=2026-09-28 campo[5]=Tio Pelon
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 278: error numérico: [6,Detergente Polvo 821,7000000277,Congelados,2027-04-26,Dos Pinos,124.36,312] campo[3]=Congelados campo[4]=2027-04-26 campo[5]=Dos Pinos
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 279: error numérico: [11,Pollo Entero 449,7000000278,Lacteos,2027-02-16,Tio Pelon,203.27,331] campo[3]=Lacteos campo[4]=2027-02-16 campo[5]=Tio Pelon
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 280: error numérico: [6,Cafe Molido 393,7000000279,Limpieza,2026-08-08,Ideal,578.33,486] campo[3]=Limpieza campo[4]=2026-08-08 campo[5]=Ideal
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 281: error numérico: [6,Cafe Molido 455,7000000280,Enlatados,2026-11-07,Ideal,451.69,204] campo[3]=Enlatados campo[4]=2026-11-07 campo[5]=Ideal
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 282: error numérico: [6,Platano Maduro 286,7000000281,Aceites,2027-01-21,Dos Pinos,626.25,256] campo[3]=Aceites campo[4]=2027-01-21 campo[5]=Dos Pinos
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 283: error numérico: [9,Te Verde 936,7000000282,Verduras,2027-01-30,Unilever,659.51,361] campo[3]=Verduras campo[4]=2027-01-30 campo[5]=Unilever
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 284: error numérico: [8,Crema Agria 627,7000000283,Cereales,2029-03-04,Kelloggs,107.31,437] campo[3]=Cereales campo[4]=2029-03-04 campo[5]=Kelloggs
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 285: error numérico: [2,Gaseosa Cola 177,7000000284,Snacks,2028-11-30,Tio Pelon,689.60,496] campo[3]=Snacks campo[4]=2028-11-30 campo[5]=Tio Pelon
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 286: error numérico: [6,Tomate Rojo 356,7000000285,Congelados,2026-10-13,Familia,462.45,457] campo[3]=Congelados campo[4]=2026-10-13 campo[5]=Familia
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 287: error numérico: [5,Chorizo 162,7000000286,Congelados,2027-05-25,Heinz,434.16,63] campo[3]=Congelados campo[4]=2027-05-25 campo[5]=Heinz
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 288: error numérico: [4,Pollo Entero 143,7000000287,Aceites,2029-03-10,Dos Pinos,309.00,294] campo[3]=Aceites campo[4]=2029-03-10 campo[5]=Dos Pinos
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 289: error numérico: [6,Agua Pura 823,7000000288,Verduras,2027-02-23,Tio Pelon,59.16,204] campo[3]=Verduras campo[4]=2027-02-23 campo[5]=Tio Pelon
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 290: error numérico: [12,Cebolla Blanca 491,7000000289,Verduras,2028-09-21,Pringles,700.46,38] campo[3]=Verduras campo[4]=2028-09-21 campo[5]=Pringles
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 291: error numérico: [3,Pimienta Negra 325,7000000290,Higiene,2026-11-01,Colgate,397.83,265] campo[3]=Higiene campo[4]=2026-11-01 campo[5]=Colgate
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 292: error numérico: [6,Atun en Agua 900,7000000291,Dulces,2027-06-10,Ideal,369.71,467] campo[3]=Dulces campo[4]=2027-06-10 campo[5]=Ideal
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 293: error numérico: [1,Mortadela 128,7000000292,Verduras,2027-04-12,Maggi,142.88,166] campo[3]=Verduras campo[4]=2027-04-12 campo[5]=Maggi
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 294: error numérico: [12,Tortillas Maiz 355,7000000293,Verduras,2028-01-05,Tio Pelon,215.64,326] campo[3]=Verduras campo[4]=2028-01-05 campo[5]=Tio Pelon
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 295: error numérico: [9,Ketchup 129,7000000294,Higiene,2028-02-13,Familia,82.59,329] campo[3]=Higiene campo[4]=2028-02-13 campo[5]=Familia
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 296: error numérico: [3,Desodorante Roll 965,7000000295,Limpieza,2027-04-14,Yoplait,561.12,369] campo[3]=Limpieza campo[4]=2027-04-14 campo[5]=Yoplait
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 297: error numérico: [10,Sal de Mesa 863,7000000296,Snacks,2026-08-26,Dos Pinos,72.26,486] campo[3]=Snacks campo[4]=2026-08-26 campo[5]=Dos Pinos
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 298: error numérico: [11,Limon Persa 591,7000000297,Cereales,2027-08-08,Pringles,526.73,16] campo[3]=Cereales campo[4]=2027-08-08 campo[5]=Pringles
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 299: error numérico: [8,Margarina 643,7000000298,Verduras,2028-01-17,Maggi,412.31,413] campo[3]=Verduras campo[4]=2028-01-17 campo[5]=Maggi
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 300: error numérico: [11,Chocolate Negro 305,7000000299,Frutas,2026-10-30,Bimbo,137.32,213] campo[3]=Frutas campo[4]=2026-10-30 campo[5]=Bimbo
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 301: error numérico: [8,Agua Pura 209,7000000300,Bebidas,2027-03-24,Del Monte,732.75,164] campo[3]=Bebidas campo[4]=2027-03-24 campo[5]=Del Monte
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 302: error numérico: [12,Huevos Blancos 354,7000000301,Carnes,2027-02-25,Heinz,439.43,55] campo[3]=Carnes campo[4]=2027-02-25 campo[5]=Heinz
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 303: error numérico: [6,Frijoles Negros 478,7000000302,Panaderia,2027-12-02,Colgate,213.36,50] campo[3]=Panaderia campo[4]=2027-12-02 campo[5]=Colgate
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 304: error numérico: [1,Mayonesa 969,7000000303,Carnes,2028-10-06,Nestle,818.41,462] campo[3]=Carnes campo[4]=2028-10-06 campo[5]=Nestle
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 305: error numérico: [3,Salchicha 336,7000000304,Snacks,2028-03-04,Kelloggs,649.48,256] campo[3]=Snacks campo[4]=2028-03-04 campo[5]=Kelloggs
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 306: error numérico: [9,Agua Pura 511,7000000305,Snacks,2028-02-24,Dove,23.12,484] campo[3]=Snacks campo[4]=2028-02-24 campo[5]=Dove
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 307: error numérico: [7,Detergente Polvo 469,7000000306,Aceites,2027-08-17,Heinz,44.69,145] campo[3]=Aceites campo[4]=2027-08-17 campo[5]=Heinz
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 308: error numérico: [8,Pasta Dental 904,7000000307,Dulces,2029-01-21,Maggi,457.81,434] campo[3]=Dulces campo[4]=2029-01-21 campo[5]=Maggi
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 309: error numérico: [2,Papas Fritas 138,7000000308,Snacks,2027-11-26,Heinz,650.10,188] campo[3]=Snacks campo[4]=2027-11-26 campo[5]=Heinz
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 310: error numérico: [1,Chocolate Negro 053,7000000309,Limpieza,2027-07-06,Heinz,471.80,38] campo[3]=Limpieza campo[4]=2027-07-06 campo[5]=Heinz
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 311: error numérico: [7,Detergente Polvo 462,7000000310,Enlatados,2027-12-27,La Preferida,112.41,50] campo[3]=Enlatados campo[4]=2027-12-27 campo[5]=La Preferida
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 312: error numérico: [7,Cafe Molido 814,7000000311,Bebidas,2028-06-20,Ideal,172.00,261] campo[3]=Bebidas campo[4]=2028-06-20 campo[5]=Ideal
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 313: error numérico: [7,Detergente Polvo 042,7000000312,Lacteos,2026-08-21,Ideal,607.56,412] campo[3]=Lacteos campo[4]=2026-08-21 campo[5]=Ideal
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 314: error numérico: [8,Suavizante Ropa 468,7000000313,Granos,2029-04-23,Ideal,281.12,314] campo[3]=Granos campo[4]=2029-04-23 campo[5]=Ideal
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 315: error numérico: [6,Jamon Cocido 403,7000000314,Limpieza,2028-02-05,Del Monte,432.94,261] campo[3]=Limpieza campo[4]=2028-02-05 campo[5]=Del Monte
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 316: error numérico: [9,Jabon Barra 726,7000000315,Limpieza,2028-02-06,Dove,694.03,189] campo[3]=Limpieza campo[4]=2028-02-06 campo[5]=Dove
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 317: error numérico: [6,Papa Blanca 113,7000000316,Carnes,2028-02-23,Dos Pinos,508.78,136] campo[3]=Carnes campo[4]=2028-02-23 campo[5]=Dos Pinos
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 318: error numérico: [11,Pollo Entero 996,7000000317,Enlatados,2027-09-12,Bimbo,497.45,88] campo[3]=Enlatados campo[4]=2027-09-12 campo[5]=Bimbo
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 319: error numérico: [9,Manzana Roja 739,7000000318,Limpieza,2028-07-20,Ideal,699.04,125] campo[3]=Limpieza campo[4]=2028-07-20 campo[5]=Ideal
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 320: error numérico: [1,Toallas Cocina 971,7000000319,Congelados,2027-01-14,Kelloggs,19.53,161] campo[3]=Congelados campo[4]=2027-01-14 campo[5]=Kelloggs
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 321: error numérico: [7,Sopa Pollo 423,7000000320,Congelados,2027-07-25,Pringles,428.29,314] campo[3]=Congelados campo[4]=2027-07-25 campo[5]=Pringles
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 322: error numérico: [8,Huevos Blancos 869,7000000321,Congelados,2026-10-08,Ideal,442.57,288] campo[3]=Congelados campo[4]=2026-10-08 campo[5]=Ideal
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 323: error numérico: [6,Tomate Rojo 490,7000000322,Verduras,2028-07-13,Del Monte,813.33,236] campo[3]=Verduras campo[4]=2028-07-13 campo[5]=Del Monte
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 324: error numérico: [9,Sal de Mesa 560,7000000323,Bebidas,2027-11-26,Dove,166.25,127] campo[3]=Bebidas campo[4]=2027-11-26 campo[5]=Dove
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 325: error numérico: [5,Servilletas 306,7000000324,Aceites,2028-02-02,Maggi,600.20,354] campo[3]=Aceites campo[4]=2028-02-02 campo[5]=Maggi
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 326: error numérico: [12,Jabon Barra 325,7000000325,Frutas,2028-05-17,Familia,793.88,408] campo[3]=Frutas campo[4]=2028-05-17 campo[5]=Familia
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 327: error numérico: [12,Ketchup 295,7000000326,Panaderia,2028-07-19,Kraft,696.26,489] campo[3]=Panaderia campo[4]=2028-07-19 campo[5]=Kraft
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 328: error numérico: [3,Mayonesa 044,7000000327,Cereales,2026-11-11,Heinz,785.67,336] campo[3]=Cereales campo[4]=2026-11-11 campo[5]=Heinz
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 329: error numérico: [5,Ajo Entero 491,7000000328,Aceites,2027-07-21,Familia,233.01,288] campo[3]=Aceites campo[4]=2027-07-21 campo[5]=Familia
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 330: error numérico: [12,Ketchup 141,7000000329,Panaderia,2027-10-06,Nestle,46.47,464] campo[3]=Panaderia campo[4]=2027-10-06 campo[5]=Nestle
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 331: error numérico: [9,Tortillas Maiz 654,7000000330,Aceites,2026-09-18,La Preferida,353.36,368] campo[3]=Aceites campo[4]=2026-09-18 campo[5]=La Preferida
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 332: error numérico: [8,Cereal Maiz 698,7000000331,Enlatados,2027-03-11,Dos Pinos,819.97,476] campo[3]=Enlatados campo[4]=2027-03-11 campo[5]=Dos Pinos
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 333: error numérico: [3,Galletas Soda 669,7000000332,Snacks,2029-02-01,Dove,554.18,388] campo[3]=Snacks campo[4]=2029-02-01 campo[5]=Dove
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 334: error numérico: [5,Vinagre Blanco 293,7000000333,Higiene,2026-10-02,Tio Pelon,555.67,119] campo[3]=Higiene campo[4]=2026-10-02 campo[5]=Tio Pelon
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 335: error numérico: [9,Ajo Entero 741,7000000334,Dulces,2026-08-18,Yoplait,357.24,429] campo[3]=Dulces campo[4]=2026-08-18 campo[5]=Yoplait
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 336: error numérico: [3,Bicarbonato 942,7000000335,Lacteos,2028-08-24,Dove,161.21,384] campo[3]=Lacteos campo[4]=2028-08-24 campo[5]=Dove
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 337: error numérico: [5,Margarina 039,7000000336,Lacteos,2028-02-04,La Preferida,789.44,172] campo[3]=Lacteos campo[4]=2028-02-04 campo[5]=La Preferida
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 338: error numérico: [5,Agua Pura 657,7000000337,Verduras,2029-03-10,Ideal,723.92,240] campo[3]=Verduras campo[4]=2029-03-10 campo[5]=Ideal
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 339: error numérico: [5,Mantequilla 829,7000000338,Panaderia,2028-04-10,Yoplait,622.39,332] campo[3]=Panaderia campo[4]=2028-04-10 campo[5]=Yoplait
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 340: error numérico: [5,Lechuga 191,7000000339,Lacteos,2028-04-23,Maggi,484.13,388] campo[3]=Lacteos campo[4]=2028-04-23 campo[5]=Maggi
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 341: error numérico: [4,Queso Fresco 626,7000000340,Dulces,2028-09-10,Pringles,439.69,45] campo[3]=Dulces campo[4]=2028-09-10 campo[5]=Pringles
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 342: error numérico: [7,Tomate Rojo 098,7000000341,Granos,2027-03-17,Dove,277.43,128] campo[3]=Granos campo[4]=2027-03-17 campo[5]=Dove
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 343: error numérico: [1,Spaghetti 393,7000000342,Aceites,2028-12-03,Unilever,811.09,155] campo[3]=Aceites campo[4]=2028-12-03 campo[5]=Unilever
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 344: error numérico: [10,Cebolla Blanca 587,7000000343,Lacteos,2027-11-20,Heinz,589.93,32] campo[3]=Lacteos campo[4]=2027-11-20 campo[5]=Heinz
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 345: error numérico: [11,Jugo Naranja 477,7000000344,Cereales,2027-04-26,Kraft,584.26,473] campo[3]=Cereales campo[4]=2027-04-26 campo[5]=Kraft
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 346: error numérico: [12,Limon Persa 319,7000000345,Congelados,2027-01-29,Maggi,314.63,114] campo[3]=Congelados campo[4]=2027-01-29 campo[5]=Maggi
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 347: error numérico: [4,Canela Molida 137,7000000346,Frutas,2027-04-12,Colgate,636.46,311] campo[3]=Frutas campo[4]=2027-04-12 campo[5]=Colgate
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 348: error numérico: [6,Galletas Soda 719,7000000347,Verduras,2029-01-22,Familia,682.39,423] campo[3]=Verduras campo[4]=2029-01-22 campo[5]=Familia
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 349: error numérico: [4,Chile Pimiento 254,7000000348,Higiene,2026-11-17,Lux,381.67,361] campo[3]=Higiene campo[4]=2026-11-17 campo[5]=Lux
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 350: error numérico: [6,Aceite Vegetal 940,7000000349,Limpieza,2027-01-18,Bimbo,705.06,463] campo[3]=Limpieza campo[4]=2027-01-18 campo[5]=Bimbo
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 351: error numérico: [9,Mantequilla 587,7000000350,Verduras,2027-04-05,Yoplait,281.25,267] campo[3]=Verduras campo[4]=2027-04-05 campo[5]=Yoplait
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 352: error numérico: [8,Jugo Naranja 697,7000000351,Aceites,2029-02-28,Tio Pelon,764.41,229] campo[3]=Aceites campo[4]=2029-02-28 campo[5]=Tio Pelon
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 353: error numérico: [1,Agua Pura 136,7000000352,Verduras,2028-09-30,Colgate,480.85,287] campo[3]=Verduras campo[4]=2028-09-30 campo[5]=Colgate
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 354: error numérico: [8,Papa Blanca 827,7000000353,Cereales,2026-07-17,Kraft,218.90,2] campo[3]=Cereales campo[4]=2026-07-17 campo[5]=Kraft
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 355: error numérico: [12,Crema Agria 593,7000000354,Panaderia,2026-09-03,Pringles,295.14,33] campo[3]=Panaderia campo[4]=2026-09-03 campo[5]=Pringles
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 356: error numérico: [9,Frijol Negro 958,7000000355,Snacks,2026-10-22,Dove,30.36,210] campo[3]=Snacks campo[4]=2026-10-22 campo[5]=Dove
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 357: error numérico: [3,Limon Persa 139,7000000356,Enlatados,2028-10-10,Heinz,843.95,196] campo[3]=Enlatados campo[4]=2028-10-10 campo[5]=Heinz
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 358: error numérico: [8,Huevos Blancos 940,7000000357,Snacks,2028-07-15,Kraft,71.43,494] campo[3]=Snacks campo[4]=2028-07-15 campo[5]=Kraft
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 359: error numérico: [11,Huevos Blancos 553,7000000358,Granos,2028-05-15,La Preferida,154.58,276] campo[3]=Granos campo[4]=2028-05-15 campo[5]=La Preferida
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 360: error numérico: [7,Suavizante Ropa 131,7000000359,Congelados,2027-09-02,Dos Pinos,643.61,153] campo[3]=Congelados campo[4]=2027-09-02 campo[5]=Dos Pinos
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 361: error numérico: [8,Papa Blanca 737,7000000360,Verduras,2028-10-18,Familia,324.56,118] campo[3]=Verduras campo[4]=2028-10-18 campo[5]=Familia
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 362: error numérico: [4,Agua Pura 355,7000000361,Granos,2027-12-19,Kelloggs,797.02,372] campo[3]=Granos campo[4]=2027-12-19 campo[5]=Kelloggs
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 363: error numérico: [2,Arroz Largo 829,7000000362,Higiene,2028-10-08,Dos Pinos,207.22,35] campo[3]=Higiene campo[4]=2028-10-08 campo[5]=Dos Pinos
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 364: error numérico: [2,Pasta Dental 035,7000000363,Frutas,2026-09-10,Nestle,630.37,206] campo[3]=Frutas campo[4]=2026-09-10 campo[5]=Nestle
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 365: error numérico: [8,Tortillas Maiz 553,7000000364,Aceites,2026-09-26,Ideal,430.05,149] campo[3]=Aceites campo[4]=2026-09-26 campo[5]=Ideal
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 366: error numérico: [4,Salchicha 939,7000000365,Congelados,2028-03-17,Del Monte,204.04,449] campo[3]=Congelados campo[4]=2028-03-17 campo[5]=Del Monte
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 367: error numérico: [3,Tomate Rojo 534,7000000366,Aceites,2028-09-26,Maggi,236.42,286] campo[3]=Aceites campo[4]=2028-09-26 campo[5]=Maggi
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 368: error numérico: [10,Margarina 753,7000000367,Snacks,2027-05-27,Pringles,474.03,25] campo[3]=Snacks campo[4]=2027-05-27 campo[5]=Pringles
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 369: error numérico: [6,Levadura Seca 659,7000000368,Higiene,2028-07-22,Lux,273.31,214] campo[3]=Higiene campo[4]=2028-07-22 campo[5]=Lux
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 370: error numérico: [7,Sopa Pollo 308,7000000369,Carnes,2027-06-14,Familia,404.33,435] campo[3]=Carnes campo[4]=2027-06-14 campo[5]=Familia
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 371: error numérico: [4,Mostaza 879,7000000370,Congelados,2027-03-25,Colgate,777.83,288] campo[3]=Congelados campo[4]=2027-03-25 campo[5]=Colgate
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 372: error numérico: [7,Canela Molida 427,7000000371,Verduras,2027-03-04,Kraft,209.08,105] campo[3]=Verduras campo[4]=2027-03-04 campo[5]=Kraft
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 373: error numérico: [6,Platano Maduro 081,7000000372,Snacks,2028-12-10,Heinz,81.77,371] campo[3]=Snacks campo[4]=2028-12-10 campo[5]=Heinz
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 374: error numérico: [4,Frijol Negro 275,7000000373,Carnes,2026-08-22,Tio Pelon,162.78,390] campo[3]=Carnes campo[4]=2026-08-22 campo[5]=Tio Pelon
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 375: error numérico: [10,Cebolla Blanca 688,7000000374,Verduras,2027-08-21,Dove,180.32,465] campo[3]=Verduras campo[4]=2027-08-21 campo[5]=Dove
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 376: error numérico: [6,Mostaza 980,7000000375,Snacks,2026-07-04,Kelloggs,796.81,493] campo[3]=Snacks campo[4]=2026-07-04 campo[5]=Kelloggs
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 377: error numérico: [12,Jugo Naranja 765,7000000376,Enlatados,2029-02-07,Nestle,592.35,361] campo[3]=Enlatados campo[4]=2029-02-07 campo[5]=Nestle
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 378: error numérico: [4,Chocolate Negro 938,7000000377,Aceites,2028-03-22,Maggi,325.73,274] campo[3]=Aceites campo[4]=2028-03-22 campo[5]=Maggi
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 379: error numérico: [11,Azucar Blanca 316,7000000378,Cereales,2028-06-08,Lux,750.80,239] campo[3]=Cereales campo[4]=2028-06-08 campo[5]=Lux
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 380: error numérico: [2,Carne Molida 740,7000000379,Frutas,2028-03-19,Kelloggs,317.30,212] campo[3]=Frutas campo[4]=2028-03-19 campo[5]=Kelloggs
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 381: error numérico: [1,Toallas Cocina 885,7000000380,Aceites,2027-03-28,Dos Pinos,224.25,479] campo[3]=Aceites campo[4]=2027-03-28 campo[5]=Dos Pinos
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 382: error numérico: [10,Desodorante Roll 738,7000000381,Carnes,2028-01-28,Ideal,169.58,118] campo[3]=Carnes campo[4]=2028-01-28 campo[5]=Ideal
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 383: error numérico: [7,Toallas Cocina 854,7000000382,Aceites,2029-03-21,Familia,557.63,351] campo[3]=Aceites campo[4]=2029-03-21 campo[5]=Familia
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 384: error numérico: [6,Spaghetti 782,7000000383,Dulces,2029-02-27,Dove,393.59,376] campo[3]=Dulces campo[4]=2029-02-27 campo[5]=Dove
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 385: error numérico: [6,Jamon Cocido 144,7000000384,Congelados,2029-02-27,Yoplait,779.66,278] campo[3]=Congelados campo[4]=2029-02-27 campo[5]=Yoplait
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 386: error numérico: [11,Canela Molida 061,7000000385,Verduras,2026-08-11,Tio Pelon,803.60,343] campo[3]=Verduras campo[4]=2026-08-11 campo[5]=Tio Pelon
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 387: error numérico: [1,Chile Pimiento 007,7000000386,Carnes,2027-03-11,Nestle,61.03,78] campo[3]=Carnes campo[4]=2027-03-11 campo[5]=Nestle
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 388: error numérico: [1,Crema Agria 518,7000000387,Frutas,2028-07-06,Bimbo,526.50,342] campo[3]=Frutas campo[4]=2028-07-06 campo[5]=Bimbo
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 389: error numérico: [10,Harina Trigo 495,7000000388,Higiene,2029-02-26,Dos Pinos,9.10,283] campo[3]=Higiene campo[4]=2029-02-26 campo[5]=Dos Pinos
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 390: error numérico: [7,Leche Entera 018,7000000389,Verduras,2027-12-17,Familia,830.94,9] campo[3]=Verduras campo[4]=2027-12-17 campo[5]=Familia
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 391: error numérico: [9,Salchicha 715,7000000390,Higiene,2028-10-31,Yoplait,94.09,50] campo[3]=Higiene campo[4]=2028-10-31 campo[5]=Yoplait
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 392: error numérico: [9,Sopa Pollo 247,7000000391,Aceites,2027-11-01,Heinz,229.79,204] campo[3]=Aceites campo[4]=2027-11-01 campo[5]=Heinz
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 393: error numérico: [2,Cafe Molido 983,7000000392,Carnes,2028-12-29,Nestle,841.73,116] campo[3]=Carnes campo[4]=2028-12-29 campo[5]=Nestle
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 394: error numérico: [5,Papa Blanca 848,7000000393,Dulces,2026-11-15,Bimbo,82.65,195] campo[3]=Dulces campo[4]=2026-11-15 campo[5]=Bimbo
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 395: error numérico: [7,Servilletas 488,7000000394,Lacteos,2026-06-22,Yoplait,73.49,433] campo[3]=Lacteos campo[4]=2026-06-22 campo[5]=Yoplait
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 396: error numérico: [7,Platano Maduro 804,7000000395,Bebidas,2026-12-15,Lux,781.56,118] campo[3]=Bebidas campo[4]=2026-12-15 campo[5]=Lux
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 397: error numérico: [4,Leche Condensada 889,7000000396,Congelados,2029-01-31,Unilever,42.91,39] campo[3]=Congelados campo[4]=2029-01-31 campo[5]=Unilever
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 398: error numérico: [11,Bicarbonato 288,7000000397,Snacks,2026-08-09,Yoplait,789.70,162] campo[3]=Snacks campo[4]=2026-08-09 campo[5]=Yoplait
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 399: error numérico: [1,Canela Molida 213,7000000398,Limpieza,2027-03-25,Kraft,789.79,154] campo[3]=Limpieza campo[4]=2027-03-25 campo[5]=Kraft
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 400: error numérico: [3,Toallas Cocina 247,7000000399,Limpieza,2028-08-07,Familia,284.31,387] campo[3]=Limpieza campo[4]=2028-08-07 campo[5]=Familia
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 401: error numérico: [12,Atun en Agua 810,7000000400,Congelados,2026-11-10,Lux,634.53,178] campo[3]=Congelados campo[4]=2026-11-10 campo[5]=Lux
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 402: error numérico: [1,Cereal Maiz 448,7000000401,Aceites,2026-11-05,Del Monte,515.78,315] campo[3]=Aceites campo[4]=2026-11-05 campo[5]=Del Monte
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 403: error numérico: [10,Chocolate Negro 993,7000000402,Enlatados,2028-04-01,Dos Pinos,540.29,402] campo[3]=Enlatados campo[4]=2028-04-01 campo[5]=Dos Pinos
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 404: error numérico: [8,Jabon Barra 234,7000000403,Bebidas,2028-07-10,Pringles,160.73,300] campo[3]=Bebidas campo[4]=2028-07-10 campo[5]=Pringles
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 405: error numérico: [11,Te Verde 088,7000000404,Enlatados,2028-01-28,Nestle,607.15,43] campo[3]=Enlatados campo[4]=2028-01-28 campo[5]=Nestle
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 406: error numérico: [5,Sopa Pollo 390,7000000405,Congelados,2027-04-14,Kraft,271.57,55] campo[3]=Congelados campo[4]=2027-04-14 campo[5]=Kraft
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 407: error numérico: [2,Leche Entera 966,7000000406,Cereales,2028-11-29,Heinz,647.98,53] campo[3]=Cereales campo[4]=2028-11-29 campo[5]=Heinz
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 408: error numérico: [3,Yogur Natural 192,7000000407,Carnes,2028-12-08,Familia,473.09,209] campo[3]=Carnes campo[4]=2028-12-08 campo[5]=Familia
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 409: error numérico: [2,Pan Blanco 092,7000000408,Bebidas,2026-12-10,Del Monte,734.64,7] campo[3]=Bebidas campo[4]=2026-12-10 campo[5]=Del Monte
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 410: error numérico: [5,Galletas Soda 398,7000000409,Enlatados,2026-11-23,Familia,769.76,125] campo[3]=Enlatados campo[4]=2026-11-23 campo[5]=Familia
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 411: error numérico: [10,Suavizante Ropa 174,7000000410,Higiene,2028-07-21,Yoplait,121.03,155] campo[3]=Higiene campo[4]=2028-07-21 campo[5]=Yoplait
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 412: error numérico: [5,Jabon Barra 150,7000000411,Panaderia,2027-05-11,Pringles,237.10,154] campo[3]=Panaderia campo[4]=2027-05-11 campo[5]=Pringles
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 413: error numérico: [8,Pollo Entero 079,7000000412,Bebidas,2027-10-31,Nestle,613.74,254] campo[3]=Bebidas campo[4]=2027-10-31 campo[5]=Nestle
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 414: error numérico: [10,Cepillo Dientes 201,7000000413,Frutas,2027-01-08,Ideal,261.39,486] campo[3]=Frutas campo[4]=2027-01-08 campo[5]=Ideal
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 415: error numérico: [7,Sal de Mesa 862,7000000414,Limpieza,2028-07-20,Del Monte,376.15,221] campo[3]=Limpieza campo[4]=2028-07-20 campo[5]=Del Monte
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 416: error numérico: [11,Pimienta Negra 609,7000000415,Granos,2028-02-08,Del Monte,514.12,356] campo[3]=Granos campo[4]=2028-02-08 campo[5]=Del Monte
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 417: error numérico: [4,Shampoo Clasico 322,7000000416,Granos,2028-08-26,Del Monte,250.21,356] campo[3]=Granos campo[4]=2028-08-26 campo[5]=Del Monte
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 418: error numérico: [11,Jabon Barra 991,7000000417,Limpieza,2027-10-12,Del Monte,321.83,419] campo[3]=Limpieza campo[4]=2027-10-12 campo[5]=Del Monte
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 419: error numérico: [7,Cafe Molido 117,7000000418,Snacks,2027-07-17,Familia,155.81,394] campo[3]=Snacks campo[4]=2027-07-17 campo[5]=Familia
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 420: error numérico: [9,Pan Blanco 976,7000000419,Congelados,2029-01-03,Kelloggs,374.65,150] campo[3]=Congelados campo[4]=2029-01-03 campo[5]=Kelloggs
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 421: error numérico: [12,Aceite Vegetal 839,7000000420,Dulces,2028-09-17,Dove,121.32,156] campo[3]=Dulces campo[4]=2028-09-17 campo[5]=Dove
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 422: error numérico: [4,Spaghetti 675,7000000421,Granos,2028-10-16,Kraft,66.11,307] campo[3]=Granos campo[4]=2028-10-16 campo[5]=Kraft
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 423: error numérico: [8,Desodorante Roll 411,7000000422,Verduras,2029-04-05,Pringles,463.70,405] campo[3]=Verduras campo[4]=2029-04-05 campo[5]=Pringles
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 424: error numérico: [6,Zanahoria 917,7000000423,Enlatados,2026-11-24,La Preferida,654.42,337] campo[3]=Enlatados campo[4]=2026-11-24 campo[5]=La Preferida
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 425: error numérico: [11,Azucar Blanca 171,7000000424,Higiene,2026-09-01,Kraft,821.91,170] campo[3]=Higiene campo[4]=2026-09-01 campo[5]=Kraft
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 426: error numérico: [7,Cereal Maiz 011,7000000425,Panaderia,2027-11-14,Nestle,435.79,266] campo[3]=Panaderia campo[4]=2027-11-14 campo[5]=Nestle
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 427: error numérico: [9,Desodorante Roll 705,7000000426,Limpieza,2027-08-29,Colgate,320.19,238] campo[3]=Limpieza campo[4]=2027-08-29 campo[5]=Colgate
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 428: error numérico: [11,Desodorante Roll 708,7000000427,Verduras,2027-04-07,Heinz,848.06,248] campo[3]=Verduras campo[4]=2027-04-07 campo[5]=Heinz
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 429: error numérico: [2,Mayonesa 426,7000000428,Snacks,2026-11-25,La Preferida,707.21,374] campo[3]=Snacks campo[4]=2026-11-25 campo[5]=La Preferida
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 430: error numérico: [3,Azucar Blanca 320,7000000429,Bebidas,2028-12-21,Kelloggs,444.62,179] campo[3]=Bebidas campo[4]=2028-12-21 campo[5]=Kelloggs
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 431: error numérico: [8,Cereal Maiz 449,7000000430,Congelados,2028-12-15,Del Monte,60.36,23] campo[3]=Congelados campo[4]=2028-12-15 campo[5]=Del Monte
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 432: error numérico: [12,Jugo Naranja 024,7000000431,Dulces,2028-05-05,La Preferida,576.70,85] campo[3]=Dulces campo[4]=2028-05-05 campo[5]=La Preferida
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 433: error numérico: [12,Frijoles Negros 529,7000000432,Granos,2027-04-26,Del Monte,477.41,491] campo[3]=Granos campo[4]=2027-04-26 campo[5]=Del Monte
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 434: error numérico: [8,Tortillas Maiz 817,7000000433,Carnes,2027-06-15,Yoplait,545.67,222] campo[3]=Carnes campo[4]=2027-06-15 campo[5]=Yoplait
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 435: error numérico: [7,Pan Blanco 756,7000000434,Limpieza,2027-07-12,Colgate,504.80,200] campo[3]=Limpieza campo[4]=2027-07-12 campo[5]=Colgate
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 436: error numérico: [1,Lechuga 220,7000000435,Aceites,2027-12-25,Tio Pelon,492.23,410] campo[3]=Aceites campo[4]=2027-12-25 campo[5]=Tio Pelon
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 437: error numérico: [9,Queso Fresco 375,7000000436,Bebidas,2027-07-11,Colgate,99.96,344] campo[3]=Bebidas campo[4]=2027-07-11 campo[5]=Colgate
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 438: error numérico: [8,Suavizante Ropa 990,7000000437,Higiene,2028-03-05,Kraft,520.97,301] campo[3]=Higiene campo[4]=2028-03-05 campo[5]=Kraft
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 439: error numérico: [2,Azucar Blanca 361,7000000438,Dulces,2028-12-26,Yoplait,692.33,362] campo[3]=Dulces campo[4]=2028-12-26 campo[5]=Yoplait
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 440: error numérico: [5,Harina Trigo 630,7000000439,Limpieza,2026-11-23,Ideal,268.61,123] campo[3]=Limpieza campo[4]=2026-11-23 campo[5]=Ideal
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 441: error numérico: [5,Jugo Naranja 188,7000000440,Bebidas,2027-03-19,Lux,332.33,306] campo[3]=Bebidas campo[4]=2027-03-19 campo[5]=Lux
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 442: error numérico: [3,Toallas Cocina 393,7000000441,Carnes,2027-06-18,Dove,541.45,356] campo[3]=Carnes campo[4]=2027-06-18 campo[5]=Dove
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 443: error numérico: [11,Bicarbonato 178,7000000442,Verduras,2027-05-10,Dove,248.00,96] campo[3]=Verduras campo[4]=2027-05-10 campo[5]=Dove
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 444: error numérico: [6,Mortadela 462,7000000443,Limpieza,2026-09-20,Heinz,809.23,249] campo[3]=Limpieza campo[4]=2026-09-20 campo[5]=Heinz
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 445: error numérico: [3,Mantequilla 835,7000000444,Carnes,2029-04-03,Dove,349.83,252] campo[3]=Carnes campo[4]=2029-04-03 campo[5]=Dove
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 446: error numérico: [7,Lechuga 861,7000000445,Frutas,2029-02-27,Yoplait,73.48,16] campo[3]=Frutas campo[4]=2029-02-27 campo[5]=Yoplait
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 447: error numérico: [4,Mayonesa 034,7000000446,Cereales,2027-09-06,Familia,247.86,400] campo[3]=Cereales campo[4]=2027-09-06 campo[5]=Familia
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 448: error numérico: [8,Toallas Cocina 761,7000000447,Enlatados,2029-03-13,Familia,435.90,294] campo[3]=Enlatados campo[4]=2029-03-13 campo[5]=Familia
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 449: error numérico: [2,Ketchup 794,7000000448,Verduras,2028-06-23,Familia,699.84,22] campo[3]=Verduras campo[4]=2028-06-23 campo[5]=Familia
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 450: error numérico: [12,Gaseosa Cola 560,7000000449,Aceites,2028-10-20,La Preferida,626.51,335] campo[3]=Aceites campo[4]=2028-10-20 campo[5]=La Preferida
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 451: error numérico: [4,Mostaza 896,7000000450,Lacteos,2028-12-10,Unilever,298.57,419] campo[3]=Lacteos campo[4]=2028-12-10 campo[5]=Unilever
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 452: error numérico: [2,Gaseosa Cola 887,7000000451,Panaderia,2027-10-01,Kelloggs,689.76,302] campo[3]=Panaderia campo[4]=2027-10-01 campo[5]=Kelloggs
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 453: error numérico: [12,Azucar Blanca 882,7000000452,Congelados,2028-10-26,Yoplait,525.07,402] campo[3]=Congelados campo[4]=2028-10-26 campo[5]=Yoplait
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 454: error numérico: [4,Salchicha 212,7000000453,Enlatados,2026-10-02,Heinz,454.08,306] campo[3]=Enlatados campo[4]=2026-10-02 campo[5]=Heinz
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 455: error numérico: [9,Jamon Cocido 332,7000000454,Congelados,2028-01-23,Maggi,488.32,488] campo[3]=Congelados campo[4]=2028-01-23 campo[5]=Maggi
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 456: error numérico: [9,Leche Condensada 696,7000000455,Dulces,2026-12-15,Ideal,818.49,403] campo[3]=Dulces campo[4]=2026-12-15 campo[5]=Ideal
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 457: error numérico: [7,Harina Trigo 061,7000000456,Cereales,2027-02-17,Ideal,214.85,365] campo[3]=Cereales campo[4]=2027-02-17 campo[5]=Ideal
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 458: error numérico: [6,Mortadela 254,7000000457,Enlatados,2028-08-15,Dove,123.85,324] campo[3]=Enlatados campo[4]=2028-08-15 campo[5]=Dove
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 459: error numérico: [5,Manzana Roja 425,7000000458,Carnes,2028-12-14,Tio Pelon,539.87,451] campo[3]=Carnes campo[4]=2028-12-14 campo[5]=Tio Pelon
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 460: error numérico: [2,Chocolate Negro 528,7000000459,Congelados,2027-12-24,Heinz,388.40,250] campo[3]=Congelados campo[4]=2027-12-24 campo[5]=Heinz
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 461: error numérico: [6,Desodorante Roll 003,7000000460,Dulces,2026-12-10,Colgate,540.89,358] campo[3]=Dulces campo[4]=2026-12-10 campo[5]=Colgate
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 462: error numérico: [6,Chorizo 065,7000000461,Enlatados,2028-08-25,Kelloggs,823.02,423] campo[3]=Enlatados campo[4]=2028-08-25 campo[5]=Kelloggs
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 463: error numérico: [4,Jabon Barra 275,7000000462,Bebidas,2028-01-04,Del Monte,466.80,67] campo[3]=Bebidas campo[4]=2028-01-04 campo[5]=Del Monte
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 464: error numérico: [10,Chorizo 497,7000000463,Enlatados,2028-05-06,Bimbo,42.39,321] campo[3]=Enlatados campo[4]=2028-05-06 campo[5]=Bimbo
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 465: error numérico: [8,Pan Blanco 128,7000000464,Snacks,2027-04-22,Colgate,389.94,491] campo[3]=Snacks campo[4]=2027-04-22 campo[5]=Colgate
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 466: error numérico: [7,Mantequilla 706,7000000465,Snacks,2027-02-28,Maggi,138.07,478] campo[3]=Snacks campo[4]=2027-02-28 campo[5]=Maggi
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 467: error numérico: [5,Yogur Natural 671,7000000466,Bebidas,2027-10-28,Tio Pelon,318.27,463] campo[3]=Bebidas campo[4]=2027-10-28 campo[5]=Tio Pelon
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 468: error numérico: [11,Jamon Cocido 054,7000000467,Carnes,2028-02-18,Nestle,366.84,47] campo[3]=Carnes campo[4]=2028-02-18 campo[5]=Nestle
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 469: error numérico: [12,Cereal Maiz 002,7000000468,Aceites,2029-02-03,Tio Pelon,115.83,116] campo[3]=Aceites campo[4]=2029-02-03 campo[5]=Tio Pelon
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 470: error numérico: [9,Papa Blanca 456,7000000469,Lacteos,2026-06-19,Del Monte,695.18,441] campo[3]=Lacteos campo[4]=2026-06-19 campo[5]=Del Monte
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 471: error numérico: [7,Zanahoria 136,7000000470,Frutas,2026-10-26,Nestle,327.77,375] campo[3]=Frutas campo[4]=2026-10-26 campo[5]=Nestle
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 472: error numérico: [2,Cereal Maiz 321,7000000471,Bebidas,2028-02-05,Ideal,327.47,417] campo[3]=Bebidas campo[4]=2028-02-05 campo[5]=Ideal
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 473: error numérico: [3,Platano Maduro 694,7000000472,Granos,2026-10-21,Lux,480.33,313] campo[3]=Granos campo[4]=2026-10-21 campo[5]=Lux
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 474: error numérico: [11,Jamon Cocido 451,7000000473,Bebidas,2027-08-13,Ideal,782.19,316] campo[3]=Bebidas campo[4]=2027-08-13 campo[5]=Ideal
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 475: error numérico: [11,Gaseosa Cola 881,7000000474,Aceites,2026-11-27,La Preferida,122.02,64] campo[3]=Aceites campo[4]=2026-11-27 campo[5]=La Preferida
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 476: error numérico: [10,Cebolla Blanca 394,7000000475,Bebidas,2028-10-29,Del Monte,673.15,127] campo[3]=Bebidas campo[4]=2028-10-29 campo[5]=Del Monte
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 477: error numérico: [5,Platano Maduro 087,7000000476,Aceites,2028-01-07,Dos Pinos,721.24,338] campo[3]=Aceites campo[4]=2028-01-07 campo[5]=Dos Pinos
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 478: error numérico: [5,Crema Agria 531,7000000477,Limpieza,2029-04-11,Kelloggs,636.55,152] campo[3]=Limpieza campo[4]=2029-04-11 campo[5]=Kelloggs
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 479: error numérico: [11,Frijol Negro 803,7000000478,Snacks,2027-10-06,Dove,330.15,124] campo[3]=Snacks campo[4]=2027-10-06 campo[5]=Dove
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 480: error numérico: [8,Manzana Roja 609,7000000479,Panaderia,2026-06-27,Heinz,794.07,68] campo[3]=Panaderia campo[4]=2026-06-27 campo[5]=Heinz
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 481: error numérico: [7,Huevos Blancos 860,7000000480,Limpieza,2028-10-11,Heinz,465.99,89] campo[3]=Limpieza campo[4]=2028-10-11 campo[5]=Heinz
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 482: error numérico: [8,Canela Molida 789,7000000481,Panaderia,2026-07-07,Tio Pelon,15.18,111] campo[3]=Panaderia campo[4]=2026-07-07 campo[5]=Tio Pelon
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 483: error numérico: [1,Bicarbonato 062,7000000482,Enlatados,2028-08-26,Lux,246.01,365] campo[3]=Enlatados campo[4]=2028-08-26 campo[5]=Lux
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 484: error numérico: [9,Limon Persa 426,7000000483,Carnes,2028-09-03,Tio Pelon,545.71,276] campo[3]=Carnes campo[4]=2028-09-03 campo[5]=Tio Pelon
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 485: error numérico: [10,Sopa Pollo 285,7000000484,Panaderia,2028-02-27,Tio Pelon,436.32,105] campo[3]=Panaderia campo[4]=2028-02-27 campo[5]=Tio Pelon
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 486: error numérico: [3,Papel Higienico 335,7000000485,Carnes,2026-10-16,Maggi,594.93,374] campo[3]=Carnes campo[4]=2026-10-16 campo[5]=Maggi
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 487: error numérico: [4,Frijol Negro 251,7000000486,Panaderia,2028-11-08,La Preferida,387.28,312] campo[3]=Panaderia campo[4]=2028-11-08 campo[5]=La Preferida
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 488: error numérico: [1,Mostaza 683,7000000487,Congelados,2027-05-28,La Preferida,14.22,71] campo[3]=Congelados campo[4]=2027-05-28 campo[5]=La Preferida
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 489: error numérico: [12,Leche Entera 168,7000000488,Frutas,2028-05-13,Lux,441.33,422] campo[3]=Frutas campo[4]=2028-05-13 campo[5]=Lux
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 490: error numérico: [12,Spaghetti 171,7000000489,Bebidas,2027-02-17,Unilever,623.93,61] campo[3]=Bebidas campo[4]=2027-02-17 campo[5]=Unilever
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 491: error numérico: [1,Sal de Mesa 827,7000000490,Carnes,2027-12-12,Lux,57.57,365] campo[3]=Carnes campo[4]=2027-12-12 campo[5]=Lux
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 492: error numérico: [10,Manzana Roja 079,7000000491,Frutas,2028-12-21,Lux,308.34,256] campo[3]=Frutas campo[4]=2028-12-21 campo[5]=Lux
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 493: error numérico: [10,Jamon Cocido 377,7000000492,Granos,2027-11-07,La Preferida,760.50,346] campo[3]=Granos campo[4]=2027-11-07 campo[5]=La Preferida
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 494: error numérico: [12,Jugo Naranja 234,7000000493,Congelados,2029-04-10,Dos Pinos,40.78,442] campo[3]=Congelados campo[4]=2029-04-10 campo[5]=Dos Pinos
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 495: error numérico: [1,Frijoles Negros 048,7000000494,Frutas,2028-06-17,Kraft,782.47,92] campo[3]=Frutas campo[4]=2028-06-17 campo[5]=Kraft
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 496: error numérico: [1,Servilletas 823,7000000495,Snacks,2028-10-08,Nestle,275.91,214] campo[3]=Snacks campo[4]=2028-10-08 campo[5]=Nestle
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 497: error numérico: [12,Vinagre Blanco 278,7000000496,Dulces,2026-11-09,Heinz,104.57,345] campo[3]=Dulces campo[4]=2026-11-09 campo[5]=Heinz
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 498: error numérico: [1,Queso Fresco 229,7000000497,Enlatados,2029-04-24,Bimbo,811.13,36] campo[3]=Enlatados campo[4]=2029-04-24 campo[5]=Bimbo
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 499: error numérico: [8,Huevos Blancos 290,7000000498,Enlatados,2028-02-29,Del Monte,76.63,234] campo[3]=Enlatados campo[4]=2028-02-29 campo[5]=Del Monte
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 500: error numérico: [1,Cafe Molido 206,7000000499,Cereales,2028-02-15,Nestle,396.21,303] campo[3]=Cereales campo[4]=2028-02-15 campo[5]=Nestle
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 501: error numérico: [8,Limon Persa 795,7000000500,Aceites,2027-10-18,Ideal,8.90,210] campo[3]=Aceites campo[4]=2027-10-18 campo[5]=Ideal
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 502: error numérico: [1,Tortillas Maiz 555,7000000501,Bebidas,2026-06-22,Del Monte,4.74,337] campo[3]=Bebidas campo[4]=2026-06-22 campo[5]=Del Monte
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 503: error numérico: [7,Chorizo 756,7000000502,Congelados,2028-02-22,La Preferida,177.20,122] campo[3]=Congelados campo[4]=2028-02-22 campo[5]=La Preferida
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 504: error numérico: [7,Jabon Barra 985,7000000503,Lacteos,2027-03-21,Unilever,82.25,472] campo[3]=Lacteos campo[4]=2027-03-21 campo[5]=Unilever
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 505: error numérico: [4,Leche Condensada 866,7000000504,Verduras,2028-09-25,Heinz,391.58,383] campo[3]=Verduras campo[4]=2028-09-25 campo[5]=Heinz
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 506: error numérico: [2,Desodorante Roll 098,7000000505,Verduras,2027-03-03,Kraft,66.84,291] campo[3]=Verduras campo[4]=2027-03-03 campo[5]=Kraft
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 507: error numérico: [1,Papas Fritas 679,7000000506,Granos,2027-09-30,Maggi,224.43,162] campo[3]=Granos campo[4]=2027-09-30 campo[5]=Maggi
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 508: error numérico: [7,Zanahoria 852,7000000507,Congelados,2028-04-01,Del Monte,386.76,120] campo[3]=Congelados campo[4]=2028-04-01 campo[5]=Del Monte
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 509: error numérico: [2,Levadura Seca 208,7000000508,Granos,2027-01-12,Ideal,92.94,231] campo[3]=Granos campo[4]=2027-01-12 campo[5]=Ideal
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 510: error numérico: [8,Vinagre Blanco 417,7000000509,Panaderia,2028-06-05,Kelloggs,386.05,238] campo[3]=Panaderia campo[4]=2028-06-05 campo[5]=Kelloggs
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 511: error numérico: [5,Chorizo 123,7000000510,Panaderia,2027-04-21,Maggi,703.04,357] campo[3]=Panaderia campo[4]=2027-04-21 campo[5]=Maggi
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 512: error numérico: [10,Arroz Largo 221,7000000511,Dulces,2028-04-04,Ideal,80.71,128] campo[3]=Dulces campo[4]=2028-04-04 campo[5]=Ideal
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 513: error numérico: [6,Chocolate Negro 526,7000000512,Lacteos,2028-02-05,Unilever,697.71,90] campo[3]=Lacteos campo[4]=2028-02-05 campo[5]=Unilever
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 514: error numérico: [1,Levadura Seca 415,7000000513,Dulces,2028-12-15,Familia,636.75,128] campo[3]=Dulces campo[4]=2028-12-15 campo[5]=Familia
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 515: error numérico: [2,Agua Pura 105,7000000514,Enlatados,2027-03-16,La Preferida,13.62,426] campo[3]=Enlatados campo[4]=2027-03-16 campo[5]=La Preferida
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 516: error numérico: [4,Atun en Agua 203,7000000515,Dulces,2028-08-31,Heinz,584.44,481] campo[3]=Dulces campo[4]=2028-08-31 campo[5]=Heinz
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 517: error numérico: [11,Yogur Natural 597,7000000516,Limpieza,2027-11-15,Tio Pelon,21.95,34] campo[3]=Limpieza campo[4]=2027-11-15 campo[5]=Tio Pelon
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 518: error numérico: [4,Leche Condensada 662,7000000517,Frutas,2027-02-21,Tio Pelon,769.65,425] campo[3]=Frutas campo[4]=2027-02-21 campo[5]=Tio Pelon
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 519: error numérico: [6,Jugo Naranja 044,7000000518,Frutas,2026-09-14,Yoplait,785.78,222] campo[3]=Frutas campo[4]=2026-09-14 campo[5]=Yoplait
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 520: error numérico: [12,Chocolate Negro 509,7000000519,Lacteos,2028-07-25,Pringles,149.78,110] campo[3]=Lacteos campo[4]=2028-07-25 campo[5]=Pringles
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 521: error numérico: [3,Ketchup 287,7000000520,Frutas,2027-04-03,Bimbo,523.34,316] campo[3]=Frutas campo[4]=2027-04-03 campo[5]=Bimbo
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 522: error numérico: [4,Platano Maduro 303,7000000521,Frutas,2028-09-23,Familia,409.00,45] campo[3]=Frutas campo[4]=2028-09-23 campo[5]=Familia
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 523: error numérico: [5,Te Verde 141,7000000522,Carnes,2027-07-16,Lux,214.40,411] campo[3]=Carnes campo[4]=2027-07-16 campo[5]=Lux
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 524: error numérico: [9,Pollo Entero 020,7000000523,Carnes,2028-06-07,Dove,464.43,249] campo[3]=Carnes campo[4]=2028-06-07 campo[5]=Dove
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 525: error numérico: [6,Harina Trigo 580,7000000524,Verduras,2028-03-22,Kraft,232.42,14] campo[3]=Verduras campo[4]=2028-03-22 campo[5]=Kraft
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 526: error numérico: [6,Pasta Dental 225,7000000525,Lacteos,2027-12-30,Bimbo,688.03,242] campo[3]=Lacteos campo[4]=2027-12-30 campo[5]=Bimbo
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 527: error numérico: [9,Azucar Blanca 786,7000000526,Limpieza,2027-09-22,Yoplait,88.26,337] campo[3]=Limpieza campo[4]=2027-09-22 campo[5]=Yoplait
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 528: error numérico: [4,Ketchup 547,7000000527,Dulces,2026-09-25,Nestle,490.82,409] campo[3]=Dulces campo[4]=2026-09-25 campo[5]=Nestle
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 529: error numérico: [7,Azucar Blanca 958,7000000528,Dulces,2027-05-24,Yoplait,203.74,163] campo[3]=Dulces campo[4]=2027-05-24 campo[5]=Yoplait
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 530: error numérico: [12,Zanahoria 368,7000000529,Snacks,2026-07-30,Heinz,805.61,289] campo[3]=Snacks campo[4]=2026-07-30 campo[5]=Heinz
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 531: error numérico: [3,Toallas Cocina 972,7000000530,Aceites,2029-03-07,Familia,265.11,252] campo[3]=Aceites campo[4]=2029-03-07 campo[5]=Familia
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 532: error numérico: [1,Yogur Natural 058,7000000531,Aceites,2027-08-25,Dos Pinos,449.14,1] campo[3]=Aceites campo[4]=2027-08-25 campo[5]=Dos Pinos
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 533: error numérico: [6,Harina Trigo 629,7000000532,Aceites,2027-02-25,Del Monte,610.39,471] campo[3]=Aceites campo[4]=2027-02-25 campo[5]=Del Monte
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 534: error numérico: [6,Frijol Negro 023,7000000533,Granos,2027-03-20,La Preferida,720.05,441] campo[3]=Granos campo[4]=2027-03-20 campo[5]=La Preferida
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 535: error numérico: [6,Canela Molida 075,7000000534,Bebidas,2028-08-21,La Preferida,288.40,166] campo[3]=Bebidas campo[4]=2028-08-21 campo[5]=La Preferida
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 536: error numérico: [3,Pimienta Negra 162,7000000535,Congelados,2028-11-13,Dove,553.03,90] campo[3]=Congelados campo[4]=2028-11-13 campo[5]=Dove
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 537: error numérico: [12,Canela Molida 576,7000000536,Congelados,2028-06-02,Nestle,566.87,418] campo[3]=Congelados campo[4]=2028-06-02 campo[5]=Nestle
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 538: error numérico: [3,Te Verde 315,7000000537,Congelados,2028-01-27,Ideal,153.93,1] campo[3]=Congelados campo[4]=2028-01-27 campo[5]=Ideal
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 539: error numérico: [12,Levadura Seca 587,7000000538,Carnes,2026-08-08,Yoplait,513.42,472] campo[3]=Carnes campo[4]=2026-08-08 campo[5]=Yoplait
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 540: error numérico: [10,Tortillas Maiz 655,7000000539,Limpieza,2027-01-02,Dove,122.55,382] campo[3]=Limpieza campo[4]=2027-01-02 campo[5]=Dove
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 541: error numérico: [2,Frijoles Negros 356,7000000540,Bebidas,2027-05-12,Tio Pelon,699.04,344] campo[3]=Bebidas campo[4]=2027-05-12 campo[5]=Tio Pelon
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 542: error numérico: [11,Cebolla Blanca 908,7000000541,Bebidas,2028-12-03,Dos Pinos,228.00,128] campo[3]=Bebidas campo[4]=2028-12-03 campo[5]=Dos Pinos
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 543: error numérico: [12,Aceite Vegetal 359,7000000542,Cereales,2027-01-10,Dos Pinos,44.26,225] campo[3]=Cereales campo[4]=2027-01-10 campo[5]=Dos Pinos
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 544: error numérico: [12,Galletas Soda 993,7000000543,Granos,2028-09-27,Dove,749.92,180] campo[3]=Granos campo[4]=2028-09-27 campo[5]=Dove
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 545: error numérico: [9,Te Verde 104,7000000544,Dulces,2029-02-08,Nestle,141.19,38] campo[3]=Dulces campo[4]=2029-02-08 campo[5]=Nestle
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 546: error numérico: [1,Mayonesa 021,7000000545,Bebidas,2027-11-19,La Preferida,66.31,88] campo[3]=Bebidas campo[4]=2027-11-19 campo[5]=La Preferida
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 547: error numérico: [7,Jamon Cocido 750,7000000546,Panaderia,2026-12-10,Del Monte,506.35,315] campo[3]=Panaderia campo[4]=2026-12-10 campo[5]=Del Monte
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 548: error numérico: [8,Lechuga 032,7000000547,Carnes,2027-05-06,Pringles,136.49,52] campo[3]=Carnes campo[4]=2027-05-06 campo[5]=Pringles
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 549: error numérico: [6,Crema Agria 998,7000000548,Aceites,2028-09-18,Familia,614.71,374] campo[3]=Aceites campo[4]=2028-09-18 campo[5]=Familia
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 550: error numérico: [9,Spaghetti 677,7000000549,Cereales,2028-02-02,Nestle,84.69,202] campo[3]=Cereales campo[4]=2028-02-02 campo[5]=Nestle
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 551: error numérico: [10,Servilletas 861,7000000550,Frutas,2027-04-13,Bimbo,308.94,219] campo[3]=Frutas campo[4]=2027-04-13 campo[5]=Bimbo
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 552: error numérico: [2,Mayonesa 844,7000000551,Higiene,2029-02-10,Kelloggs,85.60,106] campo[3]=Higiene campo[4]=2029-02-10 campo[5]=Kelloggs
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 553: error numérico: [3,Manzana Roja 299,7000000552,Panaderia,2029-01-27,La Preferida,264.52,204] campo[3]=Panaderia campo[4]=2029-01-27 campo[5]=La Preferida
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 554: error numérico: [8,Jabon Barra 917,7000000553,Higiene,2027-11-27,Tio Pelon,546.84,199] campo[3]=Higiene campo[4]=2027-11-27 campo[5]=Tio Pelon
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 555: error numérico: [3,Cafe Molido 907,7000000554,Carnes,2028-06-28,Yoplait,380.85,135] campo[3]=Carnes campo[4]=2028-06-28 campo[5]=Yoplait
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 556: error numérico: [8,Agua Pura 270,7000000555,Aceites,2027-12-05,Bimbo,131.43,357] campo[3]=Aceites campo[4]=2027-12-05 campo[5]=Bimbo
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 557: error numérico: [11,Cereal Maiz 088,7000000556,Higiene,2028-05-07,Familia,353.94,388] campo[3]=Higiene campo[4]=2028-05-07 campo[5]=Familia
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 558: error numérico: [10,Tortillas Maiz 567,7000000557,Lacteos,2028-08-03,Lux,357.87,275] campo[3]=Lacteos campo[4]=2028-08-03 campo[5]=Lux
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 559: error numérico: [11,Huevos Blancos 959,7000000558,Frutas,2027-09-28,Dove,256.48,203] campo[3]=Frutas campo[4]=2027-09-28 campo[5]=Dove
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 560: error numérico: [12,Arroz Largo 515,7000000559,Limpieza,2029-04-26,Ideal,105.32,388] campo[3]=Limpieza campo[4]=2029-04-26 campo[5]=Ideal
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 561: error numérico: [8,Queso Fresco 972,7000000560,Granos,2027-08-10,Kelloggs,110.32,217] campo[3]=Granos campo[4]=2027-08-10 campo[5]=Kelloggs
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 562: error numérico: [2,Papa Blanca 446,7000000561,Aceites,2027-04-01,Unilever,274.17,373] campo[3]=Aceites campo[4]=2027-04-01 campo[5]=Unilever
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 563: error numérico: [2,Yogur Natural 398,7000000562,Verduras,2028-08-24,Familia,279.57,142] campo[3]=Verduras campo[4]=2028-08-24 campo[5]=Familia
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 564: error numérico: [9,Agua Pura 940,7000000563,Dulces,2026-06-28,Lux,665.20,58] campo[3]=Dulces campo[4]=2026-06-28 campo[5]=Lux
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 565: error numérico: [7,Sopa Pollo 152,7000000564,Limpieza,2026-12-25,La Preferida,479.81,52] campo[3]=Limpieza campo[4]=2026-12-25 campo[5]=La Preferida
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 566: error numérico: [5,Huevos Blancos 549,7000000565,Snacks,2028-05-07,Pringles,227.09,336] campo[3]=Snacks campo[4]=2028-05-07 campo[5]=Pringles
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 567: error numérico: [8,Toallas Cocina 624,7000000566,Frutas,2026-08-18,Yoplait,236.64,74] campo[3]=Frutas campo[4]=2026-08-18 campo[5]=Yoplait
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 568: error numérico: [10,Pasta Dental 698,7000000567,Congelados,2028-09-02,Bimbo,338.54,451] campo[3]=Congelados campo[4]=2028-09-02 campo[5]=Bimbo
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 569: error numérico: [6,Zanahoria 244,7000000568,Lacteos,2029-01-31,Unilever,762.84,11] campo[3]=Lacteos campo[4]=2029-01-31 campo[5]=Unilever
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 570: error numérico: [6,Salchicha 813,7000000569,Cereales,2028-02-29,Unilever,716.97,440] campo[3]=Cereales campo[4]=2028-02-29 campo[5]=Unilever
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 571: error numérico: [12,Papa Blanca 101,7000000570,Dulces,2027-09-12,Ideal,257.86,381] campo[3]=Dulces campo[4]=2027-09-12 campo[5]=Ideal
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 572: error numérico: [8,Limon Persa 846,7000000571,Bebidas,2027-12-06,Pringles,515.61,46] campo[3]=Bebidas campo[4]=2027-12-06 campo[5]=Pringles
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 573: error numérico: [4,Gaseosa Cola 217,7000000572,Snacks,2028-09-13,Dove,646.41,445] campo[3]=Snacks campo[4]=2028-09-13 campo[5]=Dove
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 574: error numérico: [6,Salchicha 058,7000000573,Verduras,2027-04-24,Tio Pelon,266.87,260] campo[3]=Verduras campo[4]=2027-04-24 campo[5]=Tio Pelon
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 575: error numérico: [7,Atun en Agua 800,7000000574,Dulces,2026-08-01,Yoplait,166.67,427] campo[3]=Dulces campo[4]=2026-08-01 campo[5]=Yoplait
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 576: error numérico: [4,Mortadela 060,7000000575,Aceites,2026-08-09,Colgate,46.30,185] campo[3]=Aceites campo[4]=2026-08-09 campo[5]=Colgate
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 577: error numérico: [12,Mantequilla 281,7000000576,Bebidas,2029-01-08,Lux,339.51,473] campo[3]=Bebidas campo[4]=2029-01-08 campo[5]=Lux
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 578: error numérico: [2,Papa Blanca 032,7000000577,Aceites,2028-07-04,Dove,506.36,91] campo[3]=Aceites campo[4]=2028-07-04 campo[5]=Dove
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 579: error numérico: [8,Desodorante Roll 565,7000000578,Bebidas,2028-05-08,Yoplait,712.57,133] campo[3]=Bebidas campo[4]=2028-05-08 campo[5]=Yoplait
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 580: error numérico: [12,Mortadela 706,7000000579,Panaderia,2028-01-07,Dos Pinos,330.73,84] campo[3]=Panaderia campo[4]=2028-01-07 campo[5]=Dos Pinos
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 581: error numérico: [10,Limon Persa 989,7000000580,Aceites,2027-08-30,Nestle,577.17,138] campo[3]=Aceites campo[4]=2027-08-30 campo[5]=Nestle
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 582: error numérico: [11,Galletas Soda 526,7000000581,Lacteos,2026-06-21,Dove,775.10,332] campo[3]=Lacteos campo[4]=2026-06-21 campo[5]=Dove
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 583: error numérico: [3,Pasta Dental 821,7000000582,Lacteos,2027-09-04,Unilever,518.46,483] campo[3]=Lacteos campo[4]=2027-09-04 campo[5]=Unilever
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 584: error numérico: [5,Lechuga 991,7000000583,Congelados,2027-12-18,Pringles,761.53,437] campo[3]=Congelados campo[4]=2027-12-18 campo[5]=Pringles
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 585: error numérico: [6,Agua Pura 259,7000000584,Aceites,2029-01-13,Maggi,576.75,423] campo[3]=Aceites campo[4]=2029-01-13 campo[5]=Maggi
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 586: error numérico: [10,Chocolate Negro 599,7000000585,Panaderia,2026-06-18,Lux,849.52,495] campo[3]=Panaderia campo[4]=2026-06-18 campo[5]=Lux
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 587: error numérico: [6,Servilletas 663,7000000586,Limpieza,2028-01-02,Maggi,582.86,247] campo[3]=Limpieza campo[4]=2028-01-02 campo[5]=Maggi
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 588: error numérico: [2,Sal de Mesa 284,7000000587,Higiene,2028-03-29,Unilever,224.56,365] campo[3]=Higiene campo[4]=2028-03-29 campo[5]=Unilever
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 589: error numérico: [11,Mostaza 193,7000000588,Granos,2029-04-27,Nestle,765.09,413] campo[3]=Granos campo[4]=2029-04-27 campo[5]=Nestle
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 590: error numérico: [10,Chocolate Negro 677,7000000589,Bebidas,2027-03-16,Dos Pinos,558.30,152] campo[3]=Bebidas campo[4]=2027-03-16 campo[5]=Dos Pinos
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 591: error numérico: [5,Harina Trigo 429,7000000590,Carnes,2028-08-06,Bimbo,497.03,293] campo[3]=Carnes campo[4]=2028-08-06 campo[5]=Bimbo
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 592: error numérico: [4,Sal de Mesa 744,7000000591,Congelados,2027-09-01,Familia,543.83,244] campo[3]=Congelados campo[4]=2027-09-01 campo[5]=Familia
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 593: error numérico: [11,Azucar Blanca 520,7000000592,Cereales,2027-05-17,Familia,156.83,50] campo[3]=Cereales campo[4]=2027-05-17 campo[5]=Familia
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 594: error numérico: [8,Atun en Agua 759,7000000593,Cereales,2027-06-12,Del Monte,557.48,114] campo[3]=Cereales campo[4]=2027-06-12 campo[5]=Del Monte
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 595: error numérico: [6,Tortillas Maiz 763,7000000594,Dulces,2028-02-21,Pringles,670.62,170] campo[3]=Dulces campo[4]=2028-02-21 campo[5]=Pringles
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 596: error numérico: [6,Spaghetti 600,7000000595,Cereales,2029-01-07,La Preferida,401.81,444] campo[3]=Cereales campo[4]=2029-01-07 campo[5]=La Preferida
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 597: error numérico: [11,Desodorante Roll 595,7000000596,Limpieza,2026-10-26,Dove,756.40,257] campo[3]=Limpieza campo[4]=2026-10-26 campo[5]=Dove
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 598: error numérico: [2,Huevos Blancos 698,7000000597,Carnes,2028-02-04,Pringles,49.26,438] campo[3]=Carnes campo[4]=2028-02-04 campo[5]=Pringles
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 599: error numérico: [3,Atun en Agua 206,7000000598,Bebidas,2028-09-18,Colgate,124.74,442] campo[3]=Bebidas campo[4]=2028-09-18 campo[5]=Colgate
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 600: error numérico: [12,Queso Fresco 798,7000000599,Panaderia,2029-02-25,Del Monte,537.67,91] campo[3]=Panaderia campo[4]=2029-02-25 campo[5]=Del Monte
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 601: error numérico: [6,Manzana Roja 060,7000000600,Lacteos,2028-12-14,Unilever,180.74,397] campo[3]=Lacteos campo[4]=2028-12-14 campo[5]=Unilever
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 602: error numérico: [3,Toallas Cocina 783,7000000601,Granos,2029-03-01,Tio Pelon,113.04,223] campo[3]=Granos campo[4]=2029-03-01 campo[5]=Tio Pelon
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 603: error numérico: [11,Papas Fritas 414,7000000602,Carnes,2029-02-04,Kraft,7.45,274] campo[3]=Carnes campo[4]=2029-02-04 campo[5]=Kraft
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 604: error numérico: [4,Cebolla Blanca 383,7000000603,Lacteos,2028-03-23,Lux,164.82,347] campo[3]=Lacteos campo[4]=2028-03-23 campo[5]=Lux
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 605: error numérico: [1,Manzana Roja 752,7000000604,Aceites,2027-09-09,Heinz,267.69,53] campo[3]=Aceites campo[4]=2027-09-09 campo[5]=Heinz
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 606: error numérico: [7,Detergente Polvo 603,7000000605,Cereales,2027-05-11,Tio Pelon,700.88,153] campo[3]=Cereales campo[4]=2027-05-11 campo[5]=Tio Pelon
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 607: error numérico: [5,Agua Pura 746,7000000606,Verduras,2028-04-24,Pringles,755.17,69] campo[3]=Verduras campo[4]=2028-04-24 campo[5]=Pringles
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 608: error numérico: [6,Leche Condensada 502,7000000607,Bebidas,2027-06-23,Yoplait,806.05,471] campo[3]=Bebidas campo[4]=2027-06-23 campo[5]=Yoplait
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 609: error numérico: [7,Pan Blanco 234,7000000608,Aceites,2027-02-26,Kelloggs,624.90,302] campo[3]=Aceites campo[4]=2027-02-26 campo[5]=Kelloggs
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 610: error numérico: [9,Jamon Cocido 127,7000000609,Bebidas,2026-08-18,Kraft,745.49,131] campo[3]=Bebidas campo[4]=2026-08-18 campo[5]=Kraft
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 611: error numérico: [9,Cepillo Dientes 050,7000000610,Limpieza,2026-09-09,La Preferida,556.74,11] campo[3]=Limpieza campo[4]=2026-09-09 campo[5]=La Preferida
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 612: error numérico: [1,Zanahoria 119,7000000611,Carnes,2028-11-28,Kraft,108.12,130] campo[3]=Carnes campo[4]=2028-11-28 campo[5]=Kraft
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 613: error numérico: [8,Zanahoria 157,7000000612,Aceites,2026-06-22,Maggi,359.77,52] campo[3]=Aceites campo[4]=2026-06-22 campo[5]=Maggi
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 614: error numérico: [11,Suavizante Ropa 277,7000000613,Limpieza,2027-03-10,Pringles,706.65,54] campo[3]=Limpieza campo[4]=2027-03-10 campo[5]=Pringles
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 615: error numérico: [9,Cebolla Blanca 633,7000000614,Panaderia,2028-01-02,La Preferida,667.80,255] campo[3]=Panaderia campo[4]=2028-01-02 campo[5]=La Preferida
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 616: error numérico: [4,Pasta Dental 205,7000000615,Enlatados,2027-11-23,Lux,827.25,184] campo[3]=Enlatados campo[4]=2027-11-23 campo[5]=Lux
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 617: error numérico: [12,Galletas Soda 303,7000000616,Granos,2026-08-22,Familia,423.66,107] campo[3]=Granos campo[4]=2026-08-22 campo[5]=Familia
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 618: error numérico: [12,Bicarbonato 493,7000000617,Bebidas,2027-09-26,Dos Pinos,14.29,46] campo[3]=Bebidas campo[4]=2027-09-26 campo[5]=Dos Pinos
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 619: error numérico: [2,Mortadela 588,7000000618,Higiene,2029-03-10,Ideal,807.21,400] campo[3]=Higiene campo[4]=2029-03-10 campo[5]=Ideal
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 620: error numérico: [9,Aceite Vegetal 741,7000000619,Congelados,2026-12-27,Unilever,548.93,234] campo[3]=Congelados campo[4]=2026-12-27 campo[5]=Unilever
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 621: error numérico: [5,Spaghetti 476,7000000620,Lacteos,2026-12-24,Yoplait,743.46,437] campo[3]=Lacteos campo[4]=2026-12-24 campo[5]=Yoplait
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 622: error numérico: [5,Cafe Molido 821,7000000621,Higiene,2028-03-04,Pringles,628.67,49] campo[3]=Higiene campo[4]=2028-03-04 campo[5]=Pringles
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 623: error numérico: [1,Leche Entera 873,7000000622,Granos,2027-05-18,Del Monte,306.15,225] campo[3]=Granos campo[4]=2027-05-18 campo[5]=Del Monte
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 624: error numérico: [10,Ketchup 900,7000000623,Congelados,2026-12-10,Heinz,693.37,94] campo[3]=Congelados campo[4]=2026-12-10 campo[5]=Heinz
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 625: error numérico: [2,Chocolate Negro 410,7000000624,Frutas,2027-12-11,Kraft,587.50,245] campo[3]=Frutas campo[4]=2027-12-11 campo[5]=Kraft
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 626: error numérico: [7,Platano Maduro 908,7000000625,Enlatados,2027-05-10,La Preferida,115.67,372] campo[3]=Enlatados campo[4]=2027-05-10 campo[5]=La Preferida
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 627: error numérico: [1,Pimienta Negra 966,7000000626,Dulces,2027-04-25,La Preferida,355.67,303] campo[3]=Dulces campo[4]=2027-04-25 campo[5]=La Preferida
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 628: error numérico: [8,Carne Molida 583,7000000627,Higiene,2028-11-16,Yoplait,520.99,399] campo[3]=Higiene campo[4]=2028-11-16 campo[5]=Yoplait
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 629: error numérico: [6,Cepillo Dientes 030,7000000628,Dulces,2027-02-25,Dove,782.62,58] campo[3]=Dulces campo[4]=2027-02-25 campo[5]=Dove
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 630: error numérico: [7,Gaseosa Cola 048,7000000629,Panaderia,2027-11-20,Del Monte,13.96,445] campo[3]=Panaderia campo[4]=2027-11-20 campo[5]=Del Monte
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 631: error numérico: [11,Suavizante Ropa 786,7000000630,Congelados,2027-09-04,Del Monte,442.92,353] campo[3]=Congelados campo[4]=2027-09-04 campo[5]=Del Monte
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 632: error numérico: [12,Cepillo Dientes 098,7000000631,Carnes,2027-10-25,Dove,296.18,347] campo[3]=Carnes campo[4]=2027-10-25 campo[5]=Dove
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 633: error numérico: [11,Te Verde 153,7000000632,Dulces,2026-09-22,Dos Pinos,548.14,81] campo[3]=Dulces campo[4]=2026-09-22 campo[5]=Dos Pinos
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 634: error numérico: [9,Chorizo 481,7000000633,Dulces,2029-03-14,Yoplait,66.87,252] campo[3]=Dulces campo[4]=2029-03-14 campo[5]=Yoplait
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 635: error numérico: [6,Frijoles Negros 339,7000000634,Cereales,2026-09-14,Lux,192.02,330] campo[3]=Cereales campo[4]=2026-09-14 campo[5]=Lux
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 636: error numérico: [7,Chocolate Negro 837,7000000635,Aceites,2026-11-11,Colgate,379.51,294] campo[3]=Aceites campo[4]=2026-11-11 campo[5]=Colgate
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 637: error numérico: [8,Yogur Natural 878,7000000636,Frutas,2028-12-04,Del Monte,103.99,255] campo[3]=Frutas campo[4]=2028-12-04 campo[5]=Del Monte
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 638: error numérico: [12,Platano Maduro 019,7000000637,Panaderia,2028-09-06,Pringles,33.83,282] campo[3]=Panaderia campo[4]=2028-09-06 campo[5]=Pringles
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 639: error numérico: [1,Salchicha 094,7000000638,Enlatados,2028-02-16,Lux,479.51,336] campo[3]=Enlatados campo[4]=2028-02-16 campo[5]=Lux
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 640: error numérico: [11,Agua Pura 974,7000000639,Bebidas,2028-06-16,Bimbo,694.74,433] campo[3]=Bebidas campo[4]=2028-06-16 campo[5]=Bimbo
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 641: error numérico: [8,Sal de Mesa 574,7000000640,Enlatados,2029-01-26,Heinz,609.52,59] campo[3]=Enlatados campo[4]=2029-01-26 campo[5]=Heinz
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 642: error numérico: [2,Chile Pimiento 675,7000000641,Aceites,2026-06-07,Del Monte,304.13,325] campo[3]=Aceites campo[4]=2026-06-07 campo[5]=Del Monte
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 643: error numérico: [5,Servilletas 535,7000000642,Bebidas,2027-01-06,Bimbo,762.71,253] campo[3]=Bebidas campo[4]=2027-01-06 campo[5]=Bimbo
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 644: error numérico: [3,Salchicha 735,7000000643,Congelados,2028-09-18,La Preferida,218.76,101] campo[3]=Congelados campo[4]=2028-09-18 campo[5]=La Preferida
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 645: error numérico: [4,Jugo Naranja 953,7000000644,Dulces,2028-08-15,Kelloggs,390.39,401] campo[3]=Dulces campo[4]=2028-08-15 campo[5]=Kelloggs
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 646: error numérico: [4,Lechuga 347,7000000645,Panaderia,2028-09-28,Bimbo,787.89,429] campo[3]=Panaderia campo[4]=2028-09-28 campo[5]=Bimbo
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 647: error numérico: [11,Desodorante Roll 127,7000000646,Enlatados,2028-12-11,Colgate,560.88,490] campo[3]=Enlatados campo[4]=2028-12-11 campo[5]=Colgate
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 648: error numérico: [9,Atun en Agua 987,7000000647,Frutas,2026-06-11,Lux,626.71,284] campo[3]=Frutas campo[4]=2026-06-11 campo[5]=Lux
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 649: error numérico: [7,Mortadela 600,7000000648,Frutas,2029-04-09,Yoplait,589.12,89] campo[3]=Frutas campo[4]=2029-04-09 campo[5]=Yoplait
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 650: error numérico: [12,Salchicha 132,7000000649,Panaderia,2028-08-04,Del Monte,430.23,197] campo[3]=Panaderia campo[4]=2028-08-04 campo[5]=Del Monte
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 651: error numérico: [7,Pimienta Negra 624,7000000650,Snacks,2027-10-24,Unilever,340.30,176] campo[3]=Snacks campo[4]=2027-10-24 campo[5]=Unilever
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 652: error numérico: [5,Gaseosa Cola 825,7000000651,Granos,2027-03-12,Pringles,513.54,454] campo[3]=Granos campo[4]=2027-03-12 campo[5]=Pringles
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 653: error numérico: [12,Detergente Polvo 307,7000000652,Dulces,2028-03-06,Familia,538.98,103] campo[3]=Dulces campo[4]=2028-03-06 campo[5]=Familia
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 654: error numérico: [4,Cepillo Dientes 732,7000000653,Cereales,2028-05-10,Ideal,834.20,333] campo[3]=Cereales campo[4]=2028-05-10 campo[5]=Ideal
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 655: error numérico: [3,Detergente Polvo 556,7000000654,Congelados,2028-03-24,La Preferida,647.50,288] campo[3]=Congelados campo[4]=2028-03-24 campo[5]=La Preferida
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 656: error numérico: [8,Desodorante Roll 585,7000000655,Higiene,2028-10-04,Familia,245.54,434] campo[3]=Higiene campo[4]=2028-10-04 campo[5]=Familia
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 657: error numérico: [7,Carne Molida 014,7000000656,Verduras,2027-01-07,Dos Pinos,325.91,28] campo[3]=Verduras campo[4]=2027-01-07 campo[5]=Dos Pinos
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 658: error numérico: [11,Frijol Negro 205,7000000657,Cereales,2027-04-28,Maggi,581.99,75] campo[3]=Cereales campo[4]=2027-04-28 campo[5]=Maggi
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 659: error numérico: [1,Zanahoria 804,7000000658,Cereales,2027-07-25,Familia,30.85,417] campo[3]=Cereales campo[4]=2027-07-25 campo[5]=Familia
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 660: error numérico: [8,Cereal Maiz 631,7000000659,Dulces,2027-09-05,Familia,332.69,262] campo[3]=Dulces campo[4]=2027-09-05 campo[5]=Familia
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 661: error numérico: [12,Mayonesa 710,7000000660,Higiene,2026-09-07,Kraft,331.57,490] campo[3]=Higiene campo[4]=2026-09-07 campo[5]=Kraft
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 662: error numérico: [11,Vinagre Blanco 990,7000000661,Verduras,2026-09-21,Dos Pinos,633.02,104] campo[3]=Verduras campo[4]=2026-09-21 campo[5]=Dos Pinos
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 663: error numérico: [10,Huevos Blancos 800,7000000662,Dulces,2028-11-26,Nestle,775.07,361] campo[3]=Dulces campo[4]=2028-11-26 campo[5]=Nestle
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 664: error numérico: [12,Platano Maduro 377,7000000663,Enlatados,2027-07-10,Kelloggs,252.52,91] campo[3]=Enlatados campo[4]=2027-07-10 campo[5]=Kelloggs
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 665: error numérico: [11,Aceite Vegetal 192,7000000664,Granos,2029-04-20,La Preferida,322.80,220] campo[3]=Granos campo[4]=2029-04-20 campo[5]=La Preferida
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 666: error numérico: [5,Servilletas 271,7000000665,Granos,2027-04-28,Unilever,8.28,239] campo[3]=Granos campo[4]=2027-04-28 campo[5]=Unilever
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 667: error numérico: [12,Bicarbonato 159,7000000666,Lacteos,2027-04-13,Del Monte,508.76,397] campo[3]=Lacteos campo[4]=2027-04-13 campo[5]=Del Monte
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 668: error numérico: [11,Cepillo Dientes 864,7000000667,Higiene,2028-02-09,Dove,672.16,282] campo[3]=Higiene campo[4]=2028-02-09 campo[5]=Dove
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 669: error numérico: [6,Aceite Vegetal 803,7000000668,Congelados,2028-03-14,Lux,189.70,95] campo[3]=Congelados campo[4]=2028-03-14 campo[5]=Lux
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 670: error numérico: [9,Aceite Vegetal 806,7000000669,Verduras,2027-04-25,Pringles,463.22,207] campo[3]=Verduras campo[4]=2027-04-25 campo[5]=Pringles
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 671: error numérico: [2,Azucar Blanca 227,7000000670,Snacks,2027-08-13,Del Monte,283.75,151] campo[3]=Snacks campo[4]=2027-08-13 campo[5]=Del Monte
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 672: error numérico: [4,Levadura Seca 771,7000000671,Limpieza,2029-01-30,Familia,700.75,333] campo[3]=Limpieza campo[4]=2029-01-30 campo[5]=Familia
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 673: error numérico: [1,Jugo Naranja 685,7000000672,Bebidas,2028-12-01,Nestle,769.16,315] campo[3]=Bebidas campo[4]=2028-12-01 campo[5]=Nestle
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 674: error numérico: [10,Frijoles Negros 982,7000000673,Lacteos,2028-03-21,Kraft,778.84,484] campo[3]=Lacteos campo[4]=2028-03-21 campo[5]=Kraft
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 675: error numérico: [2,Te Verde 263,7000000674,Verduras,2028-01-03,Dos Pinos,774.95,421] campo[3]=Verduras campo[4]=2028-01-03 campo[5]=Dos Pinos
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 676: error numérico: [6,Detergente Polvo 823,7000000675,Verduras,2028-12-01,Dove,40.62,460] campo[3]=Verduras campo[4]=2028-12-01 campo[5]=Dove
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 677: error numérico: [11,Mantequilla 329,7000000676,Verduras,2026-11-18,La Preferida,145.20,490] campo[3]=Verduras campo[4]=2026-11-18 campo[5]=La Preferida
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 678: error numérico: [9,Papel Higienico 008,7000000677,Higiene,2026-10-15,Kelloggs,570.94,397] campo[3]=Higiene campo[4]=2026-10-15 campo[5]=Kelloggs
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 679: error numérico: [4,Huevos Blancos 702,7000000678,Carnes,2027-01-01,Kelloggs,458.71,360] campo[3]=Carnes campo[4]=2027-01-01 campo[5]=Kelloggs
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 680: error numérico: [12,Limon Persa 446,7000000679,Higiene,2026-10-28,Ideal,23.61,368] campo[3]=Higiene campo[4]=2026-10-28 campo[5]=Ideal
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 681: error numérico: [6,Arroz Largo 090,7000000680,Panaderia,2026-09-22,Yoplait,675.80,286] campo[3]=Panaderia campo[4]=2026-09-22 campo[5]=Yoplait
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 682: error numérico: [2,Toallas Cocina 842,7000000681,Aceites,2027-11-14,Pringles,331.97,323] campo[3]=Aceites campo[4]=2027-11-14 campo[5]=Pringles
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 683: error numérico: [7,Papas Fritas 324,7000000682,Lacteos,2028-08-08,La Preferida,456.24,329] campo[3]=Lacteos campo[4]=2028-08-08 campo[5]=La Preferida
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 684: error numérico: [12,Cepillo Dientes 065,7000000683,Enlatados,2026-09-04,Tio Pelon,306.29,258] campo[3]=Enlatados campo[4]=2026-09-04 campo[5]=Tio Pelon
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 685: error numérico: [2,Mayonesa 806,7000000684,Higiene,2028-02-10,Tio Pelon,241.80,475] campo[3]=Higiene campo[4]=2028-02-10 campo[5]=Tio Pelon
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 686: error numérico: [8,Te Verde 405,7000000685,Dulces,2026-08-05,Dove,135.83,113] campo[3]=Dulces campo[4]=2026-08-05 campo[5]=Dove
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 687: error numérico: [3,Ajo Entero 401,7000000686,Enlatados,2028-01-28,Ideal,255.80,455] campo[3]=Enlatados campo[4]=2028-01-28 campo[5]=Ideal
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 688: error numérico: [12,Platano Maduro 383,7000000687,Lacteos,2027-03-19,La Preferida,38.86,294] campo[3]=Lacteos campo[4]=2027-03-19 campo[5]=La Preferida
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 689: error numérico: [10,Chocolate Negro 551,7000000688,Verduras,2026-11-24,Maggi,181.31,380] campo[3]=Verduras campo[4]=2026-11-24 campo[5]=Maggi
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 690: error numérico: [12,Azucar Blanca 217,7000000689,Carnes,2029-04-17,Ideal,139.75,114] campo[3]=Carnes campo[4]=2029-04-17 campo[5]=Ideal
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 691: error numérico: [10,Mortadela 259,7000000690,Aceites,2027-01-23,Yoplait,571.48,291] campo[3]=Aceites campo[4]=2027-01-23 campo[5]=Yoplait
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 692: error numérico: [1,Chorizo 770,7000000691,Snacks,2029-01-02,Familia,65.42,344] campo[3]=Snacks campo[4]=2029-01-02 campo[5]=Familia
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 693: error numérico: [2,Spaghetti 101,7000000692,Aceites,2029-02-24,Del Monte,305.82,344] campo[3]=Aceites campo[4]=2029-02-24 campo[5]=Del Monte
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 694: error numérico: [11,Frijoles Negros 103,7000000693,Cereales,2026-10-23,Kelloggs,272.51,231] campo[3]=Cereales campo[4]=2026-10-23 campo[5]=Kelloggs
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 695: error numérico: [6,Cepillo Dientes 676,7000000694,Cereales,2027-04-11,Heinz,687.22,491] campo[3]=Cereales campo[4]=2027-04-11 campo[5]=Heinz
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 696: error numérico: [7,Jamon Cocido 005,7000000695,Bebidas,2027-10-20,Nestle,606.38,329] campo[3]=Bebidas campo[4]=2027-10-20 campo[5]=Nestle
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 697: error numérico: [7,Ketchup 861,7000000696,Bebidas,2027-03-05,Del Monte,746.63,237] campo[3]=Bebidas campo[4]=2027-03-05 campo[5]=Del Monte
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 698: error numérico: [8,Azucar Blanca 794,7000000697,Cereales,2029-02-24,Familia,95.63,331] campo[3]=Cereales campo[4]=2029-02-24 campo[5]=Familia
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 699: error numérico: [10,Yogur Natural 862,7000000698,Cereales,2027-03-16,Familia,169.78,376] campo[3]=Cereales campo[4]=2027-03-16 campo[5]=Familia
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 700: error numérico: [11,Aceite Vegetal 745,7000000699,Panaderia,2026-07-11,Lux,538.17,417] campo[3]=Panaderia campo[4]=2026-07-11 campo[5]=Lux
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 701: error numérico: [10,Desodorante Roll 415,7000000700,Enlatados,2027-08-12,Bimbo,470.42,279] campo[3]=Enlatados campo[4]=2027-08-12 campo[5]=Bimbo
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 702: error numérico: [9,Shampoo Clasico 670,7000000701,Enlatados,2027-04-03,Heinz,335.75,457] campo[3]=Enlatados campo[4]=2027-04-03 campo[5]=Heinz
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 703: error numérico: [10,Cebolla Blanca 878,7000000702,Cereales,2027-03-04,Colgate,427.70,47] campo[3]=Cereales campo[4]=2027-03-04 campo[5]=Colgate
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 704: error numérico: [7,Cafe Molido 515,7000000703,Lacteos,2027-10-05,Yoplait,644.47,72] campo[3]=Lacteos campo[4]=2027-10-05 campo[5]=Yoplait
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 705: error numérico: [8,Jamon Cocido 184,7000000704,Limpieza,2027-03-29,Dove,798.51,21] campo[3]=Limpieza campo[4]=2027-03-29 campo[5]=Dove
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 706: error numérico: [4,Chile Pimiento 500,7000000705,Aceites,2026-10-09,Unilever,316.23,22] campo[3]=Aceites campo[4]=2026-10-09 campo[5]=Unilever
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 707: error numérico: [11,Crema Agria 531,7000000706,Snacks,2028-06-11,Kraft,401.08,233] campo[3]=Snacks campo[4]=2028-06-11 campo[5]=Kraft
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 708: error numérico: [1,Arroz Largo 665,7000000707,Bebidas,2026-12-31,Lux,539.81,141] campo[3]=Bebidas campo[4]=2026-12-31 campo[5]=Lux
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 709: error numérico: [12,Spaghetti 593,7000000708,Verduras,2027-05-25,Kraft,556.84,188] campo[3]=Verduras campo[4]=2027-05-25 campo[5]=Kraft
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 710: error numérico: [10,Platano Maduro 920,7000000709,Dulces,2026-11-09,Lux,216.47,499] campo[3]=Dulces campo[4]=2026-11-09 campo[5]=Lux
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 711: error numérico: [4,Suavizante Ropa 416,7000000710,Bebidas,2028-05-09,Dove,674.48,455] campo[3]=Bebidas campo[4]=2028-05-09 campo[5]=Dove
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 712: error numérico: [10,Leche Entera 514,7000000711,Snacks,2027-03-14,Colgate,143.69,40] campo[3]=Snacks campo[4]=2027-03-14 campo[5]=Colgate
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 713: error numérico: [9,Platano Maduro 288,7000000712,Aceites,2027-04-06,Yoplait,136.70,309] campo[3]=Aceites campo[4]=2027-04-06 campo[5]=Yoplait
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 714: error numérico: [12,Salchicha 122,7000000713,Higiene,2027-09-17,Pringles,690.16,369] campo[3]=Higiene campo[4]=2027-09-17 campo[5]=Pringles
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 715: error numérico: [2,Shampoo Clasico 692,7000000714,Frutas,2029-02-08,Kelloggs,503.60,332] campo[3]=Frutas campo[4]=2029-02-08 campo[5]=Kelloggs
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 716: error numérico: [7,Pan Blanco 250,7000000715,Lacteos,2027-02-19,Yoplait,117.54,263] campo[3]=Lacteos campo[4]=2027-02-19 campo[5]=Yoplait
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 717: error numérico: [1,Leche Condensada 587,7000000716,Granos,2026-09-25,Yoplait,222.12,93] campo[3]=Granos campo[4]=2026-09-25 campo[5]=Yoplait
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 718: error numérico: [9,Canela Molida 416,7000000717,Limpieza,2026-07-11,Maggi,805.35,111] campo[3]=Limpieza campo[4]=2026-07-11 campo[5]=Maggi
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 719: error numérico: [8,Pasta Dental 483,7000000718,Dulces,2029-02-13,Yoplait,189.19,211] campo[3]=Dulces campo[4]=2029-02-13 campo[5]=Yoplait
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 720: error numérico: [10,Sopa Pollo 814,7000000719,Limpieza,2027-06-10,Lux,227.42,371] campo[3]=Limpieza campo[4]=2027-06-10 campo[5]=Lux
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 721: error numérico: [11,Sal de Mesa 945,7000000720,Frutas,2026-10-21,Nestle,323.66,68] campo[3]=Frutas campo[4]=2026-10-21 campo[5]=Nestle
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 722: error numérico: [2,Pan Blanco 208,7000000721,Verduras,2029-03-31,Pringles,703.14,311] campo[3]=Verduras campo[4]=2029-03-31 campo[5]=Pringles
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 723: error numérico: [2,Queso Fresco 488,7000000722,Snacks,2026-08-21,Familia,429.57,61] campo[3]=Snacks campo[4]=2026-08-21 campo[5]=Familia
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 724: error numérico: [2,Shampoo Clasico 676,7000000723,Granos,2026-06-05,Pringles,445.41,190] campo[3]=Granos campo[4]=2026-06-05 campo[5]=Pringles
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 725: error numérico: [1,Zanahoria 543,7000000724,Carnes,2027-09-15,Dove,671.86,196] campo[3]=Carnes campo[4]=2027-09-15 campo[5]=Dove
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 726: error numérico: [6,Desodorante Roll 824,7000000725,Congelados,2026-12-20,Pringles,116.83,245] campo[3]=Congelados campo[4]=2026-12-20 campo[5]=Pringles
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 727: error numérico: [4,Harina Trigo 880,7000000726,Panaderia,2028-01-04,Familia,349.42,97] campo[3]=Panaderia campo[4]=2028-01-04 campo[5]=Familia
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 728: error numérico: [1,Lechuga 762,7000000727,Enlatados,2026-06-17,Lux,103.24,4] campo[3]=Enlatados campo[4]=2026-06-17 campo[5]=Lux
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 729: error numérico: [7,Platano Maduro 211,7000000728,Congelados,2028-03-10,Pringles,310.16,80] campo[3]=Congelados campo[4]=2028-03-10 campo[5]=Pringles
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 730: error numérico: [7,Platano Maduro 600,7000000729,Cereales,2027-11-20,Familia,362.04,188] campo[3]=Cereales campo[4]=2027-11-20 campo[5]=Familia
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 731: error numérico: [10,Ketchup 697,7000000730,Carnes,2027-07-25,Pringles,470.86,286] campo[3]=Carnes campo[4]=2027-07-25 campo[5]=Pringles
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 732: error numérico: [8,Queso Fresco 380,7000000731,Verduras,2029-02-17,Unilever,840.27,296] campo[3]=Verduras campo[4]=2029-02-17 campo[5]=Unilever
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 733: error numérico: [6,Limon Persa 723,7000000732,Carnes,2027-03-12,La Preferida,636.52,229] campo[3]=Carnes campo[4]=2027-03-12 campo[5]=La Preferida
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 734: error numérico: [12,Levadura Seca 166,7000000733,Panaderia,2027-08-16,Lux,342.57,174] campo[3]=Panaderia campo[4]=2027-08-16 campo[5]=Lux
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 735: error numérico: [9,Cepillo Dientes 714,7000000734,Higiene,2026-09-17,Yoplait,332.88,326] campo[3]=Higiene campo[4]=2026-09-17 campo[5]=Yoplait
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 736: error numérico: [1,Carne Molida 094,7000000735,Dulces,2027-03-27,Dove,787.24,223] campo[3]=Dulces campo[4]=2027-03-27 campo[5]=Dove
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 737: error numérico: [2,Aceite Vegetal 270,7000000736,Aceites,2028-07-01,Tio Pelon,519.04,371] campo[3]=Aceites campo[4]=2028-07-01 campo[5]=Tio Pelon
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 738: error numérico: [7,Bicarbonato 411,7000000737,Limpieza,2028-01-10,Bimbo,804.05,420] campo[3]=Limpieza campo[4]=2028-01-10 campo[5]=Bimbo
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 739: error numérico: [3,Manzana Roja 507,7000000738,Frutas,2026-06-24,Kelloggs,723.51,477] campo[3]=Frutas campo[4]=2026-06-24 campo[5]=Kelloggs
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 740: error numérico: [9,Mayonesa 200,7000000739,Lacteos,2029-04-13,Lux,594.74,315] campo[3]=Lacteos campo[4]=2029-04-13 campo[5]=Lux
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 741: error numérico: [3,Papa Blanca 037,7000000740,Bebidas,2027-10-05,Dos Pinos,829.38,45] campo[3]=Bebidas campo[4]=2027-10-05 campo[5]=Dos Pinos
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 742: error numérico: [5,Limon Persa 410,7000000741,Bebidas,2028-08-20,Kraft,499.62,266] campo[3]=Bebidas campo[4]=2028-08-20 campo[5]=Kraft
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 743: error numérico: [1,Ajo Entero 721,7000000742,Panaderia,2026-12-04,Familia,244.32,425] campo[3]=Panaderia campo[4]=2026-12-04 campo[5]=Familia
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 744: error numérico: [9,Harina Trigo 597,7000000743,Bebidas,2028-05-14,Unilever,195.06,494] campo[3]=Bebidas campo[4]=2028-05-14 campo[5]=Unilever
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 745: error numérico: [4,Agua Pura 953,7000000744,Carnes,2026-06-12,Unilever,151.67,260] campo[3]=Carnes campo[4]=2026-06-12 campo[5]=Unilever
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 746: error numérico: [2,Servilletas 075,7000000745,Verduras,2028-01-26,Del Monte,805.15,412] campo[3]=Verduras campo[4]=2028-01-26 campo[5]=Del Monte
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 747: error numérico: [9,Canela Molida 264,7000000746,Snacks,2027-10-28,Colgate,821.27,289] campo[3]=Snacks campo[4]=2027-10-28 campo[5]=Colgate
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 748: error numérico: [8,Limon Persa 250,7000000747,Enlatados,2028-04-28,Colgate,580.47,460] campo[3]=Enlatados campo[4]=2028-04-28 campo[5]=Colgate
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 749: error numérico: [10,Huevos Blancos 029,7000000748,Frutas,2027-01-27,Unilever,60.68,325] campo[3]=Frutas campo[4]=2027-01-27 campo[5]=Unilever
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 750: error numérico: [4,Papa Blanca 719,7000000749,Aceites,2028-03-10,Pringles,812.28,265] campo[3]=Aceites campo[4]=2028-03-10 campo[5]=Pringles
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 751: error numérico: [9,Leche Entera 718,7000000750,Dulces,2027-11-24,Nestle,246.69,205] campo[3]=Dulces campo[4]=2027-11-24 campo[5]=Nestle
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 752: error numérico: [11,Ajo Entero 841,7000000751,Bebidas,2026-11-05,Familia,791.93,244] campo[3]=Bebidas campo[4]=2026-11-05 campo[5]=Familia
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 753: error numérico: [6,Azucar Blanca 224,7000000752,Snacks,2027-12-06,Yoplait,805.24,350] campo[3]=Snacks campo[4]=2027-12-06 campo[5]=Yoplait
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 754: error numérico: [4,Jabon Barra 755,7000000753,Aceites,2027-09-26,Nestle,742.28,106] campo[3]=Aceites campo[4]=2027-09-26 campo[5]=Nestle
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 755: error numérico: [4,Mantequilla 855,7000000754,Aceites,2028-06-01,Ideal,662.87,62] campo[3]=Aceites campo[4]=2028-06-01 campo[5]=Ideal
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 756: error numérico: [2,Papa Blanca 979,7000000755,Higiene,2029-03-07,Dos Pinos,650.43,278] campo[3]=Higiene campo[4]=2029-03-07 campo[5]=Dos Pinos
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 757: error numérico: [1,Chorizo 494,7000000756,Bebidas,2028-03-09,Dove,763.76,452] campo[3]=Bebidas campo[4]=2028-03-09 campo[5]=Dove
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 758: error numérico: [10,Huevos Blancos 282,7000000757,Frutas,2027-06-12,Lux,240.75,114] campo[3]=Frutas campo[4]=2027-06-12 campo[5]=Lux
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 759: error numérico: [10,Atun en Agua 056,7000000758,Verduras,2028-10-16,Dove,798.92,17] campo[3]=Verduras campo[4]=2028-10-16 campo[5]=Dove
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 760: error numérico: [9,Azucar Blanca 404,7000000759,Dulces,2027-05-26,Colgate,830.11,358] campo[3]=Dulces campo[4]=2027-05-26 campo[5]=Colgate
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 761: error numérico: [9,Agua Pura 324,7000000760,Congelados,2026-06-20,Dos Pinos,574.13,195] campo[3]=Congelados campo[4]=2026-06-20 campo[5]=Dos Pinos
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 762: error numérico: [10,Cereal Maiz 334,7000000761,Bebidas,2027-11-16,Yoplait,467.86,122] campo[3]=Bebidas campo[4]=2027-11-16 campo[5]=Yoplait
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 763: error numérico: [5,Shampoo Clasico 982,7000000762,Limpieza,2028-05-05,Heinz,159.18,218] campo[3]=Limpieza campo[4]=2028-05-05 campo[5]=Heinz
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 764: error numérico: [4,Galletas Soda 718,7000000763,Enlatados,2028-07-04,Heinz,726.69,144] campo[3]=Enlatados campo[4]=2028-07-04 campo[5]=Heinz
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 765: error numérico: [8,Queso Fresco 586,7000000764,Granos,2027-09-14,La Preferida,613.67,412] campo[3]=Granos campo[4]=2027-09-14 campo[5]=La Preferida
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 766: error numérico: [4,Servilletas 443,7000000765,Dulces,2028-07-22,Kelloggs,126.96,492] campo[3]=Dulces campo[4]=2028-07-22 campo[5]=Kelloggs
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 767: error numérico: [12,Sopa Pollo 485,7000000766,Enlatados,2026-06-22,Yoplait,360.32,69] campo[3]=Enlatados campo[4]=2026-06-22 campo[5]=Yoplait
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 768: error numérico: [11,Suavizante Ropa 547,7000000767,Congelados,2028-03-10,Dove,257.48,288] campo[3]=Congelados campo[4]=2028-03-10 campo[5]=Dove
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 769: error numérico: [10,Frijol Negro 408,7000000768,Panaderia,2027-05-03,Bimbo,185.89,131] campo[3]=Panaderia campo[4]=2027-05-03 campo[5]=Bimbo
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 770: error numérico: [8,Mortadela 645,7000000769,Panaderia,2028-12-10,Del Monte,223.39,185] campo[3]=Panaderia campo[4]=2028-12-10 campo[5]=Del Monte
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 771: error numérico: [9,Servilletas 955,7000000770,Enlatados,2027-11-12,Heinz,20.29,63] campo[3]=Enlatados campo[4]=2027-11-12 campo[5]=Heinz
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 772: error numérico: [6,Huevos Blancos 696,7000000771,Limpieza,2027-07-15,Familia,151.25,400] campo[3]=Limpieza campo[4]=2027-07-15 campo[5]=Familia
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 773: error numérico: [5,Azucar Blanca 333,7000000772,Higiene,2029-04-13,Dove,659.32,229] campo[3]=Higiene campo[4]=2029-04-13 campo[5]=Dove
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 774: error numérico: [2,Te Verde 629,7000000773,Cereales,2029-01-07,Ideal,738.48,328] campo[3]=Cereales campo[4]=2029-01-07 campo[5]=Ideal
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 775: error numérico: [6,Galletas Soda 647,7000000774,Limpieza,2028-09-08,Tio Pelon,70.47,176] campo[3]=Limpieza campo[4]=2028-09-08 campo[5]=Tio Pelon
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 776: error numérico: [4,Vinagre Blanco 325,7000000775,Higiene,2028-01-20,Unilever,515.96,203] campo[3]=Higiene campo[4]=2028-01-20 campo[5]=Unilever
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 777: error numérico: [5,Margarina 456,7000000776,Enlatados,2028-06-15,Lux,820.82,212] campo[3]=Enlatados campo[4]=2028-06-15 campo[5]=Lux
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 778: error numérico: [3,Queso Fresco 875,7000000777,Lacteos,2027-02-14,Nestle,563.90,482] campo[3]=Lacteos campo[4]=2027-02-14 campo[5]=Nestle
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 779: error numérico: [12,Zanahoria 768,7000000778,Panaderia,2027-08-08,Yoplait,339.60,49] campo[3]=Panaderia campo[4]=2027-08-08 campo[5]=Yoplait
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 780: error numérico: [2,Bicarbonato 900,7000000779,Frutas,2026-09-21,Dos Pinos,656.10,269] campo[3]=Frutas campo[4]=2026-09-21 campo[5]=Dos Pinos
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 781: error numérico: [2,Cereal Maiz 269,7000000780,Limpieza,2027-04-17,Tio Pelon,557.82,454] campo[3]=Limpieza campo[4]=2027-04-17 campo[5]=Tio Pelon
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 782: error numérico: [7,Mostaza 235,7000000781,Aceites,2028-01-05,Colgate,533.82,68] campo[3]=Aceites campo[4]=2028-01-05 campo[5]=Colgate
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 783: error numérico: [9,Mortadela 175,7000000782,Lacteos,2026-08-13,Heinz,731.80,167] campo[3]=Lacteos campo[4]=2026-08-13 campo[5]=Heinz
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 784: error numérico: [8,Agua Pura 999,7000000783,Dulces,2027-12-12,Familia,380.06,497] campo[3]=Dulces campo[4]=2027-12-12 campo[5]=Familia
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 785: error numérico: [12,Papel Higienico 182,7000000784,Limpieza,2028-12-24,Pringles,446.61,328] campo[3]=Limpieza campo[4]=2028-12-24 campo[5]=Pringles
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 786: error numérico: [9,Mostaza 931,7000000785,Bebidas,2029-02-13,Familia,195.76,46] campo[3]=Bebidas campo[4]=2029-02-13 campo[5]=Familia
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 787: error numérico: [8,Mostaza 375,7000000786,Carnes,2027-11-17,Ideal,260.47,1] campo[3]=Carnes campo[4]=2027-11-17 campo[5]=Ideal
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 788: error numérico: [9,Salchicha 777,7000000787,Dulces,2027-03-09,Heinz,246.24,274] campo[3]=Dulces campo[4]=2027-03-09 campo[5]=Heinz
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 789: error numérico: [1,Zanahoria 945,7000000788,Frutas,2029-02-04,Maggi,11.23,221] campo[3]=Frutas campo[4]=2029-02-04 campo[5]=Maggi
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 790: error numérico: [5,Pasta Dental 237,7000000789,Enlatados,2026-06-17,Familia,319.79,211] campo[3]=Enlatados campo[4]=2026-06-17 campo[5]=Familia
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 791: error numérico: [9,Papas Fritas 405,7000000790,Aceites,2027-05-03,Kraft,704.76,113] campo[3]=Aceites campo[4]=2027-05-03 campo[5]=Kraft
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 792: error numérico: [5,Yogur Natural 433,7000000791,Higiene,2027-10-06,Lux,650.68,466] campo[3]=Higiene campo[4]=2027-10-06 campo[5]=Lux
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 793: error numérico: [10,Carne Molida 711,7000000792,Higiene,2027-12-11,Maggi,552.42,273] campo[3]=Higiene campo[4]=2027-12-11 campo[5]=Maggi
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 794: error numérico: [5,Galletas Soda 193,7000000793,Dulces,2026-10-21,Yoplait,119.15,57] campo[3]=Dulces campo[4]=2026-10-21 campo[5]=Yoplait
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 795: error numérico: [11,Agua Pura 633,7000000794,Frutas,2027-12-12,Dove,162.46,10] campo[3]=Frutas campo[4]=2027-12-12 campo[5]=Dove
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 796: error numérico: [3,Frijol Negro 993,7000000795,Verduras,2026-07-18,Yoplait,826.58,145] campo[3]=Verduras campo[4]=2026-07-18 campo[5]=Yoplait
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 797: error numérico: [5,Atun en Agua 733,7000000796,Frutas,2026-06-19,Nestle,79.85,8] campo[3]=Frutas campo[4]=2026-06-19 campo[5]=Nestle
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 798: error numérico: [8,Crema Agria 351,7000000797,Carnes,2028-03-02,Dove,848.28,238] campo[3]=Carnes campo[4]=2028-03-02 campo[5]=Dove
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 799: error numérico: [12,Pollo Entero 033,7000000798,Bebidas,2026-11-14,Ideal,50.94,398] campo[3]=Bebidas campo[4]=2026-11-14 campo[5]=Ideal
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 800: error numérico: [7,Aceite Vegetal 557,7000000799,Frutas,2027-06-09,Kelloggs,761.71,129] campo[3]=Frutas campo[4]=2027-06-09 campo[5]=Kelloggs
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 801: error numérico: [7,Mortadela 013,7000000800,Panaderia,2027-10-25,Kraft,656.34,227] campo[3]=Panaderia campo[4]=2027-10-25 campo[5]=Kraft
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 802: error numérico: [4,Ajo Entero 035,7000000801,Aceites,2029-01-01,La Preferida,444.64,107] campo[3]=Aceites campo[4]=2029-01-01 campo[5]=La Preferida
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 803: error numérico: [8,Te Verde 698,7000000802,Cereales,2028-03-25,Yoplait,536.09,22] campo[3]=Cereales campo[4]=2028-03-25 campo[5]=Yoplait
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 804: error numérico: [12,Bicarbonato 563,7000000803,Verduras,2027-02-08,Unilever,410.86,153] campo[3]=Verduras campo[4]=2027-02-08 campo[5]=Unilever
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 805: error numérico: [4,Cafe Molido 909,7000000804,Lacteos,2027-08-23,La Preferida,203.25,223] campo[3]=Lacteos campo[4]=2027-08-23 campo[5]=La Preferida
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 806: error numérico: [6,Leche Entera 172,7000000805,Enlatados,2027-12-20,La Preferida,338.55,125] campo[3]=Enlatados campo[4]=2027-12-20 campo[5]=La Preferida
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 807: error numérico: [1,Pimienta Negra 044,7000000806,Limpieza,2029-01-31,Ideal,317.89,46] campo[3]=Limpieza campo[4]=2029-01-31 campo[5]=Ideal
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 808: error numérico: [4,Jamon Cocido 512,7000000807,Panaderia,2028-04-26,Bimbo,54.10,331] campo[3]=Panaderia campo[4]=2028-04-26 campo[5]=Bimbo
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 809: error numérico: [3,Zanahoria 550,7000000808,Enlatados,2027-01-08,Ideal,416.46,163] campo[3]=Enlatados campo[4]=2027-01-08 campo[5]=Ideal
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 810: error numérico: [9,Pollo Entero 661,7000000809,Enlatados,2028-05-14,Colgate,624.14,11] campo[3]=Enlatados campo[4]=2028-05-14 campo[5]=Colgate
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 811: error numérico: [12,Te Verde 367,7000000810,Congelados,2027-03-05,Unilever,764.22,249] campo[3]=Congelados campo[4]=2027-03-05 campo[5]=Unilever
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 812: error numérico: [12,Gaseosa Cola 573,7000000811,Cereales,2029-03-02,Kelloggs,483.21,279] campo[3]=Cereales campo[4]=2029-03-02 campo[5]=Kelloggs
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 813: error numérico: [6,Vinagre Blanco 750,7000000812,Frutas,2027-12-18,Familia,139.23,272] campo[3]=Frutas campo[4]=2027-12-18 campo[5]=Familia
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 814: error numérico: [3,Gaseosa Cola 303,7000000813,Dulces,2027-11-24,Familia,314.26,1] campo[3]=Dulces campo[4]=2027-11-24 campo[5]=Familia
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 815: error numérico: [11,Detergente Polvo 389,7000000814,Congelados,2027-06-17,Dos Pinos,528.11,187] campo[3]=Congelados campo[4]=2027-06-17 campo[5]=Dos Pinos
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 816: error numérico: [10,Frijoles Negros 329,7000000815,Congelados,2026-10-10,Familia,696.83,98] campo[3]=Congelados campo[4]=2026-10-10 campo[5]=Familia
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 817: error numérico: [9,Papa Blanca 510,7000000816,Enlatados,2027-04-14,Maggi,276.58,329] campo[3]=Enlatados campo[4]=2027-04-14 campo[5]=Maggi
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 818: error numérico: [6,Jugo Naranja 099,7000000817,Verduras,2026-10-17,Bimbo,710.49,67] campo[3]=Verduras campo[4]=2026-10-17 campo[5]=Bimbo
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 819: error numérico: [3,Huevos Blancos 033,7000000818,Aceites,2027-01-08,Dove,165.70,17] campo[3]=Aceites campo[4]=2027-01-08 campo[5]=Dove
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 820: error numérico: [10,Platano Maduro 857,7000000819,Carnes,2029-03-02,Lux,531.69,303] campo[3]=Carnes campo[4]=2029-03-02 campo[5]=Lux
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 821: error numérico: [5,Frijol Negro 376,7000000820,Aceites,2026-10-26,Dos Pinos,790.92,107] campo[3]=Aceites campo[4]=2026-10-26 campo[5]=Dos Pinos
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 822: error numérico: [11,Jabon Barra 951,7000000821,Snacks,2026-11-13,Colgate,681.56,32] campo[3]=Snacks campo[4]=2026-11-13 campo[5]=Colgate
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 823: error numérico: [6,Servilletas 762,7000000822,Snacks,2028-10-01,Heinz,675.83,30] campo[3]=Snacks campo[4]=2028-10-01 campo[5]=Heinz
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 824: error numérico: [10,Ketchup 542,7000000823,Lacteos,2026-10-25,Maggi,69.47,111] campo[3]=Lacteos campo[4]=2026-10-25 campo[5]=Maggi
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 825: error numérico: [9,Cereal Maiz 104,7000000824,Congelados,2027-09-19,Familia,329.68,99] campo[3]=Congelados campo[4]=2027-09-19 campo[5]=Familia
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 826: error numérico: [9,Tomate Rojo 255,7000000825,Limpieza,2027-06-04,Familia,637.69,213] campo[3]=Limpieza campo[4]=2027-06-04 campo[5]=Familia
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 827: error numérico: [12,Cereal Maiz 785,7000000826,Higiene,2028-06-05,Colgate,598.21,219] campo[3]=Higiene campo[4]=2028-06-05 campo[5]=Colgate
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 828: error numérico: [2,Jamon Cocido 812,7000000827,Granos,2028-09-02,Lux,289.20,81] campo[3]=Granos campo[4]=2028-09-02 campo[5]=Lux
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 829: error numérico: [9,Pasta Dental 454,7000000828,Snacks,2028-05-24,Del Monte,469.14,167] campo[3]=Snacks campo[4]=2028-05-24 campo[5]=Del Monte
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 830: error numérico: [6,Galletas Soda 783,7000000829,Higiene,2028-10-31,Del Monte,518.52,289] campo[3]=Higiene campo[4]=2028-10-31 campo[5]=Del Monte
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 831: error numérico: [9,Crema Agria 385,7000000830,Enlatados,2027-11-05,Heinz,817.54,230] campo[3]=Enlatados campo[4]=2027-11-05 campo[5]=Heinz
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 832: error numérico: [7,Leche Entera 744,7000000831,Lacteos,2028-01-06,Dos Pinos,441.66,456] campo[3]=Lacteos campo[4]=2028-01-06 campo[5]=Dos Pinos
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 833: error numérico: [5,Leche Entera 308,7000000832,Aceites,2027-08-16,Del Monte,21.87,421] campo[3]=Aceites campo[4]=2027-08-16 campo[5]=Del Monte
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 834: error numérico: [12,Salchicha 283,7000000833,Snacks,2029-04-15,Familia,486.57,293] campo[3]=Snacks campo[4]=2029-04-15 campo[5]=Familia
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 835: error numérico: [3,Cereal Maiz 039,7000000834,Frutas,2028-05-31,Ideal,120.66,188] campo[3]=Frutas campo[4]=2028-05-31 campo[5]=Ideal
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 836: error numérico: [10,Frijoles Negros 239,7000000835,Cereales,2028-02-08,Tio Pelon,486.42,292] campo[3]=Cereales campo[4]=2028-02-08 campo[5]=Tio Pelon
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 837: error numérico: [4,Cebolla Blanca 080,7000000836,Congelados,2028-03-28,Dove,149.86,423] campo[3]=Congelados campo[4]=2028-03-28 campo[5]=Dove
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 838: error numérico: [12,Zanahoria 591,7000000837,Dulces,2026-12-15,Maggi,35.14,414] campo[3]=Dulces campo[4]=2026-12-15 campo[5]=Maggi
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 839: error numérico: [10,Te Verde 081,7000000838,Enlatados,2026-09-25,Del Monte,298.02,419] campo[3]=Enlatados campo[4]=2026-09-25 campo[5]=Del Monte
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 840: error numérico: [7,Galletas Soda 953,7000000839,Dulces,2027-02-04,Nestle,636.41,435] campo[3]=Dulces campo[4]=2027-02-04 campo[5]=Nestle
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 841: error numérico: [10,Bicarbonato 012,7000000840,Higiene,2028-07-25,Bimbo,261.50,22] campo[3]=Higiene campo[4]=2028-07-25 campo[5]=Bimbo
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 842: error numérico: [6,Papel Higienico 579,7000000841,Granos,2028-04-02,Lux,594.16,79] campo[3]=Granos campo[4]=2028-04-02 campo[5]=Lux
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 843: error numérico: [1,Papa Blanca 750,7000000842,Carnes,2028-12-01,Lux,79.76,222] campo[3]=Carnes campo[4]=2028-12-01 campo[5]=Lux
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 844: error numérico: [5,Pollo Entero 404,7000000843,Granos,2027-02-28,Del Monte,73.37,293] campo[3]=Granos campo[4]=2027-02-28 campo[5]=Del Monte
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 845: error numérico: [12,Frijol Negro 562,7000000844,Carnes,2027-11-22,Tio Pelon,340.85,223] campo[3]=Carnes campo[4]=2027-11-22 campo[5]=Tio Pelon
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 846: error numérico: [12,Atun en Agua 781,7000000845,Granos,2029-02-11,Familia,171.20,203] campo[3]=Granos campo[4]=2029-02-11 campo[5]=Familia
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 847: error numérico: [11,Toallas Cocina 201,7000000846,Verduras,2027-10-20,Nestle,64.15,398] campo[3]=Verduras campo[4]=2027-10-20 campo[5]=Nestle
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 848: error numérico: [7,Vinagre Blanco 702,7000000847,Snacks,2026-12-03,La Preferida,572.13,217] campo[3]=Snacks campo[4]=2026-12-03 campo[5]=La Preferida
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 849: error numérico: [6,Azucar Blanca 196,7000000848,Bebidas,2028-05-08,Dos Pinos,655.04,87] campo[3]=Bebidas campo[4]=2028-05-08 campo[5]=Dos Pinos
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 850: error numérico: [6,Cepillo Dientes 842,7000000849,Enlatados,2028-11-24,Ideal,376.35,474] campo[3]=Enlatados campo[4]=2028-11-24 campo[5]=Ideal
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 851: error numérico: [4,Mantequilla 702,7000000850,Bebidas,2027-04-18,Tio Pelon,98.62,28] campo[3]=Bebidas campo[4]=2027-04-18 campo[5]=Tio Pelon
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 852: error numérico: [4,Levadura Seca 636,7000000851,Snacks,2027-04-01,Maggi,15.13,356] campo[3]=Snacks campo[4]=2027-04-01 campo[5]=Maggi
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 853: error numérico: [2,Mostaza 461,7000000852,Frutas,2026-07-19,Del Monte,180.43,276] campo[3]=Frutas campo[4]=2026-07-19 campo[5]=Del Monte
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 854: error numérico: [4,Crema Agria 560,7000000853,Verduras,2027-11-14,Familia,412.38,374] campo[3]=Verduras campo[4]=2027-11-14 campo[5]=Familia
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 855: error numérico: [3,Zanahoria 716,7000000854,Higiene,2026-07-10,Kraft,497.01,340] campo[3]=Higiene campo[4]=2026-07-10 campo[5]=Kraft
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 856: error numérico: [9,Arroz Largo 262,7000000855,Granos,2026-10-04,Maggi,173.39,357] campo[3]=Granos campo[4]=2026-10-04 campo[5]=Maggi
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 857: error numérico: [10,Ketchup 055,7000000856,Frutas,2026-06-20,Tio Pelon,332.49,139] campo[3]=Frutas campo[4]=2026-06-20 campo[5]=Tio Pelon
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 858: error numérico: [11,Chorizo 935,7000000857,Higiene,2028-06-09,La Preferida,19.65,445] campo[3]=Higiene campo[4]=2028-06-09 campo[5]=La Preferida
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 859: error numérico: [11,Te Verde 237,7000000858,Carnes,2029-04-09,La Preferida,768.63,249] campo[3]=Carnes campo[4]=2029-04-09 campo[5]=La Preferida
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 860: error numérico: [10,Papel Higienico 091,7000000859,Granos,2027-07-15,Lux,821.89,288] campo[3]=Granos campo[4]=2027-07-15 campo[5]=Lux
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 861: error numérico: [12,Pan Blanco 041,7000000860,Aceites,2028-02-17,Del Monte,418.23,382] campo[3]=Aceites campo[4]=2028-02-17 campo[5]=Del Monte
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 862: error numérico: [3,Pan Blanco 356,7000000861,Higiene,2028-05-23,Heinz,532.76,121] campo[3]=Higiene campo[4]=2028-05-23 campo[5]=Heinz
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 863: error numérico: [9,Ketchup 832,7000000862,Lacteos,2027-11-12,Kraft,757.23,418] campo[3]=Lacteos campo[4]=2027-11-12 campo[5]=Kraft
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 864: error numérico: [1,Levadura Seca 569,7000000863,Cereales,2027-09-07,Ideal,292.82,202] campo[3]=Cereales campo[4]=2027-09-07 campo[5]=Ideal
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 865: error numérico: [11,Atun en Agua 090,7000000864,Congelados,2028-07-24,Lux,816.65,314] campo[3]=Congelados campo[4]=2028-07-24 campo[5]=Lux
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 866: error numérico: [11,Papa Blanca 233,7000000865,Carnes,2027-10-08,Ideal,364.50,160] campo[3]=Carnes campo[4]=2027-10-08 campo[5]=Ideal
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 867: error numérico: [10,Sal de Mesa 460,7000000866,Verduras,2027-02-27,Kelloggs,555.82,298] campo[3]=Verduras campo[4]=2027-02-27 campo[5]=Kelloggs
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 868: error numérico: [9,Papa Blanca 820,7000000867,Aceites,2027-03-12,Maggi,586.34,461] campo[3]=Aceites campo[4]=2027-03-12 campo[5]=Maggi
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 869: error numérico: [9,Harina Trigo 139,7000000868,Carnes,2027-03-27,Yoplait,272.26,286] campo[3]=Carnes campo[4]=2027-03-27 campo[5]=Yoplait
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 870: error numérico: [9,Levadura Seca 737,7000000869,Panaderia,2027-06-15,Del Monte,714.16,75] campo[3]=Panaderia campo[4]=2027-06-15 campo[5]=Del Monte
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 871: error numérico: [12,Pan Blanco 784,7000000870,Bebidas,2028-09-27,Pringles,260.28,382] campo[3]=Bebidas campo[4]=2028-09-27 campo[5]=Pringles
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 872: error numérico: [11,Bicarbonato 757,7000000871,Cereales,2027-04-10,Kelloggs,93.88,95] campo[3]=Cereales campo[4]=2027-04-10 campo[5]=Kelloggs
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 873: error numérico: [1,Chile Pimiento 627,7000000872,Limpieza,2027-12-01,Nestle,508.32,119] campo[3]=Limpieza campo[4]=2027-12-01 campo[5]=Nestle
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 874: error numérico: [11,Pan Blanco 368,7000000873,Panaderia,2029-02-03,Ideal,428.72,310] campo[3]=Panaderia campo[4]=2029-02-03 campo[5]=Ideal
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 875: error numérico: [8,Lechuga 666,7000000874,Bebidas,2027-06-14,Kraft,419.51,71] campo[3]=Bebidas campo[4]=2027-06-14 campo[5]=Kraft
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 876: error numérico: [3,Mantequilla 232,7000000875,Lacteos,2028-09-16,Dos Pinos,786.88,487] campo[3]=Lacteos campo[4]=2028-09-16 campo[5]=Dos Pinos
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 877: error numérico: [7,Tortillas Maiz 761,7000000876,Higiene,2027-07-23,Kelloggs,59.48,475] campo[3]=Higiene campo[4]=2027-07-23 campo[5]=Kelloggs
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 878: error numérico: [8,Huevos Blancos 632,7000000877,Frutas,2028-03-29,Colgate,754.84,219] campo[3]=Frutas campo[4]=2028-03-29 campo[5]=Colgate
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 879: error numérico: [7,Limon Persa 043,7000000878,Limpieza,2028-07-21,Del Monte,337.15,481] campo[3]=Limpieza campo[4]=2028-07-21 campo[5]=Del Monte
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 880: error numérico: [12,Toallas Cocina 609,7000000879,Verduras,2026-08-20,Lux,96.04,234] campo[3]=Verduras campo[4]=2026-08-20 campo[5]=Lux
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 881: error numérico: [1,Margarina 252,7000000880,Verduras,2028-08-21,Bimbo,475.59,265] campo[3]=Verduras campo[4]=2028-08-21 campo[5]=Bimbo
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 882: error numérico: [11,Canela Molida 051,7000000881,Aceites,2028-01-20,Colgate,340.44,156] campo[3]=Aceites campo[4]=2028-01-20 campo[5]=Colgate
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 883: error numérico: [5,Agua Pura 171,7000000882,Carnes,2028-01-26,Bimbo,587.55,463] campo[3]=Carnes campo[4]=2028-01-26 campo[5]=Bimbo
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 884: error numérico: [3,Agua Pura 850,7000000883,Higiene,2028-12-14,Tio Pelon,615.22,58] campo[3]=Higiene campo[4]=2028-12-14 campo[5]=Tio Pelon
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 885: error numérico: [3,Limon Persa 600,7000000884,Snacks,2027-03-07,Kraft,353.58,231] campo[3]=Snacks campo[4]=2027-03-07 campo[5]=Kraft
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 886: error numérico: [1,Queso Fresco 465,7000000885,Limpieza,2027-07-21,Colgate,79.84,166] campo[3]=Limpieza campo[4]=2027-07-21 campo[5]=Colgate
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 887: error numérico: [12,Platano Maduro 929,7000000886,Congelados,2027-05-04,La Preferida,80.69,362] campo[3]=Congelados campo[4]=2027-05-04 campo[5]=La Preferida
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 888: error numérico: [8,Manzana Roja 372,7000000887,Panaderia,2028-07-28,Lux,521.62,82] campo[3]=Panaderia campo[4]=2028-07-28 campo[5]=Lux
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 889: error numérico: [7,Servilletas 390,7000000888,Lacteos,2027-05-18,Del Monte,482.19,338] campo[3]=Lacteos campo[4]=2027-05-18 campo[5]=Del Monte
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 890: error numérico: [3,Jamon Cocido 890,7000000889,Granos,2027-06-04,Bimbo,358.68,159] campo[3]=Granos campo[4]=2027-06-04 campo[5]=Bimbo
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 891: error numérico: [12,Limon Persa 985,7000000890,Frutas,2028-01-15,Yoplait,103.01,68] campo[3]=Frutas campo[4]=2028-01-15 campo[5]=Yoplait
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 892: error numérico: [4,Leche Entera 638,7000000891,Enlatados,2027-11-03,Dos Pinos,391.74,438] campo[3]=Enlatados campo[4]=2027-11-03 campo[5]=Dos Pinos
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 893: error numérico: [8,Papel Higienico 827,7000000892,Lacteos,2029-03-09,Nestle,187.08,338] campo[3]=Lacteos campo[4]=2029-03-09 campo[5]=Nestle
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 894: error numérico: [8,Agua Pura 420,7000000893,Frutas,2026-11-12,Dos Pinos,210.65,281] campo[3]=Frutas campo[4]=2026-11-12 campo[5]=Dos Pinos
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 895: error numérico: [5,Cepillo Dientes 644,7000000894,Verduras,2027-08-02,Bimbo,159.97,29] campo[3]=Verduras campo[4]=2027-08-02 campo[5]=Bimbo
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 896: error numérico: [11,Azucar Blanca 038,7000000895,Granos,2026-08-08,Maggi,283.79,45] campo[3]=Granos campo[4]=2026-08-08 campo[5]=Maggi
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 897: error numérico: [1,Cereal Maiz 427,7000000896,Granos,2027-04-29,Maggi,520.79,355] campo[3]=Granos campo[4]=2027-04-29 campo[5]=Maggi
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 898: error numérico: [12,Pasta Dental 587,7000000897,Enlatados,2027-06-01,Colgate,637.81,185] campo[3]=Enlatados campo[4]=2027-06-01 campo[5]=Colgate
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 899: error numérico: [1,Yogur Natural 787,7000000898,Cereales,2028-03-25,Heinz,763.26,420] campo[3]=Cereales campo[4]=2028-03-25 campo[5]=Heinz
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 900: error numérico: [2,Chile Pimiento 438,7000000899,Dulces,2026-10-13,Maggi,402.05,63] campo[3]=Dulces campo[4]=2026-10-13 campo[5]=Maggi
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 901: error numérico: [12,Huevos Blancos 282,7000000900,Bebidas,2028-09-27,Lux,181.13,108] campo[3]=Bebidas campo[4]=2028-09-27 campo[5]=Lux
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 902: error numérico: [10,Frijol Negro 112,7000000901,Limpieza,2026-11-29,Dove,616.43,310] campo[3]=Limpieza campo[4]=2026-11-29 campo[5]=Dove
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 903: error numérico: [12,Mayonesa 438,7000000902,Limpieza,2028-03-12,Unilever,448.24,320] campo[3]=Limpieza campo[4]=2028-03-12 campo[5]=Unilever
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 904: error numérico: [6,Bicarbonato 133,7000000903,Limpieza,2029-03-15,Lux,620.75,255] campo[3]=Limpieza campo[4]=2029-03-15 campo[5]=Lux
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 905: error numérico: [8,Carne Molida 185,7000000904,Snacks,2027-09-22,Maggi,832.44,1] campo[3]=Snacks campo[4]=2027-09-22 campo[5]=Maggi
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 906: error numérico: [2,Pan Blanco 477,7000000905,Higiene,2027-01-30,Kelloggs,680.33,213] campo[3]=Higiene campo[4]=2027-01-30 campo[5]=Kelloggs
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 907: error numérico: [7,Arroz Largo 342,7000000906,Bebidas,2027-08-11,Dos Pinos,545.78,354] campo[3]=Bebidas campo[4]=2027-08-11 campo[5]=Dos Pinos
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 908: error numérico: [5,Spaghetti 810,7000000907,Panaderia,2028-02-23,Maggi,432.41,166] campo[3]=Panaderia campo[4]=2028-02-23 campo[5]=Maggi
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 909: error numérico: [1,Jugo Naranja 703,7000000908,Bebidas,2028-05-02,Kraft,616.70,316] campo[3]=Bebidas campo[4]=2028-05-02 campo[5]=Kraft
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 910: error numérico: [1,Mortadela 180,7000000909,Aceites,2028-04-09,Del Monte,784.21,246] campo[3]=Aceites campo[4]=2028-04-09 campo[5]=Del Monte
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 911: error numérico: [8,Carne Molida 037,7000000910,Higiene,2027-03-08,Dove,135.03,236] campo[3]=Higiene campo[4]=2027-03-08 campo[5]=Dove
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 912: error numérico: [9,Leche Condensada 344,7000000911,Frutas,2028-09-27,Bimbo,710.42,154] campo[3]=Frutas campo[4]=2028-09-27 campo[5]=Bimbo
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 913: error numérico: [10,Cebolla Blanca 695,7000000912,Bebidas,2026-07-11,Kelloggs,492.27,170] campo[3]=Bebidas campo[4]=2026-07-11 campo[5]=Kelloggs
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 914: error numérico: [6,Aceite Vegetal 993,7000000913,Granos,2027-12-29,Dos Pinos,290.59,193] campo[3]=Granos campo[4]=2027-12-29 campo[5]=Dos Pinos
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 915: error numérico: [11,Papel Higienico 863,7000000914,Granos,2028-08-08,Yoplait,507.33,443] campo[3]=Granos campo[4]=2028-08-08 campo[5]=Yoplait
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 916: error numérico: [5,Lechuga 879,7000000915,Bebidas,2026-08-06,Unilever,353.84,255] campo[3]=Bebidas campo[4]=2026-08-06 campo[5]=Unilever
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 917: error numérico: [4,Cafe Molido 463,7000000916,Dulces,2028-02-12,Kelloggs,448.00,90] campo[3]=Dulces campo[4]=2028-02-12 campo[5]=Kelloggs
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 918: error numérico: [2,Cafe Molido 804,7000000917,Lacteos,2027-07-21,Tio Pelon,379.15,13] campo[3]=Lacteos campo[4]=2027-07-21 campo[5]=Tio Pelon
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 919: error numérico: [8,Leche Condensada 513,7000000918,Granos,2027-06-27,Del Monte,785.36,376] campo[3]=Granos campo[4]=2027-06-27 campo[5]=Del Monte
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 920: error numérico: [9,Mostaza 795,7000000919,Bebidas,2027-03-23,La Preferida,699.44,481] campo[3]=Bebidas campo[4]=2027-03-23 campo[5]=La Preferida
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 921: error numérico: [9,Papa Blanca 136,7000000920,Aceites,2026-08-16,Colgate,331.59,443] campo[3]=Aceites campo[4]=2026-08-16 campo[5]=Colgate
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 922: error numérico: [9,Jugo Naranja 005,7000000921,Cereales,2026-09-01,Tio Pelon,285.63,456] campo[3]=Cereales campo[4]=2026-09-01 campo[5]=Tio Pelon
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 923: error numérico: [1,Cereal Maiz 534,7000000922,Enlatados,2028-03-03,Dos Pinos,492.40,160] campo[3]=Enlatados campo[4]=2028-03-03 campo[5]=Dos Pinos
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 924: error numérico: [11,Leche Condensada 215,7000000923,Bebidas,2027-07-18,Kelloggs,246.08,273] campo[3]=Bebidas campo[4]=2027-07-18 campo[5]=Kelloggs
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 925: error numérico: [6,Limon Persa 452,7000000924,Higiene,2027-01-29,Unilever,129.90,141] campo[3]=Higiene campo[4]=2027-01-29 campo[5]=Unilever
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 926: error numérico: [2,Leche Entera 982,7000000925,Limpieza,2029-04-20,La Preferida,178.37,180] campo[3]=Limpieza campo[4]=2029-04-20 campo[5]=La Preferida
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 927: error numérico: [9,Vinagre Blanco 278,7000000926,Granos,2028-01-04,Nestle,148.48,160] campo[3]=Granos campo[4]=2028-01-04 campo[5]=Nestle
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 928: error numérico: [10,Leche Condensada 347,7000000927,Verduras,2028-11-27,Bimbo,113.61,242] campo[3]=Verduras campo[4]=2028-11-27 campo[5]=Bimbo
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 929: error numérico: [11,Frijol Negro 109,7000000928,Carnes,2026-09-21,Tio Pelon,364.50,92] campo[3]=Carnes campo[4]=2026-09-21 campo[5]=Tio Pelon
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 930: error numérico: [12,Pasta Dental 913,7000000929,Limpieza,2028-12-02,Heinz,267.98,419] campo[3]=Limpieza campo[4]=2028-12-02 campo[5]=Heinz
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 931: error numérico: [4,Lechuga 777,7000000930,Higiene,2026-11-10,Colgate,484.13,48] campo[3]=Higiene campo[4]=2026-11-10 campo[5]=Colgate
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 932: error numérico: [12,Agua Pura 100,7000000931,Frutas,2028-02-28,Colgate,401.82,486] campo[3]=Frutas campo[4]=2028-02-28 campo[5]=Colgate
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 933: error numérico: [4,Sopa Pollo 882,7000000932,Snacks,2027-11-13,Heinz,335.39,359] campo[3]=Snacks campo[4]=2027-11-13 campo[5]=Heinz
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 934: error numérico: [11,Sal de Mesa 808,7000000933,Dulces,2028-03-29,Colgate,416.17,34] campo[3]=Dulces campo[4]=2028-03-29 campo[5]=Colgate
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 935: error numérico: [8,Jugo Naranja 360,7000000934,Frutas,2029-01-02,Yoplait,242.43,179] campo[3]=Frutas campo[4]=2029-01-02 campo[5]=Yoplait
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 936: error numérico: [10,Toallas Cocina 131,7000000935,Verduras,2026-12-30,Kraft,695.56,408] campo[3]=Verduras campo[4]=2026-12-30 campo[5]=Kraft
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 937: error numérico: [2,Vinagre Blanco 570,7000000936,Higiene,2026-10-26,Maggi,454.47,206] campo[3]=Higiene campo[4]=2026-10-26 campo[5]=Maggi
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 938: error numérico: [10,Galletas Soda 245,7000000937,Limpieza,2027-10-15,Familia,138.11,247] campo[3]=Limpieza campo[4]=2027-10-15 campo[5]=Familia
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 939: error numérico: [7,Aceite Vegetal 349,7000000938,Aceites,2028-11-01,Pringles,483.64,176] campo[3]=Aceites campo[4]=2028-11-01 campo[5]=Pringles
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 940: error numérico: [9,Zanahoria 242,7000000939,Granos,2026-11-09,Dove,100.27,306] campo[3]=Granos campo[4]=2026-11-09 campo[5]=Dove
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 941: error numérico: [8,Vinagre Blanco 569,7000000940,Panaderia,2028-11-30,Yoplait,264.25,208] campo[3]=Panaderia campo[4]=2028-11-30 campo[5]=Yoplait
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 942: error numérico: [2,Pasta Dental 112,7000000941,Higiene,2028-07-18,Del Monte,421.92,339] campo[3]=Higiene campo[4]=2028-07-18 campo[5]=Del Monte
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 943: error numérico: [1,Yogur Natural 223,7000000942,Dulces,2027-03-14,Dos Pinos,644.37,339] campo[3]=Dulces campo[4]=2027-03-14 campo[5]=Dos Pinos
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 944: error numérico: [3,Gaseosa Cola 545,7000000943,Cereales,2028-08-09,Colgate,169.13,349] campo[3]=Cereales campo[4]=2028-08-09 campo[5]=Colgate
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 945: error numérico: [6,Mostaza 584,7000000944,Enlatados,2028-02-16,Pringles,611.11,469] campo[3]=Enlatados campo[4]=2028-02-16 campo[5]=Pringles
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 946: error numérico: [6,Yogur Natural 597,7000000945,Lacteos,2029-04-13,Kraft,721.02,437] campo[3]=Lacteos campo[4]=2029-04-13 campo[5]=Kraft
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 947: error numérico: [5,Frijol Negro 379,7000000946,Snacks,2026-09-19,Dos Pinos,598.89,421] campo[3]=Snacks campo[4]=2026-09-19 campo[5]=Dos Pinos
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 948: error numérico: [6,Jugo Naranja 882,7000000947,Cereales,2026-08-05,Nestle,368.95,303] campo[3]=Cereales campo[4]=2026-08-05 campo[5]=Nestle
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 949: error numérico: [7,Manzana Roja 326,7000000948,Congelados,2028-07-25,Kraft,326.49,280] campo[3]=Congelados campo[4]=2028-07-25 campo[5]=Kraft
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 950: error numérico: [4,Tomate Rojo 178,7000000949,Frutas,2027-03-14,Kelloggs,473.66,432] campo[3]=Frutas campo[4]=2027-03-14 campo[5]=Kelloggs
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 951: error numérico: [6,Mortadela 428,7000000950,Granos,2028-01-14,Ideal,117.17,37] campo[3]=Granos campo[4]=2028-01-14 campo[5]=Ideal
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 952: error numérico: [11,Pan Blanco 148,7000000951,Congelados,2029-02-23,Pringles,828.82,70] campo[3]=Congelados campo[4]=2029-02-23 campo[5]=Pringles
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 953: error numérico: [2,Atun en Agua 658,7000000952,Enlatados,2028-10-01,Colgate,759.92,357] campo[3]=Enlatados campo[4]=2028-10-01 campo[5]=Colgate
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 954: error numérico: [10,Bicarbonato 436,7000000953,Limpieza,2027-06-06,Colgate,434.72,283] campo[3]=Limpieza campo[4]=2027-06-06 campo[5]=Colgate
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 955: error numérico: [8,Te Verde 364,7000000954,Aceites,2027-06-18,Pringles,515.27,296] campo[3]=Aceites campo[4]=2027-06-18 campo[5]=Pringles
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 956: error numérico: [8,Chorizo 749,7000000955,Aceites,2029-03-26,Unilever,351.27,280] campo[3]=Aceites campo[4]=2029-03-26 campo[5]=Unilever
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 957: error numérico: [10,Cafe Molido 035,7000000956,Lacteos,2029-02-16,Heinz,99.29,247] campo[3]=Lacteos campo[4]=2029-02-16 campo[5]=Heinz
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 958: error numérico: [12,Yogur Natural 146,7000000957,Congelados,2027-12-27,Colgate,441.10,268] campo[3]=Congelados campo[4]=2027-12-27 campo[5]=Colgate
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 959: error numérico: [10,Yogur Natural 252,7000000958,Frutas,2026-11-09,Familia,679.09,160] campo[3]=Frutas campo[4]=2026-11-09 campo[5]=Familia
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 960: error numérico: [10,Frijol Negro 926,7000000959,Bebidas,2026-06-25,Dove,387.84,464] campo[3]=Bebidas campo[4]=2026-06-25 campo[5]=Dove
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 961: error numérico: [8,Toallas Cocina 752,7000000960,Bebidas,2028-10-12,Heinz,816.63,409] campo[3]=Bebidas campo[4]=2028-10-12 campo[5]=Heinz
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 962: error numérico: [5,Mayonesa 172,7000000961,Lacteos,2028-02-15,Unilever,55.49,243] campo[3]=Lacteos campo[4]=2028-02-15 campo[5]=Unilever
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 963: error numérico: [10,Jamon Cocido 587,7000000962,Lacteos,2028-01-21,Dos Pinos,246.29,43] campo[3]=Lacteos campo[4]=2028-01-21 campo[5]=Dos Pinos
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 964: error numérico: [3,Detergente Polvo 079,7000000963,Dulces,2027-12-24,Unilever,115.69,144] campo[3]=Dulces campo[4]=2027-12-24 campo[5]=Unilever
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 965: error numérico: [5,Chorizo 264,7000000964,Lacteos,2027-01-17,Yoplait,773.93,379] campo[3]=Lacteos campo[4]=2027-01-17 campo[5]=Yoplait
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 966: error numérico: [3,Tomate Rojo 458,7000000965,Bebidas,2027-05-28,Unilever,665.91,121] campo[3]=Bebidas campo[4]=2027-05-28 campo[5]=Unilever
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 967: error numérico: [8,Queso Fresco 819,7000000966,Verduras,2026-08-09,Del Monte,836.52,496] campo[3]=Verduras campo[4]=2026-08-09 campo[5]=Del Monte
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 968: error numérico: [3,Pasta Dental 957,7000000967,Dulces,2027-04-14,Dove,640.71,212] campo[3]=Dulces campo[4]=2027-04-14 campo[5]=Dove
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 969: error numérico: [7,Frijoles Negros 677,7000000968,Frutas,2027-05-11,Kelloggs,492.57,432] campo[3]=Frutas campo[4]=2027-05-11 campo[5]=Kelloggs
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 970: error numérico: [6,Frijol Negro 658,7000000969,Cereales,2027-01-26,Bimbo,145.37,205] campo[3]=Cereales campo[4]=2027-01-26 campo[5]=Bimbo
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 971: error numérico: [8,Mostaza 488,7000000970,Congelados,2027-09-24,Kraft,582.09,200] campo[3]=Congelados campo[4]=2027-09-24 campo[5]=Kraft
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 972: error numérico: [8,Spaghetti 149,7000000971,Verduras,2028-11-09,Dos Pinos,247.96,409] campo[3]=Verduras campo[4]=2028-11-09 campo[5]=Dos Pinos
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 973: error numérico: [8,Te Verde 695,7000000972,Bebidas,2026-08-26,La Preferida,780.34,327] campo[3]=Bebidas campo[4]=2026-08-26 campo[5]=La Preferida
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 974: error numérico: [6,Canela Molida 865,7000000973,Carnes,2027-12-13,Del Monte,232.33,411] campo[3]=Carnes campo[4]=2027-12-13 campo[5]=Del Monte
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 975: error numérico: [2,Spaghetti 671,7000000974,Limpieza,2028-08-12,Colgate,657.97,384] campo[3]=Limpieza campo[4]=2028-08-12 campo[5]=Colgate
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 976: error numérico: [4,Cebolla Blanca 689,7000000975,Limpieza,2027-07-07,Lux,289.11,354] campo[3]=Limpieza campo[4]=2027-07-07 campo[5]=Lux
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 977: error numérico: [3,Vinagre Blanco 561,7000000976,Lacteos,2026-06-20,Tio Pelon,13.63,51] campo[3]=Lacteos campo[4]=2026-06-20 campo[5]=Tio Pelon
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 978: error numérico: [9,Cereal Maiz 702,7000000977,Frutas,2028-05-22,Nestle,617.42,129] campo[3]=Frutas campo[4]=2028-05-22 campo[5]=Nestle
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 979: error numérico: [4,Arroz Largo 025,7000000978,Limpieza,2026-12-08,Bimbo,797.94,337] campo[3]=Limpieza campo[4]=2026-12-08 campo[5]=Bimbo
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 980: error numérico: [4,Levadura Seca 614,7000000979,Higiene,2027-02-07,La Preferida,76.63,310] campo[3]=Higiene campo[4]=2027-02-07 campo[5]=La Preferida
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 981: error numérico: [3,Te Verde 673,7000000980,Enlatados,2027-06-16,La Preferida,592.37,130] campo[3]=Enlatados campo[4]=2027-06-16 campo[5]=La Preferida
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 982: error numérico: [5,Agua Pura 677,7000000981,Snacks,2026-11-05,Colgate,784.56,142] campo[3]=Snacks campo[4]=2026-11-05 campo[5]=Colgate
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 983: error numérico: [7,Zanahoria 926,7000000982,Higiene,2028-03-26,Unilever,140.60,38] campo[3]=Higiene campo[4]=2028-03-26 campo[5]=Unilever
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 984: error numérico: [5,Limon Persa 064,7000000983,Carnes,2028-08-06,Del Monte,846.58,133] campo[3]=Carnes campo[4]=2028-08-06 campo[5]=Del Monte
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 985: error numérico: [5,Queso Fresco 452,7000000984,Panaderia,2029-03-06,Kelloggs,520.12,92] campo[3]=Panaderia campo[4]=2029-03-06 campo[5]=Kelloggs
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 986: error numérico: [11,Jabon Barra 112,7000000985,Granos,2028-11-02,Kelloggs,523.22,55] campo[3]=Granos campo[4]=2028-11-02 campo[5]=Kelloggs
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 987: error numérico: [8,Lechuga 266,7000000986,Panaderia,2026-08-13,Tio Pelon,63.10,373] campo[3]=Panaderia campo[4]=2026-08-13 campo[5]=Tio Pelon
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 988: error numérico: [5,Limon Persa 457,7000000987,Lacteos,2029-03-18,Ideal,556.15,1] campo[3]=Lacteos campo[4]=2029-03-18 campo[5]=Ideal
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 989: error numérico: [1,Tomate Rojo 400,7000000988,Cereales,2027-04-09,Del Monte,769.26,295] campo[3]=Cereales campo[4]=2027-04-09 campo[5]=Del Monte
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 990: error numérico: [1,Detergente Polvo 725,7000000989,Enlatados,2029-03-03,Dove,372.62,433] campo[3]=Enlatados campo[4]=2029-03-03 campo[5]=Dove
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 991: error numérico: [12,Limon Persa 832,7000000990,Enlatados,2026-10-24,Familia,194.68,197] campo[3]=Enlatados campo[4]=2026-10-24 campo[5]=Familia
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 992: error numérico: [12,Salchicha 799,7000000991,Frutas,2027-02-06,Familia,795.01,184] campo[3]=Frutas campo[4]=2027-02-06 campo[5]=Familia
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 993: error numérico: [6,Papa Blanca 311,7000000992,Carnes,2026-09-24,Tio Pelon,312.77,437] campo[3]=Carnes campo[4]=2026-09-24 campo[5]=Tio Pelon
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 994: error numérico: [6,Yogur Natural 862,7000000993,Frutas,2028-01-17,Kelloggs,153.01,21] campo[3]=Frutas campo[4]=2028-01-17 campo[5]=Kelloggs
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 995: error numérico: [7,Tomate Rojo 196,7000000994,Cereales,2028-08-09,La Preferida,537.32,184] campo[3]=Cereales campo[4]=2028-08-09 campo[5]=La Preferida
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 996: error numérico: [8,Yogur Natural 907,7000000995,Higiene,2028-11-15,Kelloggs,121.96,99] campo[3]=Higiene campo[4]=2028-11-15 campo[5]=Kelloggs
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 997: error numérico: [1,Cebolla Blanca 608,7000000996,Aceites,2029-02-28,Kraft,56.82,277] campo[3]=Aceites campo[4]=2029-02-28 campo[5]=Kraft
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 998: error numérico: [11,Mostaza 512,7000000997,Verduras,2028-12-09,Dos Pinos,34.86,29] campo[3]=Verduras campo[4]=2028-12-09 campo[5]=Dos Pinos
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 999: error numérico: [6,Pollo Entero 739,7000000998,Lacteos,2028-09-10,La Preferida,182.69,335] campo[3]=Lacteos campo[4]=2028-09-10 campo[5]=La Preferida
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 1000: error numérico: [11,Suavizante Ropa 470,7000000999,Higiene,2027-04-04,Nestle,786.36,19] campo[3]=Higiene campo[4]=2027-04-04 campo[5]=Nestle
+[Mon May 04 00:43:43 CST 2026] Sucursales línea 1001: error numérico: [12,Sopa Pollo 501,7000001000,Higiene,2026-07-12,Dove,771.43,317] campo[3]=Higiene campo[4]=2026-07-12 campo[5]=Dove

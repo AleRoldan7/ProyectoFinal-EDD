@@ -2,7 +2,10 @@ package ui.view;
 
 import clases.Productos;
 import clases.Sucursal;
+import estructuras.arbolB.ArbolB;
 import estructuras.arbolB.NodoB;
+import estructuras.arbolBPlus.ArbolBPlus;
+import estructuras.arbolBPlus.NodoBPlus;
 import estructuras.avl.ArbolAVL;
 import estructuras.avl.NodoAVL;
 import estructuras.lista.ListaEnlazada;
@@ -29,12 +32,7 @@ public class EliminacionView extends VBox {
         TabPane tabPane = new TabPane();
         tabPane.setTabClosingPolicy(TabPane.TabClosingPolicy.UNAVAILABLE);
 
-        tabPane.getTabs().addAll(
-                tabEliminarProductoSucursal(),
-                tabEliminarProductoGlobal(),
-                tabEliminarSucursal(),
-                tabRebalanceo()
-        );
+        tabPane.getTabs().addAll(tabEliminarProductoSucursal(), tabEliminarProductoGlobal(), tabEliminarSucursal(), tabRebalanceo());
 
         this.getChildren().add(tabPane);
         VBox.setVgrow(tabPane, javafx.scene.layout.Priority.ALWAYS);
@@ -46,17 +44,9 @@ public class EliminacionView extends VBox {
         VBox root = new VBox(12);
         root.setPadding(new Insets(20));
 
-        Label titulo = new Label(
-                "Eliminar producto de una sucursal específica"
-        );
-        titulo.setStyle(
-                "-fx-font-size: 16px; -fx-font-weight: bold;"
-        );
-        Label desc = new Label(
-                "El producto se elimina de AVL, Hash, Árbol B, " +
-                        "Árbol B+ y Lista de esa sucursal. " +
-                        "Los árboles se rebalancean automáticamente."
-        );
+        Label titulo = new Label("Eliminar producto de una sucursal específica");
+        titulo.setStyle("-fx-font-size: 16px; -fx-font-weight: bold;");
+        Label desc = new Label("El producto se elimina de AVL, Hash, Árbol B, " + "Árbol B+ y Lista de esa sucursal. " + "Los árboles se rebalancean automáticamente.");
         desc.setStyle("-fx-text-fill: #7f8c8d; -fx-font-size: 11px;");
         desc.setWrapText(true);
 
@@ -77,7 +67,7 @@ public class EliminacionView extends VBox {
         txtCodigo.setPromptText("O escribe el código de barras");
         txtCodigo.setPrefWidth(280);
 
-        Button btnBuscar  = new Button("[Buscar]");
+        Button btnBuscar = new Button("[Buscar]");
         Button btnEliminar = new Button("[Eliminar]");
         Button btnDeshacer = new Button("[Deshacer]");
 
@@ -92,26 +82,17 @@ public class EliminacionView extends VBox {
         TextArea txtPrevia = new TextArea();
         txtPrevia.setEditable(false);
         txtPrevia.setPrefHeight(80);
-        txtPrevia.setStyle(
-                "-fx-font-family: monospace; -fx-font-size: 11px;"
-        );
+        txtPrevia.setStyle("-fx-font-family: monospace; -fx-font-size: 11px;");
 
-        Label lblAVL = new Label(
-                "AVL de la sucursal (antes y después):"
-        );
+        Label lblAVL = new Label("AVL de la sucursal (antes y después):");
         Canvas canvasAntes = new Canvas(450, 260);
         Canvas canvasDespues = new Canvas(450, 260);
-        HBox canvases = new HBox(10,
-                new VBox(5, new Label("Antes:"), canvasAntes),
-                new VBox(5, new Label("Después:"), canvasDespues)
-        );
+        HBox canvases = new HBox(10, new VBox(5, new Label("Antes:"), canvasAntes), new VBox(5, new Label("Después:"), canvasDespues));
 
         TextArea log = new TextArea();
         log.setEditable(false);
         log.setPrefHeight(130);
-        log.setStyle(
-                "-fx-font-family: monospace; -fx-font-size: 11px;"
-        );
+        log.setStyle("-fx-font-family: monospace; -fx-font-size: 11px;");
 
         btnBuscar.setOnAction(e -> {
             String cod = txtCodigo.getText().trim();
@@ -128,8 +109,7 @@ public class EliminacionView extends VBox {
             if (p != null) {
                 txtPrevia.setText(formatearProducto(p));
                 log.appendText("Encontrado: " + p.getName() + "\n");
-                dibujarAVL(canvasAntes, s.getAvlNombre(),
-                        null, "Estado actual");
+                dibujarAVL(canvasAntes, s.getAvlNombre(), null, "Estado actual");
             } else {
                 txtPrevia.setText("Producto no encontrado: " + cod);
                 log.appendText("No encontrado: " + cod + "\n");
@@ -140,17 +120,14 @@ public class EliminacionView extends VBox {
             String cod = obtenerCodigo(cmbProd, txtCodigo);
             String sel = cmbSuc.getValue();
             if (cod == null || sel == null) {
-                log.appendText(
-                        "Selecciona sucursal y producto\n"
-                );
+                log.appendText("Selecciona sucursal y producto\n");
                 return;
             }
             int id = parsearId(sel);
             Sucursal s = appState.getCargaCSV().buscarSucursal(id);
             if (s == null) return;
 
-            dibujarAVL(canvasAntes, s.getAvlNombre(),
-                    null, "Antes");
+            dibujarAVL(canvasAntes, s.getAvlNombre(), null, "Antes");
 
             Productos p = s.buscarPorCodigo(cod);
             if (p == null) {
@@ -162,14 +139,8 @@ public class EliminacionView extends VBox {
             boolean ok = s.eliminarProducto(cod);
 
             if (ok) {
-                dibujarAVL(canvasDespues, s.getAvlNombre(),
-                        null, "Después (rebalanceado)");
-                log.appendText(String.format(
-                        "'%s' eliminado de %s\n" +
-                                "   AVL rebalanceado | Hash actualizado\n" +
-                                "   Árbol B y B+ actualizados\n",
-                        nombre, s.getNameSucursal()
-                ));
+                dibujarAVL(canvasDespues, s.getAvlNombre(), null, "Después (rebalanceado)");
+                log.appendText(String.format("'%s' eliminado de %s\n" + "   AVL rebalanceado | Hash actualizado\n" + "   Árbol B y B+ actualizados\n", nombre, s.getNameSucursal()));
                 txtPrevia.clear();
                 cargarProductos(cmbSuc, cmbProd);
             } else {
@@ -187,11 +158,9 @@ public class EliminacionView extends VBox {
             Sucursal s = appState.getCargaCSV().buscarSucursal(id);
             if (s == null) return;
 
-            clases.OperacionProducto op =
-                    s.deshacerUltimaOperacion();
+            clases.OperacionProducto op = s.deshacerUltimaOperacion();
             if (op != null) {
-                dibujarAVL(canvasDespues, s.getAvlNombre(),
-                        null, "Después del rollback");
+                dibujarAVL(canvasDespues, s.getAvlNombre(), null, "Después del rollback");
                 log.appendText("Deshecho: " + op + "\n");
                 cargarProductos(cmbSuc, cmbProd);
             } else {
@@ -204,20 +173,11 @@ public class EliminacionView extends VBox {
         form.setVgap(10);
         form.addRow(0, etiq("Sucursal:"), cmbSuc);
         form.addRow(1, etiq("Producto:"), cmbProd);
-        form.addRow(2, etiq("Código:"), txtCodigo,
-                btnBuscar);
+        form.addRow(2, etiq("Código:"), txtCodigo, btnBuscar);
 
-        HBox botones = new HBox(10,
-                btnEliminar, btnDeshacer
-        );
+        HBox botones = new HBox(10, btnEliminar, btnDeshacer);
 
-        root.getChildren().addAll(
-                titulo, desc, new Separator(),
-                form, botones,
-                new Label("Vista previa:"), txtPrevia,
-                lblAVL, canvases,
-                new Label("Log:"), log
-        );
+        root.getChildren().addAll(titulo, desc, new Separator(), form, botones, new Label("Vista previa:"), txtPrevia, lblAVL, canvases, new Label("Log:"), log);
 
         ScrollPane scroll = new ScrollPane(root);
         scroll.setFitToWidth(true);
@@ -231,20 +191,10 @@ public class EliminacionView extends VBox {
         VBox root = new VBox(12);
         root.setPadding(new Insets(20));
 
-        Label titulo = new Label(
-                "Eliminar producto de TODAS las sucursales"
-        );
-        titulo.setStyle(
-                "-fx-font-size: 16px; -fx-font-weight: bold;"
-        );
-        Label desc = new Label(
-                "Busca el código de barras en todas las sucursales " +
-                        "y lo elimina donde exista. " +
-                        "Cada árbol afectado se rebalancea."
-        );
-        desc.setStyle(
-                "-fx-text-fill: #7f8c8d; -fx-font-size: 11px;"
-        );
+        Label titulo = new Label("Eliminar producto de TODAS las sucursales");
+        titulo.setStyle("-fx-font-size: 16px; -fx-font-weight: bold;");
+        Label desc = new Label("Busca el código de barras en todas las sucursales " + "y lo elimina donde exista. " + "Cada árbol afectado se rebalancea.");
+        desc.setStyle("-fx-text-fill: #7f8c8d; -fx-font-size: 11px;");
         desc.setWrapText(true);
 
         TextField txtCodigo = new TextField();
@@ -252,7 +202,7 @@ public class EliminacionView extends VBox {
         txtCodigo.setPrefWidth(280);
 
         Button btnBuscarG = new Button("Buscar en todas");
-        Button btnElimG   = new Button("Eliminar de todas");
+        Button btnElimG = new Button("Eliminar de todas");
 
         btnBuscarG.setStyle(estilo("#2980b9"));
         btnElimG.setStyle(estilo("#e74c3c"));
@@ -260,16 +210,12 @@ public class EliminacionView extends VBox {
         TextArea txtResultados = new TextArea();
         txtResultados.setEditable(false);
         txtResultados.setPrefHeight(150);
-        txtResultados.setStyle(
-                "-fx-font-family: monospace; -fx-font-size: 11px;"
-        );
+        txtResultados.setStyle("-fx-font-family: monospace; -fx-font-size: 11px;");
 
         TextArea log = new TextArea();
         log.setEditable(false);
         log.setPrefHeight(200);
-        log.setStyle(
-                "-fx-font-family: monospace; -fx-font-size: 11px;"
-        );
+        log.setStyle("-fx-font-family: monospace; -fx-font-size: 11px;");
 
         btnBuscarG.setOnAction(e -> {
             String cod = txtCodigo.getText().trim();
@@ -278,38 +224,26 @@ public class EliminacionView extends VBox {
                 return;
             }
             txtResultados.clear();
-            txtResultados.appendText(
-                    "Buscando '" + cod + "' en todas las sucursales:\n\n"
-            );
+            txtResultados.appendText("Buscando '" + cod + "' en todas las sucursales:\n\n");
 
-            ListaEnlazada<Sucursal> sucursales =
-                    appState.getCargaCSV().getListaSucursales();
+            ListaEnlazada<Sucursal> sucursales = appState.getCargaCSV().getListaSucursales();
             boolean encontrado = false;
 
-            estructuras.nodo.Nodo<Sucursal> nodo =
-                    sucursales.getHead();
+            estructuras.nodo.Nodo<Sucursal> nodo = sucursales.getHead();
             while (nodo != null) {
                 Sucursal s = nodo.producto;
                 Productos p = s.buscarPorCodigo(cod);
                 if (p != null) {
-                    txtResultados.appendText(String.format(
-                            "Encontrado en: %-20s → %s\n",
-                            s.getNameSucursal(), formatearProducto(p)
-                    ));
+                    txtResultados.appendText(String.format("Encontrado en: %-20s → %s\n", s.getNameSucursal(), formatearProducto(p)));
                     encontrado = true;
                 } else {
-                    txtResultados.appendText(String.format(
-                            "No existe en:  %s\n",
-                            s.getNameSucursal()
-                    ));
+                    txtResultados.appendText(String.format("No existe en:  %s\n", s.getNameSucursal()));
                 }
                 nodo = nodo.next;
             }
 
             if (!encontrado) {
-                txtResultados.appendText(
-                        "\nCódigo no encontrado en ninguna sucursal\n"
-                );
+                txtResultados.appendText("\nCódigo no encontrado en ninguna sucursal\n");
             }
         });
 
@@ -320,16 +254,12 @@ public class EliminacionView extends VBox {
                 return;
             }
 
-            log.appendText(
-                    "=== Eliminación global: " + cod + " ===\n"
-            );
+            log.appendText("=== Eliminación global: " + cod + " ===\n");
 
-            ListaEnlazada<Sucursal> sucursales =
-                    appState.getCargaCSV().getListaSucursales();
+            ListaEnlazada<Sucursal> sucursales = appState.getCargaCSV().getListaSucursales();
             int eliminados = 0;
 
-            estructuras.nodo.Nodo<Sucursal> nodo =
-                    sucursales.getHead();
+            estructuras.nodo.Nodo<Sucursal> nodo = sucursales.getHead();
             while (nodo != null) {
                 Sucursal s = nodo.producto;
                 Productos p = s.buscarPorCodigo(cod);
@@ -341,20 +271,11 @@ public class EliminacionView extends VBox {
                     boolean ok = s.eliminarProducto(cod);
 
                     if (ok) {
-                        int altDespues =
-                                s.getAvlNombre().getHeight();
+                        int altDespues = s.getAvlNombre().getHeight();
                         eliminados++;
-                        log.appendText(String.format(
-                                "Eliminado de %-20s | " +
-                                        "AVL: altura %d->%d (rebalanceado)\n",
-                                s.getNameSucursal(),
-                                altAntes, altDespues
-                        ));
+                        log.appendText(String.format("Eliminado de %-20s | " + "AVL: altura %d->%d (rebalanceado)\n", s.getNameSucursal(), altAntes, altDespues));
                     } else {
-                        log.appendText(String.format(
-                                "Error en %-20s\n",
-                                s.getNameSucursal()
-                        ));
+                        log.appendText(String.format("Error en %-20s\n", s.getNameSucursal()));
                     }
                 }
                 nodo = nodo.next;
@@ -366,10 +287,7 @@ public class EliminacionView extends VBox {
                 log.appendText("Eliminado del AVL global\n");
             }
 
-            log.appendText(String.format(
-                    "--- Total eliminados: %d sucursal(es) ---\n\n",
-                    eliminados
-            ));
+            log.appendText(String.format("--- Total eliminados: %d sucursal(es) ---\n\n", eliminados));
 
             txtCodigo.clear();
             txtResultados.clear();
@@ -377,15 +295,7 @@ public class EliminacionView extends VBox {
 
         HBox botones = new HBox(10, btnBuscarG, btnElimG);
 
-        root.getChildren().addAll(
-                titulo, desc, new Separator(),
-                new HBox(10, etiq("Código:"), txtCodigo),
-                botones,
-                new Label("Resultados de búsqueda:"),
-                txtResultados,
-                new Label("Log de eliminación:"),
-                log
-        );
+        root.getChildren().addAll(titulo, desc, new Separator(), new HBox(10, etiq("Código:"), txtCodigo), botones, new Label("Resultados de búsqueda:"), txtResultados, new Label("Log de eliminación:"), log);
 
         ScrollPane scroll = new ScrollPane(root);
         scroll.setFitToWidth(true);
@@ -399,17 +309,9 @@ public class EliminacionView extends VBox {
         root.setPadding(new Insets(20));
 
         Label titulo = new Label("Eliminar sucursal completa");
-        titulo.setStyle(
-                "-fx-font-size: 16px; -fx-font-weight: bold;"
-        );
-        Label desc = new Label(
-                "Elimina la sucursal y todos sus productos del sistema. " +
-                        "Los productos pueden transferirse antes de eliminar."
-        );
-        desc.setStyle(
-                "-fx-text-fill: #e74c3c; -fx-font-size: 11px;" +
-                        "-fx-font-weight: bold;"
-        );
+        titulo.setStyle("-fx-font-size: 16px; -fx-font-weight: bold;");
+        Label desc = new Label("Elimina la sucursal y todos sus productos del sistema. " + "Los productos pueden transferirse antes de eliminar.");
+        desc.setStyle("-fx-text-fill: #e74c3c; -fx-font-size: 11px;" + "-fx-font-weight: bold;");
         desc.setWrapText(true);
 
         ComboBox<String> cmbSuc = new ComboBox<>();
@@ -420,30 +322,23 @@ public class EliminacionView extends VBox {
         TextArea txtInfo = new TextArea();
         txtInfo.setEditable(false);
         txtInfo.setPrefHeight(120);
-        txtInfo.setStyle(
-                "-fx-font-family: monospace; -fx-font-size: 11px;"
-        );
+        txtInfo.setStyle("-fx-font-family: monospace; -fx-font-size: 11px;");
 
-        Button btnVerInfo   = new Button("Ver informacion");
-        Button btnEliminar  = new Button("Eliminar sucursal");
+        Button btnVerInfo = new Button("Ver informacion");
+        Button btnEliminar = new Button("Eliminar sucursal");
         Button btnRefrescar = new Button("Refrescar");
 
         btnVerInfo.setStyle(estilo("#2980b9"));
         btnEliminar.setStyle(estilo("#e74c3c"));
         btnRefrescar.setStyle(estilo("#7f8c8d"));
 
-        CheckBox chkConfirmar = new CheckBox(
-                "Confirmo que quiero eliminar esta sucursal " +
-                        "y todos sus productos"
-        );
+        CheckBox chkConfirmar = new CheckBox("Confirmo que quiero eliminar esta sucursal " + "y todos sus productos");
         chkConfirmar.setStyle("-fx-text-fill: #e74c3c;");
 
         TextArea log = new TextArea();
         log.setEditable(false);
         log.setPrefHeight(200);
-        log.setStyle(
-                "-fx-font-family: monospace; -fx-font-size: 11px;"
-        );
+        log.setStyle("-fx-font-family: monospace; -fx-font-size: 11px;");
 
         btnRefrescar.setOnAction(e -> {
             recargarSucursales(cmbSuc);
@@ -460,28 +355,7 @@ public class EliminacionView extends VBox {
             Sucursal s = appState.getCargaCSV().buscarSucursal(id);
             if (s == null) return;
 
-            txtInfo.setText(String.format(
-                    "ID:          %d\n" +
-                            "Nombre:      %s\n" +
-                            "Ubicación:   %s\n" +
-                            "Productos:   %d\n" +
-                            "T.Ingreso:   %ds\n" +
-                            "T.Traspaso:  %ds\n" +
-                            "T.Despacho:  %ds\n" +
-                            "Cola ingreso: %d\n" +
-                            "Cola salida:  %d\n" +
-                            "AVL altura:  %d\n",
-                    s.getIdSucursal(),
-                    s.getNameSucursal(),
-                    s.getLocation(),
-                    s.getLista().size(),
-                    s.getEntryTime(),
-                    s.getTransferTime(),
-                    s.getDispatchInterval(),
-                    s.getColaIngreso().size(),
-                    s.getColaSalida().size(),
-                    s.getAvlNombre().getHeight()
-            ));
+            txtInfo.setText(String.format("ID:          %d\n" + "Nombre:      %s\n" + "Ubicación:   %s\n" + "Productos:   %d\n" + "T.Ingreso:   %ds\n" + "T.Traspaso:  %ds\n" + "T.Despacho:  %ds\n" + "Cola ingreso: %d\n" + "Cola salida:  %d\n" + "AVL altura:  %d\n", s.getIdSucursal(), s.getNameSucursal(), s.getLocation(), s.getLista().size(), s.getEntryTime(), s.getTransferTime(), s.getDispatchInterval(), s.getColaIngreso().size(), s.getColaSalida().size(), s.getAvlNombre().getHeight()));
         });
 
         btnEliminar.setOnAction(e -> {
@@ -501,28 +375,19 @@ public class EliminacionView extends VBox {
             int productos = s.getLista().size();
             String nombre = s.getNameSucursal();
 
-            estructuras.nodo.Nodo<clases.Productos> nodo =
-                    s.getLista().getHead();
+            estructuras.nodo.Nodo<clases.Productos> nodo = s.getLista().getHead();
             while (nodo != null) {
                 appState.getAvlGlobal().delete(nodo.producto);
                 nodo = nodo.next;
             }
 
-            log.appendText(String.format(
-                    "=== Eliminando sucursal: %s ===\n", nombre
-            ));
-            log.appendText(String.format(
-                    "   Productos eliminados del AVL global: %d\n",
-                    productos
-            ));
+            log.appendText(String.format("=== Eliminando sucursal: %s ===\n", nombre));
+            log.appendText(String.format("   Productos eliminados del AVL global: %d\n", productos));
 
             boolean eliminada = appState.getCargaCSV().eliminarSucursal(id);
 
             if (eliminada) {
-                log.appendText(String.format(
-                        "Sucursal '%s' eliminada correctamente\n",
-                        nombre
-                ));
+                log.appendText(String.format("Sucursal '%s' eliminada correctamente\n", nombre));
                 txtInfo.clear();
                 chkConfirmar.setSelected(false);
                 recargarSucursales(cmbSuc);
@@ -531,18 +396,9 @@ public class EliminacionView extends VBox {
             }
         });
 
-        HBox botones = new HBox(10,
-                btnVerInfo, btnRefrescar, btnEliminar
-        );
+        HBox botones = new HBox(10, btnVerInfo, btnRefrescar, btnEliminar);
 
-        root.getChildren().addAll(
-                titulo, desc, new Separator(),
-                new HBox(10, etiq("Sucursal:"), cmbSuc),
-                botones,
-                new Label("Información:"), txtInfo,
-                chkConfirmar,
-                new Label("Log:"), log
-        );
+        root.getChildren().addAll(titulo, desc, new Separator(), new HBox(10, etiq("Sucursal:"), cmbSuc), botones, new Label("Información:"), txtInfo, chkConfirmar, new Label("Log:"), log);
 
         ScrollPane scroll = new ScrollPane(root);
         scroll.setFitToWidth(true);
@@ -556,12 +412,8 @@ public class EliminacionView extends VBox {
         VBox root = new VBox(12);
         root.setPadding(new Insets(20));
 
-        Label titulo = new Label(
-                "Visualizar rebalanceo de estructuras"
-        );
-        titulo.setStyle(
-                "-fx-font-size: 16px; -fx-font-weight: bold;"
-        );
+        Label titulo = new Label("Visualizar rebalanceo de estructuras");
+        titulo.setStyle("-fx-font-size: 16px; -fx-font-weight: bold;");
 
         ComboBox<String> cmbSuc = new ComboBox<>();
         cmbSuc.setPromptText("Selecciona sucursal");
@@ -569,11 +421,7 @@ public class EliminacionView extends VBox {
         recargarSucursales(cmbSuc);
 
         ComboBox<String> cmbEstructura = new ComboBox<>();
-        cmbEstructura.getItems().addAll(
-                "AVL (por nombre)",
-                "Árbol B (por fecha)",
-                "Árbol B+ (por categoría)"
-        );
+        cmbEstructura.getItems().addAll("AVL (por nombre)", "Árbol B (por fecha)", "Árbol B+ (por categoría)");
         cmbEstructura.setValue("AVL (por nombre)");
         cmbEstructura.setPrefWidth(220);
 
@@ -581,16 +429,12 @@ public class EliminacionView extends VBox {
         btnAnalizar.setStyle(estilo("#8e44ad"));
 
         Canvas canvasRebal = new Canvas(850, 320);
-        canvasRebal.setStyle(
-                "-fx-border-color: #bdc3c7; -fx-border-width: 1;"
-        );
+        canvasRebal.setStyle("-fx-border-color: #bdc3c7; -fx-border-width: 1;");
 
         TextArea txtAnalisis = new TextArea();
         txtAnalisis.setEditable(false);
         txtAnalisis.setPrefHeight(200);
-        txtAnalisis.setStyle(
-                "-fx-font-family: monospace; -fx-font-size: 11px;"
-        );
+        txtAnalisis.setStyle("-fx-font-family: monospace; -fx-font-size: 11px;");
 
         btnAnalizar.setOnAction(e -> {
             String sel = cmbSuc.getValue();
@@ -608,24 +452,15 @@ public class EliminacionView extends VBox {
             if (estructura.startsWith("AVL")) {
                 analizarAVL(s, canvasRebal, txtAnalisis);
             } else if (estructura.startsWith("Árbol B+")) {
+                analizarBMas(s, canvasRebal, txtAnalisis);
             } else {
                 analizarB(s, canvasRebal, txtAnalisis);
             }
         });
 
-        HBox controles = new HBox(12,
-                etiq("Sucursal:"), cmbSuc,
-                etiq("Estructura:"), cmbEstructura,
-                btnAnalizar
-        );
+        HBox controles = new HBox(12, etiq("Sucursal:"), cmbSuc, etiq("Estructura:"), cmbEstructura, btnAnalizar);
 
-        root.getChildren().addAll(
-                titulo, new Separator(),
-                controles,
-                canvasRebal,
-                new Label("Análisis de balance:"),
-                txtAnalisis
-        );
+        root.getChildren().addAll(titulo, new Separator(), controles, canvasRebal, new Label("Análisis de balance:"), txtAnalisis);
 
         ScrollPane scroll = new ScrollPane(root);
         scroll.setFitToWidth(true);
@@ -634,8 +469,7 @@ public class EliminacionView extends VBox {
     }
 
 
-    private void dibujarAVL(Canvas canvas, ArbolAVL<Productos> avl,
-                            String resaltado, String titulo) {
+    private void dibujarAVL(Canvas canvas, ArbolAVL<Productos> avl, String resaltado, String titulo) {
         GraphicsContext gc = canvas.getGraphicsContext2D();
         gc.clearRect(0, 0, canvas.getWidth(), canvas.getHeight());
         gc.setFill(Color.web("#f8f9fa"));
@@ -647,30 +481,20 @@ public class EliminacionView extends VBox {
 
         if (avl == null || avl.isEmpty()) {
             gc.setFill(Color.GRAY);
-            gc.fillText("(vacío)", canvas.getWidth() / 2 - 20,
-                    canvas.getHeight() / 2);
+            gc.fillText("(vacío)", canvas.getWidth() / 2 - 20, canvas.getHeight() / 2);
             return;
         }
-        dibujarNodoAVL(gc, avl.getRoot(),
-                canvas.getWidth() / 2, 35,
-                canvas.getWidth() / 4, resaltado);
+        dibujarNodoAVL(gc, avl.getRoot(), canvas.getWidth() / 2, 35, canvas.getWidth() / 4, resaltado);
     }
 
-    private void dibujarNodoAVL(GraphicsContext gc, NodoAVL<Productos> nodo,
-                                double x, double y, double offset,
-                                String resaltado) {
+    private void dibujarNodoAVL(GraphicsContext gc, NodoAVL<Productos> nodo, double x, double y, double offset, String resaltado) {
         if (nodo == null) return;
 
-        int R = 22;
-        String etiq = nodo.getProducto() != null
-                ? (nodo.getProducto().getName().length() > 6
-                   ? nodo.getProducto().getName().substring(0, 5) + "."
-                   : nodo.getProducto().getName())
-                : "?";
+        int altura = alturaAVL(nodo);
+        int R = Math.max(18, 40 - altura * 2);
+        String etiq = nodo.getProducto() != null ? (nodo.getProducto().getName().length() > 10 ? nodo.getProducto().getName().substring(0, 15) + "." : nodo.getProducto().getName()) : "?";
 
-        boolean resalta = resaltado != null
-                && nodo.getProducto() != null
-                && nodo.getProducto().getName().equals(resaltado);
+        boolean resalta = resaltado != null && nodo.getProducto() != null && nodo.getProducto().getName().equals(resaltado);
 
         if (nodo.left != null) {
             double cx = x - offset, cy = y + 60;
@@ -698,7 +522,7 @@ public class EliminacionView extends VBox {
         gc.strokeOval(x - R, y - R, R * 2, R * 2);
 
         gc.setFill(Color.WHITE);
-        gc.setFont(Font.font("Arial", FontWeight.BOLD, 8));
+        gc.setFont(Font.font("Arial", FontWeight.BOLD, R * 0.4));
         gc.fillText(etiq, x - etiq.length() * 2.8, y + 3);
 
         int fb = nodo.getAltura();
@@ -707,7 +531,6 @@ public class EliminacionView extends VBox {
         gc.setFill(Color.web("#ecf0f1"));
         gc.fillText(fbStr, x - 8, y + R + 10);
     }
-
 
 
     private void analizarAVL(Sucursal s, Canvas canvas, TextArea txt) {
@@ -724,7 +547,7 @@ public class EliminacionView extends VBox {
         analizarNodo(avl.getRoot(), stats, 0);
 
         double alturaIdeal = Math.log(stats[0] + 1) / Math.log(2);
-        double eficiencia  = alturaIdeal / avl.getHeight() * 100;
+        double eficiencia = alturaIdeal / avl.getHeight() * 100;
 
         txt.appendText(String.format("Análisis AVL %s \n\n", s.getNameSucursal()));
         txt.appendText(String.format("Nodos totales:    %d\n", stats[0]));
@@ -737,16 +560,9 @@ public class EliminacionView extends VBox {
 
         boolean[] balanceOk = {true};
         verificarBalance(avl.getRoot(), balanceOk);
-        txt.appendText(balanceOk[0]
-                ? "Árbol correctamente balanceado \n"
-                : "Nodo desbalanceado detectado\n"
-        );
+        txt.appendText(balanceOk[0] ? "Árbol correctamente balanceado \n" : "Nodo desbalanceado detectado\n");
 
-        txt.appendText("\nOrden Big-O:\n" +
-                "  Búsqueda: O(log n) = O(" + avl.getHeight() + ")\n" +
-                "  Inserción: O(log n)\n" +
-                "  Eliminación: O(log n)\n"
-        );
+        txt.appendText("\nOrden Big-O:\n" + "  Búsqueda: O(log n) = O(" + avl.getHeight() + ")\n" + "  Inserción: O(log n)\n" + "  Eliminación: O(log n)\n");
 
         dibujarAVL(canvas, avl, null, "AVL — " + s.getNameSucursal());
     }
@@ -759,7 +575,7 @@ public class EliminacionView extends VBox {
             stats[2] = Math.max(stats[2], nivel);
             stats[3] = Math.min(stats[3], nivel);
         }
-        analizarNodo(n.left,  stats, nivel + 1);
+        analizarNodo(n.left, stats, nivel + 1);
         analizarNodo(n.right, stats, nivel + 1);
     }
 
@@ -768,7 +584,7 @@ public class EliminacionView extends VBox {
         int izq = alturaAVL(n.left);
         int der = alturaAVL(n.right);
         if (Math.abs(izq - der) > 1) ok[0] = false;
-        verificarBalance(n.left,  ok);
+        verificarBalance(n.left, ok);
         verificarBalance(n.right, ok);
     }
 
@@ -778,9 +594,7 @@ public class EliminacionView extends VBox {
     }
 
     private void analizarB(Sucursal s, Canvas canvas, TextArea txt) {
-        txt.appendText(String.format(
-                "Análisis Árbol B %s \n\n", s.getNameSucursal()
-        ));
+        txt.appendText(String.format("Análisis Árbol B %s \n\n", s.getNameSucursal()));
         txt.appendText("Estructura B con claves ordenadas por fecha de vencimiento.\n");
         txt.appendText("Orden Big-O:\n");
         txt.appendText("  Búsqueda: O(log_t n)\n");
@@ -789,8 +603,18 @@ public class EliminacionView extends VBox {
         dibujarArbolBCanvas(canvas, s.getArbolBFechas());
     }
 
-    private void dibujarArbolBCanvas(Canvas canvas,
-                                     estructuras.arbolB.ArbolB<String> arbol) {
+    private void analizarBMas(Sucursal s, Canvas canvas, TextArea txt) {
+
+        txt.appendText("Árbol B+ - índices por categoría\n\n");
+
+        if (s.getArbolBPlusCategoria() == null) {
+            txt.appendText("Árbol vacío\n");
+            return;
+        }
+
+        dibujarArbolBMasCanvas(canvas, s.getArbolBPlusCategoria());
+    }
+    private void dibujarArbolBCanvas(Canvas canvas, ArbolB<String> arbol) {
         GraphicsContext gc = canvas.getGraphicsContext2D();
         gc.clearRect(0, 0, canvas.getWidth(), canvas.getHeight());
         gc.setFill(Color.web("#f8f9fa"));
@@ -801,17 +625,29 @@ public class EliminacionView extends VBox {
             gc.fillText("(vacío)", canvas.getWidth() / 2 - 20, canvas.getHeight() / 2);
             return;
         }
-        dibujarNodoBCanvas(gc, arbol.getRaiz(),
-                canvas.getWidth() / 2, 20, canvas.getWidth() / 4);
+        dibujarNodoBCanvas(gc, arbol.getRaiz(), canvas.getWidth() / 2, 20, canvas.getWidth() / 4);
     }
 
-    private void dibujarNodoBCanvas(GraphicsContext gc, NodoB<String> nodo,
-                                    double cx, double cy, double off) {
+    private void dibujarArbolBMasCanvas(Canvas canvas, ArbolBPlus<String> arbol) {
+        GraphicsContext gc = canvas.getGraphicsContext2D();
+        gc.clearRect(0, 0, canvas.getWidth(), canvas.getHeight());
+        gc.setFill(Color.web("#f8f9fa"));
+        gc.fillRect(0, 0, canvas.getWidth(), canvas.getHeight());
+
+        if (arbol == null || arbol.getRaiz() == null) {
+            gc.setFill(Color.GRAY);
+            gc.fillText("(vacío)", canvas.getWidth() / 2 - 20, canvas.getHeight() / 2);
+            return;
+        }
+        dibujarNodoBMasCanvas(gc, arbol.getRaiz(), canvas.getWidth() / 2, 20, canvas.getWidth() / 4);
+    }
+
+    private void dibujarNodoBCanvas(GraphicsContext gc, NodoB<String> nodo, double cx, double cy, double off) {
         if (nodo == null || nodo.getNumClaves() == 0) return;
 
-        int num  = nodo.getNumClaves();
-        int nW   = 80;
-        int nH   = 24;
+        int num = nodo.getNumClaves();
+        int nW = 80;
+        int nH = 24;
         double nodoW = num * nW;
         double nodoX = cx - nodoW / 2.0;
 
@@ -849,10 +685,72 @@ public class EliminacionView extends VBox {
         }
     }
 
+    private void dibujarNodoBMasCanvas(GraphicsContext gc, NodoBPlus<String> nodo,
+                                       double cx, double cy, double off) {
 
+        if (nodo == null || nodo.getNumClaves() == 0) return;
+
+        int num = nodo.getNumClaves();
+        int nH = 28;
+
+        int nW = 0;
+        Comparable[] clavesArr = nodo.getClaves();
+
+        for (int i = 0; i < num; i++) {
+            String clave = clavesArr[i] != null ? clavesArr[i].toString() : "";
+            nW = Math.max(nW, clave.length() * 7);
+        }
+        nW += 20;
+
+        double nodoW = num * nW;
+        double nodoX = cx - nodoW / 2.0;
+
+        gc.setFill(nodo.isEsHoja() ? Color.web("#16a085") : Color.web("#2c3e50"));
+        gc.fillRoundRect(nodoX, cy, nodoW, nH, 6, 6);
+
+        gc.setStroke(Color.WHITE);
+        gc.strokeRoundRect(nodoX, cy, nodoW, nH, 6, 6);
+
+        for (int i = 0; i < num; i++) {
+
+            if (i > 0) {
+                gc.setStroke(Color.web("#ffffff88"));
+                gc.strokeLine(nodoX + i * nW, cy, nodoX + i * nW, cy + nH);
+            }
+
+            String clave = clavesArr[i] != null ? clavesArr[i].toString() : "";
+
+            if (clave.length() > 12)
+                clave = clave.substring(0, 11) + "...";
+
+            gc.setFill(Color.WHITE);
+            gc.setFont(Font.font(10));
+
+            double textX = nodoX + i * nW + (nW / 2.0) - (clave.length() * 3);
+            gc.fillText(clave, textX, cy + nH / 2.0 + 4);
+        }
+
+        // hijos
+        if (!nodo.isEsHoja()) {
+            int numH = num + 1;
+            double paso = (off * 2) / Math.max(numH - 1, 1);
+            double iniX = cx - off;
+
+            for (int i = 0; i <= num; i++) {
+                if (nodo.getHijos()[i] == null) continue;
+
+                double hx = numH == 1 ? cx : iniX + i * paso;
+                double hy = cy + 90;
+
+                gc.setStroke(Color.web("#bdc3c7"));
+                gc.strokeLine(cx, cy + nH, hx, hy);
+
+                dibujarNodoBMasCanvas(gc, nodo.getHijos()[i], hx, hy, off / 2);
+            }
+        }
+    }
     private Productos buscarEnGlobal(String codigo) {
-        ListaEnlazada<Sucursal> suc =
-                appState.getCargaCSV().getListaSucursales();
+        ListaEnlazada<Sucursal> suc = appState.getCargaCSV().getListaSucursales();
         estructuras.nodo.Nodo<Sucursal> n = suc.getHead();
         while (n != null) {
             Productos p = n.producto.buscarPorCodigo(codigo);
@@ -862,27 +760,21 @@ public class EliminacionView extends VBox {
         return null;
     }
 
-    private void cargarProductos(ComboBox<String> cmbSuc,
-                                 ComboBox<String> cmbProd) {
+    private void cargarProductos(ComboBox<String> cmbSuc, ComboBox<String> cmbProd) {
         cmbProd.getItems().clear();
         String sel = cmbSuc.getValue();
         if (sel == null) return;
         int id = parsearId(sel);
         Sucursal s = appState.getCargaCSV().buscarSucursal(id);
         if (s == null) return;
-        estructuras.nodo.Nodo<clases.Productos> n =
-                s.getLista().getHead();
+        estructuras.nodo.Nodo<clases.Productos> n = s.getLista().getHead();
         while (n != null) {
-            cmbProd.getItems().add(
-                    n.producto.getBarCode()
-                            + " | " + n.producto.getName()
-            );
+            cmbProd.getItems().add(n.producto.getBarCode() + " | " + n.producto.getName());
             n = n.next;
         }
     }
 
-    private String obtenerCodigo(ComboBox<String> cmbProd,
-                                 TextField txtCodigo) {
+    private String obtenerCodigo(ComboBox<String> cmbProd, TextField txtCodigo) {
         String txt = txtCodigo.getText().trim();
         if (!txt.isEmpty()) return txt;
         String sel = cmbProd.getValue();
@@ -893,30 +785,14 @@ public class EliminacionView extends VBox {
     private void recargarSucursales(ComboBox<String> cmb) {
         String actual = cmb.getValue();
         cmb.getItems().clear();
-        ListaEnlazada<Sucursal> lista =
-                appState.getCargaCSV().getListaSucursales();
+        ListaEnlazada<Sucursal> lista = appState.getCargaCSV().getListaSucursales();
         estructuras.nodo.Nodo<Sucursal> n = lista.getHead();
         while (n != null) {
-            cmb.getItems().add(
-                    n.producto.getIdSucursal()
-                            + " - " + n.producto.getNameSucursal()
-            );
+            cmb.getItems().add(n.producto.getIdSucursal() + " - " + n.producto.getNameSucursal());
             n = n.next;
         }
-        if (actual != null && cmb.getItems().contains(actual))
-            cmb.setValue(actual);
+        if (actual != null && cmb.getItems().contains(actual)) cmb.setValue(actual);
     }
-
-    /*
-    private void limpiarCanvas(Canvas c) {
-        GraphicsContext gc = c.getGraphicsContext2D();
-        gc.clearRect(0, 0, c.getWidth(), c.getHeight());
-        gc.setFill(Color.web("#f8f9fa"));
-        gc.fillRect(0, 0, c.getWidth(), c.getHeight());
-        gc.setFill(Color.GRAY);
-        gc.fillText("(vacío)", c.getWidth() / 2 - 20, c.getHeight() / 2);
-    }
-     */
 
     private int parsearId(String s) {
         return Integer.parseInt(s.split(" - ")[0].trim());
@@ -930,18 +806,10 @@ public class EliminacionView extends VBox {
     }
 
     private String estilo(String c) {
-        return "-fx-background-color:" + c +
-                "; -fx-text-fill: white; -fx-padding: 6 14;";
+        return "-fx-background-color:" + c + "; -fx-text-fill: white; -fx-padding: 6 14;";
     }
 
     private String formatearProducto(Productos p) {
-        return String.format(
-                "Nombre:   %s\nCódigo:   %s\n" +
-                        "Cat:      %s\nPrecio:   Q%.2f\n" +
-                        "Stock:    %d\nFecha:    %s",
-                p.getName(), p.getBarCode(),
-                p.getCategory(), p.getPrice(),
-                p.getStock(), p.getExpiryDate()
-        );
+        return String.format("Nombre:   %s\nCódigo:   %s\n" + "Cat:      %s\nPrecio:   Q%.2f\n" + "Stock:    %d\nFecha:    %s", p.getName(), p.getBarCode(), p.getCategory(), p.getPrice(), p.getStock(), p.getExpiryDate());
     }
 }

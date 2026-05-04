@@ -39,26 +39,17 @@ public class Cola<T> {
         return frente.producto;
     }
 
-    public java.util.List<T> toList() {
-        java.util.List<T> lista = new java.util.ArrayList<>();
-        Nodo<T> actual = frente;
-        while (actual != null) {
-            lista.add(actual.producto);
-            actual = actual.next;
-        }
-        return lista;
-    }
 
     public boolean isEmpty() { return frente == null; }
     public int size()        { return size; }
 
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder("Cola (frente→fin): ");
+        StringBuilder sb = new StringBuilder("Cola (frente -> fin): ");
         Nodo<T> actual = frente;
         while (actual != null) {
             sb.append(actual.producto);
-            if (actual.next != null) sb.append(" → ");
+            if (actual.next != null) sb.append(" -> ");
             actual = actual.next;
         }
         return sb.toString();

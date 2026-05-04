@@ -10,7 +10,6 @@ public class Pila<T> {
         size = 0;
     }
 
-    // Agregar al tope — O(1)
     public void push(T dato) {
         Nodo<T> nuevo = new Nodo<>(dato);
         nuevo.next    = tope;
@@ -18,7 +17,6 @@ public class Pila<T> {
         size++;
     }
 
-    // Sacar del tope — O(1)
     public T pop() {
         if (isEmpty())
             throw new RuntimeException("Pila vacía");
@@ -28,7 +26,6 @@ public class Pila<T> {
         return dato;
     }
 
-    // Ver el tope sin sacar — O(1)
     public T peek() {
         if (isEmpty())
             throw new RuntimeException("Pila vacía");
@@ -40,11 +37,11 @@ public class Pila<T> {
 
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder("Pila (tope→fondo): ");
+        StringBuilder sb = new StringBuilder("Pila (tope -> fondo): ");
         Nodo<T> actual = tope;
         while (actual != null) {
             sb.append(actual.producto);
-            if (actual.next != null) sb.append(" → ");
+            if (actual.next != null) sb.append(" -> ");
             actual = actual.next;
         }
         return sb.toString();

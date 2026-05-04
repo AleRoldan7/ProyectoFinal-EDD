@@ -185,7 +185,7 @@ public class ArbolBPlus<T extends Comparable<T>> {
     public void eliminar(T clave) {
         eliminarRec(raiz, clave);
 
-        // Si la raíz queda vacía y tiene hijo → bajar nivel
+        // Si la raíz queda vacía y tiene hijo se baja un nivel
         if (!raiz.isEsHoja() && raiz.getNumClaves() == 0) {
             raiz = raiz.getHijos()[0];
         }

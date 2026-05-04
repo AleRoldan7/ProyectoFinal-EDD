@@ -32,7 +32,7 @@ public class SucursalesView extends VBox {
 
         txtId.setPromptText("ID único");
         txtNombre.setPromptText("Nombre sucursal");
-        txtUbicacion.setPromptText("Ciudad / dirección");
+        txtUbicacion.setPromptText("Ciudad ");
         txtIngreso.setPromptText("Segundos");
         txtTraspaso.setPromptText("Segundos");
         txtDespacho.setPromptText("Segundos");
@@ -48,9 +48,7 @@ public class SucursalesView extends VBox {
         Button btnListar = new Button("Listar sucursales");
         Button btnDetalle = new Button("Ver detalle");
 
-        btnAgregar.setStyle(
-                "-fx-background-color: #27ae60; -fx-text-fill: white;"
-        );
+        btnAgregar.setStyle("-fx-background-color: #27ae60; -fx-text-fill: white;");
 
         salida = new TextArea();
         salida.setEditable(false);
@@ -66,11 +64,16 @@ public class SucursalesView extends VBox {
                 int tTra = Integer.parseInt(txtTraspaso.getText().trim());
                 int tDes = Integer.parseInt(txtDespacho.getText().trim());
 
-                Sucursal s = new Sucursal(id, nom, ubi, tIng, tTra, tDes);
-                state.getGrafo().agregarSucursal(id);
+                Sucursal sucursal = new Sucursal(id, nom, ubi, tIng, tTra, tDes);
 
-                salida.appendText("Sucursal agregada: "
-                        + nom + " (ID=" + id + ")\n");
+                boolean ok = state.getCargaCSV().agregarSucursal(sucursal);
+
+                if (ok) {
+                    state.getGrafo().agregarSucursal(id);
+                    salida.appendText("Sucursal agregada correctamente\n");
+                } else {
+                    salida.appendText("Error: Sucursal ya existe con el ID" + id );
+                }
 
                 txtId.clear();
                 txtNombre.clear();
@@ -86,20 +89,9 @@ public class SucursalesView extends VBox {
 
         btnListar.setOnAction(e -> {
             salida.clear();
-            salida.appendText("📋 Sucursales registradas:\n\n");
+            salida.appendText("Sucursales registradas:\n\n");
             for (Sucursal s : state.getCargaCSV().getListaSucursales()) {
-                salida.appendText(String.format(
-                        "ID: %-4d | %-20s | %-18s\n" +
-                                "         T.Ingreso: %ds | T.Traspaso: %ds | T.Despacho: %ds\n" +
-                                "         Productos: %d\n\n",
-                        s.getIdSucursal(),
-                        s.getNameSucursal(),
-                        s.getLocation(),
-                        s.getEntryTime(),
-                        s.getTransferTime(),
-                        s.getDispatchInterval(),
-                        s.getLista().size()
-                ));
+                salida.appendText(String.format("ID: %-4d | %-20s | %-18s\n" + "T.Ingreso: %ds | T.Traspaso: %ds | T.Despacho: %ds\n" + "         Productos: %d\n\n", s.getIdSucursal(), s.getNameSucursal(), s.getLocation(), s.getEntryTime(), s.getTransferTime(), s.getDispatchInterval(), s.getLista().size()));
             }
         });
 
@@ -117,7 +109,7 @@ public class SucursalesView extends VBox {
                     return;
                 }
                 salida.clear();
-                salida.appendText("═══ Detalle Sucursal ═══\n");
+                salida.appendText("Sucursales");
                 salida.appendText("ID:          " + s.getIdSucursal() + "\n");
                 salida.appendText("Nombre:      " + s.getNameSucursal() + "\n");
                 salida.appendText("Ubicación:   " + s.getLocation() + "\n");
@@ -134,11 +126,14 @@ public class SucursalesView extends VBox {
 
         HBox botones = new HBox(8, btnAgregar, btnListar, btnDetalle);
 
-        this.getChildren().addAll(
-                titulo, new Separator(),
-                form, botones,
-                new Label("Resultado:"),
-                salida
-        );
+        this.getChildren().addAll(titulo, new Separator(), form, botones, new Label("Resultado:"), salida);
+    }
+
+    private void mostrarAlerta(Alert.AlertType tipo, String titulo, String mensaje) {
+        Alert alerta = new Alert(tipo);
+        alerta.setTitle(titulo);
+        alerta.setHeaderText(null);
+        alerta.setContentText(mensaje);
+        alerta.showAndWait();
     }
 }
